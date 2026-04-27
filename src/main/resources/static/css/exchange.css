@@ -1,0 +1,125 @@
+body {
+  font-size: 14px;
+}
+
+/* 카드 제목 */
+.card-title {
+  font-size: 1rem;
+}
+
+/* 계산 결과 강조 */
+.result {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+/* 카드 hover */
+.rate-card:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.rate-card {
+  cursor: grab;
+}
+
+.rate-card.dragging {
+  opacity: 0.5;
+}
+.drag-handle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e9ecef;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  user-select: none;
+  margin-bottom: 8px;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+  background: #ced4da;
+}
+.rate-card.drag-over {
+  outline: 2px dashed #0d6efd;
+}
+.rate-card.dragging {
+  opacity: 0.6;
+}
+
+.rate-card.drag-over {
+  outline: 2px dashed #0d6efd;
+}
+
+/* 정렬 버튼 컨테이너 */
+.order-controls {
+  opacity: 0.35;
+  transition: opacity 0.15s ease;
+}
+
+/* 카드 hover 시에만 강조 */
+.rate-card:hover .order-controls {
+  opacity: 1;
+}
+
+/* 버튼 기본 */
+.order-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+
+  border: 1px solid #ced4da;
+  background: #f8f9fa;
+  color: #495057;
+
+  font-size: 12px;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  padding: 0;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.1s ease;
+}
+
+/* hover 효과 */
+.order-btn:hover:not(:disabled) {
+  background: #e7f1ff;
+  border-color: #0d6efd;
+  color: #0d6efd;
+  transform: translateY(-1px);
+}
+
+/* 클릭 시 */
+.order-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* 비활성 */
+.order-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
