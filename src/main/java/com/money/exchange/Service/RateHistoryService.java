@@ -1,9 +1,8 @@
 package com.money.exchange.Service;
 
-import com.money.exchange.Dto.ExchangeHistoryResponseDto;
+import com.money.exchange.Dto.RateHistoryResponseDto;
 import com.money.exchange.Entity.Currency;
-import com.money.exchange.Entity.ExchangeRateHistory;
-import com.money.exchange.Repository.ExchangeRateHistoryRepository;
+import com.money.exchange.Repository.RateHistoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,11 +14,11 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
-public class ExchangeHistoryService {
+public class RateHistoryService {
     private final CurrencyService currencyService;
-    private final ExchangeRateHistoryRepository historyRepository;
+    private final RateHistoryRepository historyRepository;
 
-    public List<ExchangeHistoryResponseDto> getHistory(String currencyCode, int years) {
+    public List<RateHistoryResponseDto> getHistory(String currencyCode, int years) {
         Currency currency = currencyService.getCurrencyByCode(currencyCode);
 
         LocalDate endDate = LocalDate.now();
@@ -31,7 +30,7 @@ public class ExchangeHistoryService {
                         endDate
                 )
                 .stream()
-                .map(ExchangeHistoryResponseDto::from)
+                .map(RateHistoryResponseDto::from)
                 .toList();
 
     }

@@ -1,10 +1,9 @@
 package com.money.exchange.Controller;
 
-import com.money.exchange.Dto.ExchangeHistoryResponseDto;
-import com.money.exchange.Service.ExchangeHistoryService;
+import com.money.exchange.Dto.RateHistoryResponseDto;
+import com.money.exchange.Service.RateHistoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,15 +11,15 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/rates")
-public class ExchangeHistoryApiController {
-    private final ExchangeHistoryService exchangeHistoryService;
+public class RateHistoryApiController {
+    private final RateHistoryService rateHistoryService;
 
     @GetMapping("/history/{code}")
-    public ResponseEntity<List<ExchangeHistoryResponseDto>> getHistory(
+    public ResponseEntity<List<RateHistoryResponseDto>> getHistory(
             @PathVariable String code,
             @RequestParam(defaultValue = "1") int years
     ) {
-        List<ExchangeHistoryResponseDto> history = exchangeHistoryService.getHistory(code, years);
+        List<RateHistoryResponseDto> history = rateHistoryService.getHistory(code, years);
         return ResponseEntity.ok(history);
     }
 }

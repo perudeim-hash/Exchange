@@ -3,8 +3,6 @@ package com.money.exchange.Entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.cglib.core.Local;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -16,10 +14,10 @@ import java.time.LocalDate;
 @Table(
         name = "exchange_rate_history",
         uniqueConstraints = {
-                @UniqueConstraint(columnNames = {"currency_code", "rate_date"})
+                @UniqueConstraint(columnNames = {"currency_id", "rate_date"})
         }
 )
-public class ExchangeRateHistory {
+public class RateHistory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,7 +38,7 @@ public class ExchangeRateHistory {
     private String source;
 
 
-    public ExchangeRateHistory(Currency currency, LocalDate rateDate, BigDecimal rate, String source) {
+    public RateHistory(Currency currency, LocalDate rateDate, BigDecimal rate, String source) {
         this.currency = currency;
         this.rateDate = rateDate;
         this.rate = rate;

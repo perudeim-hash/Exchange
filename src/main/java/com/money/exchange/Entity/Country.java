@@ -7,29 +7,26 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor
-public class Currency {
-
+public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // 국가 Code
     @Column(nullable = false, unique = true, length = 10)
     private String code;
 
+    // 나라 이름
     @Column(nullable = false, length = 50)
-    private String countryName;
+    private String name;
 
+    // ASIA , EUROPE 같은 지역
     @Column(nullable = false, length = 50)
-    private String currencyName;
+    private String region;
 
-    @Column(name = "bok_item_code", length = 20)
-    private String bokItemCode;
-
-    @Column(length = 10)
-    private String symbol;
-
-    @Column(nullable = false)
-    private Integer unit;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "currency_id", nullable = false)
+    private Currency currency;
 
     @Column(nullable = false)
     private Boolean enabled;
@@ -37,13 +34,11 @@ public class Currency {
     @Column(nullable = false)
     private Integer displayOrder;
 
-    public Currency(String code, String countryName, String currencyName,String bokItemCode ,String symbol, Integer unit, Boolean enabled, Integer displayOrder) {
+    public Country(String code, String name, String region, Currency currency, Boolean enabled, Integer displayOrder) {
         this.code = code;
-        this.countryName = countryName;
-        this.currencyName = currencyName;
-        this.bokItemCode = bokItemCode;
-        this.symbol = symbol;
-        this.unit = unit;
+        this.name = name;
+        this.region = region;
+        this.currency = currency;
         this.enabled = enabled;
         this.displayOrder = displayOrder;
     }

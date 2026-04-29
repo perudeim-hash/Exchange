@@ -13,11 +13,12 @@ Spring Boot + Thymeleaf로 만든 환율 계산기를 REST API 기반으로 리�
 ### 백엔드 작업
 
 #### 1. ExchangeApiController.java 생성
+
 ```java
 package com.money.exchange.Controller;
 
-import com.money.exchange.Dto.ExchangeDto;
-import com.money.exchange.Service.ExchangeService;
+import com.money.exchange.Dto.RateDto;
+import com.money.exchange.Service.RateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,15 +31,15 @@ import java.util.List;
 public class ExchangeApiController {
 
     @Autowired
-    private ExchangeService exchangeService;
+    private RateService rateService;
 
     /**
      * 오늘의 환율 전체 조회
      * GET /api/rates/today
      */
     @GetMapping("/rates/today")
-    public ResponseEntity<List<ExchangeDto>> getTodayRates() {
-        List<ExchangeDto> rates = exchangeService.getTodayExchangeRates();
+    public ResponseEntity<List<RateDto>> getTodayRates() {
+        List<RateDto> rates = rateService.getTodayExchangeRates();
         return ResponseEntity.ok(rates);
     }
 
@@ -47,14 +48,14 @@ public class ExchangeApiController {
      * GET /api/rates/calculate?krw=10000
      */
     @GetMapping("/rates/calculate")
-    public ResponseEntity<List<ExchangeDto>> calculateRates(
+    public ResponseEntity<List<RateDto>> calculateRates(
             @RequestParam(defaultValue = "0") long krw
     ) {
         if (krw == 0) {
             // 0원이면 계산 안 된 기본 환율만 반환
-            return ResponseEntity.ok(exchangeService.getTodayExchangeRates());
+            return ResponseEntity.ok(rateService.getTodayExchangeRates());
         }
-        List<ExchangeDto> calculatedRates = exchangeService.calculateByKrw(krw);
+        List<RateDto> calculatedRates = rateService.calculateByKrw(krw);
         return ResponseEntity.ok(calculatedRates);
     }
 
@@ -63,8 +64,8 @@ public class ExchangeApiController {
      * GET /api/rates/{code}
      */
     @GetMapping("/rates/{code}")
-    public ResponseEntity<ExchangeDto> getRateByCode(@PathVariable String code) {
-        ExchangeDto rate = exchangeService.getRateByCode(code);
+    public ResponseEntity<RateDto> getRateByCode(@PathVariable String code) {
+        RateDto rate = rateService.getRateByCode(code);
         return ResponseEntity.ok(rate);
     }
 
@@ -80,10 +81,11 @@ public class ExchangeApiController {
 ```
 
 #### 2. ExchangeController.java 수정 (View 전용)
+
 ```java
 package com.money.exchange.Controller;
 
-import com.money.exchange.Service.ExchangeService;
+import com.money.exchange.Service.RateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -93,7 +95,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ExchangeController {
 
     @Autowired
-    private ExchangeService exchangeService;
+    private RateService rateService;
 
     /**
      * 환율 페이지 (View만 반환, 데이터는 API로 조회)
@@ -468,10 +470,10 @@ private UserPreferenceService userPreferenceService;
 
 /**
  * 사용자 환율 순서 저장
- * POST /api/user/currency-order
+ * POST /api/user/currency.csv-order
  * Body: ["USD", "JPY", "EUR", ...]
  */
-@PostMapping("/user/currency-order")
+@PostMapping("/user/currency.csv-order")
 public ResponseEntity<?> saveCurrencyOrder(
         @RequestBody List<String> order,
         HttpSession session
@@ -483,9 +485,9 @@ public ResponseEntity<?> saveCurrencyOrder(
 
 /**
  * 사용자 환율 순서 조회
- * GET /api/user/currency-order
+ * GET /api/user/currency.csv-order
  */
-@GetMapping("/user/currency-order")
+@GetMapping("/user/currency.csv-order")
 public ResponseEntity<List<String>> getCurrencyOrder(HttpSession session) {
     String sessionId = session.getId();
     List<String> order = userPreferenceService.getCurrencyOrder(sessionId);
@@ -807,7 +809,7 @@ exchange.bok-api-key=YOUR_BOK_API_KEY_HERE
 public ResponseEntity<List<ExchangeHistoryDto>> getYearlyRates(
         @PathVariable String code
 ) {
-    List<ExchangeHistoryDto> history = exchangeService.getYearlyRates(code);
+    List<ExchangeHistoryDto> history = rateService.getYearlyRates(code);
     return ResponseEntity.ok(history);
 }
 ```
@@ -1171,10 +1173,11 @@ public class CacheConfig {
 ```
 
 #### 4. ExchangeService.java에 캐싱 적용
+
 ```java
 package com.money.exchange.Service;
 
-import com.money.exchange.Dto.ExchangeDto;
+import com.money.exchange.Dto.RateDto;
 import com.money.exchange.Dto.ExchangeHistoryDto;
 import com.money.exchange.Utils.ExchangeUtils;
 import lombok.RequiredArgsConstructor;
@@ -1209,30 +1212,30 @@ public class ExchangeService {
      * 매일 자정에 캐시 초기화
      */
     @Cacheable(value = "todayRates", key = "'today'")
-    public List<ExchangeDto> getTodayExchangeRates() {
+    public List<RateDto> getTodayExchangeRates() {
         System.out.println("🔥 외부 API 호출: 한국수출입은행");
-        
+
         String searchDate = ExchangeUtils.getSearchDate();
         String url =
                 "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON"
                         + "?authkey=" + authKey
                         + "&searchdate=" + searchDate
                         + "&data=" + data;
-        
+
         RestTemplate restTemplate = new RestTemplate();
-        ExchangeDto[] response = restTemplate.getForObject(url, ExchangeDto[].class);
-        
+        RateDto[] response = restTemplate.getForObject(url, RateDto[].class);
+
         if (response == null) {
             return List.of();
         }
-        
+
         return Arrays.asList(response);
     }
 
-    public List<ExchangeDto> calculateByKrw(long krw) {
-        List<ExchangeDto> rates = getTodayExchangeRates(); // 캐시에서 조회
+    public List<RateDto> calculateByKrw(long krw) {
+        List<RateDto> rates = getTodayExchangeRates(); // 캐시에서 조회
 
-        for (ExchangeDto dto : rates) {
+        for (RateDto dto : rates) {
             BigDecimal rate = new BigDecimal(dto.getDeal_bas_r().replace(",", ""));
             BigDecimal krwAmount = BigDecimal.valueOf(krw);
 
@@ -1244,14 +1247,14 @@ public class ExchangeService {
             BigDecimal result = krwAmount.divide(divisor, 4, RoundingMode.HALF_UP);
             dto.setCalc(result.toPlainString());
         }
-        
+
         return rates;
     }
 
     @Cacheable(value = "rateByCode", key = "#code")
-    public ExchangeDto getRateByCode(String code) {
+    public RateDto getRateByCode(String code) {
         System.out.println("🔥 getRateByCode 호출: " + code);
-        
+
         return getTodayExchangeRates().stream()
                 .filter(dto -> {
                     String curUnit = dto.getCur_unit();
@@ -1269,61 +1272,61 @@ public class ExchangeService {
     @Cacheable(value = "yearlyRates", key = "#currencyCode")
     public List<ExchangeHistoryDto> getYearlyRates(String currencyCode) {
         System.out.println("🔥 외부 API 호출: 한국은행 - " + currencyCode);
-        
+
         Map<String, String> bokCodes = Map.ofEntries(
-            Map.entry("USD", "0000001"),
-            Map.entry("JPY", "0000002"),
-            Map.entry("EUR", "0000003"),
-            Map.entry("GBP", "0000004"),
-            Map.entry("CHF", "0000005"),
-            Map.entry("CAD", "0000006"),
-            Map.entry("AUD", "0000007"),
-            Map.entry("SEK", "0000008"),
-            Map.entry("NOK", "0000009"),
-            Map.entry("DKK", "0000010"),
-            Map.entry("HKD", "0000011"),
-            Map.entry("SGD", "0000012"),
-            Map.entry("SAR", "0000013"),
-            Map.entry("AED", "0000014"),
-            Map.entry("THB", "0000015"),
-            Map.entry("MYR", "0000016"),
-            Map.entry("IDR", "0000017"),
-            Map.entry("KWD", "0000018"),
-            Map.entry("BHD", "0000019"),
-            Map.entry("NZD", "0000020"),
-            Map.entry("CNY", "0000053")
+                Map.entry("USD", "0000001"),
+                Map.entry("JPY", "0000002"),
+                Map.entry("EUR", "0000003"),
+                Map.entry("GBP", "0000004"),
+                Map.entry("CHF", "0000005"),
+                Map.entry("CAD", "0000006"),
+                Map.entry("AUD", "0000007"),
+                Map.entry("SEK", "0000008"),
+                Map.entry("NOK", "0000009"),
+                Map.entry("DKK", "0000010"),
+                Map.entry("HKD", "0000011"),
+                Map.entry("SGD", "0000012"),
+                Map.entry("SAR", "0000013"),
+                Map.entry("AED", "0000014"),
+                Map.entry("THB", "0000015"),
+                Map.entry("MYR", "0000016"),
+                Map.entry("IDR", "0000017"),
+                Map.entry("KWD", "0000018"),
+                Map.entry("BHD", "0000019"),
+                Map.entry("NZD", "0000020"),
+                Map.entry("CNY", "0000053")
         );
-        
+
         String statCode = bokCodes.get(currencyCode);
         if (statCode == null) {
             throw new IllegalArgumentException("지원하지 않는 통화입니다: " + currencyCode);
         }
-        
+
         LocalDate today = LocalDate.now();
         LocalDate oneYearAgo = today.minusYears(1);
-        
+
         String startDate = oneYearAgo.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         String endDate = today.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-        
+
         String url = String.format(
-            "https://ecos.bok.or.kr/api/StatisticSearch/%s/json/kr/1/1000/731Y001/D/%s/%s/%s",
-            bokApiKey, startDate, endDate, statCode
+                "https://ecos.bok.or.kr/api/StatisticSearch/%s/json/kr/1/1000/731Y001/D/%s/%s/%s",
+                bokApiKey, startDate, endDate, statCode
         );
-        
+
         RestTemplate restTemplate = new RestTemplate();
-        
+
         try {
             Map<String, Object> response = restTemplate.getForObject(url, Map.class);
             Map<String, Object> statisticSearch = (Map<String, Object>) response.get("StatisticSearch");
             List<Map<String, String>> rows = (List<Map<String, String>>) statisticSearch.get("row");
-            
+
             return rows.stream()
-                .map(row -> new ExchangeHistoryDto(
-                    formatDate(row.get("TIME")),
-                    Double.parseDouble(row.get("DATA_VALUE"))
-                ))
-                .collect(Collectors.toList());
-                
+                    .map(row -> new ExchangeHistoryDto(
+                            formatDate(row.get("TIME")),
+                            Double.parseDouble(row.get("DATA_VALUE"))
+                    ))
+                    .collect(Collectors.toList());
+
         } catch (Exception e) {
             throw new RuntimeException("한국은행 API 호출 실패: " + e.getMessage());
         }
@@ -1343,9 +1346,9 @@ public class ExchangeService {
     }
 
     private String formatDate(String dateStr) {
-        return dateStr.substring(0, 4) + "-" + 
-               dateStr.substring(4, 6) + "-" + 
-               dateStr.substring(6, 8);
+        return dateStr.substring(0, 4) + "-" +
+                dateStr.substring(4, 6) + "-" +
+                dateStr.substring(6, 8);
     }
 }
 ```
@@ -1358,7 +1361,7 @@ public class ExchangeService {
  */
 @DeleteMapping("/cache/today")
 public ResponseEntity<?> clearTodayCache() {
-    exchangeService.clearTodayRatesCache();
+    rateService.clearTodayRatesCache();
     return ResponseEntity.ok("오늘 환율 캐시가 삭제되었습니다.");
 }
 
@@ -1368,7 +1371,7 @@ public ResponseEntity<?> clearTodayCache() {
  */
 @DeleteMapping("/cache/yearly")
 public ResponseEntity<?> clearYearlyCache() {
-    exchangeService.clearYearlyRatesCache();
+    rateService.clearYearlyRatesCache();
     return ResponseEntity.ok("1년치 환율 캐시가 삭제되었습니다.");
 }
 ```
