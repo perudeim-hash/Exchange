@@ -1,8 +1,7 @@
-
 const rawRates = window.__RATES__;
 
-export function calculateRates(rates,krw) {
-  return rates.map(rate => {
+export function calculateRates(rates, krw) {
+  return rates.map((rate) => {
     let baseRate = parseFloat(rate.deal_bas_r.replace(/,/g, ""));
     const match = rate.cur_unit.match(/\((\d+)\)/);
     if (match) {
@@ -11,8 +10,7 @@ export function calculateRates(rates,krw) {
 
     return {
       ...rate,
-      calculated: krw > 0 ? krw / baseRate : null
+      calculated: krw > 0 ? krw / baseRate : null,
     };
   });
 }
-

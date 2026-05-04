@@ -2,6 +2,7 @@ package com.money.exchange.Service;
 
 import com.money.exchange.Dto.RateHistoryResponseDto;
 import com.money.exchange.Entity.Currency;
+import com.money.exchange.Entity.RateHistory;
 import com.money.exchange.Repository.RateHistoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,21 +19,32 @@ public class RateHistoryService {
     private final CurrencyService currencyService;
     private final RateHistoryRepository historyRepository;
 
-    public List<RateHistoryResponseDto> getHistory(String currencyCode, int years) {
+    public List<RateHistoryResponseDto> getHistory(String currencyCode, LocalDate from, LocalDate to, Integer limit) {
         Currency currency = currencyService.getCurrencyByCode(currencyCode);
 
-        LocalDate endDate = LocalDate.now();
-        LocalDate startDate = endDate.minusYears(years);
+        List<RateHistory> histories;
 
-        return historyRepository.findByCurrencyAndRateDateBetweenOrderByRateDateAsc(
-                        currency,
-                        startDate,
-                        endDate
-                )
-                .stream()
+        if (from != null && to != null) {
+            histories = historyRepository.findByCurrencyAndRateDateBetweenOrderByRateDateAsc(currency, from, to);
+
+        } else {
+            histories = historyRepository.findByCurrencyOrderByRateDateAsc(currency);
+        }
+
+        histories = applyLimit(histories, limit);
+
+        return histories.stream()
                 .map(RateHistoryResponseDto::from)
                 .toList();
 
     }
+
+    private List<RateHistory> applyLimit(List<RateHistory> histories, Integer limit) {
+        if (limit == null || limit <= 0 || histories.size() < limit) {
+            return histories;
+        }
+        return histories.subList(histories.size() - limit, histories.size());
+    }
+
 
 }

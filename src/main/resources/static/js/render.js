@@ -1,10 +1,9 @@
 import {
   currencyMeta,
   normalizeCurrencyCode,
-  formatCurrency
+  formatCurrency,
 } from "./currency.js";
 import { swapRates } from "./input.js";
-
 
 const grid = document.getElementById("rateGrid");
 
@@ -22,7 +21,7 @@ export function renderGrid(rates, krw) {
     card.className = "col12 col-md-6 col-lg-4 rate-card";
     card.dataset.index = index;
 
-     card.innerHTML = `
+    card.innerHTML = `
                 <div class="card h-100 shadow-sm">
                     <div class="card-body position-relative">
                         <div class="position-absolute top-0 end-0 m-2 d-flex gap-1 order-controls">
@@ -45,12 +44,12 @@ export function renderGrid(rates, krw) {
     const upBtn = card.querySelector(".move-up");
     const downBtn = card.querySelector(".move-down");
 
-    upBtn?.addEventListener("click", e => {
+    upBtn?.addEventListener("click", (e) => {
       e.stopPropagation();
       swapRates(index, index - 1);
     });
 
-    downBtn?.addEventListener("click", e => {
+    downBtn?.addEventListener("click", (e) => {
       e.stopPropagation();
       swapRates(index, index + 1);
     });

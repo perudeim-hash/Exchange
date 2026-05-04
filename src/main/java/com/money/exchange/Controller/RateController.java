@@ -16,10 +16,11 @@ public class RateController {
 
     @GetMapping("/exchange")
     public String exchange(@RequestParam(defaultValue = "0") long krw, Model model)  {
-        model.addAttribute("rates", rateService.getTodayRatesForEnabledCurrencies());
-        model.addAttribute("krw", krw);
+        model.addAttribute("currencyRates", rateService.getTodayRatesForEnabledCurrencies());
+        model.addAttribute("countryRates", rateService.getTodayRatesForEnabledCountries());
         return "exchange";
     }
+
 
     @GetMapping("/exchange/{code}")
     public String exchangeDetail(@PathVariable String code, Model model) {

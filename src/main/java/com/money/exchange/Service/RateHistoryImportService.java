@@ -4,6 +4,7 @@ import com.money.exchange.Entity.Currency;
 import com.money.exchange.Entity.RateHistory;
 import com.money.exchange.Repository.RateHistoryRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class RateHistoryImportService {
@@ -50,11 +52,20 @@ public class RateHistoryImportService {
 
         for (Currency currency : currencies) {
             if (currency.getBokItemCode() == null || currency.getBokItemCode().isBlank()) {
+                log.warn("BOK itemCode 없다. 수집 건너뜀. currencyCode={} ", currency.getCode());
+
                 continue;
             }
-            importRecentHistory(currency.getCode(), days);
+            try {
+                importRecentHistory(currency.getCode(), days);
+                log.info("환율 데이터 수집 완료. currencyCode={}, days={}", currency.getCode(), days);
+            } catch (Exception e) {
+                log.error("환율 데이터 수집 실패. currencyCode={}, days={}", currency.getCode(), days, e);
 
+            }
         }
+        log.info("최근 환율 데이터 수집 종료. days={}", days);
+
     }
 
     // 모든 통화 1년치 저장

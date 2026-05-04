@@ -15,6 +15,9 @@ public interface RateHistoryRepository extends JpaRepository<RateHistory, Long> 
             LocalDate startDate,
             LocalDate endDate
     );
+
+    List<RateHistory> findByCurrencyOrderByRateDateAsc(Currency currency);
+
 // 저장 할때 중복 체크용
     boolean existsByCurrencyAndRateDate(
             Currency currency,

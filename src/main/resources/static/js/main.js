@@ -1,4 +1,5 @@
-const rawRates = window.__RATES__ || [];
+const currencyRates = window.__CURRENCY_RATES__ || [];
+const countryRates = window.__COUNTRY_RATES__ || [];
 
 const fromAmountInput = document.getElementById("fromAmount");
 const toAmountInput = document.getElementById("toAmount");
@@ -19,30 +20,32 @@ const krwRate = {
   symbol: "₩",
   unit: 1,
   rate: 1,
-  rateDate: getLatestRateDate(rawRates),
-  source: "BASE"
+  rateDate: getLatestRateDate(currencyRates),
+  source: "BASE",
 };
 
-const currencies = [krwRate, ...rawRates];
+const currencies = [krwRate, ...currencyRates];
 
 function init() {
   renderCurrencyOptions();
   setDefaultCurrencies();
   renderRateInfo();
   renderSummary();
-  renderGrid(rawRates, 0, krwRate);
+  renderGrid(countryRates, 0, krwRate);
 
   bindEvents();
   calculateAndRender();
 }
 
 function bindEvents() {
-  fromAmountInput.addEventListener("input", event => {
+  fromAmountInput.addEventListener("input", (event) => {
     const onlyNumber = event.target.value.replace(/[^0-9]/g, "");
 
     if (onlyNumber === "") {
       event.target.value = "";
       toAmountInput.value = "";
+      calculateAndRender();
+
       return;
     }
 
@@ -68,7 +71,7 @@ function bindEvents() {
 
 function renderCurrencyOptions() {
   const optionHtml = currencies
-    .map(currency => {
+    .map((currency) => {
       return `
         <option value="${currency.currencyCode}">
           ${currency.countryName} - ${currency.currencyName}
@@ -84,20 +87,22 @@ function renderCurrencyOptions() {
 function setDefaultCurrencies() {
   fromCurrencySelect.value = "KRW";
 
-  const hasUsd = currencies.some(currency => currency.currencyCode === "USD");
-  toCurrencySelect.value = hasUsd ? "USD" : currencies[1]?.currencyCode || "KRW";
+  const hasUsd = currencies.some((currency) => currency.currencyCode === "USD");
+  toCurrencySelect.value = hasUsd
+    ? "USD"
+    : currencies[1]?.currencyCode || "KRW";
 }
 
 function calculateAndRender() {
   const amount = parseNumber(fromAmountInput.value);
+  const fromCurrency = findCurrency(fromCurrencySelect.value);
+  const toCurrency = findCurrency(toCurrencySelect.value);
 
   if (!amount || amount <= 0) {
     toAmountInput.value = "";
+    renderGrid(countryRates, 0, fromCurrency);
     return;
   }
-
-  const fromCurrency = findCurrency(fromCurrencySelect.value);
-  const toCurrency = findCurrency(toCurrencySelect.value);
 
   if (!fromCurrency || !toCurrency) {
     toAmountInput.value = "";
@@ -107,7 +112,7 @@ function calculateAndRender() {
   const result = convertCurrency(amount, fromCurrency, toCurrency);
   toAmountInput.value = formatCurrencyAmount(toCurrency, result);
 
-  renderGrid(rawRates,amount,fromCurrency);
+  renderGrid(countryRates, amount, fromCurrency);
 }
 
 function convertCurrency(amount, fromCurrency, toCurrency) {
@@ -134,11 +139,11 @@ function fromKrw(krwAmount, currency) {
   const rate = Number(currency.rate);
   const unit = Number(currency.unit);
 
-  return krwAmount * unit / rate;
+  return (krwAmount * unit) / rate;
 }
 
 function renderRateInfo() {
-  const latestDate = getLatestRateDate(rawRates);
+  const latestDate = getLatestRateDate(currencyRates);
 
   if (!latestDate) {
     rateInfoText.textContent = "저장된 환율 데이터가 없습니다.";
@@ -149,13 +154,13 @@ function renderRateInfo() {
 }
 
 function renderSummary() {
-  if (!rawRates || rawRates.length === 0) {
+  if (!countryRates || countryRates.length === 0) {
     rateSummary.textContent = "저장된 환율 데이터가 없습니다.";
     return;
   }
 
-  const latestDate = getLatestRateDate(rawRates);
-  rateSummary.textContent = `기준일: ${latestDate} / ${rawRates.length}개 통화`;
+  const latestDate = getLatestRateDate(countryRates);
+  rateSummary.textContent = `기준일: ${latestDate} / ${countryRates.length}개 통화`;
 }
 
 function renderGrid(rates, amount, fromCurrency) {
@@ -172,7 +177,7 @@ function renderGrid(rates, amount, fromCurrency) {
     return;
   }
 
-  rates.forEach(rate => {
+  rates.forEach((rate) => {
     const calculatedAmount =
       amount > 0 && fromCurrency
         ? convertCurrency(amount, fromCurrency, rate)
@@ -201,7 +206,7 @@ function renderGrid(rates, amount, fromCurrency) {
                 ${rate.currencyName} (${rate.currencyCode})
               </p>
             </div>
-            <span class="badge text-bg-light">${rate.source}</span>
+            <span class="badge text-bg-light">${rate.region}</span>
           </div>
 
           <div class="border-top pt-3">
@@ -245,7 +250,7 @@ function renderGrid(rates, amount, fromCurrency) {
 }
 
 function findCurrency(currencyCode) {
-  return currencies.find(currency => currency.currencyCode === currencyCode);
+  return currencies.find((currency) => currency.currencyCode === currencyCode);
 }
 
 function parseNumber(value) {
@@ -270,7 +275,7 @@ function formatCurrencyAmount(currency, value) {
     ? Math.floor(number).toLocaleString("ko-KR")
     : number.toLocaleString("ko-KR", {
         minimumFractionDigits: 2,
-        maximumFractionDigits: 2
+        maximumFractionDigits: 2,
       });
 
   return formatted;
@@ -285,7 +290,7 @@ function formatKrw(value) {
 
   return number.toLocaleString("ko-KR", {
     minimumFractionDigits: 2,
-    maximumFractionDigits: 2
+    maximumFractionDigits: 2,
   });
 }
 
