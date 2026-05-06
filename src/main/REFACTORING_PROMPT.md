@@ -15,10 +15,10 @@ Spring Boot + Thymeleaf로 만든 환율 계산기를 REST API 기반으로 리�
 #### 1. ExchangeApiController.java 생성
 
 ```java
-package com.money.exchange.Controller;
+package com.money.exchange.controller;
 
-import com.money.exchange.Dto.RateDto;
-import com.money.exchange.Service.RateService;
+import com.money.exchange.dto.RateDto;
+import com.money.exchange.service.RateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -83,9 +83,9 @@ public class ExchangeApiController {
 #### 2. ExchangeController.java 수정 (View 전용)
 
 ```java
-package com.money.exchange.Controller;
+package com.money.exchange.controller;
 
-import com.money.exchange.Service.RateService;
+import com.money.exchange.service.RateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -365,8 +365,9 @@ console.log('Response:', await response.text());
 ### 백엔드 작업
 
 #### 1. UserPreference.java 엔티티 생성
+
 ```java
-package com.money.exchange.Entity;
+package com.money.exchange.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -409,10 +410,11 @@ public class UserPreference {
 ```
 
 #### 2. UserPreferenceRepository.java 생성
-```java
-package com.money.exchange.Repository;
 
-import com.money.exchange.Entity.UserPreference;
+```java
+package com.money.exchange.repository;
+
+import com.money.exchange.entity.UserPreference;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -425,11 +427,12 @@ public interface UserPreferenceRepository extends JpaRepository<UserPreference, 
 ```
 
 #### 3. UserPreferenceService.java 생성
-```java
-package com.money.exchange.Service;
 
-import com.money.exchange.Entity.UserPreference;
-import com.money.exchange.Repository.UserPreferenceRepository;
+```java
+package com.money.exchange.service;
+
+import com.money.exchange.entity.UserPreference;
+import com.money.exchange.repository.UserPreferenceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -448,10 +451,10 @@ public class UserPreferenceService {
     public void saveCurrencyOrder(String sessionId, List<String> order) {
         UserPreference preference = repository.findBySessionId(sessionId)
                 .orElse(new UserPreference());
-        
+
         preference.setSessionId(sessionId);
         preference.setCurrencyOrder(String.join(",", order));
-        
+
         repository.save(preference);
     }
 
@@ -701,8 +704,9 @@ curl http://localhost:8080/api/user/currency-order \
 ### 백엔드 작업
 
 #### 1. ExchangeHistoryDto.java 생성
+
 ```java
-package com.money.exchange.Dto;
+package com.money.exchange.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -1138,8 +1142,9 @@ public class ExchangeApplication {
 ```
 
 #### 3. CacheConfig.java 생성
+
 ```java
-package com.money.exchange.Config;
+package com.money.exchange.config;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.CacheManager;
@@ -1157,16 +1162,16 @@ public class CacheConfig {
     @Bean
     public CacheManager cacheManager() {
         CaffeineCacheManager cacheManager = new CaffeineCacheManager(
-            "todayRates",    // 오늘 환율 캐시
-            "yearlyRates",   // 1년치 환율 캐시
-            "rateByCode"     // 특정 통화 캐시
+                "todayRates",    // 오늘 환율 캐시
+                "yearlyRates",   // 1년치 환율 캐시
+                "rateByCode"     // 특정 통화 캐시
         );
-        
+
         cacheManager.setCaffeine(Caffeine.newBuilder()
-            .maximumSize(100)
-            .expireAfterWrite(1, TimeUnit.HOURS) // 1시간 후 만료
+                .maximumSize(100)
+                .expireAfterWrite(1, TimeUnit.HOURS) // 1시간 후 만료
         );
-        
+
         return cacheManager;
     }
 }
@@ -1175,11 +1180,11 @@ public class CacheConfig {
 #### 4. ExchangeService.java에 캐싱 적용
 
 ```java
-package com.money.exchange.Service;
+package com.money.exchange.service;
 
-import com.money.exchange.Dto.RateDto;
-import com.money.exchange.Dto.ExchangeHistoryDto;
-import com.money.exchange.Utils.ExchangeUtils;
+import com.money.exchange.dto.RateDto;
+import com.money.exchange.dto.ExchangeHistoryDto;
+import com.money.exchange.utils.ExchangeUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
