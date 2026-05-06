@@ -1,0 +1,144 @@
+code,name,cityName,countryCode,enabled,displayOrder
+ICN,인천국제공항,서울,KR,true,1
+GMP,김포국제공항,서울,KR,true,2
+PUS,김해국제공항,부산,KR,true,3
+
+JFK,존 F. 케네디 국제공항,뉴욕,US,true,10
+LAX,로스앤젤레스 국제공항,로스앤젤레스,US,true,11
+SFO,샌프란시스코 국제공항,샌프란시스코,US,true,12
+ORD,오헤어 국제공항,시카고,US,true,13
+SEA,시애틀 터코마 국제공항,시애틀,US,true,14
+
+NRT,나리타 국제공항,도쿄,JP,true,20
+HND,하네다 공항,도쿄,JP,true,21
+KIX,간사이 국제공항,오사카,JP,true,22
+FUK,후쿠오카 공항,후쿠오카,JP,true,23
+CTS,신치토세 공항,삿포로,JP,true,24
+NGO,주부 센트레아 국제공항,나고야,JP,true,25
+OKA,나하 공항,오키나와,JP,true,26
+
+PEK,베이징 수도 국제공항,베이징,CN,true,30
+PKX,베이징 다싱 국제공항,베이징,CN,true,31
+PVG,상하이 푸동 국제공항,상하이,CN,true,32
+SHA,상하이 훙차오 국제공항,상하이,CN,true,33
+CAN,광저우 바이윈 국제공항,광저우,CN,true,34
+SZX,선전 바오안 국제공항,선전,CN,true,35
+CTU,청두 솽류 국제공항,청두,CN,true,36
+
+CDG,샤를 드골 공항,파리,FR,true,40
+ORY,오를리 공항,파리,FR,true,41
+NCE,니스 코트다쥐르 공항,니스,FR,true,42
+LYS,리옹 생텍쥐페리 공항,리옹,FR,true,43
+MRS,마르세유 프로방스 공항,마르세유,FR,true,44
+
+FRA,프랑크푸르트 공항,프랑크푸르트,DE,true,50
+MUC,뮌헨 공항,뮌헨,DE,true,51
+BER,베를린 브란덴부르크 공항,베를린,DE,true,52
+DUS,뒤셀도르프 공항,뒤셀도르프,DE,true,53
+HAM,함부르크 공항,함부르크,DE,true,54
+
+FCO,레오나르도 다 빈치 피우미치노 공항,로마,IT,true,60
+MXP,밀라노 말펜사 공항,밀라노,IT,true,61
+LIN,밀라노 리나테 공항,밀라노,IT,true,62
+VCE,베네치아 마르코 폴로 공항,베네치아,IT,true,63
+NAP,나폴리 국제공항,나폴리,IT,true,64
+
+MAD,마드리드 바라하스 공항,마드리드,ES,true,70
+BCN,바르셀로나 엘프라트 공항,바르셀로나,ES,true,71
+AGP,말라가 공항,말라가,ES,true,72
+PMI,팔마 데 마요르카 공항,팔마 데 마요르카,ES,true,73
+VLC,발렌시아 공항,발렌시아,ES,true,74
+
+AMS,스키폴 공항,암스테르담,NL,true,80
+EIN,에인트호번 공항,에인트호번,NL,true,81
+RTM,로테르담 더 헤이그 공항,로테르담,NL,true,82
+
+LIS,리스본 공항,리스본,PT,true,90
+OPO,포르투 공항,포르투,PT,true,91
+FAO,파루 공항,파루,PT,true,92
+
+VIE,빈 국제공항,빈,AT,true,100
+SZG,잘츠부르크 공항,잘츠부르크,AT,true,101
+INN,인스브루크 공항,인스브루크,AT,true,102
+
+ATH,아테네 국제공항,아테네,GR,true,110
+SKG,테살로니키 공항,테살로니키,GR,true,111
+HER,이라클리온 공항,이라클리온,GR,true,112
+RHO,로도스 공항,로도스,GR,true,113
+JTR,산토리니 공항,산토리니,GR,true,114
+
+LHR,히드로 공항,런던,GB,true,120
+LGW,개트윅 공항,런던,GB,true,121
+STN,스탠스테드 공항,런던,GB,true,122
+MAN,맨체스터 공항,맨체스터,GB,true,123
+EDI,에든버러 공항,에든버러,GB,true,124
+
+ZRH,취리히 공항,취리히,CH,true,130
+GVA,제네바 공항,제네바,CH,true,131
+BSL,유로에어포트 바젤 뮐루즈 프라이부르크,바젤,CH,true,132
+
+ARN,스톡홀름 알란다 공항,스톡홀름,SE,true,140
+GOT,예테보리 란드베테르 공항,예테보리,SE,true,141
+MMX,말뫼 공항,말뫼,SE,true,142
+
+OSL,오슬로 가르데르모엔 공항,오슬로,NO,true,150
+BGO,베르겐 공항,베르겐,NO,true,151
+TRD,트론헤임 공항,트론헤임,NO,true,152
+
+CPH,코펜하겐 공항,코펜하겐,DK,true,160
+BLL,빌룬 공항,빌룬,DK,true,161
+AAL,올보르 공항,올보르,DK,true,162
+
+HKG,香港 국제공항,香港,HK,true,170
+
+SIN,창이 국제공항,싱가포르,SG,true,180
+
+BKK,수완나품 국제공항,방콕,TH,true,190
+DMK,돈므앙 국제공항,방콕,TH,true,191
+HKT,푸켓 국제공항,푸켓,TH,true,192
+CNX,치앙마이 국제공항,치앙마이,TH,true,193
+
+KUL,쿠알라룸푸르 국제공항,쿠알라룸푸르,MY,true,200
+PEN,페낭 국제공항,페낭,MY,true,201
+BKI,코타키나발루 국제공항,코타키나발루,MY,true,202
+JHB,세나이 국제공항,조호르바루,MY,true,203
+
+CGK,수카르노 하타 국제공항,자카르타,ID,true,210
+DPS,응우라라이 국제공항,발리,ID,true,211
+SUB,주안다 국제공항,수라바야,ID,true,212
+KNO,쿠알라나무 국제공항,메단,ID,true,213
+
+MNL,니노이 아키노 국제공항,마닐라,PH,true,220
+CEB,막탄 세부 국제공항,세부,PH,true,221
+CRK,클라크 국제공항,클라크,PH,true,222
+DVO,다바오 국제공항,다바오,PH,true,223
+
+SGN,떤선녓 국제공항,호치민,VN,true,230
+HAN,노이바이 국제공항,하노이,VN,true,231
+DAD,다낭 국제공항,다낭,VN,true,232
+CXR,깜라인 국제공항,나트랑,VN,true,233
+PQC,푸꾸옥 국제공항,푸꾸옥,VN,true,234
+
+TPE,타오위안 국제공항,타이베이,TW,true,240
+TSA,쑹산 공항,타이베이,TW,true,241
+KHH,가오슝 국제공항,가오슝,TW,true,242
+
+SYD,시드니 공항,시드니,AU,true,250
+MEL,멜버른 공항,멜버른,AU,true,251
+BNE,브리즈번 공항,브리즈번,AU,true,252
+PER,퍼스 공항,퍼스,AU,true,253
+ADL,애들레이드 공항,애들레이드,AU,true,254
+
+AKL,오클랜드 공항,오클랜드,NZ,true,260
+CHC,크라이스트처치 공항,크라이스트처치,NZ,true,261
+WLG,웰링턴 공항,웰링턴,NZ,true,262
+ZQN,퀸스타운 공항,퀸스타운,NZ,true,263
+
+YYZ,토론토 피어슨 국제공항,토론토,CA,true,270
+YVR,밴쿠버 국제공항,밴쿠버,CA,true,271
+YUL,몬트리올 트뤼도 국제공항,몬트리올,CA,true,272
+YYC,캘거리 국제공항,캘거리,CA,true,273
+
+DXB,두바이 국제공항,두바이,AE,true,280
+AUH,아부다비 국제공항,아부다비,AE,true,281
+SHJ,샤르자 국제공항,샤르자,AE,true,282

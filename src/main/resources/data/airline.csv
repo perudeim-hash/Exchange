@@ -1,0 +1,10 @@
+code,name,tier,enabled,displayOrder
+AS,Aurora Sky,PREMIUM,true,1
+NA,Noble Air,PREMIUM,true,2
+IW,Imperial Wings,PREMIUM,true,3
+BR,BlueRoute Air,STANDARD,true,4
+SB,SkyBridge,STANDARD,true,5
+MF,Meridian Flight,STANDARD,true,6
+LJ,LiteJet,LOW_COST,true,7
+PA,Pocket Air,LOW_COST,true,8
+FC,FlyComma,LOW_COST,true,9

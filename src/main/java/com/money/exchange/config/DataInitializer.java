@@ -52,6 +52,7 @@ public class DataInitializer implements CommandLineRunner {
         saveCurrencyIfNotExists("SAR", "사우디아라비아", "리얄", "0000020", "﷼", 1, true, 22);
         saveCurrencyIfNotExists("KWD", "쿠웨이트", "디나르", "0000021", "KD", 1, true, 23);
         saveCurrencyIfNotExists("BHD", "바레인", "디나르", "0000022", "BD", 1, true, 24);
+        saveCurrencyIfNotExists("KRW", "대한민국", "원", null, "₩", 1, true, 0);
     }
 
     private void initCountries(){
@@ -76,6 +77,8 @@ public class DataInitializer implements CommandLineRunner {
         Currency nok = getCurrency("NOK");
         Currency dkk = getCurrency("DKK");
         Currency aed = getCurrency("AED");
+        Currency krw = getCurrency("KRW");
+
 
         saveCountryIfNotExists("US", "미국", "AMERICA", usd, true, 1);
         saveCountryIfNotExists("JP", "일본", "ASIA", jpy, true, 2);
@@ -107,6 +110,7 @@ public class DataInitializer implements CommandLineRunner {
         saveCountryIfNotExists("PH", "필리핀", "ASIA", php, true, 22);
         saveCountryIfNotExists("VN", "베트남", "ASIA", vnd, true, 23);
         saveCountryIfNotExists("TW", "대만", "ASIA", twd, true, 24);
+        saveCountryIfNotExists("KR", "대한민국", "ASIA", krw, false, 0);
 
         saveCountryIfNotExists("AU", "호주", "OCEANIA", aud, true, 25);
         saveCountryIfNotExists("NZ", "뉴질랜드", "OCEANIA", nzd, true, 26);
