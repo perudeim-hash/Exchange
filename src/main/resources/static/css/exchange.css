@@ -1,191 +1,483 @@
+/* ================================
+   Exchange Page Base
+   ================================ */
+
 body {
-  font-size: 14px;
+    font-size: 14px;
 }
 
-/* 카드 제목 */
-.card-title {
-  font-size: 1rem;
+.exchange-page {
+    background: #f8fafc;
+    min-height: calc(100vh - 72px);
 }
 
-/* 계산 결과 강조 */
-.result {
-  font-weight: 600;
-  color: #0d6efd;
+.exchange-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 24px 56px;
 }
 
-/* 카드 hover */
-.rate-card:hover {
-  transform: translateY(-2px);
-  transition: 0.2s ease;
-}
-/* Chrome, Edge, Safari */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+/* ================================
+   Exchange Hero
+   ================================ */
 
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
+.exchange-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 18px;
 }
 
-.rate-card {
-  cursor: grab;
+.page-label {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #2563eb;
 }
 
-.rate-card.dragging {
-  opacity: 0.5;
-}
-.drag-handle {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #e9ecef;
-  color: #495057;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: grab;
-  user-select: none;
-  margin-bottom: 8px;
+.exchange-hero h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+    color: #111827;
 }
 
-.drag-handle:active {
-  cursor: grabbing;
-  background: #ced4da;
-}
-.rate-card.drag-over {
-  outline: 2px dashed #0d6efd;
-}
-.rate-card.dragging {
-  opacity: 0.6;
+.exchange-hero-description {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6b7280;
 }
 
-.rate-card.drag-over {
-  outline: 2px dashed #0d6efd;
+.exchange-source-box {
+    min-width: 220px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
-/* 정렬 버튼 컨테이너 */
-.order-controls {
-  opacity: 0.35;
-  transition: opacity 0.15s ease;
+.exchange-source-box span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6b7280;
 }
 
-/* 카드 hover 시에만 강조 */
-.rate-card:hover .order-controls {
-  opacity: 1;
+.exchange-source-box strong {
+    display: block;
+    font-size: 14px;
+    color: #111827;
 }
 
-/* 버튼 기본 */
-.order-btn {
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
-
-  border: 1px solid #ced4da;
-  background: #f8f9fa;
-  color: #495057;
-
-  font-size: 12px;
-  line-height: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-  padding: 0;
-
-  transition:
-    background-color 0.15s ease,
-    border-color 0.15s ease,
-    color 0.15s ease,
-    transform 0.1s ease;
+.exchange-source-box p {
+    margin: 6px 0 0;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #9ca3af;
 }
 
-/* hover 효과 */
-.order-btn:hover:not(:disabled) {
-  background: #e7f1ff;
-  border-color: #0d6efd;
-  color: #0d6efd;
-  transform: translateY(-1px);
-}
+/* ================================
+   Converter Card
+   ================================ */
 
-/* 클릭 시 */
-.order-btn:active:not(:disabled) {
-  transform: translateY(0);
-}
-
-/* 비활성 */
-.order-btn:disabled {
-  opacity: 0.25;
-  cursor: default;
-}
 .converter-card {
-  border: 0;
-  border-radius: 18px;
+    border: 0;
+    border-radius: 22px;
+    overflow: hidden;
+    margin-bottom: 30px !important;
+    box-shadow: 0 16px 42px rgba(15, 23, 42, 0.08) !important;
+}
+
+.converter-card .card-body {
+    padding: 22px 28px !important;
+}
+
+.converter-card h4 {
+    margin: 0;
+    font-size: 21px;
+    color: #111827;
+}
+
+#rateInfoText {
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.converter-card .mb-4 {
+    margin-bottom: 16px !important;
 }
 
 .currency-box {
-  display: flex;
-  align-items: center;
-  border: 1px solid #dee2e6;
-  border-radius: 14px;
-  background: #fff;
-  overflow: hidden;
-  min-height: 76px;
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    height: 58px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #ffffff;
 }
 
 .currency-input {
-  flex: 1;
-  border: 0;
-  outline: none;
-  padding: 0 20px;
-  font-size: 2rem;
-  font-weight: 700;
-  background: transparent;
-  min-width: 0;
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: none;
+    padding: 0 16px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111827;
+    background: #ffffff;
+}
+
+.currency-input::placeholder {
+    color: #9ca3af;
 }
 
 .currency-select {
-  width: auto;
-  min-width: 170px;
-  max-width: 260px;
-  height: 76px;
-  border: 0;
-  border-left: 1px solid #dee2e6;
-  padding: 0 14px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  background: #f8f9fa;
-  cursor: pointer;
+    border: 0;
+    border-left: 1px solid #e5e7eb;
+    padding: 0 12px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #111827;
+    background: #f9fafb;
+    cursor: pointer;
 }
 
 .swap-btn {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  border: 0;
-  background: #0d6efd;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1;
-  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.25);
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+    color: #ffffff;
+    background: #2563eb;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
 }
 
 .swap-btn:hover {
-  background: #0b5ed7;
+    background: #1d4ed8;
 }
 
-@media (max-width: 991px) {
-  .currency-input {
-    font-size: 1.5rem;
-  }
+/* ================================
+   Rate List Header / Search / Region
+   ================================ */
 
-  .currency-select {
-    width: auto;
-    font-size: 1rem;
-  }
+.rate-list-section {
+    margin-top: 24px;
+}
+
+.rate-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 14px;
+}
+
+.rate-list-header h5 {
+    margin: 0;
+    font-size: 21px;
+}
+
+#rateSummary {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.rate-filter-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.region-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.region-filter-btn {
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid #dbe3ef;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        border-color 0.15s ease,
+        background-color 0.15s ease,
+        color 0.15s ease;
+}
+
+.region-filter-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.region-filter-btn.active {
+    border-color: #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.rate-search-box {
+    width: 330px;
+    max-width: 100%;
+}
+
+.rate-search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #dbe3ef;
+    border-radius: 999px;
+    outline: none;
+    background: #ffffff;
+    font-size: 13px;
+    color: #111827;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.rate-search-input::placeholder {
+    color: #9ca3af;
+}
+
+.rate-search-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* ================================
+   Rate Cards
+   ================================ */
+
+#rateGrid {
+    margin-bottom: 36px;
+}
+
+.rate-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rate-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+}
+
+.rate-card .card-body {
+    padding: 16px;
+}
+
+.rate-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.rate-card .card-title {
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.currency-name {
+    margin: 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.region-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    height: 24px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background: #f9fafb;
+    font-size: 11px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.rate-info-list {
+    padding-top: 12px;
+}
+
+.rate-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+.rate-info-row span {
+    color: #6b7280;
+}
+
+.rate-info-row strong {
+    font-weight: 700;
+    color: #111827;
+}
+
+.calculated-box {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+.small-label {
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.from-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.to-text {
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.history-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    margin-top: 14px;
+    border: 1px solid #bfdbfe;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2563eb;
+    background: #ffffff;
+    text-decoration: none;
+}
+
+.history-link:hover {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* ================================
+   Empty Result
+   ================================ */
+
+.no-rate-result {
+    padding: 30px 20px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px dashed #cbd5e1;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ================================
+   Number Input Spinner Remove
+   ================================ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 992px) {
+    .exchange-hero {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .exchange-source-box {
+        width: 100%;
+    }
+
+    .currency-box {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .currency-input {
+        height: 58px;
+    }
+
+    .currency-select {
+        height: 52px;
+        border-left: 0;
+        border-top: 1px solid #e5e7eb;
+    }
+}
+
+@media (max-width: 768px) {
+    .exchange-container {
+        padding: 24px 18px 52px;
+    }
+
+    .exchange-hero h1 {
+        font-size: 28px;
+    }
+
+    .converter-card .card-body {
+        padding: 22px !important;
+    }
+
+    .rate-list-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rate-filter-area {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .region-filter-buttons {
+        justify-content: flex-start;
+    }
+
+    .rate-search-box {
+        width: 100%;
+    }
 }

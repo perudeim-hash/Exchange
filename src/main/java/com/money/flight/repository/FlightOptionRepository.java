@@ -1,0 +1,57 @@
+package com.money.flight.repository;
+
+import com.money.flight.entity.FlightOption;
+import com.money.flight.entity.FlightRoute;
+import com.money.flight.enums.ConnectionType;
+import com.money.flight.enums.SeatClass;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.time.LocalDate;
+import java.util.List;
+
+public interface FlightOptionRepository extends JpaRepository<FlightOption, Long> {
+
+    boolean existsByFlightRouteAndDepartureDate(FlightRoute flightRoute, LocalDate localDate);
+
+    long deleteByDepartureDateBefore(LocalDate date);
+
+    List<FlightOption> findByFlightRouteAndDepartureDateBetweenAndEnabledTrue(FlightRoute flightRoute, LocalDate startDate, LocalDate endDate);
+
+    List<FlightOption> findByDepartureDateBetweenAndEnabledTrueOrderByDepartureDateAsc(LocalDate startDate, LocalDate endDate);
+
+    List<FlightOption> findByFlightRouteAndEnabledTrueOrderByPriceAsc(FlightRoute flightRoute);
+
+    List<FlightOption> findByFlightRouteAndDepartureDateAndEnabledTrueOrderByPrice(FlightRoute flightRoute, LocalDate localDate);
+
+    List<FlightOption> findByFlightRouteAndConnectionTypeAndEnabledTrueOrderByPrice(FlightRoute flightRoute, ConnectionType connectionType);
+
+    @Query("""
+            select fo.flightRoute.id as routeId,
+            fo.departureDate as departureDate
+            from FlightOption fo
+            where fo.departureDate between :startDate and :endDate
+            group by fo.flightRoute.id, fo.departureDate 
+            """)
+    List<RouteDateProjection> findExistingRouteDatesBetween(@Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate);
+
+
+    @Query("""
+            select fo from FlightOption fo join fetch fo.flightRoute fr
+            join fetch fr.originAirport oa join fetch fr.destinationAirport da
+            join fetch fo.airline a left join fetch fo.layoverAirport la
+            where oa.code = :originCode and da.code = :destinationCode
+            and fo.departureDate = :departureDate and fo.enabled = true
+            and (:connectionType is null or fo.connectionType = :connectionType)
+            and (:seatClass is null or fo.seatClass = :seatClass)
+            """)
+    List<FlightOption> searchFlightOptions(@Param("originCode") String originCode, @Param("destinationCode") String destinationCode, @Param("departureDate") LocalDate departureDate, @Param("connectionType") ConnectionType connectionType, @Param("seatClass") SeatClass seatClass);
+
+    interface RouteDateProjection{
+            Long getRouteId();
+            LocalDate getDepartureDate();
+    }
+
+
+}

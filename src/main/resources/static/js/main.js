@@ -10,8 +10,13 @@ const swapCurrencyBtn = document.getElementById("swapCurrencyBtn");
 const rateGrid = document.getElementById("rateGrid");
 const rateSummary = document.getElementById("rateSummary");
 const rateInfoText = document.getElementById("rateInfoText");
+const currencySearchInput = document.getElementById("currencySearchInput");
+const regionFilterButtons = document.querySelectorAll(".region-filter-btn");
 
 const NO_DECIMAL_CODES = new Set(["KRW", "JPY", "IDR", "VND"]);
+
+let isComposing = false;
+let selectedRegion = "ALL";
 
 const krwRate = {
   currencyCode: "KRW",
@@ -31,7 +36,6 @@ function init() {
   setDefaultCurrencies();
   renderRateInfo();
   renderSummary();
-  renderGrid(countryRates, 0, krwRate);
 
   bindEvents();
   calculateAndRender();
@@ -45,7 +49,6 @@ function bindEvents() {
       event.target.value = "";
       toAmountInput.value = "";
       calculateAndRender();
-
       return;
     }
 
@@ -66,6 +69,39 @@ function bindEvents() {
     toCurrencySelect.value = fromCode;
 
     calculateAndRender();
+  });
+
+  if (currencySearchInput) {
+    currencySearchInput.addEventListener("compositionstart", () => {
+      isComposing = true;
+    });
+
+    currencySearchInput.addEventListener("compositionend", () => {
+      isComposing = false;
+      calculateAndRender();
+    });
+
+    currencySearchInput.addEventListener("input", () => {
+      if (isComposing) {
+        return;
+      }
+
+      calculateAndRender();
+    });
+  }
+
+  regionFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedRegion = button.dataset.region || "ALL";
+
+      regionFilterButtons.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      calculateAndRender();
+    });
   });
 }
 
@@ -88,6 +124,7 @@ function setDefaultCurrencies() {
   fromCurrencySelect.value = "KRW";
 
   const hasUsd = currencies.some((currency) => currency.currencyCode === "USD");
+
   toCurrencySelect.value = hasUsd
     ? "USD"
     : currencies[1]?.currencyCode || "KRW";
@@ -97,10 +134,11 @@ function calculateAndRender() {
   const amount = parseNumber(fromAmountInput.value);
   const fromCurrency = findCurrency(fromCurrencySelect.value);
   const toCurrency = findCurrency(toCurrencySelect.value);
+  const filteredCountryRates = filterCountryRates();
 
   if (!amount || amount <= 0) {
     toAmountInput.value = "";
-    renderGrid(countryRates, 0, fromCurrency);
+    renderGrid(filteredCountryRates, 0, fromCurrency);
     return;
   }
 
@@ -112,7 +150,48 @@ function calculateAndRender() {
   const result = convertCurrency(amount, fromCurrency, toCurrency);
   toAmountInput.value = formatCurrencyAmount(toCurrency, result);
 
-  renderGrid(countryRates, amount, fromCurrency);
+  renderGrid(filteredCountryRates, amount, fromCurrency);
+}
+
+function filterCountryRates() {
+  if (isComposing) {
+    return countryRates;
+  }
+
+  const keyword = currencySearchInput
+    ? currencySearchInput.value.trim().toLowerCase()
+    : "";
+
+  return countryRates.filter((rate) => {
+    const matchesRegion =
+      selectedRegion === "ALL" ||
+      normalizeRegion(rate.region) === selectedRegion;
+
+    const matchesKeyword =
+      keyword === "" ||
+      includesKeyword(rate.countryName, keyword) ||
+      includesKeyword(rate.currencyName, keyword) ||
+      includesKeyword(rate.currencyCode, keyword) ||
+      includesKeyword(rate.region, keyword);
+
+    return matchesRegion && matchesKeyword;
+  });
+}
+
+function normalizeRegion(region) {
+  if (!region) {
+    return "";
+  }
+
+  return String(region).trim().toUpperCase().replaceAll(" ", "_");
+}
+
+function includesKeyword(value, keyword) {
+  if (!value) {
+    return false;
+  }
+
+  return String(value).toLowerCase().includes(keyword);
 }
 
 function convertCurrency(amount, fromCurrency, toCurrency) {
@@ -169,8 +248,8 @@ function renderGrid(rates, amount, fromCurrency) {
   if (!rates || rates.length === 0) {
     rateGrid.innerHTML = `
       <div class="col-12">
-        <div class="alert alert-warning mb-0">
-          저장된 환율 데이터가 없습니다. 관리자 API로 환율 데이터를 먼저 저장해 주세요.
+        <div class="no-rate-result">
+          검색 결과가 없습니다. 국가명, 통화명, 통화 코드를 다시 입력해 주세요.
         </div>
       </div>
     `;
@@ -197,48 +276,42 @@ function renderGrid(rates, amount, fromCurrency) {
     card.className = "col-12 col-md-6 col-lg-4";
 
     card.innerHTML = `
-      <div class="card h-100 shadow-sm rate-card">
+      <div class="card h-100 rate-card">
         <div class="card-body">
-          <div class="d-flex justify-content-between align-items-start mb-3">
+          <div class="rate-card-top">
             <div>
-              <h5 class="card-title fw-bold mb-1">${rate.countryName}</h5>
-              <p class="text-muted mb-0">
+              <h5 class="card-title">${rate.countryName}</h5>
+              <p class="currency-name">
                 ${rate.currencyName} (${rate.currencyCode})
               </p>
             </div>
-            <span class="badge text-bg-light">${rate.region}</span>
+            <span class="region-badge">${formatRegionName(rate.region)}</span>
           </div>
 
-          <div class="border-top pt-3">
-            <div class="d-flex justify-content-between mb-2">
-              <span class="text-muted">기준일</span>
-              <span>${rate.rateDate}</span>
+          <div class="rate-info-list">
+            <div class="rate-info-row">
+              <span>기준일</span>
+              <strong>${rate.rateDate}</strong>
             </div>
 
-            <div class="d-flex justify-content-between mb-2">
-              <span class="text-muted">환율</span>
-              <span class="fw-semibold">
-                ${formatKrw(rate.rate)} 원
-              </span>
+            <div class="rate-info-row">
+              <span>환율</span>
+              <strong>${formatKrw(rate.rate)} 원</strong>
             </div>
 
-            <div class="d-flex justify-content-between mb-2">
-              <span class="text-muted">기준 단위</span>
-              <span>${rate.unit}${rate.currencyName}</span>
-            </div>
-
-            <div class="bg-light rounded-3 p-3 mt-3">
-              <div class="small text-muted mb-1">입력 금액 기준</div>
-              <div class="fw-semibold">
-                ${fromText}
-              </div>
-              <div class="fw-bold text-primary mt-1">
-                = ${toText}
-              </div>
+            <div class="rate-info-row">
+              <span>기준 단위</span>
+              <strong>${rate.unit}${rate.currencyName}</strong>
             </div>
           </div>
 
-          <a href="/exchange/${rate.currencyCode}" class="btn btn-outline-primary btn-sm w-100 mt-4">
+          <div class="calculated-box">
+            <div class="small-label">입력 금액 기준</div>
+            <div class="from-text">${fromText}</div>
+            <div class="to-text">= ${toText}</div>
+          </div>
+
+          <a href="/exchange/${rate.currencyCode}" class="history-link">
             과거 환율 보기
           </a>
         </div>
@@ -247,6 +320,26 @@ function renderGrid(rates, amount, fromCurrency) {
 
     rateGrid.appendChild(card);
   });
+}
+
+function formatRegionName(region) {
+  const normalizedRegion = normalizeRegion(region);
+
+  switch (normalizedRegion) {
+    case "ASIA":
+      return "ASIA";
+    case "EUROPE":
+      return "EUROPE";
+    case "AMERICA":
+    case "NORTH_AMERICA":
+      return "AMERICA";
+    case "OCEANIA":
+      return "OCEANIA";
+    case "MIDDLE_EAST":
+      return "MIDDLE EAST";
+    default:
+      return region || "-";
+  }
 }
 
 function findCurrency(currencyCode) {
@@ -271,14 +364,14 @@ function formatCurrencyAmount(currency, value) {
   const number = Number(value);
   const noDecimal = NO_DECIMAL_CODES.has(currency.currencyCode);
 
-  const formatted = noDecimal
-    ? Math.floor(number).toLocaleString("ko-KR")
-    : number.toLocaleString("ko-KR", {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      });
+  if (noDecimal) {
+    return Math.floor(number).toLocaleString("ko-KR");
+  }
 
-  return formatted;
+  return number.toLocaleString("ko-KR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 }
 
 function formatKrw(value) {

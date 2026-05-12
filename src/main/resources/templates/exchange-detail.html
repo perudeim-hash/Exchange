@@ -9,11 +9,13 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/exchange.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body class="bg-light">
+  <div th:replace="~{fragments/header :: siteHeader}"></div>
     <div class="container my-5">
       <div class="mb-4">
         <a href="/exchange" class="btn btn-outline-secondary btn-sm mb-3">

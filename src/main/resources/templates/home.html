@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Money</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main>
+    <section class="hero-section">
+        <div class="hero-content">
+            <p class="hero-subtitle">Flight · Exchange · Travel Cost</p>
+            <h1>항공권 가격과 환율을 함께 보는<br>여행 비용 분석 서비스</h1>
+            <p class="hero-description">
+                항공권 가격 시뮬레이션, 직항/경유 비교, 환율 차트와 여행 비용 정보를 한 곳에서 확인하세요.
+            </p>
+
+            <div class="hero-actions">
+                <a href="/flights/search" class="primary-button">항공권 검색하기</a>
+                <a href="/exchange" class="secondary-button">환율 확인하기</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="ticket-card">
+                <div class="ticket-top">
+                    <span>ICN</span>
+                    <span class="arrow">→</span>
+                    <span>NRT</span>
+                </div>
+                <div class="ticket-info">
+                    <p>직항 · 이코노미</p>
+                    <h2>₩104,000~</h2>
+                    <p>환율과 항공권 가격을 함께 비교</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="feature-card">
+            <h3>항공권 검색</h3>
+            <p>출발 공항, 도착 공항, 날짜를 기준으로 직항/경유 항공권을 검색합니다.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>환율 차트</h3>
+            <p>국가별 통화의 현재 환율과 과거 환율 변화를 확인합니다.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>여행 비용 분석</h3>
+            <p>항공권 가격과 환율 데이터를 함께 활용해 여행 시기를 비교합니다.</p>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

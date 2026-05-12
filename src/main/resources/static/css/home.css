@@ -1,0 +1,158 @@
+.hero-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 90px 24px 70px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero-subtitle {
+    margin: 0 0 16px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #2563eb;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 46px;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+    color: #111827;
+}
+
+.hero-description {
+    margin: 24px 0 0;
+    max-width: 620px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6b7280;
+}
+
+.hero-actions {
+    margin-top: 34px;
+    display: flex;
+    gap: 14px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.primary-button {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #1d4ed8;
+}
+
+.secondary-button {
+    background: #ffffff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+}
+
+.secondary-button:hover {
+    background: #eff6ff;
+}
+
+.hero-card {
+    display: flex;
+    justify-content: center;
+}
+
+.ticket-card {
+    width: 360px;
+    padding: 28px;
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.16);
+}
+
+.ticket-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 34px;
+    font-weight: 900;
+    color: #111827;
+}
+
+.ticket-top .arrow {
+    color: #2563eb;
+}
+
+.ticket-info {
+    margin-top: 34px;
+    padding-top: 24px;
+    border-top: 1px dashed #d1d5db;
+}
+
+.ticket-info p {
+    margin: 0 0 12px;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.ticket-info h2 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    color: #2563eb;
+}
+
+.feature-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px 24px 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 26px;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.feature-card h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.feature-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #6b7280;
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding-top: 56px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .feature-section {
+        grid-template-columns: 1fr;
+    }
+}

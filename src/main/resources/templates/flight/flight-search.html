@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>항공권 검색</title>
+
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/flight.css">
+</head>
+
+<body>
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main class="flight-page">
+  <section class="flight-hero">
+    <div class="flight-hero-inner">
+      <div class="flight-hero-content">
+        <p class="page-label">Flight Search</p>
+        <h1>항공권 검색</h1>
+        <p class="hero-description">
+          국가, 도시, 공항명, 공항 코드로 출발지와 도착지를 검색하고 항공권을 비교합니다.
+        </p>
+      </div>
+
+      <div class="trip-type-tabs">
+        <button type="button" class="trip-type-btn active" data-trip-type="ONE_WAY">편도</button>
+        <button type="button" class="trip-type-btn disabled" disabled>왕복 준비중</button>
+      </div>
+
+      <section class="flight-search-card">
+        <div class="primary-search-row">
+          <div class="airport-autocomplete-field">
+            <label for="originAirportInput">출발지</label>
+
+            <div class="airport-input-shell">
+              <input
+                      type="text"
+                      id="originAirportInput"
+                      class="airport-search-input"
+                      placeholder="국가, 도시, 공항명 또는 코드"
+                      autocomplete="off"
+              />
+              <span id="originAirportCodeBadge" class="airport-code-badge">-</span>
+            </div>
+
+            <div id="originAirportDropdown" class="airport-dropdown"></div>
+          </div>
+
+          <button type="button" id="swapAirportBtn" class="airport-swap-btn" aria-label="출발지 도착지 변경">
+            ⇄
+          </button>
+
+          <div class="airport-autocomplete-field">
+            <label for="destinationAirportInput">도착지</label>
+
+            <div class="airport-input-shell">
+              <input
+                      type="text"
+                      id="destinationAirportInput"
+                      class="airport-search-input"
+                      placeholder="국가, 도시, 공항명 또는 코드"
+                      autocomplete="off"
+              />
+              <span id="destinationAirportCodeBadge" class="airport-code-badge">-</span>
+            </div>
+
+            <div id="destinationAirportDropdown" class="airport-dropdown"></div>
+          </div>
+
+          <div class="search-field date-field">
+            <label for="departureDateInput">가는 날</label>
+            <input type="date" id="departureDateInput">
+          </div>
+
+          <div class="traveler-field-wrapper">
+            <label>여행자</label>
+
+            <button type="button" id="travelerPickerButton" class="traveler-picker-button">
+              <span id="travelerSummaryText">성인 1명</span>
+              <span class="traveler-arrow">▾</span>
+            </button>
+
+            <div id="travelerPopover" class="traveler-popover">
+              <div class="traveler-popover-title">여행자</div>
+
+              <div class="traveler-row">
+                <div>
+                  <strong>성인</strong>
+                  <p>만 18세 이상</p>
+                </div>
+
+                <div class="traveler-stepper">
+                  <button type="button" id="adultMinusBtn" class="stepper-btn">−</button>
+                  <span id="adultCountText" class="traveler-count">1</span>
+                  <button type="button" id="adultPlusBtn" class="stepper-btn">+</button>
+                </div>
+              </div>
+
+              <p class="traveler-help-text">
+                현재 항공권 가격은 성인 1인 기준입니다. 청소년/유아 요금은 추후 할인 정책에서 확장할 예정입니다.
+              </p>
+
+              <button type="button" id="travelerApplyBtn" class="traveler-apply-btn">
+                적용
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="secondary-search-row">
+          <div class="search-field">
+            <label for="seatClassSelect">좌석 등급</label>
+            <select id="seatClassSelect">
+              <option value="">전체 좌석</option>
+              <option value="ECONOMY">이코노미</option>
+              <option value="EXTRA_LEGROOM">엑스트라 레그룸</option>
+              <option value="PREMIUM_ECONOMY">프리미엄 이코노미</option>
+              <option value="BUSINESS">비즈니스</option>
+              <option value="FIRST">퍼스트</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="connectionTypeSelect">항공편 유형</label>
+            <select id="connectionTypeSelect">
+              <option value="">전체</option>
+              <option value="DIRECT">직항</option>
+              <option value="ONE_STOP">1회 경유</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="sortSelect">정렬</label>
+            <select id="sortSelect">
+              <option value="PRICE_ASC">최저가순</option>
+              <option value="DURATION_ASC">최단시간순</option>
+              <option value="DEPARTURE_ASC">출발시간순</option>
+            </select>
+          </div>
+
+          <button type="button" id="flightSearchBtn" class="flight-search-btn" disabled>
+            공항 목록 로딩 중
+          </button>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="flight-result-section">
+    <div class="result-header">
+      <div>
+        <p class="page-label">Search Result</p>
+        <h2>검색 결과</h2>
+        <p id="resultSummary" class="result-summary">
+          출발지, 도착지, 날짜를 선택하고 항공권을 검색해 주세요.
+        </p>
+      </div>
+    </div>
+
+    <div id="flightResultGrid" class="flight-result-grid">
+      <div class="empty-result">
+        항공권 검색 결과가 여기에 표시됩니다.
+      </div>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="/js/flight-search.js"></script>
+</body>
+</html>
