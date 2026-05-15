@@ -4,6 +4,7 @@ import com.money.flight.entity.FlightOption;
 import com.money.flight.entity.FlightRoute;
 import com.money.flight.enums.ConnectionType;
 import com.money.flight.enums.SeatClass;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -38,9 +39,15 @@ public interface FlightOptionRepository extends JpaRepository<FlightOption, Long
 
 
     @Query("""
-            select fo from FlightOption fo join fetch fo.flightRoute fr
-            join fetch fr.originAirport oa join fetch fr.destinationAirport da
-            join fetch fo.airline a left join fetch fo.layoverAirport la
+            select distinct fo from FlightOption fo 
+            join fetch fo.flightRoute fr
+            join fetch fr.originAirport oa 
+            join fetch fr.destinationAirport da
+            join fetch fo.airline a 
+            left join fetch fo.layoverAirport la
+            left join fetch fo.segments fs
+            left join fetch fs.originAirport soa
+            left join fetch fs.destinationAirport sda
             where oa.code = :originCode and da.code = :destinationCode
             and fo.departureDate = :departureDate and fo.enabled = true
             and (:connectionType is null or fo.connectionType = :connectionType)
@@ -48,10 +55,34 @@ public interface FlightOptionRepository extends JpaRepository<FlightOption, Long
             """)
     List<FlightOption> searchFlightOptions(@Param("originCode") String originCode, @Param("destinationCode") String destinationCode, @Param("departureDate") LocalDate departureDate, @Param("connectionType") ConnectionType connectionType, @Param("seatClass") SeatClass seatClass);
 
+    @Query("""
+            select fo.id from FlightOption fo
+            where not exists (
+            select 1 from FlightSegment fs
+            where fs.flightOption = fo
+            )
+            order by fo.id asc
+            """)
+    List<Long> findIdsWithoutSegments(Pageable pageable);
+
+    @Query("""
+            select distinct fo from FlightOption fo
+            join fetch fo.flightRoute fr 
+            join fetch fr.originAirport
+            join fetch fr.destinationAirport da
+            left join fetch fo.layoverAirport la
+            where fo.id in :ids
+            """)
+    List<FlightOption> findAllWithRouteAndAirportsByIdIn(@Param("ids") List<Long> ids);
+
+
+
+
     interface RouteDateProjection{
             Long getRouteId();
             LocalDate getDepartureDate();
     }
+
 
 
 }

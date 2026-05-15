@@ -1,20 +1,21 @@
 package com.money.flight.entity;
 
-import com.money.exchange.entity.Country;
-import com.money.flight.enums.AirlineTier;
 import com.money.flight.enums.ConnectionType;
 import com.money.flight.enums.SeatClass;
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "flight_option")
 public class FlightOption {
 
@@ -77,7 +78,11 @@ public class FlightOption {
     @Column(nullable = false)
     private Boolean enabled;
 
-    public FlightOption(FlightRoute flightRoute, Airline airline, Airport layoverAirport, SeatClass seatClass, ConnectionType connectionType, LocalDate departureDate, LocalTime departureTime, LocalDate arrivalDate, LocalTime arrivalTime, Integer flightDurationMinutes, Integer layoverDurationMinutes,Integer totalDurationMinutes, BigDecimal price, Boolean enabled) {
+    @OneToMany(mappedBy = "flightOption", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy("segmentOrder ASC")
+    private List<FlightSegment> segments = new ArrayList<>();
+
+    public FlightOption(FlightRoute flightRoute, Airline airline, Airport layoverAirport, SeatClass seatClass, ConnectionType connectionType, LocalDate departureDate, LocalTime departureTime, LocalDate arrivalDate, LocalTime arrivalTime, Integer flightDurationMinutes, Integer layoverDurationMinutes, Integer totalDurationMinutes, BigDecimal price, Boolean enabled) {
         this.flightRoute = flightRoute;
         this.airline = airline;
         this.layoverAirport = layoverAirport;
@@ -92,5 +97,25 @@ public class FlightOption {
         this.totalDurationMinutes = totalDurationMinutes;
         this.price = price;
         this.enabled = enabled;
+    }
+
+    public void addSegment(FlightSegment segment) {
+        if (segment == null) {
+            throw new IllegalArgumentException("항공편 구간은 null 일 수 없습니다.");
+        }
+         if (segment.getFlightOption() != this) {
+            throw new IllegalArgumentException("다른 항공권 옵션에 속한 구간을 추가할 수 없습니다.");
+        }
+        boolean duplicatedSegmentOrder = this.segments.stream()
+                .anyMatch(existingSegment -> existingSegment.getSegmentOrder() == segment.getSegmentOrder());
+
+        if (duplicatedSegmentOrder) {
+            throw new IllegalArgumentException("같은 순서의 항공편 구간을 중복 추가할 수 없습니다.");
+        }
+        this.segments.add(segment);
+    }
+
+    public void clearSegments() {
+        this.segments.clear();
     }
 }

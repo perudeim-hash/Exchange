@@ -6,6 +6,7 @@ import lombok.Getter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 @Getter
 public class FlightOptionResponseDto {
@@ -28,9 +29,23 @@ public class FlightOptionResponseDto {
     private final Integer totalDurationMinutes;
     private final String totalDurationText;
     private final BigDecimal price;
+    private final List<FlightSegmentResponseDto> segments;
+    private final int adultCount;
+    private final int childCount;
+    private final int infantCount;
 
+    private final BigDecimal adultUnitPrice;
+    private final BigDecimal childUnitPrice;
+    private final BigDecimal infantUnitPrice;
 
-    public FlightOptionResponseDto(Long flightOptionId, String airlineCode, String airlineName, String airlineTier, String airlineTierDescription, String seatClass, String seatClassDescription, String connectionType, String connectionTypeDescription, String layoverAirportCode, String layoverAirportName, LocalTime departureTime, LocalDate arrivalDate, LocalTime arrivalTime, Integer flightDurationMinutes, Integer layoverDurationMinutes, Integer totalDurationMinutes, String totalDurationText, BigDecimal price) {
+    private final BigDecimal adultTotalPrice;
+    private final BigDecimal childTotalPrice;
+    private final BigDecimal infantTotalPrice;
+
+    private final BigDecimal totalPrice;
+    private final String passengerSummary;
+
+    public FlightOptionResponseDto(Long flightOptionId, String airlineCode, String airlineName, String airlineTier, String airlineTierDescription, String seatClass, String seatClassDescription, String connectionType, String connectionTypeDescription, String layoverAirportCode, String layoverAirportName, LocalTime departureTime, LocalDate arrivalDate, LocalTime arrivalTime, Integer flightDurationMinutes, Integer layoverDurationMinutes, Integer totalDurationMinutes, String totalDurationText, BigDecimal price, List<FlightSegmentResponseDto> segments, int adultCount, int childCount, int infantCount, BigDecimal adultUnitPrice, BigDecimal childUnitPrice, BigDecimal infantUnitPrice, BigDecimal adultTotalPrice, BigDecimal childTotalPrice, BigDecimal infantTotalPrice, BigDecimal totalPrice, String passengerSummary) {
         this.flightOptionId = flightOptionId;
         this.airlineCode = airlineCode;
         this.airlineName = airlineName;
@@ -50,9 +65,24 @@ public class FlightOptionResponseDto {
         this.totalDurationMinutes = totalDurationMinutes;
         this.totalDurationText = totalDurationText;
         this.price = price;
+        this.segments = segments;
+        this.adultCount = adultCount;
+        this.childCount = childCount;
+        this.infantCount = infantCount;
+        this.adultUnitPrice = adultUnitPrice;
+        this.childUnitPrice = childUnitPrice;
+        this.infantUnitPrice = infantUnitPrice;
+        this.adultTotalPrice = adultTotalPrice;
+        this.childTotalPrice = childTotalPrice;
+        this.infantTotalPrice = infantTotalPrice;
+        this.totalPrice = totalPrice;
+        this.passengerSummary = passengerSummary;
     }
 
-    public static FlightOptionResponseDto from(FlightOption option) {
+    public static FlightOptionResponseDto from(FlightOption option, PassengerFareDto passengerFare) {
+        List<FlightSegmentResponseDto> segments = option.getSegments().stream()
+                .map(FlightSegmentResponseDto::from)
+                .toList();
         return new FlightOptionResponseDto(option.getId(),
                 option.getAirline().getCode(),
                 option.getAirline().getName(),
@@ -71,15 +101,30 @@ public class FlightOptionResponseDto {
                 option.getLayoverDurationMinutes(),
                 option.getTotalDurationMinutes(),
                 formatDuration(option.getTotalDurationMinutes()),
-                option.getPrice());
+                option.getPrice(),
+                segments,
+                passengerFare.getAdultCount(),
+                passengerFare.getChildCount(),
+                passengerFare.getInfantCount(),
+                passengerFare.getAdultUnitPrice(),
+                passengerFare.getChildUnitPrice(),
+                passengerFare.getInfantUnitPrice(),
+
+                passengerFare.getAdultTotalPrice(),
+                passengerFare.getChildTotalPrice(),
+                passengerFare.getInfantTotalPrice(),
+
+                passengerFare.getTotalPrice(),
+                passengerFare.getPassengerSummary());
+
 
     }
 
-    private static String formatDuration(Integer minutes){
+    private static String formatDuration(Integer minutes) {
         if (minutes == null) {
             return null;
         }
-        int hours = minutes/60;
+        int hours = minutes / 60;
         int remainingMinutes = minutes % 60;
 
         if (hours == 0) {

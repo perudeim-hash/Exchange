@@ -1,6 +1,7 @@
 package com.money.flight.controller;
 
 import com.money.flight.dto.FlightSearchResponseDto;
+import com.money.flight.dto.RoundTripFlightSearchResponseDto;
 import com.money.flight.enums.ConnectionType;
 import com.money.flight.enums.FlightSortType;
 import com.money.flight.enums.SeatClass;
@@ -23,8 +24,24 @@ public class FlightSearchController {
     @GetMapping("/search")
     public FlightSearchResponseDto searchFlights(@RequestParam String origin, @RequestParam String destination,
                                                  @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate departureDate, @RequestParam(required = false) ConnectionType connectionType,
-                                                 @RequestParam(required = false) SeatClass seatClass, @RequestParam(required = false) FlightSortType sort) {
+                                                 @RequestParam(required = false) SeatClass seatClass, @RequestParam(required = false) FlightSortType sort,
+                                                 @RequestParam(defaultValue = "1") int adultCount, @RequestParam(defaultValue = "0") int childCount, @RequestParam(defaultValue = "0") int infantCount) {
 
-        return flightSearchService.searchFlights(origin, destination, departureDate, connectionType, seatClass, sort);
+        return flightSearchService.searchFlights(origin, destination, departureDate, connectionType, seatClass, sort, adultCount, childCount, infantCount);
+    }
+
+    @GetMapping("/search/round-trip")
+    public RoundTripFlightSearchResponseDto searchResponseTripFlights(
+            @RequestParam String origin, @RequestParam String destination,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate departureDate, @RequestParam(required = false) LocalDate returnDate,
+            @RequestParam(required = false) ConnectionType connectionType,
+            @RequestParam(required = false) SeatClass seatClass,
+            @RequestParam(required = false) FlightSortType sort,
+            @RequestParam(defaultValue = "1") int adultCount,
+            @RequestParam(defaultValue = "0") int childCount,
+            @RequestParam(defaultValue = "0") int infantCount) {
+        return flightSearchService.searchRoundTripFlights(origin, destination,
+                departureDate, returnDate, connectionType, seatClass, sort, adultCount, childCount, infantCount);
     }
 }
+

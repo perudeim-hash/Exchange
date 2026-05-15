@@ -11,6 +11,15 @@ body {
     background: #f8fafc;
 }
 
+.flight-results-page {
+    min-height: calc(100vh - 72px);
+    background: #f8fafc;
+}
+
+.search-only-hero {
+    min-height: calc(100vh - 72px);
+}
+
 .page-label {
     margin: 0 0 8px;
     font-size: 12px;
@@ -25,8 +34,8 @@ body {
 
 .flight-hero {
     background:
-        radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.22), transparent 32%),
-        linear-gradient(135deg, #061d35 0%, #082746 48%, #0b3155 100%);
+            radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.22), transparent 32%),
+            linear-gradient(135deg, #061d35 0%, #082746 48%, #0b3155 100%);
     color: #ffffff;
 }
 
@@ -97,7 +106,13 @@ body {
 
 .primary-search-row {
     display: grid;
-    grid-template-columns: minmax(220px, 1.25fr) 52px minmax(220px, 1.25fr) minmax(180px, 0.8fr) minmax(190px, 0.85fr);
+    grid-template-columns:
+        minmax(190px, 1.15fr)
+        52px
+        minmax(190px, 1.15fr)
+        minmax(150px, 0.75fr)
+        minmax(150px, 0.75fr)
+        minmax(170px, 0.85fr);
     gap: 12px;
     align-items: end;
 }
@@ -263,6 +278,7 @@ body {
 }
 
 .airport-option-sub {
+    display: block;
     margin-top: 3px;
     font-size: 12px;
     color: #64748b;
@@ -371,6 +387,12 @@ body {
     gap: 16px;
 }
 
+.traveler-row + .traveler-row {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #e5e7eb;
+}
+
 .traveler-row strong {
     display: block;
     font-size: 15px;
@@ -451,6 +473,10 @@ body {
     padding: 36px 24px 80px;
 }
 
+.results-page-section {
+    padding-top: 32px;
+}
+
 .result-header {
     display: flex;
     align-items: flex-end;
@@ -475,7 +501,7 @@ body {
 .flight-result-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
 }
 
 .empty-result,
@@ -488,32 +514,110 @@ body {
     color: #6b7280;
 }
 
+.result-sort-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.result-sort-box label {
+    font-size: 13px;
+    font-weight: 800;
+    color: #475569;
+}
+
+.result-sort-box select {
+    height: 40px;
+    border: 1px solid #dbe3ef;
+    border-radius: 10px;
+    padding: 0 12px;
+    background: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.result-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 24px;
+}
+
+.result-filter-panel {
+    min-width: 0;
+}
+
+.filter-card {
+    position: sticky;
+    top: 92px;
+    padding: 20px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
+}
+
+.filter-card h3 {
+    margin: 0 0 18px;
+    font-size: 18px;
+    color: #111827;
+}
+
+.filter-group {
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.filter-group:first-of-type {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.filter-group + .filter-group {
+    margin-top: 18px;
+}
+
+.filter-group p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #111827;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #475569;
+}
+
 /* ================================
-   Flight Option Card
+   One Way Flight Option Card
    ================================ */
 
 .flight-option-card {
     display: grid;
-    grid-template-columns: 1.1fr 1.5fr 0.85fr;
-    gap: 24px;
+    grid-template-columns: 1fr 1.35fr 170px;
+    gap: 18px;
     align-items: center;
-    padding: 22px;
+    padding: 18px;
     border: 1px solid #e5e7eb;
-    border-radius: 22px;
+    border-radius: 20px;
     background: #ffffff;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
 }
 
 .airline-block h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     color: #111827;
 }
 
 .airline-meta {
-    margin: 8px 0 0;
+    margin: 6px 0 0;
     color: #6b7280;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .badge-row {
@@ -537,13 +641,13 @@ body {
 
 .route-block {
     display: grid;
-    grid-template-columns: 1fr 90px 1fr;
-    gap: 16px;
+    grid-template-columns: 1fr 140px 1fr;
+    gap: 14px;
     align-items: center;
 }
 
 .route-time {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 900;
     color: #111827;
 }
@@ -560,9 +664,10 @@ body {
 }
 
 .route-line {
+    display: block;
     position: relative;
     height: 1px;
-    margin: 8px 0;
+    margin: 6px 0;
     background: #cbd5e1;
 }
 
@@ -579,15 +684,27 @@ body {
 }
 
 .duration-text {
-    font-size: 13px;
+    display: block;
+    font-size: 12px;
     font-weight: 800;
     color: #475569;
 }
 
-.layover-text {
+.segment-path {
+    display: block;
     margin-top: 4px;
     font-size: 12px;
+    font-weight: 900;
+    color: #111827;
+    white-space: nowrap;
+}
+
+.layover-text {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
     color: #6b7280;
+    line-height: 1.4;
 }
 
 .price-block {
@@ -602,9 +719,15 @@ body {
 
 .price {
     margin: 0;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 900;
     color: #2563eb;
+}
+
+.passenger-summary {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #64748b;
 }
 
 .total-price {
@@ -618,7 +741,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 38px;
-    margin-top: 14px;
+    margin-top: 12px;
     padding: 0 16px;
     border-radius: 10px;
     background: #2563eb;
@@ -633,6 +756,301 @@ body {
 }
 
 /* ================================
+   Compact Round Trip Option Card
+   ================================ */
+
+.round-trip-option-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 170px;
+    gap: 16px;
+    align-items: stretch;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.round-trip-main {
+    min-width: 0;
+}
+
+.round-trip-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.round-trip-label {
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #2563eb;
+}
+
+.round-trip-title-row h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #111827;
+}
+
+.round-trip-total-duration {
+    flex: 0 0 auto;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.compact-leg-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.compact-trip-leg {
+    display: grid;
+    grid-template-columns: 62px 125px 72px minmax(150px, 1fr) 82px;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    background: #f8fafc;
+}
+
+.compact-leg-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.compact-leg-airline {
+    min-width: 0;
+}
+
+.compact-leg-airline strong {
+    display: block;
+    overflow: hidden;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.compact-leg-airline span {
+    display: block;
+    margin-top: 2px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.compact-leg-time strong {
+    display: block;
+    color: #111827;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.compact-leg-time span {
+    display: block;
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.compact-leg-center {
+    min-width: 0;
+    text-align: center;
+}
+
+.compact-leg-center .route-line {
+    margin: 5px 0;
+}
+
+.round-trip-price-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-left: 16px;
+    border-left: 1px solid #e5e7eb;
+    text-align: right;
+}
+
+.round-trip-price-block .price {
+    font-size: 24px;
+}
+
+.round-trip-price-detail {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* ================================
+   Results Inline Search Panel
+   ================================ */
+
+.results-top-area {
+    position: relative;
+    z-index: 50;
+    background: #082746;
+    padding: 28px 24px;
+}
+
+.results-top-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.compact-search-bar {
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    text-align: left;
+}
+
+.compact-search-bar:hover {
+    background: rgba(255, 255, 255, 0.17);
+}
+
+.compact-search-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.compact-search-summary {
+    color: #ffffff;
+}
+
+.compact-search-summary strong {
+    display: block;
+    font-size: 16px;
+}
+
+.compact-search-summary span {
+    display: block;
+    margin-top: 4px;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.compact-edit-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #082746;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.results-search-panel {
+    display: none;
+    margin-top: 16px;
+    padding: 18px;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.35);
+}
+
+.results-search-panel.open {
+    display: block;
+}
+
+.results-search-panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.results-search-panel-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #111827;
+}
+
+.panel-close-btn {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 12px;
+    background: #f1f5f9;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.panel-close-btn:hover {
+    background: #e2e8f0;
+}
+
+.results-search-dim {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.results-search-dim.open {
+    display: block;
+}
+
+.search-panel-open {
+    overflow: hidden;
+}
+
+.results-trip-type-tabs {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.results-search-panel .trip-type-btn {
+    border-color: #cbd5e1;
+    color: #475569;
+}
+
+.results-search-panel .trip-type-btn.active {
+    border-color: #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* ================================
    Responsive
    ================================ */
 
@@ -642,6 +1060,7 @@ body {
     }
 
     .date-field,
+    .return-date-field,
     .traveler-field-wrapper {
         grid-column: span 1;
     }
@@ -652,6 +1071,55 @@ body {
 
     .flight-search-btn {
         grid-column: span 2;
+    }
+
+    .round-trip-option-card {
+        grid-template-columns: 1fr;
+    }
+
+    .round-trip-price-block {
+        align-items: flex-start;
+        padding-left: 0;
+        padding-top: 16px;
+        border-left: 0;
+        border-top: 1px solid #e5e7eb;
+        text-align: left;
+    }
+
+    .compact-trip-leg {
+        grid-template-columns: 62px 120px 70px minmax(130px, 1fr) 80px;
+    }
+}
+
+@media (max-width: 900px) {
+    .compact-search-bar {
+        grid-template-columns: 44px 1fr;
+    }
+
+    .compact-edit-text {
+        grid-column: 1 / -1;
+    }
+
+    .result-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-card {
+        position: static;
+    }
+
+    .result-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .compact-trip-leg {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+    }
+
+    .compact-leg-center {
+        text-align: left;
     }
 }
 
@@ -698,7 +1166,15 @@ body {
         text-align: left;
     }
 
+    .segment-path {
+        white-space: normal;
+    }
+
     .price-block {
         text-align: left;
+    }
+
+    .round-trip-title-row {
+        flex-direction: column;
     }
 }

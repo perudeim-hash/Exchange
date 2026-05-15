@@ -12,7 +12,7 @@
 <div th:replace="~{fragments/header :: siteHeader}"></div>
 
 <main class="flight-page">
-  <section class="flight-hero">
+  <section class="flight-hero search-only-hero">
     <div class="flight-hero-inner">
       <div class="flight-hero-content">
         <p class="page-label">Flight Search</p>
@@ -23,8 +23,23 @@
       </div>
 
       <div class="trip-type-tabs">
-        <button type="button" class="trip-type-btn active" data-trip-type="ONE_WAY">편도</button>
-        <button type="button" class="trip-type-btn disabled" disabled>왕복 준비중</button>
+        <button
+                type="button"
+                class="trip-type-btn active"
+                data-trip-type="ROUND_TRIP"
+                id="roundTripBtn"
+        >
+          왕복
+        </button>
+
+        <button
+                type="button"
+                class="trip-type-btn"
+                data-trip-type="ONE_WAY"
+                id="oneWayBtn"
+        >
+          편도
+        </button>
       </div>
 
       <section class="flight-search-card">
@@ -72,6 +87,11 @@
             <input type="date" id="departureDateInput">
           </div>
 
+          <div class="search-field date-field return-date-field" id="returnDateField">
+            <label for="returnDateInput">오는 날</label>
+            <input type="date" id="returnDateInput">
+          </div>
+
           <div class="traveler-field-wrapper">
             <label>여행자</label>
 
@@ -96,8 +116,34 @@
                 </div>
               </div>
 
+              <div class="traveler-row">
+                <div>
+                  <strong>소아</strong>
+                  <p>만 2세 ~ 17세</p>
+                </div>
+
+                <div class="traveler-stepper">
+                  <button type="button" id="childMinusBtn" class="stepper-btn">−</button>
+                  <span id="childCountText" class="traveler-count">0</span>
+                  <button type="button" id="childPlusBtn" class="stepper-btn">+</button>
+                </div>
+              </div>
+
+              <div class="traveler-row">
+                <div>
+                  <strong>유아</strong>
+                  <p>만 2세 미만</p>
+                </div>
+
+                <div class="traveler-stepper">
+                  <button type="button" id="infantMinusBtn" class="stepper-btn">−</button>
+                  <span id="infantCountText" class="traveler-count">0</span>
+                  <button type="button" id="infantPlusBtn" class="stepper-btn">+</button>
+                </div>
+              </div>
+
               <p class="traveler-help-text">
-                현재 항공권 가격은 성인 1인 기준입니다. 청소년/유아 요금은 추후 할인 정책에서 확장할 예정입니다.
+                항공권 가격은 백엔드 요금 정책에 따라 성인/소아/유아 금액으로 계산됩니다.
               </p>
 
               <button type="button" id="travelerApplyBtn" class="traveler-apply-btn">
@@ -143,24 +189,6 @@
           </button>
         </div>
       </section>
-    </div>
-  </section>
-
-  <section class="flight-result-section">
-    <div class="result-header">
-      <div>
-        <p class="page-label">Search Result</p>
-        <h2>검색 결과</h2>
-        <p id="resultSummary" class="result-summary">
-          출발지, 도착지, 날짜를 선택하고 항공권을 검색해 주세요.
-        </p>
-      </div>
-    </div>
-
-    <div id="flightResultGrid" class="flight-result-grid">
-      <div class="empty-result">
-        항공권 검색 결과가 여기에 표시됩니다.
-      </div>
     </div>
   </section>
 </main>

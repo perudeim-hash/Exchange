@@ -14,4 +14,11 @@ public class HomeController {
     public String flightSearchPage(){
         return "flight/flight-search";
     }
+
+
+    @GetMapping("/flights/results")
+    public String flightResultsPage(){
+        return "flight/flight-results";
+    }
+
 }

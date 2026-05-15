@@ -1,9 +1,6 @@
 package com.money.flight.service.generator;
 
-import com.money.flight.entity.Airline;
-import com.money.flight.entity.Airport;
-import com.money.flight.entity.FlightOption;
-import com.money.flight.entity.FlightRoute;
+import com.money.flight.entity.*;
 import com.money.flight.enums.AirlineTier;
 import com.money.flight.enums.ConnectionType;
 import com.money.flight.enums.RouteConnectionPolicy;
@@ -47,7 +44,7 @@ public class FlightOptionGenerator {
                     int variantCount = 1 + random.nextInt(2);
                     for (int variant = 0; variant < variantCount; variant++) {
                         FlightOption option = createOption(route, airline, seatClass, connectionType, departureDate, variant, random);
-                        if (option != null){
+                        if (option != null) {
                             options.add(option);
                         }
                     }
@@ -63,7 +60,7 @@ public class FlightOptionGenerator {
         return switch (policy) {
             case DIRECT_ONLY -> List.of(ConnectionType.DIRECT);
             case ONE_STOP_ONLY -> List.of(ConnectionType.ONE_STOP);
-            case DIRECT_AND_ONE_STOP -> List.of(ConnectionType.DIRECT,ConnectionType.ONE_STOP);
+            case DIRECT_AND_ONE_STOP -> List.of(ConnectionType.DIRECT, ConnectionType.ONE_STOP);
         };
     }
 
@@ -124,14 +121,91 @@ public class FlightOptionGenerator {
             }
             layoverDurationMinutes = flightDurationCalculator.createLayoverDurationMinutes(random);
             flightDurationMinutes = flightDurationCalculator.calculateFlightDurationMinutes(totalDurationMinutes, layoverDurationMinutes);
+            totalDurationMinutes = flightDurationMinutes + layoverDurationMinutes;
         }
         LocalDateTime departureDateTime = LocalDateTime.of(departureDate, departureTime);
         LocalDateTime arrivalDateTime = departureDateTime.plusMinutes(totalDurationMinutes);
 
-        return new FlightOption(route, airline, layoverAirport, seatClass, connectionType, departureDate, departureTime,
-                arrivalDateTime.toLocalDate(), arrivalDateTime.toLocalTime(), flightDurationMinutes, layoverDurationMinutes, totalDurationMinutes,
-                flightPriceCalculator.createPrice(route, airline, seatClass, connectionType, departureDate, departureTime, variant, random),true);
+        FlightOption option = new FlightOption(route, airline, layoverAirport, seatClass,
+                connectionType, departureDate, departureTime, arrivalDateTime.toLocalDate(), arrivalDateTime.toLocalTime(),
+                flightDurationMinutes, layoverDurationMinutes, totalDurationMinutes, flightPriceCalculator.createPrice(
+                route, airline, seatClass, connectionType, departureDate, departureTime, variant, random
+        ), true);
+        addSegments(option, route, connectionType, layoverAirport, departureDateTime, flightDurationMinutes, layoverDurationMinutes, random);
+
+        return option;
     }
+
+    private void addSegments(FlightOption option, FlightRoute route, ConnectionType connectionType, Airport layoverAirport, LocalDateTime departureDateTime, Integer flightDurationMinutes, Integer layoverDurationMinutes, Random random) {
+        if (connectionType == ConnectionType.DIRECT) {
+            addDirectSegment(
+                    option, route, departureDateTime, flightDurationMinutes);
+            return;
+        }
+        if (connectionType == ConnectionType.ONE_STOP) {
+            addOneStopSegment(
+                    option, route,layoverAirport, departureDateTime, flightDurationMinutes,layoverDurationMinutes,random);
+            return;
+        }
+
+    }
+
+
+    private void addDirectSegment(FlightOption option, FlightRoute route, LocalDateTime departureDateTime, int durationMinutes) {
+        LocalDateTime arrivalDateTime = departureDateTime.plusMinutes(durationMinutes);
+
+        FlightSegment segment = FlightSegment.create(option,1,
+                route.getOriginAirport(), route.getDestinationAirport(), departureDateTime.toLocalDate(),
+                departureDateTime.toLocalTime(), arrivalDateTime.toLocalDate(),arrivalDateTime.toLocalTime(),durationMinutes,null);
+        option.addSegment(segment);
+    }
+
+    private void addOneStopSegment(FlightOption option, FlightRoute route, Airport layoverAirport, LocalDateTime departureDateTime, Integer flightDurationMinutes, Integer layoverDurationMinutes, Random random) {
+        if (layoverAirport == null) {
+            throw new IllegalArgumentException("1회 경유 항공권의 경유 공항은 필수입니다.");
+        }
+        if (layoverDurationMinutes <= 0) {
+            throw new IllegalArgumentException("1회 경유 항공권의 경유 대기 시간은 0보다 커야 합니다.");
+        }
+        int firstSegmentDurationMinutes = createFirstSegmentDurationMinutes(flightDurationMinutes, random);
+
+        int secondSegmentDurationMinutes = flightDurationMinutes - firstSegmentDurationMinutes;
+
+        if (secondSegmentDurationMinutes <= 0) {
+            throw new IllegalArgumentException("두 번째 비행 구간 시간은 0보다 커야 합니다.");
+        }
+        LocalDateTime firstDepartureDateTime = departureDateTime;
+        LocalDateTime firstArrivalDateTime = firstDepartureDateTime.plusMinutes(firstSegmentDurationMinutes);
+
+        LocalDateTime secondDepartureDateTime = firstArrivalDateTime.plusMinutes(layoverDurationMinutes);
+        LocalDateTime secondArrivalDateTime = secondDepartureDateTime.plusMinutes(secondSegmentDurationMinutes);
+
+        FlightSegment firstSegment = FlightSegment.create(option, 1, route.getOriginAirport(),
+                layoverAirport, firstDepartureDateTime.toLocalDate(), firstDepartureDateTime.toLocalTime(), firstArrivalDateTime.toLocalDate(), firstArrivalDateTime.toLocalTime(),
+                firstSegmentDurationMinutes, layoverDurationMinutes);
+
+        FlightSegment secondSegment = FlightSegment.create(option, 2, layoverAirport, route.getDestinationAirport(),
+                secondDepartureDateTime.toLocalDate(), secondDepartureDateTime.toLocalTime(), secondArrivalDateTime.toLocalDate(), secondArrivalDateTime.toLocalTime(),
+                secondSegmentDurationMinutes, null);
+
+        option.addSegment(firstSegment);
+        option.addSegment(secondSegment);
+        
+    }
+
+    private int createFirstSegmentDurationMinutes(int flightDurationMinutes, Random random) {
+        if (flightDurationMinutes <= 1) {
+            throw new IllegalArgumentException("실제 비행 시간은 1분보다 커야 합니다.");
+        }
+        int minFirstSegmentMinutes = Math.max(30, flightDurationMinutes / 3);
+        int maxFirstSegmentMinutes = Math.min(flightDurationMinutes - 30, (flightDurationMinutes * 2) / 3);
+
+        if (maxFirstSegmentMinutes <= minFirstSegmentMinutes) {
+            return flightDurationMinutes / 2;
+        }
+        return minFirstSegmentMinutes + random.nextInt(maxFirstSegmentMinutes - minFirstSegmentMinutes + 1);
+    }
+
 
     private LocalTime createDepartureTime(Random random) {
         int[] hours = {6, 8, 10, 13, 16, 19, 22, 23};

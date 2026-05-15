@@ -109,9 +109,15 @@ public class FlightDataInitializer implements CommandLineRunner {
                 Boolean enabled = Boolean.parseBoolean(values[5].trim());
                 Integer displayOrder = Integer.parseInt(values[6].trim());
 
-                saveRouteIfNotExists(originAirportCode, destinationAirportCode, policy,directBaseDurationMinutes,oneStopBaseDurationMinutes, enabled, displayOrder);
+                saveRoutePairIfNotExists(originAirportCode, destinationAirportCode, policy,directBaseDurationMinutes,oneStopBaseDurationMinutes, enabled, displayOrder);
             }
         }
+    }
+
+    private void saveRoutePairIfNotExists(String originAirportCode, String destinationAirportCode, RouteConnectionPolicy policy, Integer directBaseDurationMinutes, Integer oneStopBaseDurationMinutes, Boolean enabled, Integer displayOrder) {
+        saveRouteIfNotExists(originAirportCode, destinationAirportCode, policy, directBaseDurationMinutes, oneStopBaseDurationMinutes, enabled, displayOrder);
+
+        saveRouteIfNotExists(destinationAirportCode, originAirportCode, policy, directBaseDurationMinutes, oneStopBaseDurationMinutes, enabled, displayOrder + 10000);
     }
 
 
