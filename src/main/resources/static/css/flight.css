@@ -1178,3 +1178,524 @@ body {
         flex-direction: column;
     }
 }
+
+/* ================================
+   Flight Booking / Detail Page
+   ================================ */
+
+.flight-booking-page {
+    width: 100%;
+    max-width: 100%;
+    min-height: calc(100vh - 72px);
+    overflow-x: hidden;
+    background: #f8fafc;
+}
+
+.booking-hero {
+    background:
+            radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.18), transparent 32%),
+            linear-gradient(135deg, #061d35 0%, #082746 48%, #0b3155 100%);
+    color: #ffffff;
+}
+
+.booking-hero-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 42px 24px 46px;
+}
+
+.booking-hero h1 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+}
+
+.booking-hero-description {
+    margin: 12px 0 0;
+    max-width: 720px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+.booking-section {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+    overflow-x: hidden;
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 24px;
+    align-items: start;
+    width: 100%;
+    max-width: 100%;
+}
+
+.booking-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    min-width: 0;
+}
+
+.booking-summary-card,
+.booking-flight-card,
+.booking-price-card {
+    min-width: 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+}
+
+.booking-summary-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 20px;
+}
+
+.booking-card-label {
+    margin: 0 0 6px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #2563eb;
+}
+
+.booking-summary-card h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #111827;
+    letter-spacing: -0.03em;
+}
+
+.booking-sub-text {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.booking-sub-btn {
+    flex: 0 0 auto;
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.booking-sub-btn:hover {
+    background: #f1f5f9;
+}
+
+.booking-flight-card {
+    padding: 20px;
+}
+
+.booking-flight-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.booking-leg-badge {
+    display: inline-flex;
+    align-items: center;
+    height: 28px;
+    padding: 0 11px;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.booking-leg-badge.return {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.booking-flight-header h3 {
+    margin: 8px 0 0;
+    font-size: 22px;
+    color: #111827;
+}
+
+.booking-date-text {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.booking-flight-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    min-width: 0;
+}
+
+/* Route Overview */
+
+.booking-route-overview {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr) 100px;
+    gap: 14px;
+    align-items: center;
+    min-width: 0;
+    width: 100%;
+    padding: 16px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+}
+
+.booking-route-time-block {
+    min-width: 0;
+}
+
+.booking-route-time-block strong {
+    display: block;
+    font-size: 28px;
+    font-weight: 900;
+    color: #111827;
+}
+
+.booking-route-time-block span {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #2563eb;
+}
+
+.booking-route-time-block small {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.booking-route-time-block.right {
+    text-align: right;
+}
+
+.booking-route-center {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.booking-route-center .route-line {
+    width: 100%;
+    max-width: 100%;
+    margin: 8px 0;
+}
+
+.booking-route-center .segment-path,
+.booking-route-center .layover-text {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* Booking Info */
+
+.booking-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    min-width: 0;
+}
+
+.booking-info-item {
+    min-width: 0;
+    padding: 14px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.booking-info-item span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 800;
+}
+
+.booking-info-item strong {
+    display: block;
+    overflow: hidden;
+    font-size: 15px;
+    color: #111827;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.booking-info-item small {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Segment Detail */
+
+.booking-segment-section {
+    min-width: 0;
+    padding: 16px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.booking-section-title {
+    margin-bottom: 14px;
+    font-size: 15px;
+    font-weight: 900;
+    color: #111827;
+}
+
+.booking-segment-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+}
+
+.booking-segment-item {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    min-width: 0;
+}
+
+.booking-segment-order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.booking-segment-main {
+    min-width: 0;
+    padding: 14px;
+    border-radius: 16px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+}
+
+.booking-segment-route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.booking-segment-route strong {
+    min-width: 0;
+    font-size: 16px;
+    color: #111827;
+    overflow-wrap: anywhere;
+}
+
+.booking-segment-route span {
+    flex: 0 0 auto;
+    font-size: 13px;
+    font-weight: 900;
+    color: #475569;
+}
+
+.booking-segment-airports {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #64748b;
+    overflow-wrap: anywhere;
+}
+
+.booking-segment-time {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #475569;
+}
+
+.booking-layover-box {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #fff7ed;
+    color: #9a3412;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.booking-segment-empty {
+    padding: 18px;
+    border-radius: 14px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Price Panel */
+
+.booking-price-panel {
+    position: sticky;
+    top: 92px;
+    width: 100%;
+    max-width: 300px;
+    min-width: 0;
+}
+
+.booking-price-card {
+    width: 100%;
+    padding: 22px;
+}
+
+.booking-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    font-size: 14px;
+    color: #475569;
+}
+
+.booking-price-row strong {
+    font-size: 15px;
+    color: #111827;
+}
+
+.booking-price-divider {
+    height: 1px;
+    margin: 8px 0 16px;
+    background: #e5e7eb;
+}
+
+.booking-price-total {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.booking-price-total span {
+    font-size: 14px;
+    font-weight: 900;
+    color: #111827;
+}
+
+.booking-price-total strong {
+    font-size: 26px;
+    font-weight: 900;
+    color: #2563eb;
+    text-align: right;
+}
+
+.booking-price-help {
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.booking-main-btn {
+    width: 100%;
+    height: 46px;
+    margin-top: 18px;
+    border: 0;
+    border-radius: 14px;
+    background: #94a3b8;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: not-allowed;
+}
+
+.booking-next-help {
+    margin: 12px 0 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* Booking Responsive */
+
+@media (max-width: 1024px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-price-panel {
+        position: static;
+        max-width: none;
+    }
+
+    .booking-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .booking-hero h1 {
+        font-size: 30px;
+    }
+
+    .booking-summary-card,
+    .booking-flight-header,
+    .booking-price-total {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .booking-route-overview {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .booking-route-time-block.right {
+        text-align: left;
+    }
+
+    .booking-route-center {
+        text-align: left;
+    }
+
+    .booking-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-segment-route {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .booking-price-total strong {
+        text-align: left;
+    }
+}

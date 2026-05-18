@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>항공권 상세 확인</title>
+
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/flight.css">
+</head>
+
+<body>
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main class="flight-booking-page">
+  <section class="booking-hero">
+    <div class="booking-hero-inner">
+      <p class="page-label">Flight Detail</p>
+      <h1>선택한 항공권 상세 확인</h1>
+      <p class="booking-hero-description">
+        선택한 가는 편과 오는 편의 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.
+      </p>
+    </div>
+  </section>
+
+  <section class="booking-section">
+    <div id="bookingLoading" class="loading-result">
+      항공권 상세 정보를 불러오는 중입니다.
+    </div>
+
+    <div id="bookingError" class="empty-result" style="display: none;">
+      항공권 상세 정보를 불러오지 못했습니다. 다시 검색해 주세요.
+    </div>
+
+    <div id="bookingContent" class="booking-layout" style="display: none;">
+      <div class="booking-main">
+        <div class="booking-summary-card">
+          <div>
+            <p class="booking-card-label">선택한 여행</p>
+            <h2 id="bookingRouteTitle">왕복 항공권</h2>
+            <p id="bookingPassengerSummary" class="booking-sub-text">
+              승객 정보를 불러오는 중입니다.
+            </p>
+          </div>
+
+          <button type="button" id="backToResultsBtn" class="booking-sub-btn">
+            검색 결과로 돌아가기
+          </button>
+        </div>
+
+        <article class="booking-flight-card">
+          <div class="booking-flight-header">
+            <div>
+              <span class="booking-leg-badge">가는 편</span>
+              <h3 id="outboundTitle">가는 편 항공권</h3>
+            </div>
+          </div>
+
+          <div id="outboundFlightDetail" class="booking-flight-body">
+            <!-- flight-booking.js에서 렌더링 -->
+          </div>
+        </article>
+
+        <article class="booking-flight-card">
+          <div class="booking-flight-header">
+            <div>
+              <span class="booking-leg-badge return">오는 편</span>
+              <h3 id="returnTitle">오는 편 항공권</h3>
+            </div>
+          </div>
+
+          <div id="returnFlightDetail" class="booking-flight-body">
+            <!-- flight-booking.js에서 렌더링 -->
+          </div>
+        </article>
+      </div>
+
+      <aside class="booking-price-panel">
+        <div class="booking-price-card">
+          <p class="booking-card-label">요금 요약</p>
+
+          <div class="booking-price-row">
+            <span>가는 편</span>
+            <strong id="outboundPrice">-</strong>
+          </div>
+
+          <div class="booking-price-row">
+            <span>오는 편</span>
+            <strong id="returnPrice">-</strong>
+          </div>
+
+          <div class="booking-price-divider"></div>
+
+          <div class="booking-price-total">
+            <span>총 예상 금액</span>
+            <strong id="totalPrice">-</strong>
+          </div>
+
+          <p id="pricePassengerSummary" class="booking-price-help">
+            승객 정보를 불러오는 중입니다.
+          </p>
+
+          <button type="button" class="booking-main-btn" disabled>
+            예매 기능은 이후 단계에서 추가
+          </button>
+
+          <p class="booking-next-help">
+            현재 단계에서는 실제 예매/결제 없이 항공권 상세 확인까지만 진행합니다.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="/js/flight-booking.js"></script>
+</body>
+</html>

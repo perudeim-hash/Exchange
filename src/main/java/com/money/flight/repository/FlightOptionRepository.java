@@ -11,6 +11,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 public interface FlightOptionRepository extends JpaRepository<FlightOption, Long> {
 
@@ -36,7 +37,6 @@ public interface FlightOptionRepository extends JpaRepository<FlightOption, Long
             group by fo.flightRoute.id, fo.departureDate 
             """)
     List<RouteDateProjection> findExistingRouteDatesBetween(@Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate);
-
 
     @Query("""
             select distinct fo from FlightOption fo 
@@ -75,8 +75,20 @@ public interface FlightOptionRepository extends JpaRepository<FlightOption, Long
             """)
     List<FlightOption> findAllWithRouteAndAirportsByIdIn(@Param("ids") List<Long> ids);
 
-
-
+    @Query("""
+            select distinct fo
+            from FlightOption fo
+            join fetch fo.flightRoute fr
+            join fetch fr.originAirport oa
+            join fetch fr.destinationAirport da
+            join fetch fo.airline a
+            left join fetch fo.layoverAirport la
+            left join fetch fo.segments fs
+            left join fetch fs.originAirport soa
+            left join fetch fs.destinationAirport sda
+            where fo.id = :optionId
+            """)
+    Optional<FlightOption> findDetailById(@Param("optionId") Long optionId);
 
     interface RouteDateProjection{
             Long getRouteId();

@@ -1,9 +1,21 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
     margin: 0;
+    overflow-x: hidden;
     font-family: Arial, "Noto Sans KR", sans-serif;
     color: #1f2937;
     background: #f8fafc;
@@ -14,45 +26,77 @@ a {
     color: inherit;
 }
 
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .site-header {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
     background: #ffffff;
     border-bottom: 1px solid #e5e7eb;
 }
 
 .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     max-width: 1180px;
     height: 72px;
     margin: 0 auto;
     padding: 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
     font-size: 24px;
     font-weight: 800;
     color: #2563eb;
+    line-height: 1;
+}
+
+.logo:focus-visible,
+.nav-link:focus-visible,
+.dropdown-menu a:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.35);
+    outline-offset: 4px;
+    border-radius: 8px;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 32px;
+    min-width: 0;
 }
 
 .nav-item {
     position: relative;
+    flex: 0 0 auto;
     padding: 24px 0;
 }
 
 .nav-link {
+    display: inline-flex;
+    align-items: center;
     font-size: 15px;
     font-weight: 700;
     color: #374151;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -64,9 +108,10 @@ a {
     position: absolute;
     top: 68px;
     left: 50%;
-    transform: translateX(-50%);
+    z-index: 120;
     min-width: 190px;
     padding: 10px;
+    transform: translateX(-50%);
     background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 14px;
@@ -83,6 +128,7 @@ a {
     border-radius: 10px;
     font-size: 14px;
     color: #374151;
+    white-space: nowrap;
 }
 
 .dropdown-menu a:hover {
@@ -93,23 +139,31 @@ a {
 @media (max-width: 900px) {
     .header-inner {
         height: auto;
+        min-height: 72px;
         padding: 18px 20px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 28px;
     }
 
     .main-nav {
-        gap: 18px;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 20px;
         flex-wrap: wrap;
     }
 
     .nav-item {
-        padding: 8px 0;
+        padding: 4px 0;
     }
 
     .dropdown-menu {
-        top: 34px;
+        top: 32px;
         left: 0;
         transform: none;
     }
