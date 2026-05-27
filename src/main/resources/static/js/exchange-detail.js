@@ -42,6 +42,7 @@ function bindEvents() {
   quickRangeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const range = button.dataset.range;
+
       applyQuickRange(range);
       updateQuickButtonStyle(button);
       loadHistory();
@@ -104,17 +105,17 @@ async function loadHistory() {
       throw new Error("환율 데이터를 불러오지 못했습니다.");
     }
 
-    const history = await response.json();
+    const analysis = await response.json();
 
-    if (!history || history.length === 0) {
+    if (!analysis || !analysis.histories || analysis.histories.length === 0) {
       renderEmpty();
       return;
     }
 
-    renderSummary(history);
-    renderChart(history);
-    renderMonthlyAnalysis(history);
-    renderTable(history);
+    renderSummary(analysis);
+    renderChart(analysis.histories);
+    renderMonthlyAnalysis(analysis);
+    renderTable(analysis.histories);
   } catch (error) {
     console.error(error);
     renderError();
@@ -137,41 +138,52 @@ function buildHistoryUrl() {
     params.append("limit", limit);
   }
 
+  const baseUrl = `/api/rates/history/${currencyCode}/analysis`;
   const queryString = params.toString();
 
   if (!queryString) {
-    return `/api/rates/history/${currencyCode}`;
+    return baseUrl;
   }
 
-  return `/api/rates/history/${currencyCode}?${queryString}`;
+  return `${baseUrl}?${queryString}`;
 }
 
-function renderSummary(history) {
-  const latest = history[history.length - 1];
+function renderSummary(analysis) {
+  chartSummary.textContent = `${analysis.fromDate} ~ ${analysis.toDate} / 총 ${analysis.totalCount}건`;
 
-  const maxItem = history.reduce((max, current) =>
-    Number(current.rate) > Number(max.rate) ? current : max,
+  renderRateSummaryItem(
+    latestRateDateEl,
+    latestRateEl,
+    analysis.latestRate,
   );
 
-  const minItem = history.reduce((min, current) =>
-    Number(current.rate) < Number(min.rate) ? current : min,
+  renderRateSummaryItem(
+    maxRateDateEl,
+    maxRateEl,
+    analysis.maxRate,
   );
 
-  chartSummary.textContent = `${history[0].rateDate} ~ ${latest.rateDate} / 총 ${history.length}건`;
-
-  latestRateDateEl.textContent = latest.rateDate;
-  latestRateEl.textContent = `${formatKrw(latest.rate)} 원`;
-
-  maxRateDateEl.textContent = maxItem.rateDate;
-  maxRateEl.textContent = `${formatKrw(maxItem.rate)} 원`;
-
-  minRateDateEl.textContent = minItem.rateDate;
-  minRateEl.textContent = `${formatKrw(minItem.rate)} 원`;
+  renderRateSummaryItem(
+    minRateDateEl,
+    minRateEl,
+    analysis.minRate,
+  );
 }
 
-function renderChart(history) {
-  const labels = history.map((item) => item.rateDate);
-  const data = history.map((item) => Number(item.rate));
+function renderRateSummaryItem(dateElement, rateElement, summary) {
+  if (!summary) {
+    dateElement.textContent = "-";
+    rateElement.textContent = "-";
+    return;
+  }
+
+  dateElement.textContent = summary.rateDate;
+  rateElement.textContent = `${formatKrw(summary.rate)} 원`;
+}
+
+function renderChart(histories) {
+  const labels = histories.map((item) => item.rateDate);
+  const data = histories.map((item) => Number(item.rate));
 
   if (rateChart) {
     rateChart.destroy();
@@ -223,64 +235,38 @@ function renderChart(history) {
   });
 }
 
-function renderMonthlyAnalysis(history) {
-  const monthlyAverages = calculateMonthlyAverages(history);
+function renderMonthlyAnalysis(analysis) {
+  const monthlyAverages = analysis.monthlyAverages || [];
 
-  if (!monthlyAverages || monthlyAverages.length === 0) {
+  if (monthlyAverages.length === 0) {
     renderEmptyMonthlyAnalysis();
     return;
   }
 
-  const lowest = monthlyAverages.reduce((min, current) =>
-    current.averageRate < min.averageRate ? current : min,
+  renderMonthSummaryItem(
+    lowestMonthEl,
+    lowestMonthRateEl,
+    analysis.lowestMonth,
   );
 
-  const highest = monthlyAverages.reduce((max, current) =>
-    current.averageRate > max.averageRate ? current : max,
+  renderMonthSummaryItem(
+    highestMonthEl,
+    highestMonthRateEl,
+    analysis.highestMonth,
   );
-
-  lowestMonthEl.textContent = formatMonthLabel(lowest.month);
-  lowestMonthRateEl.textContent = `평균 환율 ${formatKrw(lowest.averageRate)} 원`;
-
-  highestMonthEl.textContent = formatMonthLabel(highest.month);
-  highestMonthRateEl.textContent = `평균 환율 ${formatKrw(highest.averageRate)} 원`;
 
   renderMonthlyAverageTable(monthlyAverages);
 }
 
-function calculateMonthlyAverages(history) {
-  const monthlyMap = new Map();
+function renderMonthSummaryItem(monthElement, rateElement, monthlyAverage) {
+  if (!monthlyAverage) {
+    monthElement.textContent = "-";
+    rateElement.textContent = "-";
+    return;
+  }
 
-  history.forEach((item) => {
-    const month = item.rateDate.substring(0, 7);
-    const rate = Number(item.rate);
-
-    if (Number.isNaN(rate)) {
-      return;
-    }
-
-    if (!monthlyMap.has(month)) {
-      monthlyMap.set(month, {
-        month,
-        sum: 0,
-        count: 0,
-      });
-    }
-
-    const monthlyData = monthlyMap.get(month);
-    monthlyData.sum += rate;
-    monthlyData.count += 1;
-  });
-
-  return Array.from(monthlyMap.values())
-    .map((item) => {
-      return {
-        month: item.month,
-        averageRate: item.sum / item.count,
-        count: item.count,
-      };
-    })
-    .sort((a, b) => a.month.localeCompare(b.month));
+  monthElement.textContent = formatMonthLabel(monthlyAverage.month);
+  rateElement.textContent = `평균 환율 ${formatKrw(monthlyAverage.averageRate)} 원`;
 }
 
 function renderMonthlyAverageTable(monthlyAverages) {
@@ -314,15 +300,10 @@ function renderEmptyMonthlyAnalysis() {
   `;
 }
 
-function formatMonthLabel(month) {
-  const [year, monthValue] = month.split("-");
-  return `${year}년 ${Number(monthValue)}월`;
-}
-
-function renderTable(history) {
+function renderTable(histories) {
   historyTableBody.innerHTML = "";
 
-  const reversedHistory = [...history].reverse();
+  const reversedHistory = [...histories].reverse();
 
   reversedHistory.forEach((item) => {
     const tr = document.createElement("tr");
@@ -339,6 +320,7 @@ function renderTable(history) {
 
 function renderEmpty() {
   chartSummary.textContent = "저장된 환율 데이터가 없습니다.";
+
   latestRateEl.textContent = "-";
   maxRateEl.textContent = "-";
   minRateEl.textContent = "-";
@@ -346,6 +328,7 @@ function renderEmpty() {
   latestRateDateEl.textContent = "-";
   maxRateDateEl.textContent = "-";
   minRateDateEl.textContent = "-";
+
   renderEmptyMonthlyAnalysis();
 
   historyTableBody.innerHTML = `
@@ -364,6 +347,7 @@ function renderEmpty() {
 
 function renderError() {
   chartSummary.textContent = "환율 데이터를 불러오는 중 오류가 발생했습니다.";
+
   latestRateEl.textContent = "-";
   maxRateEl.textContent = "-";
   minRateEl.textContent = "-";
@@ -371,7 +355,9 @@ function renderError() {
   latestRateDateEl.textContent = "-";
   maxRateDateEl.textContent = "-";
   minRateDateEl.textContent = "-";
+
   renderEmptyMonthlyAnalysis();
+
   historyTableBody.innerHTML = `
     <tr>
       <td colspan="3" class="text-center text-danger">
@@ -379,6 +365,20 @@ function renderError() {
       </td>
     </tr>
   `;
+
+  if (rateChart) {
+    rateChart.destroy();
+    rateChart = null;
+  }
+}
+
+function formatMonthLabel(month) {
+  if (!month) {
+    return "-";
+  }
+
+  const [year, monthValue] = month.split("-");
+  return `${year}년 ${Number(monthValue)}월`;
 }
 
 function formatKrw(value) {
