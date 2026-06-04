@@ -1,9 +1,6 @@
 package com.money.event.service;
 
-import com.money.event.dto.MonthlyTravelEventResponseDto;
-import com.money.event.dto.TravelEventCalendarResponseDto;
-import com.money.event.dto.TravelEventCsvRowDto;
-import com.money.event.dto.TravelEventResponseDto;
+import com.money.event.dto.*;
 import com.money.event.entity.TravelEvent;
 import com.money.event.repository.TravelEventRepository;
 import com.money.flight.entity.Airport;
@@ -58,9 +55,8 @@ public class TravelEventQueryService {
         List<TravelEvent> events = travelEventRepository.findByCountryCodeAndCityNameAndEnabledTrueOrderByMonthAscDisplayOrderAsc(normalizedCountryCode, normalizedCityName);
         String countryName = events.isEmpty() ? "" : events.get(0).getCountryName();
         List<MonthlyTravelEventResponseDto> monthlyEvents = toMonthlyResponses(events);
-        return TravelEventCalendarResponseDto.of(null, countryCode, countryName, cityName, monthlyEvents);
+        return TravelEventCalendarResponseDto.of(null, normalizedCountryCode, countryName, normalizedCityName, monthlyEvents);
     }
-
 
     public TravelEventCalendarResponseDto getMonthlyEventsByCountryAndCityAndMonth(String countryCode, String cityName, Integer month) {
         validateMonth(month);
@@ -74,6 +70,83 @@ public class TravelEventQueryService {
         return TravelEventCalendarResponseDto.of(null, normalizedCountryCode, countryName, normalizedCityName, monthlyEvents);
     }
 
+    public List<TravelEventLocationResponseDto> getEventLocations() {
+        List<TravelEvent> events =
+                travelEventRepository.findByEnabledTrueOrderByRegionAscCountryNameAscCityNameAsc();
+
+        Map<String, String> regionNameMap = new LinkedHashMap<>();
+        Map<String, Map<String, String>> countryNameMapByRegion = new LinkedHashMap<>();
+        Map<String, Map<String, List<String>>> cityMapByRegionAndCountry = new LinkedHashMap<>();
+
+        for (TravelEvent event : events) {
+            String region = event.getRegion();
+            String countryCode = event.getCountryCode();
+            String countryName = event.getCountryName();
+            String cityName = event.getCityName();
+
+            if (region == null || region.isBlank()) {
+                continue;
+            }
+
+            if (countryCode == null || countryCode.isBlank()) {
+                continue;
+            }
+
+            if (cityName == null || cityName.isBlank()) {
+                continue;
+            }
+
+            regionNameMap.putIfAbsent(region, getRegionName(region));
+
+            countryNameMapByRegion.putIfAbsent(region, new LinkedHashMap<>());
+            cityMapByRegionAndCountry.putIfAbsent(region, new LinkedHashMap<>());
+
+            Map<String, String> countryNameMap = countryNameMapByRegion.get(region);
+            Map<String, List<String>> cityMapByCountry = cityMapByRegionAndCountry.get(region);
+
+            countryNameMap.putIfAbsent(countryCode, countryName);
+            cityMapByCountry.putIfAbsent(countryCode, new ArrayList<>());
+
+            List<String> cities = cityMapByCountry.get(countryCode);
+
+            if (!cities.contains(cityName)) {
+                cities.add(cityName);
+            }
+        }
+
+        List<TravelEventLocationResponseDto> result = new ArrayList<>();
+
+        for (String region : regionNameMap.keySet()) {
+            Map<String, String> countryNameMap = countryNameMapByRegion.get(region);
+            Map<String, List<String>> cityMapByCountry = cityMapByRegionAndCountry.get(region);
+
+            List<TravelEventLocationResponseDto.CountryLocationDto> countries = new ArrayList<>();
+
+            for (String countryCode : countryNameMap.keySet()) {
+                String countryName = countryNameMap.get(countryCode);
+                List<String> cities = cityMapByCountry.get(countryCode);
+
+                countries.add(
+                        TravelEventLocationResponseDto.CountryLocationDto.of(
+                                countryCode,
+                                countryName,
+                                cities
+                        )
+                );
+            }
+
+            result.add(
+                    TravelEventLocationResponseDto.of(
+                            region,
+                            regionNameMap.get(region),
+                            countries
+                    )
+            );
+        }
+
+        return result;
+    }
+    
     private Airport getAirportByCode(String airPortCode) {
         String normalizedAirportCode = normalizedAirportCode(airPortCode);
 
@@ -136,6 +209,17 @@ public class TravelEventQueryService {
             throw new IllegalArgumentException("1월부터 12월까지만 가능합니다.");
         }
 
+    }
+
+    private String getRegionName(String region) {
+        return switch (region) {
+            case "ASIA" -> "아시아";
+            case "EUROPE" -> "유럽";
+            case "AMERICA" -> "아메리카";
+            case "OCEANIA" -> "오세아니아";
+            case "MIDDLE_EAST" -> "중동";
+            default -> region;
+        };
     }
 
 }

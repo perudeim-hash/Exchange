@@ -1,4 +1,4 @@
-package com.money.event.dto;
+package com.money.recommendation.dto.timing;
 
 import lombok.Getter;
 

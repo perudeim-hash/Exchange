@@ -1,0 +1,139 @@
+﻿region,country_code,country_name,city_name,event_area,month,event_name,event_type,description,event_url,enabled,display_order
+OCEANIA,AU,호주,시드니,차이나타운/도심 일대,1,시드니 설날 축제,CULTURAL_FESTIVAL,"음력설 일정에 따라 매년 1~3월 사이로 개최 시기가 달라질 수 있으며, 퍼레이드, 공연, 음식, 문화 프로그램이 이어지는 시드니 대표 설 축제다.",https://www.cityofsydney.nsw.gov.au/whats-on/sydney-lunar-festival,true,1
+OCEANIA,AU,호주,시드니,도심/항구 일대,1,시드니 페스티벌,ART,"여름 시즌 시드니 전역에서 공연예술, 음악, 설치미술, 야외 프로그램이 열리는 대표 예술 축제다.",https://www.sydneyfestival.org.au/,true,2
+OCEANIA,AU,호주,시드니,도심/하버 일대,1,시드니 호주 데이 행사,NATIONAL_HOLIDAY,"1월 26일 호주 데이를 맞아 시드니 항구와 도심 일대에서 공연, 가족 프로그램, 기념 행사가 열리는 국가 기념일 행사다.",https://www.australiaday.com.au/,true,3
+OCEANIA,AU,호주,시드니,차이나타운/도심 일대,2,시드니 설날 축제,CULTURAL_FESTIVAL,"음력설 일정에 따라 매년 1~3월 사이로 개최 시기가 달라질 수 있으며, 퍼레이드, 공연, 음식, 문화 프로그램이 이어지는 시드니 대표 설 축제다.",https://www.cityofsydney.nsw.gov.au/whats-on/sydney-lunar-festival,true,4
+OCEANIA,AU,호주,시드니,시드니 하버,3,한다 오페라 온 시드니 하버,ART,시드니 하버를 배경으로 대형 야외 무대에서 오페라 공연을 감상하는 시드니의 대표 공연예술 시즌 행사다.,https://opera.org.au/productions/the-phantom-of-the-opera-on-sydney-harbour/,true,5
+OCEANIA,AU,호주,시드니,시드니 하버,4,한다 오페라 온 시드니 하버,ART,시드니 하버를 배경으로 대형 야외 무대에서 오페라 공연을 감상하는 시드니의 대표 공연예술 시즌 행사다.,https://opera.org.au/productions/the-phantom-of-the-opera-on-sydney-harbour/,true,6
+OCEANIA,AU,호주,시드니,시드니 쇼그라운드,4,시드니 로열 이스터 쇼,FESTIVAL,"부활절 일정과 NSW 학교 방학에 따라 매년 개최 날짜가 달라질 수 있으며, 농업 전시, 놀이기구, 음식, 공연이 함께 열리는 대형 박람회다.",https://www.eastershow.com.au/,true,7
+OCEANIA,AU,호주,시드니,도심 공연장 일대,4,시드니 코미디 페스티벌,ART,시드니 여러 공연장에서 국내외 코미디 공연과 스탠드업 무대가 이어지는 코미디 축제다.,https://www.sydneycomedyfest.com.au/,true,8
+OCEANIA,AU,호주,시드니,시드니 하버,5,한다 오페라 온 시드니 하버,ART,시드니 하버를 배경으로 대형 야외 무대에서 오페라 공연을 감상하는 시드니의 대표 공연예술 시즌 행사다.,https://opera.org.au/productions/the-phantom-of-the-opera-on-sydney-harbour/,true,9
+OCEANIA,AU,호주,시드니,도심/하버 일대,5,비비드 시드니,ART,"시드니 하버와 도심을 빛, 음악, 아이디어 프로그램으로 채우는 대표 겨울 예술·조명 축제다.",https://www.vividsydney.com/,true,10
+OCEANIA,AU,호주,시드니,도심/하버 일대,6,비비드 시드니,ART,"시드니 하버와 도심을 빛, 음악, 아이디어 프로그램으로 채우는 대표 겨울 예술·조명 축제다.",https://www.vividsydney.com/,true,11
+OCEANIA,AU,호주,시드니,바란가루,7,바란가루 윈터 페스티벌,SEASONAL,"바란가루 일대에서 겨울 분위기의 음식, 공연, 조명, 야외 프로그램을 즐길 수 있는 도심 겨울 시즌 행사다.",https://www.barangaroo.com/whats-on,true,12
+OCEANIA,AU,호주,시드니,본다이,7,본다이 페스티벌,ART,"본다이 일대에서 공연, 코미디, 아이스링크, 가족 프로그램이 열리는 겨울 해변 문화 축제다.",https://www.bondifestival.com.au/,true,13
+OCEANIA,AU,호주,시드니,본다이 비치,9,본다이 해변 바람 축제,CULTURAL_FESTIVAL,"본다이 해변에서 대형 연, 공연, 가족 프로그램이 펼쳐지는 봄철 해변 축제다.",https://akfs.org.au/bondi-festival-of-the-winds/,true,14
+OCEANIA,AU,호주,시드니,도심 공연장/예술공간,9,시드니 프린지 페스티벌,ART,"독립 공연예술, 실험극, 코미디, 음악, 전시가 도시 곳곳에서 열리는 시드니 대표 프린지 축제다.",https://sydneyfringe.com/,true,15
+OCEANIA,AU,호주,시드니,본다이-타마라마 해안,10,본다이 바다 조각전,ART,본다이에서 타마라마까지 이어지는 해안 산책로에 대형 조각 작품이 전시되는 야외 조각전이다.,https://sculpturebythesea.com/bondi/,true,16
+OCEANIA,AU,호주,시드니,도심/하이드파크 일대,10,나이트 누들 마켓,FOOD_FESTIVAL,"아시아 길거리 음식, 야시장 분위기, 야외 식사 공간을 즐기는 시드니의 대표 야간 음식 행사다.",https://www.goodfoodevents.com.au/night-noodle-markets/,true,17
+OCEANIA,AU,호주,시드니,본다이-타마라마 해안,11,본다이 바다 조각전,ART,본다이에서 타마라마까지 이어지는 해안 산책로에 대형 조각 작품이 전시되는 야외 조각전이다.,https://sculpturebythesea.com/bondi/,true,18
+OCEANIA,AU,호주,시드니,도심/하버 일대,12,시드니 크리스마스 시즌,SEASONAL,"시드니 도심, 마틴 플레이스, 하버 일대에서 크리스마스 조명, 공연, 마켓이 이어지는 연말 시즌이다.",https://www.cityofsydney.nsw.gov.au/christmas,true,19
+OCEANIA,AU,호주,시드니,시드니 하버,12,시드니 새해 전야 불꽃놀이,HOLIDAY,시드니 하버 브리지와 오페라하우스 일대에서 열리는 세계적인 새해맞이 카운트다운 불꽃놀이다.,https://www.sydneynewyearseve.com/,true,20
+OCEANIA,AU,호주,멜버른,차이나타운/도심 일대,1,멜버른 설날 축제,CULTURAL_FESTIVAL,"음력설 일정에 따라 매년 1~2월 사이로 개최 시기가 달라질 수 있으며, 퍼레이드, 공연, 음식, 문화 프로그램이 열리는 설 축제다.",https://whatson.melbourne.vic.gov.au/things-to-do/lunar-new-year,true,21
+OCEANIA,AU,호주,멜버른,차이나타운/도심 일대,2,멜버른 설날 축제,CULTURAL_FESTIVAL,"음력설 일정에 따라 매년 1~2월 사이로 개최 시기가 달라질 수 있으며, 퍼레이드, 공연, 음식, 문화 프로그램이 열리는 설 축제다.",https://whatson.melbourne.vic.gov.au/things-to-do/lunar-new-year,true,22
+OCEANIA,AU,호주,멜버른,도심/야라강 일대,3,뭄바 페스티벌,FESTIVAL,"노동절 연휴에 퍼레이드, 강변 행사, 놀이기구, 불꽃놀이가 이어지는 멜버른 대표 가족형 축제다.",https://moomba.melbourne.vic.gov.au/,true,23
+OCEANIA,AU,호주,멜버른,도심 레스토랑/행사장,3,멜버른 푸드 앤 와인 페스티벌,FOOD_FESTIVAL,"레스토랑, 와이너리, 셰프 프로그램, 도심 미식 행사가 함께 열리는 멜버른 대표 음식·와인 축제다.",https://www.melbournefoodandwine.com.au/,true,24
+OCEANIA,AU,호주,멜버른,도심 공연장 일대,3,멜버른 국제 코미디 페스티벌,ART,"국내외 코미디언의 스탠드업, 공연, 쇼케이스가 여러 공연장에서 열리는 대형 코미디 축제다.",https://www.comedyfestival.com.au/,true,25
+OCEANIA,AU,호주,멜버른,도심 공연장 일대,4,멜버른 국제 코미디 페스티벌,ART,"국내외 코미디언의 스탠드업, 공연, 쇼케이스가 여러 공연장에서 열리는 대형 코미디 축제다.",https://www.comedyfestival.com.au/,true,26
+OCEANIA,AU,호주,멜버른,도심/예술공간 일대,5,라이징 페스티벌,ART,"멜버른 도심에서 공연예술, 음악, 설치미술, 야간 프로그램이 열리는 현대 예술 축제다.",https://rising.melbourne/,true,27
+OCEANIA,AU,호주,멜버른,도심/예술공간 일대,6,라이징 페스티벌,ART,"멜버른 도심에서 공연예술, 음악, 설치미술, 야간 프로그램이 열리는 현대 예술 축제다.",https://rising.melbourne/,true,28
+OCEANIA,AU,호주,멜버른,멜버른 쇼그라운드,9,로열 멜버른 쇼,FESTIVAL,"농업 전시, 동물 체험, 놀이기구, 공연, 음식이 함께 열리는 빅토리아주의 대표 봄 박람회다.",https://royalshow.com.au/,true,29
+OCEANIA,AU,호주,멜버른,도심 공연장/예술공간,9,멜버른 프린지 페스티벌,ART,"독립 공연예술, 실험극, 코미디, 전시가 도시 곳곳에서 열리는 멜버른 대표 프린지 축제다.",https://www.melbournefringe.com.au/,true,30
+OCEANIA,AU,호주,멜버른,도심 공연장/예술공간,10,멜버른 프린지 페스티벌,ART,"독립 공연예술, 실험극, 코미디, 전시가 도시 곳곳에서 열리는 멜버른 대표 프린지 축제다.",https://www.melbournefringe.com.au/,true,31
+OCEANIA,AU,호주,멜버른,도심 공연장 일대,10,멜버른 국제 재즈 페스티벌,ART,"10월 중순~하순에 열리는 재즈 축제로, 국내외 재즈 뮤지션 공연이 멜버른 여러 무대에서 이어진다.",https://www.melbournejazz.com/,true,32
+OCEANIA,AU,호주,멜버른,페더레이션 스퀘어/도심 일대,10,디왈리 멜버른,RELIGIOUS_CULTURAL,"힌두 태음태양력 기준 명절이라 매년 10월 또는 11월 사이로 개최 시기가 달라질 수 있으며, 빛, 공연, 음식, 문화 프로그램이 열리는 인도 문화 축제다.",https://www.celebrateindia.org.au/,true,33
+OCEANIA,AU,호주,멜버른,페더레이션 스퀘어/도심 일대,11,디왈리 멜버른,RELIGIOUS_CULTURAL,"힌두 태음태양력 기준 명절이라 매년 10월 또는 11월 사이로 개최 시기가 달라질 수 있으며, 빛, 공연, 음식, 문화 프로그램이 열리는 인도 문화 축제다.",https://www.celebrateindia.org.au/,true,34
+OCEANIA,AU,호주,멜버른,도심 전역,11,멜버른 크리스마스 시즌,SEASONAL,"멜버른 도심에서 크리스마스 조명, 트리, 공연, 마켓, 가족 프로그램이 이어지는 연말 시즌이다.",https://whatson.melbourne.vic.gov.au/things-to-do/christmas-festival,true,35
+OCEANIA,AU,호주,멜버른,도심 전역,12,멜버른 크리스마스 시즌,SEASONAL,"멜버른 도심에서 크리스마스 조명, 트리, 공연, 마켓, 가족 프로그램이 이어지는 연말 시즌이다.",https://whatson.melbourne.vic.gov.au/things-to-do/christmas-festival,true,36
+OCEANIA,AU,호주,멜버른,도심 전역,12,멜버른 새해 전야 행사,HOLIDAY,"도심 여러 지점에서 카운트다운, 가족 프로그램, 야간 불꽃놀이로 새해를 맞이하는 멜버른 연말 행사다.",https://whatson.melbourne.vic.gov.au/things-to-do/new-years-eve,true,37
+OCEANIA,AU,호주,브리즈번,써니뱅크/도심 문화공간,2,브리즈번 설날 축제,CULTURAL_FESTIVAL,"음력설을 맞아 아시아 음식, 공연, 사자춤, 가족 프로그램이 열리는 브리즈번의 설 문화 행사다.",https://visit.brisbane.qld.au/whats-on,true,38
+OCEANIA,AU,호주,브리즈번,퀸즐랜드 뮤지엄/문화지구,3,월드 사이언스 페스티벌 브리즈번,CULTURE,"과학 토크, 전시, 체험 프로그램, 공연이 함께 열리는 브리즈번 대표 과학 문화 축제다.",https://www.worldsciencefestival.com.au/,true,39
+OCEANIA,AU,호주,브리즈번,파워하우스/도심 공연장,4,브리즈번 코미디 페스티벌,ART,국내외 코미디언의 스탠드업과 라이브 코미디 공연이 열리는 브리즈번 대표 코미디 축제다.,https://www.brisbanecomedyfestival.com/,true,40
+OCEANIA,AU,호주,브리즈번,머스그레이브 파크,5,파니이리 그리스 페스티벌,CULTURAL_FESTIVAL,"그리스 음식, 전통춤, 음악, 문화 체험이 열리는 퀸즐랜드 대표 그리스 문화 축제다.",https://paniyiri.com/,true,41
+OCEANIA,AU,호주,브리즈번,로마 스트리트 파크랜드,7,르 프렌치 페스티벌,CULTURAL_FESTIVAL,"프랑스 음식, 와인, 음악, 마켓, 문화 프로그램을 즐길 수 있는 브리즈번의 프랑스 문화 축제다.",https://lefestival.com.au/,true,42
+OCEANIA,AU,호주,브리즈번,브리즈번 쇼그라운드,8,에카 로열 퀸즐랜드 쇼,FESTIVAL,"농업 전시, 동물 체험, 놀이기구, 음식, 공연이 함께 열리는 퀸즐랜드 대표 대형 박람회다.",https://www.ekka.com.au/,true,43
+OCEANIA,AU,호주,브리즈번,도심/문화공간 일대,9,브리즈번 페스티벌,ART,"도시 전역에서 공연예술, 음악, 설치미술, 야외 프로그램이 열리는 브리즈번 대표 예술 축제다.",https://www.brisbanefestival.com.au/,true,44
+OCEANIA,AU,호주,브리즈번,브리즈번 강/도심 일대,9,리버파이어 브리즈번,FESTIVAL,브리즈번 강과 도심 스카이라인을 배경으로 대형 불꽃놀이와 축제 분위기를 즐기는 브리즈번 페스티벌의 대표 행사다.,https://www.brisbanefestival.com.au/riverfire,true,45
+OCEANIA,AU,호주,브리즈번,브리즈번 쇼그라운드,10,옥토버페스트 브리즈번,FOOD_FESTIVAL,"독일 맥주 축제 문화를 바탕으로 음식, 음악, 전통 의상, 가족 프로그램이 열리는 브리즈번의 독일 문화 축제다.",https://oktoberfestbrisbane.com.au/,true,46
+OCEANIA,AU,호주,브리즈번,뉴팜 파크/도심 가로수길,10,브리즈번 자카란다 시즌,NATURE,"자카란다 꽃이 도심과 공원 일대에 피어나는 봄 시즌으로, 뉴팜 파크와 강변 산책로가 대표 명소다.",https://visit.brisbane.qld.au/inspiration/where-to-find-the-jacarandas-in-brisbane,true,47
+OCEANIA,AU,호주,브리즈번,뉴팜 파크/도심 가로수길,11,브리즈번 자카란다 시즌,NATURE,"자카란다 꽃이 도심과 공원 일대에 피어나는 봄 시즌으로, 뉴팜 파크와 강변 산책로가 대표 명소다.",https://visit.brisbane.qld.au/inspiration/where-to-find-the-jacarandas-in-brisbane,true,48
+OCEANIA,AU,호주,브리즈번,도심 전역,11,브리즈번 크리스마스 시즌,SEASONAL,"도심 조명, 크리스마스 마켓, 공연, 가족 프로그램이 이어지는 브리즈번의 연말 시즌이다.",https://www.brisbane.qld.gov.au/whats-on-and-events/christmas-in-brisbane,true,49
+OCEANIA,AU,호주,브리즈번,도심 전역,12,브리즈번 크리스마스 시즌,SEASONAL,"도심 조명, 크리스마스 마켓, 공연, 가족 프로그램이 이어지는 브리즈번의 연말 시즌이다.",https://www.brisbane.qld.gov.au/whats-on-and-events/christmas-in-brisbane,true,50
+OCEANIA,AU,호주,브리즈번,브리즈번 강/사우스뱅크 일대,12,브리즈번 새해 전야 행사,HOLIDAY,"브리즈번 강과 사우스뱅크 일대에서 카운트다운, 가족 프로그램, 불꽃놀이로 새해를 맞이하는 연말 행사다.",https://visit.brisbane.qld.au/whats-on,true,51
+OCEANIA,AU,호주,퍼스,스완강/랭글리 파크,1,퍼스 호주 데이 스카이쇼,NATIONAL_HOLIDAY,1월 26일 호주 데이를 맞아 스완강과 도심 하늘을 배경으로 드론 쇼와 불꽃놀이가 열리는 퍼스 대표 국가 기념일 행사다.,https://perth.wa.gov.au/news-and-updates/all-news/reflect-respect-celebrate-australia-day-in-the-city,true,52
+OCEANIA,AU,호주,퍼스,노스브리지/도심 공연장,1,프린지 월드 페스티벌,ART,"퍼스 도심 여러 공연장과 야외 공간에서 코미디, 서커스, 음악, 공연예술이 열리는 대형 프린지 축제다.",https://fringeworld.com.au/,true,53
+OCEANIA,AU,호주,퍼스,노스브리지/도심 공연장,2,프린지 월드 페스티벌,ART,"퍼스 도심 여러 공연장과 야외 공간에서 코미디, 서커스, 음악, 공연예술이 열리는 대형 프린지 축제다.",https://fringeworld.com.au/,true,54
+OCEANIA,AU,호주,퍼스,도심 공연장/예술공간,2,퍼스 페스티벌,ART,"공연예술, 음악, 문학, 영화, 시각예술 프로그램이 함께 열리는 퍼스 대표 국제 예술 축제다.",https://www.perthfestival.com.au/,true,55
+OCEANIA,AU,호주,퍼스,도심 공연장/예술공간,3,퍼스 페스티벌,ART,"공연예술, 음악, 문학, 영화, 시각예술 프로그램이 함께 열리는 퍼스 대표 국제 예술 축제다.",https://www.perthfestival.com.au/,true,56
+OCEANIA,AU,호주,퍼스,코테슬로 해변,3,스컬프처 바이 더 씨 코테슬로,ART,코테슬로 해변을 따라 대형 조각 작품이 전시되는 서호주의 대표 야외 조각전이다.,https://sculpturebythesea.com/cottesloe/,true,57
+OCEANIA,AU,호주,퍼스,프리맨틀,4,프리맨틀 국제 거리 예술 축제,ART,"부활절 연휴 프리맨틀 거리에서 서커스, 마임, 버스킹, 거리극 공연이 펼쳐지는 무료 거리예술 축제다.",https://www.streetartsfestival.com.au/,true,58
+OCEANIA,AU,호주,퍼스,도심 공연장 일대,4,퍼스 코미디 페스티벌,ART,퍼스 여러 공연장에서 스탠드업 코미디와 라이브 코미디 쇼가 열리는 코미디 축제다.,https://www.perthcomedyfestival.com/,true,59
+OCEANIA,AU,호주,퍼스,도심 공연장 일대,5,퍼스 코미디 페스티벌,ART,퍼스 여러 공연장에서 스탠드업 코미디와 라이브 코미디 쇼가 열리는 코미디 축제다.,https://www.perthcomedyfestival.com/,true,60
+OCEANIA,AU,호주,퍼스,버스우드 파크/도심 일대,6,WA 데이 페스티벌,NATIONAL_HOLIDAY,"서호주의 역사와 문화를 기념하며 음악, 음식, 가족 프로그램이 열리는 WA 데이 연휴 대표 행사다.",https://www.celebratewa.com.au/wa-day-festival/,true,61
+OCEANIA,AU,호주,퍼스,킹스 파크,9,킹스 파크 와일드플라워 페스티벌,NATURE,"서호주의 야생화와 토종 식물을 기념하며 킹스 파크 전역에서 전시, 산책, 자연 프로그램이 열리는 봄꽃 축제다.",https://www.bgpa.wa.gov.au/everlasting-kings-park-festival,true,62
+OCEANIA,AU,호주,퍼스,클레어몬트 쇼그라운드,9,퍼스 로열 쇼,FESTIVAL,"농업 전시, 동물 체험, 놀이기구, 공연, 음식이 함께 열리는 서호주 대표 봄 박람회다.",https://perthroyalshow.com.au/,true,63
+OCEANIA,AU,호주,퍼스,서비아코,10,언와인드 서비아코,FOOD_FESTIVAL,"서호주 와인, 수제 맥주, 진, 로컬 음식을 도심 야외 공간에서 즐길 수 있는 와인·미식 축제다.",https://www.wineandfood.com.au/,true,64
+OCEANIA,AU,호주,퍼스,도심 공연장 일대,10,퍼스 국제 재즈 페스티벌,ART,퍼스 여러 공연장에서 호주와 해외 재즈 뮤지션 공연이 이어지는 도시 대표 재즈 축제다.,https://perthjazzfest.com/,true,65
+OCEANIA,AU,호주,퍼스,도심 전역,11,퍼스 크리스마스 시즌,SEASONAL,"퍼스 도심에서 크리스마스 조명, 마켓, 가족 프로그램이 이어지며, 크리스마스 퍼레이드 같은 연말 퍼레이드도 함께 즐길 수 있는 시즌이다.",https://visitperth.com/events/christmas,true,66
+OCEANIA,AU,호주,퍼스,프리맨틀 에스플러네이드 파크,11,프리맨틀 비어페스트,FOOD_FESTIVAL,"서호주 수제 맥주, 사이다, 스트리트 푸드, 라이브 음악을 즐기는 프리맨틀의 야외 맥주 축제다.",https://www.westernaustralia.com/en/event/fremantle-beerfest/5f0657d992044aa01ff0df6d,true,67
+OCEANIA,AU,호주,퍼스,도심 전역,12,퍼스 크리스마스 시즌,SEASONAL,"퍼스 도심에서 크리스마스 조명, 마켓, 가족 프로그램이 이어지며, 크리스마스 퍼레이드 같은 연말 퍼레이드도 함께 즐길 수 있는 시즌이다.",https://visitperth.com/events/christmas,true,68
+OCEANIA,AU,호주,퍼스,도심/스완강 일대,12,퍼스 새해 전야 행사,HOLIDAY,"퍼스 도심과 스완강 일대에서 카운트다운, 가족 프로그램, 불꽃놀이로 새해를 맞이하는 연말 행사다.",https://visitperth.com/events/new-years-eve,true,69
+OCEANIA,AU,호주,애들레이드,도심 공연장/예술공간,2,애들레이드 프린지,ART,"공연예술, 코미디, 음악, 서커스, 거리공연이 도시 전역에서 열리는 남반구 대표 프린지 축제다.",https://adelaidefringe.com.au/,true,70
+OCEANIA,AU,호주,애들레이드,도심 공연장/예술공간,2,애들레이드 페스티벌,ART,"오페라, 연극, 무용, 음악, 문학 프로그램이 열리는 애들레이드 대표 국제 예술 축제다.",https://www.adelaidefestival.com.au/,true,71
+OCEANIA,AU,호주,애들레이드,도심 공연장/예술공간,3,애들레이드 프린지,ART,"공연예술, 코미디, 음악, 서커스, 거리공연이 도시 전역에서 열리는 남반구 대표 프린지 축제다.",https://adelaidefringe.com.au/,true,72
+OCEANIA,AU,호주,애들레이드,도심 공연장/예술공간,3,애들레이드 페스티벌,ART,"오페라, 연극, 무용, 음악, 문학 프로그램이 열리는 애들레이드 대표 국제 예술 축제다.",https://www.adelaidefestival.com.au/,true,73
+OCEANIA,AU,호주,애들레이드,보태닉 파크,3,워매들레이드,ART,"세계 음악, 예술, 춤, 문화 프로그램이 보태닉 파크에서 열리는 애들레이드의 대표 월드뮤직 축제다.",https://www.womadelaide.com.au/,true,74
+OCEANIA,AU,호주,애들레이드,도시 전역,5,남호주 역사 페스티벌,CULTURE,"남호주 곳곳의 역사 공간, 박물관, 커뮤니티 장소에서 투어와 전시, 문화 프로그램이 열리는 역사 축제다.",https://festival.history.sa.gov.au/,true,75
+OCEANIA,AU,호주,애들레이드,도심 공연장 일대,6,애들레이드 카바레 페스티벌,ART,"카바레, 음악극, 보컬 공연이 중심이 되는 애들레이드 대표 겨울 공연예술 축제다.",https://www.adelaidecabaretfestival.com.au/,true,76
+OCEANIA,AU,호주,애들레이드,도심/노스테라스 일대,7,일루미네이트 애들레이드,ART,"도시 건축물, 거리, 예술공간을 빛과 미디어아트로 채우는 애들레이드 대표 겨울 예술·조명 축제다.",https://www.illuminateadelaide.com/,true,77
+OCEANIA,AU,호주,애들레이드,남호주 전역,8,SALA 페스티벌,ART,"South Australian Living Artists Festival로, 남호주 전역의 갤러리와 공간에서 지역 시각예술가의 전시와 프로그램이 열리는 8월 예술 축제다.",https://www.salafestival.com/,true,78
+OCEANIA,AU,호주,애들레이드,애들레이드 쇼그라운드,9,로열 애들레이드 쇼,FESTIVAL,"농업 전시, 동물 체험, 놀이기구, 공연, 음식이 함께 열리는 남호주 대표 봄 박람회다.",https://www.theshow.com.au/,true,79
+OCEANIA,AU,호주,애들레이드,도심 공연장/문화공간,10,오즈아시아 페스티벌,ART,"아시아와 호주의 현대 공연예술, 음악, 전시, 음식 프로그램을 소개하는 애들레이드 대표 문화 축제다.",https://www.ozasiafestival.com.au/,true,80
+OCEANIA,AU,호주,애들레이드,도심 공연장/문화공간,11,오즈아시아 페스티벌,ART,"아시아와 호주의 현대 공연예술, 음악, 전시, 음식 프로그램을 소개하는 애들레이드 대표 문화 축제다.",https://www.ozasiafestival.com.au/,true,81
+OCEANIA,AU,호주,애들레이드,도심 전역,11,애들레이드 크리스마스 시즌,SEASONAL,"애들레이드 도심에서 크리스마스 조명과 가족 프로그램이 이어지며, 내셔널 파머시스 크리스마스 페이지언트와 빅토리아 광장 대형 트리도 함께 즐길 수 있는 시즌이다.",https://southaustralia.com/plan-a-trip/christmas-in-south-australia,true,82
+OCEANIA,AU,호주,애들레이드,도심 전역,12,애들레이드 크리스마스 시즌,SEASONAL,"애들레이드 도심에서 크리스마스 조명과 가족 프로그램이 이어지며, 내셔널 파머시스 크리스마스 페이지언트, 빅토리아 광장 대형 트리, 캐럴즈 온 더 스퀘어를 함께 즐길 수 있는 시즌이다.",https://southaustralia.com/plan-a-trip/christmas-in-south-australia,true,83
+OCEANIA,AU,호주,애들레이드,도심/엘더 파크 일대,12,애들레이드 새해 전야 행사,HOLIDAY,"도심과 강변 일대에서 카운트다운, 가족 프로그램, 불꽃놀이로 새해를 맞이하는 애들레이드 연말 행사다.",https://www.cityofadelaide.com.au/community/events-celebrations/new-years-eve/,true,84
+OCEANIA,NZ,뉴질랜드,오클랜드,와이테마타 하버,1,오클랜드 애니버서리 데이 레가타,TRADITION,"오클랜드 애니버서리 데이에 맞춰 와이테마타 하버에서 요트와 보트 퍼레이드, 해양 행사가 열리는 오랜 전통의 항구 축제다.",https://regatta.org.nz/,true,85
+OCEANIA,NZ,뉴질랜드,오클랜드,도심/마누카우 일대,2,오클랜드 랜턴 페스티벌,CULTURAL_FESTIVAL,"음력설 일정에 따라 매년 개최 시기가 달라질 수 있으며, 랜턴 전시, 공연, 음식, 문화 프로그램이 열리는 오클랜드 대표 설 축제다.",https://www.aucklandnz.com/lantern,true,86
+OCEANIA,NZ,뉴질랜드,오클랜드,타파파캉가 리저널 파크,2,스플로어 뮤직 페스티벌,ART,"음악, 공연예술, 예술 설치, 캠핑 문화가 함께 열리는 오클랜드권 대표 여름 음악·예술 축제다.",https://www.splore.net/,true,87
+OCEANIA,NZ,뉴질랜드,오클랜드,웨스턴 스프링스,3,파시피카 페스티벌,CULTURAL_FESTIVAL,"태평양 섬 문화권의 음악, 춤, 음식, 공예, 커뮤니티 프로그램이 모이는 오클랜드 대표 다문화 축제다.",https://www.aucklandnz.com/pasifika,true,88
+OCEANIA,NZ,뉴질랜드,오클랜드,도심 공연장/예술공간,3,오클랜드 아트 페스티벌,ART,"연극, 무용, 음악, 시각예술, 도시형 공연 프로그램이 열리는 오클랜드 대표 국제 예술 축제다.",https://www.aaf.co.nz/,true,89
+OCEANIA,NZ,뉴질랜드,오클랜드,도심 공연장 일대,5,뉴질랜드 국제 코미디 페스티벌,ART,오클랜드와 웰링턴을 중심으로 국내외 코미디언의 스탠드업과 라이브 코미디 공연이 열리는 코미디 축제다.,https://www.comedyfestival.co.nz/,true,90
+OCEANIA,NZ,뉴질랜드,오클랜드,도심/마라에/문화공간,7,마타리키 페스티벌 오클랜드,CULTURAL_FESTIVAL,"마오리 새해인 마타리키 일정에 따라 매년 개최 시기가 달라질 수 있으며, 공연, 전시, 음식, 전통문화 프로그램이 열리는 축제다.",https://www.aucklandnz.com/matariki,true,91
+OCEANIA,NZ,뉴질랜드,오클랜드,도심 참여 레스토랑,8,오클랜드 레스토랑 먼스,FOOD_FESTIVAL,"오클랜드 도심 여러 레스토랑에서 특별 메뉴, 미식 행사, 셰프 협업 프로그램이 열리는 겨울 미식 축제다.",https://heartofthecity.co.nz/restaurant-month/showcase,true,92
+OCEANIA,NZ,뉴질랜드,오클랜드,더 클라우드,9,초콜릿 & 커피 페스티벌,FOOD_FESTIVAL,"초콜릿, 커피, 디저트, 로컬 식음료 브랜드를 한자리에서 즐길 수 있는 오클랜드의 미식 행사다.",https://www.chocolatecoffeefestival.nz/,true,93
+OCEANIA,NZ,뉴질랜드,오클랜드,더 클라우드,10,오클랜드 아시아 페스티벌,CULTURAL_FESTIVAL,"아시아 여러 국가의 음식, 공연, 문화 체험, 커뮤니티 프로그램을 소개하는 오클랜드의 다문화 축제다.",https://www.aucklandnz.com/events/all-events/auckland-asia-festival-2026,true,94
+OCEANIA,NZ,뉴질랜드,오클랜드,도심/아오테아 스퀘어 일대,10,오클랜드 디왈리 페스티벌,RELIGIOUS_CULTURAL,"힌두 태음태양력 기준 명절이라 매년 10월 또는 11월 사이로 개최 시기가 달라질 수 있으며, 인도 문화 공연, 음식, 빛의 축제가 열리는 행사다.",https://www.aucklandnz.com/diwali,true,95
+OCEANIA,NZ,뉴질랜드,오클랜드,도심 퍼레이드 구간,11,오클랜드 산타 퍼레이드,SEASONAL,"오클랜드 도심에서 산타, 플로트카, 마칭밴드, 캐릭터가 행진하며 크리스마스 시즌 시작을 알리는 퍼레이드다.",https://www.santaparade.co.nz/,true,96
+OCEANIA,NZ,뉴질랜드,오클랜드,도심 전역,11,오클랜드 크리스마스 시즌,SEASONAL,"오클랜드 도심에서 크리스마스 조명, 산타 퍼레이드, 마켓, 가족 프로그램이 이어지는 연말 시즌이다.",https://heartofthecity.co.nz/christmas,true,97
+OCEANIA,NZ,뉴질랜드,오클랜드,도심 전역,12,오클랜드 크리스마스 시즌,SEASONAL,"오클랜드 도심에서 크리스마스 조명, 마켓, 가족 프로그램, 연말 분위기를 즐길 수 있는 크리스마스 시즌이다.",https://heartofthecity.co.nz/christmas,true,98
+OCEANIA,NZ,뉴질랜드,오클랜드,스카이타워/도심 일대,12,오클랜드 새해 전야 불꽃놀이,HOLIDAY,오클랜드 도심과 스카이타워 일대에서 카운트다운과 불꽃놀이로 새해를 맞이하는 연말 행사다.,https://heartofthecity.co.nz/article/new-years-eve-auckland-city-centre,true,99
+OCEANIA,NZ,뉴질랜드,크라이스트처치,도심 공연장/거리공간,1,월드 버스커스 페스티벌,ART,"크라이스트처치 도심에서 거리공연, 서커스, 코미디, 마임, 음악 공연이 열리는 대표 거리예술 축제다.",https://www.worldbuskersfestival.co.nz/,true,100
+OCEANIA,NZ,뉴질랜드,크라이스트처치,해글리 파크,1,그레이트 키위 비어 페스티벌,FOOD_FESTIVAL,"뉴질랜드 수제 맥주, 음식, 라이브 음악을 함께 즐기는 크라이스트처치의 대형 야외 맥주 축제다.",https://www.greatkiwibeerfestival.co.nz/,true,101
+OCEANIA,NZ,뉴질랜드,크라이스트처치,노스 해글리 파크,2,미터10 스파크스,ART,노스 해글리 파크에서 라이브 오케스트라 공연과 불꽃놀이가 함께 열리는 크라이스트처치의 대표 무료 야외 공연 행사다.,https://eventshub.co.nz/events/mitre10-sparks-2026-3051-roman,true,102
+OCEANIA,NZ,뉴질랜드,크라이스트처치,노스 해글리 파크,2,일렉트릭 애비뉴 페스티벌,ART,노스 해글리 파크에서 여러 무대와 음악 공연이 열리는 크라이스트처치 대표 여름 음악 페스티벌이다.,https://www.electricavenuefestival.co.nz/,true,103
+OCEANIA,NZ,뉴질랜드,크라이스트처치,빅토리아 스퀘어/도심 일대,2,크라이스트처치 설날 랜턴 축제,CULTURAL_FESTIVAL,"음력설을 맞아 랜턴, 문화 공연, 음식, 가족 프로그램이 열리는 크라이스트처치의 설날 문화 행사다.",https://www.christchurchnz.com/visit/whats-on,true,104
+OCEANIA,NZ,뉴질랜드,크라이스트처치,도심 공원/야외무대,2,서머 선데이즈 크라이스트처치,ART,여름 일요일에 야외 음악 공연과 가족 프로그램을 즐기는 크라이스트처치의 무료 시즌형 문화 행사다.,https://www.eventfinda.co.nz/2026/summer-sundays/christchurch,true,105
+OCEANIA,NZ,뉴질랜드,크라이스트처치,도심/마라에/문화공간,6,마타리키 마오리 새해 축제,CULTURAL_FESTIVAL,"마오리 새해인 마타리키를 기념하며 공연, 음식, 전통문화, 커뮤니티 프로그램이 열리는 겨울 문화 행사다.",https://ccc.govt.nz/news-and-events/whats-on,true,106
+OCEANIA,NZ,뉴질랜드,크라이스트처치,아트센터,7,마타리키 마켓,CULTURAL_FESTIVAL,"마타리키 시즌에 맞춰 아트센터에서 마오리 문화, 공예, 음식, 지역 판매자 프로그램이 열리는 겨울 마켓 행사다.",https://www.artscentre.org.nz/whats-on/matariki-makete/,true,107
+OCEANIA,NZ,뉴질랜드,크라이스트처치,도심 공연장 일대,8,고 라이브 페스티벌,ART,라이브 음악 공연과 아티스트 무대가 열리는 크라이스트처치의 겨울 음악 페스티벌이다.,https://www.ticketmaster.co.nz/go-live-festival-tickets/artist/3677034,true,108
+OCEANIA,NZ,뉴질랜드,크라이스트처치,캔터베리 애그리컬처럴 파크,11,캔터베리 A&P 쇼,FESTIVAL,"농업 전시, 동물 체험, 지역 음식, 가족 프로그램이 함께 열리는 캔터베리 지역의 대표 박람회다.",https://www.theshow.co.nz/,true,109
+OCEANIA,NZ,뉴질랜드,크라이스트처치,도심 전역,11,크라이스트처치 크리스마스 시즌,SEASONAL,"도심 조명, 산타 퍼레이드, 가족 공연, 크리스마스 마켓 분위기가 이어지는 크라이스트처치의 연말 시즌이다.",https://ccc.govt.nz/news-and-events/whats-on,true,110
+OCEANIA,NZ,뉴질랜드,크라이스트처치,도심 전역,12,크라이스트처치 크리스마스 시즌,SEASONAL,"도심 조명, 산타 퍼레이드, 해글리 파크 캐럴 행사, 가족 공연이 이어지는 크라이스트처치의 크리스마스 시즌이다.",https://ccc.govt.nz/news-and-events/whats-on,true,111
+OCEANIA,NZ,뉴질랜드,크라이스트처치,캔터베리 애그리컬처럴 파크,12,크라이스트처치 크리스마스 쇼 퍼레이드,SEASONAL,"동화 속 플로트카, 마칭밴드, 캐릭터, 산타가 등장하는 크라이스트처치의 대표 크리스마스 퍼레이드 행사다.",https://christmasshowparade.co.nz/,true,112
+OCEANIA,NZ,뉴질랜드,크라이스트처치,해글리 파크/도심 일대,12,크라이스트처치 새해 전야 행사,HOLIDAY,"해글리 파크와 도심 일대에서 라이브 공연, 가족 프로그램, 카운트다운과 불꽃놀이로 새해를 맞이하는 연말 행사다.",https://ccc.govt.nz/news-and-events/whats-on,true,113
+OCEANIA,NZ,뉴질랜드,웰링턴,도심 공연장/예술공간,2,뉴질랜드 프린지 페스티벌,ART,"웰링턴 여러 공연장과 독립 예술공간에서 연극, 코미디, 음악, 퍼포먼스가 열리는 뉴질랜드 대표 프린지 축제다.",https://www.fringe.co.nz/,true,114
+OCEANIA,NZ,뉴질랜드,웰링턴,도심 공연장/예술공간,3,뉴질랜드 프린지 페스티벌,ART,"웰링턴 여러 공연장과 독립 예술공간에서 연극, 코미디, 음악, 퍼포먼스가 열리는 뉴질랜드 대표 프린지 축제다.",https://www.fringe.co.nz/,true,115
+OCEANIA,NZ,뉴질랜드,웰링턴,쿠바 스트리트/도심 일대,3,큐바두파,CULTURAL_FESTIVAL,"쿠바 스트리트 일대에서 거리공연, 음악, 음식, 예술 프로그램이 열리는 웰링턴 대표 거리 문화 축제다.",https://www.cubadupa.co.nz/,true,116
+OCEANIA,NZ,뉴질랜드,웰링턴,도심 공연장/예술공간,6,뢰미스 겨울 축제,ART,"한겨울의 밤과 문화를 주제로 공연예술, 음악, 설치미술, 실험적 프로그램이 열리는 웰링턴의 겨울 예술 축제다.",https://www.wellingtonnz.com/visit/events/loemis,true,117
+OCEANIA,NZ,뉴질랜드,웰링턴,도심/워터프런트/문화공간,6,마타리키 웰링턴,CULTURAL_FESTIVAL,"마오리 새해인 마타리키를 기념하며 공연, 조명, 전통문화, 가족 프로그램이 열리는 웰링턴의 겨울 문화 행사다.",https://wellington.govt.nz/news-and-events/events-and-festivals/matariki,true,118
+OCEANIA,NZ,뉴질랜드,웰링턴,도심/워터프런트/문화공간,7,마타리키 웰링턴,CULTURAL_FESTIVAL,"마오리 새해인 마타리키를 기념하며 공연, 조명, 전통문화, 가족 프로그램이 열리는 웰링턴의 겨울 문화 행사다.",https://wellington.govt.nz/news-and-events/events-and-festivals/matariki,true,119
+OCEANIA,NZ,뉴질랜드,웰링턴,웰링턴 참여 레스토랑,8,비자 웰링턴 온 어 플레이트,FOOD_FESTIVAL,"웰링턴 여러 레스토랑과 바에서 특별 메뉴, 버거, 미식 이벤트가 열리는 뉴질랜드 대표 음식 축제다.",https://visawoap.com/,true,120
+OCEANIA,NZ,뉴질랜드,웰링턴,Hnry 스타디움,8,비어바나,FOOD_FESTIVAL,"뉴질랜드 수제 맥주, 양조장, 음식, 라이브 프로그램을 한자리에서 즐기는 웰링턴 대표 맥주 축제다.",https://beervana.co.nz/,true,121
+OCEANIA,NZ,뉴질랜드,웰링턴,도심 공연장 일대,10,웰링턴 재즈 페스티벌,ART,웰링턴 여러 공연장에서 국내외 재즈 뮤지션 공연이 이어지는 도시 대표 음악 축제다.,https://www.jazzfestival.nz/,true,122
+OCEANIA,NZ,뉴질랜드,웰링턴,TSB 아레나/도심 일대,10,웰링턴 디왈리 페스티벌,RELIGIOUS_CULTURAL,"힌두 태음태양력 기준 명절이라 매년 10월 또는 11월 사이로 개최 시기가 달라질 수 있으며, 인도 문화 공연, 음식, 빛의 축제가 열리는 행사다.",https://wellington.govt.nz/news-and-events/events-and-festivals/diwali,true,123
+OCEANIA,NZ,뉴질랜드,웰링턴,TSB 아레나/도심 일대,11,웰링턴 디왈리 페스티벌,RELIGIOUS_CULTURAL,"힌두 태음태양력 기준 명절이라 매년 10월 또는 11월 사이로 개최 시기가 달라질 수 있으며, 인도 문화 공연, 음식, 빛의 축제가 열리는 행사다.",https://wellington.govt.nz/news-and-events/events-and-festivals/diwali,true,124
+OCEANIA,NZ,뉴질랜드,웰링턴,도심 전역,11,웰링턴 크리스마스 시즌,SEASONAL,"웰링턴 도심과 워터프런트에서 크리스마스 조명, 마켓, 가족 공연, 연말 분위기가 이어지는 시즌이다.",https://wellington.govt.nz/news-and-events/events-and-festivals,true,125
+OCEANIA,NZ,뉴질랜드,웰링턴,도심 전역,12,웰링턴 크리스마스 시즌,SEASONAL,"웰링턴 도심과 워터프런트에서 크리스마스 조명, 마켓, 가족 공연, 연말 분위기가 이어지는 시즌이다.",https://wellington.govt.nz/news-and-events/events-and-festivals,true,126
+OCEANIA,NZ,뉴질랜드,웰링턴,웰링턴 워터프런트/도심 일대,12,웰링턴 새해 전야 행사,HOLIDAY,"웰링턴 워터프런트와 도심 일대에서 라이브 공연, 카운트다운, 불꽃놀이로 새해를 맞이하는 연말 행사다.",https://wellington.govt.nz/news-and-events/events-and-festivals,true,127
+OCEANIA,NZ,뉴질랜드,퀸스타운,와카티푸 호수/도심 일대,1,퀸스타운 새해 전야 불꽃놀이,HOLIDAY,"와카티푸 호수와 도심 일대에서 카운트다운, 음악, 불꽃놀이로 새해를 맞이하는 퀸스타운의 연말·새해 행사다.",https://www.queenstownnz.co.nz/things-to-do/events/annual-events/,true,128
+OCEANIA,NZ,뉴질랜드,퀸스타운,깁스턴,1,더 밸리 와인·푸드·뮤직 페스티벌,FOOD_FESTIVAL,"깁스턴 밸리에서 와인, 음식, 라이브 음악을 함께 즐기는 퀸스타운권 여름 미식·음악 행사다.",https://www.queenstownnz.co.nz/stories/post/summer-events-guide/,true,129
+OCEANIA,NZ,뉴질랜드,퀸스타운,애로우타운,4,애로우타운 가을 축제,CULTURAL_FESTIVAL,"애로우타운의 단풍 시즌에 맞춰 퍼레이드, 시장, 공연, 지역 문화 프로그램이 열리는 퀸스타운권 대표 가을 축제다.",https://www.arrowtownautumnfestival.co.nz/,true,130
+OCEANIA,NZ,뉴질랜드,퀸스타운,키위 파크/도심 일대,6,루마 인챈티드,SEASONAL,겨울 시즌 퀸스타운의 자연 공간과 야간 산책로를 빛과 설치물로 꾸미는 야간 조명 행사다.,https://luma.nz/,true,131
+OCEANIA,NZ,뉴질랜드,퀸스타운,키위 파크/도심 일대,7,루마 인챈티드,SEASONAL,겨울 시즌 퀸스타운의 자연 공간과 야간 산책로를 빛과 설치물로 꾸미는 야간 조명 행사다.,https://luma.nz/,true,132
+OCEANIA,NZ,뉴질랜드,퀸스타운,퀸스타운 이벤트 센터,7,마디 그라 퀸스타운,ART,겨울 시즌 음악 공연과 파티 분위기가 결합된 퀸스타운의 대표 겨울 음악 이벤트다.,https://www.audiologytouring.com/festival/mardi-gras,true,133
+OCEANIA,NZ,뉴질랜드,퀸스타운,스키장/도심 일대,7,야간 스키 파티,SEASONAL,"퀸스타운 겨울 스키 시즌에 맞춰 야간 스키와 음악, 축제 분위기를 함께 즐기는 겨울 이벤트다.",https://www.queenstownnz.co.nz/things-to-do/events/,true,134
+OCEANIA,NZ,뉴질랜드,퀸스타운,키위 파크/도심 일대,8,루마 인챈티드,SEASONAL,겨울 시즌 퀸스타운의 자연 공간과 야간 산책로를 빛과 설치물로 꾸미는 야간 조명 행사다.,https://luma.nz/,true,135
+OCEANIA,NZ,뉴질랜드,퀸스타운,퀸스타운 도심/스키 리조트 일대,9,스노우 머신 퀸스타운,ART,스키 시즌과 음악 페스티벌을 결합해 퀸스타운 도심과 산악 리조트 일대에서 열리는 겨울 음악 행사다.,https://snow-machine.com/,true,136
+OCEANIA,NZ,뉴질랜드,퀸스타운,도심 전역,12,퀸스타운 크리스마스 시즌,SEASONAL,"퀸스타운 도심과 호수 주변에서 크리스마스 장식, 가족 프로그램, 연말 분위기를 즐길 수 있는 시즌이다.",https://www.queenstownnz.co.nz/things-to-do/events/annual-events/,true,137
+OCEANIA,NZ,뉴질랜드,퀸스타운,와카티푸 호수/도심 일대,12,퀸스타운 새해 전야 불꽃놀이,HOLIDAY,"와카티푸 호수와 도심 일대에서 카운트다운, 음악, 불꽃놀이로 새해를 맞이하는 퀸스타운의 대표 연말 행사다.",https://www.queenstownnz.co.nz/things-to-do/events/annual-events/,true,138

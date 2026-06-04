@@ -2,7 +2,7 @@ package com.money.recommendation.controller;
 
 import com.money.flight.enums.ConnectionType;
 import com.money.flight.enums.SeatClass;
-import com.money.recommendation.dto.FlightPriceAnalysisResponseDto;
+import com.money.recommendation.dto.flight.FlightPriceAnalysisResponseDto;
 import com.money.recommendation.service.FlightPriceAnalysisService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;

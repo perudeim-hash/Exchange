@@ -1,7 +1,8 @@
-package com.money.event.service;
+package com.money.recommendation.service;
 
-import com.money.event.dto.TravelTimingScoreDto;
-import com.money.recommendation.dto.MonthlyFlightPriceAnalysisDto;
+import com.money.exchange.dto.MonthlyAverageRateDto;
+import com.money.recommendation.dto.timing.TravelTimingScoreDto;
+import com.money.recommendation.dto.flight.MonthlyFlightPriceAnalysisDto;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -11,21 +12,22 @@ import java.util.Objects;
 
 @Component
 public class TravelTimingScoreCalculator {
-    private static final int FLIGHT_CHEAP_TOP5_MAX_SCORE = 50;
+    private static final int FLIGHT_CHEAP_TOP5_MAX_SCORE = 55;
     private static final int FLIGHT_MIN_PRICE_MAX_SCORE = 10;
     private static final int FLIGHT_STABILITY_MAX_SCORE = 15;
-    private static final int EXCHANGE_AVERAGE_RATE_MAX_SCORE = 12;
+    private static final int EXCHANGE_AVERAGE_RATE_MAX_SCORE = 17;
     private static final int EXCHANGE_DATA_COUNT_MAX_SCORE = 3;
-    private static final int EVENT_REPRESENTATIVE_MAX_SCORE = 6;
-    private static final int EVENT_COUNT_MAX_SCORE = 4;
 
-    public TravelTimingScoreDto calculateFlightOnlyScore(MonthlyFlightPriceAnalysisDto currentMonth, List<MonthlyFlightPriceAnalysisDto> allMonths) {
-        validateFlightInputs(currentMonth, allMonths);
+    public TravelTimingScoreDto calculateScore(MonthlyFlightPriceAnalysisDto currentFlightMonth, List<MonthlyFlightPriceAnalysisDto> allFlightMonths,
+                                               MonthlyAverageRateDto currentExchangeMonth, List<MonthlyAverageRateDto> allExchangeMonths) {
+        validateFlightInputs(currentFlightMonth, allFlightMonths);
 
-        int cheapTop5Score = calculateLowerIsBetterScore(currentMonth.getCheapTop5AveragePrice(), findMinCheapTop5AveragePrice(allMonths), findMaxCheapTop5AveragePrice(allMonths), FLIGHT_CHEAP_TOP5_MAX_SCORE);
-        int minPriceScore = calculateLowerIsBetterScore(currentMonth.getMinRoundTripPrice(), findMinRoundTripPrice(allMonths), findMaxRoundTripPrice(allMonths), FLIGHT_MIN_PRICE_MAX_SCORE);
-        int stabilityScore = calculateLowerIsBetterScore(calculatePriceVolatilityRate(currentMonth), findMinVolatilityRate(allMonths), findMaxVolatilityRate(allMonths), FLIGHT_STABILITY_MAX_SCORE);
-        return TravelTimingScoreDto.of(cheapTop5Score, minPriceScore, stabilityScore, 0, 0, 0, 0);
+        int cheapTop5Score = calculateLowerIsBetterScore(currentFlightMonth.getCheapTop5AveragePrice(), findMinCheapTop5AveragePrice(allFlightMonths), findMaxCheapTop5AveragePrice(allFlightMonths), FLIGHT_CHEAP_TOP5_MAX_SCORE);
+        int minPriceScore = calculateLowerIsBetterScore(currentFlightMonth.getMinRoundTripPrice(), findMinRoundTripPrice(allFlightMonths), findMaxRoundTripPrice(allFlightMonths), FLIGHT_MIN_PRICE_MAX_SCORE);
+        int stabilityScore = calculateLowerIsBetterScore(calculatePriceVolatilityRate(currentFlightMonth), findMinVolatilityRate(allFlightMonths), findMaxVolatilityRate(allFlightMonths), FLIGHT_STABILITY_MAX_SCORE);
+        int exchangeAverageRateScore = calculateExchangeAverageRateScore(currentExchangeMonth, allExchangeMonths);
+        int exchangeDateCountScore = calculateExchangeDataCountScore(currentExchangeMonth);
+        return TravelTimingScoreDto.of(cheapTop5Score, minPriceScore, stabilityScore, exchangeAverageRateScore, exchangeDateCountScore);
     }
 
     private int calculateLowerIsBetterScore(BigDecimal currentValue, BigDecimal minValue, BigDecimal maxValue, int maxScore) {
@@ -110,6 +112,7 @@ public class TravelTimingScoreCalculator {
                 .max(BigDecimal::compareTo)
                 .orElse(BigDecimal.ZERO);
     }
+
     private void validateFlightInputs(MonthlyFlightPriceAnalysisDto currentMonth, List<MonthlyFlightPriceAnalysisDto> allMonths) {
         if (currentMonth == null) {
             throw new IllegalArgumentException("현재 월 항공권 분석 결과는 필수입니다.");
@@ -120,5 +123,40 @@ public class TravelTimingScoreCalculator {
         }
     }
 
+    private int calculateExchangeAverageRateScore(MonthlyAverageRateDto currentMonth, List<MonthlyAverageRateDto> allMonths) {
+        if (currentMonth == null || allMonths == null || allMonths.isEmpty()) {
+            return 0;
+        }
+        return calculateLowerIsBetterScore(currentMonth.getAverageRate(), findMinAverageRate(allMonths), findMaxAverageRate(allMonths), EXCHANGE_AVERAGE_RATE_MAX_SCORE);
+    }
+
+
+    private int calculateExchangeDataCountScore(MonthlyAverageRateDto currentMonth) {
+        if (currentMonth == null || currentMonth.getCount() <= 0) {
+            return 0;
+        }
+        int count = currentMonth.getCount();
+        if (count >= 15) {
+            return EXCHANGE_DATA_COUNT_MAX_SCORE;
+        }
+        if (count >= 8) {
+            return 2;
+        }
+        return 1;
+    }
+
+    private BigDecimal findMinAverageRate(List<MonthlyAverageRateDto> months) {
+        return months.stream()
+                .map(MonthlyAverageRateDto::getAverageRate)
+                .filter(Objects::nonNull).min(BigDecimal::compareTo)
+                .orElse(BigDecimal.ZERO);
+    }
+
+    private BigDecimal findMaxAverageRate(List<MonthlyAverageRateDto> months) {
+        return months.stream()
+                .map(MonthlyAverageRateDto::getAverageRate)
+                .filter(Objects::nonNull).max(BigDecimal::compareTo)
+                .orElse(BigDecimal.ZERO);
+    }
 }
 

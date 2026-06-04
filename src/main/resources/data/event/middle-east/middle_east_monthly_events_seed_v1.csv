@@ -1,0 +1,68 @@
+﻿region,country_code,country_name,city_name,event_area,month,event_name,event_type,description,event_url,enabled,display_order
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,1,두바이 쇼핑 페스티벌,SEASONAL,"겨울 시즌 두바이 전역에서 쇼핑 프로모션, 불꽃놀이, 공연, 가족 프로그램이 이어지는 대표 도시 축제다.",https://www.visitdubai.com/en/festivals-and-events/dsf,true,1
+MIDDLE_EAST,AE,아랍에미리트,두바이,글로벌 빌리지,1,글로벌 빌리지 두바이,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 상반기까지 운영되는 시즌형 문화·엔터테인먼트 행사로, 국가별 파빌리온, 공연, 음식, 쇼핑을 즐길 수 있다.",https://www.globalvillage.ae/,true,2
+MIDDLE_EAST,AE,아랍에미리트,두바이,알 신다가/알 파히디 일대,1,시카 아트 & 디자인 페스티벌,ART,"두바이 지역 예술가와 디자이너의 전시, 설치, 워크숍, 공연이 열리는 문화예술 페스티벌이다.",https://dubaiculture.gov.ae/en/events,true,3
+MIDDLE_EAST,AE,아랍에미리트,두바이,글로벌 빌리지,2,글로벌 빌리지 두바이,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 상반기까지 운영되는 시즌형 문화·엔터테인먼트 행사로, 국가별 파빌리온, 공연, 음식, 쇼핑을 즐길 수 있다.",https://www.globalvillage.ae/,true,4
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,2,라마단 인 두바이,RELIGIOUS_CULTURAL,"라마단은 이슬람력 기준이라 매년 양력 날짜가 달라질 수 있으며, 이 기간 두바이 전역에서 이프타르, 야시장, 문화 프로그램이 열린다.",https://www.visitdubai.com/en/festivals-and-events/ramadan,true,5
+MIDDLE_EAST,AE,아랍에미리트,두바이,글로벌 빌리지,3,글로벌 빌리지 두바이,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 상반기까지 운영되는 시즌형 문화·엔터테인먼트 행사로, 국가별 파빌리온, 공연, 음식, 쇼핑을 즐길 수 있다.",https://www.globalvillage.ae/,true,6
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,3,라마단 인 두바이,RELIGIOUS_CULTURAL,"라마단은 이슬람력 기준이라 매년 양력 날짜가 달라질 수 있으며, 이 기간 두바이 전역에서 이프타르, 야시장, 문화 프로그램이 열린다.",https://www.visitdubai.com/en/festivals-and-events/ramadan,true,7
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,3,이드 알피트르 인 두바이,RELIGIOUS_CULTURAL,"이슬람력과 달 관측에 따라 매년 날짜가 달라질 수 있으며, 라마단 종료를 기념하는 공연, 불꽃놀이, 가족 행사가 두바이 전역에서 열린다.",https://www.visitdubai.com/en/festivals-and-events/eid-al-fitr,true,8
+MIDDLE_EAST,AE,아랍에미리트,두바이,알 카라마,3,라마단 스트리트 푸드 페스티벌,FOOD_FESTIVAL,"라마단 기간 알 카라마 일대에서 다양한 길거리 음식, 야간 식사, 가족 프로그램을 즐기는 두바이의 라마단 미식 행사다.",https://www.visitdubai.com/en/festivals-and-events/ramadan-street-food-festival,true,9
+MIDDLE_EAST,AE,아랍에미리트,두바이,글로벌 빌리지,4,글로벌 빌리지 두바이,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 상반기까지 운영되는 시즌형 문화·엔터테인먼트 행사로, 국가별 파빌리온, 공연, 음식, 쇼핑을 즐길 수 있다.",https://www.globalvillage.ae/,true,10
+MIDDLE_EAST,AE,아랍에미리트,두바이,글로벌 빌리지,5,글로벌 빌리지 두바이,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 상반기까지 운영되는 시즌형 문화·엔터테인먼트 행사로, 국가별 파빌리온, 공연, 음식, 쇼핑을 즐길 수 있다.",https://www.globalvillage.ae/,true,11
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 참여 레스토랑,5,두바이 레스토랑 위크,FOOD_FESTIVAL,두바이 푸드 페스티벌 기간 여러 레스토랑에서 특별 메뉴와 미식 프로그램을 제공하는 도시 미식 행사다.,https://www.visitdubai.com/en/whats-on/dubai-food-festival/dubai-restaurant-week,true,12
+MIDDLE_EAST,AE,아랍에미리트,두바이,주메이라 비치,5,e& 비치 캔틴,FOOD_FESTIVAL,"해변가에서 음식 부스, 팝업 레스토랑, 공연, 가족 프로그램을 함께 즐기는 두바이 푸드 페스티벌의 야외 미식 행사다.",https://www.beachcanteen.ae/,true,13
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,5,이드 알 아드하 인 두바이,RELIGIOUS_CULTURAL,"이슬람력과 달 관측에 따라 매년 날짜가 달라질 수 있으며, 이드 알 아드하를 맞아 가족 행사, 공연, 불꽃놀이가 진행된다.",https://www.visitdubai.com/en/festivals-and-events/eid-al-adha,true,14
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,7,두바이 서머 서프라이즈,SEASONAL,"여름 기간 두바이 전역에서 쇼핑 프로모션, 실내 가족 프로그램, 공연, 도시 이벤트가 이어지는 대표 여름 시즌 행사다.",https://www.visitdubai.com/en/festivals-and-events/dubai-summer-surprises,true,15
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 월드 트레이드 센터,7,모데시 월드,SEASONAL,"여름 방학 시즌 어린이와 가족을 위한 실내 놀이, 공연, 체험 프로그램이 열리는 두바이의 대표 가족형 실내 행사다.",https://www.modeshworld.com/,true,16
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,8,두바이 서머 서프라이즈,SEASONAL,"여름 기간 두바이 전역에서 쇼핑 프로모션, 실내 가족 프로그램, 공연, 도시 이벤트가 이어지는 대표 여름 시즌 행사다.",https://www.visitdubai.com/en/festivals-and-events/dubai-summer-surprises,true,17
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 월드 트레이드 센터,8,모데시 월드,SEASONAL,"여름 방학 시즌 어린이와 가족을 위한 실내 놀이, 공연, 체험 프로그램이 열리는 두바이의 대표 가족형 실내 행사다.",https://www.modeshworld.com/,true,18
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,9,두바이 사우디 국경일 축하 행사,CULTURAL_FESTIVAL,"9월 23일 사우디아라비아 국경일을 맞아 두바이 주요 랜드마크와 쇼핑몰, 가족 명소에서 조명, 공연, 축하 행사가 진행된다.",https://www.dubaidet.gov.ae/en/newsroom/press-releases/ksa-national-day,true,19
+MIDDLE_EAST,AE,아랍에미리트,두바이,글로벌 빌리지,10,글로벌 빌리지 두바이,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 상반기까지 운영되는 시즌형 문화·엔터테인먼트 행사로, 새 시즌 운영 기간은 해마다 달라질 수 있다.",https://www.globalvillage.ae/,true,20
+MIDDLE_EAST,AE,아랍에미리트,두바이,도심 공연장 일대,10,두바이 코미디 페스티벌,ART,국내외 코미디언의 스탠드업 공연과 라이브 코미디 쇼가 여러 공연장에서 열리는 두바이 대표 코미디 축제다.,https://dubaicomedyfest.ae/,true,21
+MIDDLE_EAST,AE,아랍에미리트,두바이,글로벌 빌리지,11,글로벌 빌리지 두바이,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 상반기까지 운영되는 시즌형 문화·엔터테인먼트 행사로, 새 시즌 운영 기간은 해마다 달라질 수 있다.",https://www.globalvillage.ae/,true,22
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,11,두바이 디왈리 페스티벌,RELIGIOUS_CULTURAL,"힌두 태음태양력 기준 명절이라 매년 10월 또는 11월 사이로 날짜가 달라질 수 있으며, 조명, 공연, 음식, 가족 프로그램이 진행된다.",https://www.visitdubai.com/en/festivals-and-events/diwali-in-dubai,true,23
+MIDDLE_EAST,AE,아랍에미리트,두바이,글로벌 빌리지,12,글로벌 빌리지 두바이,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 상반기까지 운영되는 시즌형 문화·엔터테인먼트 행사로, 국가별 파빌리온, 공연, 음식, 쇼핑을 즐길 수 있다.",https://www.globalvillage.ae/,true,24
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,12,두바이 쇼핑 페스티벌,SEASONAL,"겨울 시즌 두바이 전역에서 쇼핑 프로모션, 불꽃놀이, 공연, 가족 프로그램이 이어지는 대표 도시 축제다.",https://www.visitdubai.com/en/festivals-and-events/dsf,true,25
+MIDDLE_EAST,AE,아랍에미리트,두바이,버즈 칼리파/도심 전역,12,두바이 새해 전야 불꽃놀이,HOLIDAY,"버즈 칼리파와 두바이 주요 명소에서 카운트다운, 불꽃놀이, 조명 쇼로 새해를 맞이하는 대표 연말 행사다.",https://www.visitdubai.com/en/articles/new-years-eve-in-dubai,true,26
+MIDDLE_EAST,AE,아랍에미리트,두바이,두바이 전역,12,두바이 이드 알 이티하드 시즌,NATIONAL_HOLIDAY,"12월 2일 UAE 연합기념일을 맞아 두바이 전역에서 불꽃놀이, 퍼레이드, 콘서트, 문화 공연이 열리는 국가 기념 시즌이다.",https://www.visitdubai.com/en/festivals-and-events/uae-national-day,true,27
+MIDDLE_EAST,AE,아랍에미리트,아부다비,알 와트바,1,셰이크 자이드 페스티벌,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 1분기까지 이어지는 시즌형 문화축제로, 에미라티 전통, 국가관, 공연, 음식, 불꽃놀이를 즐길 수 있다.",https://zayedfestival.ae/en,true,28
+MIDDLE_EAST,AE,아랍에미리트,아부다비,리와/알 다프라,1,리와 국제 페스티벌,CULTURAL_FESTIVAL,"알 다프라 사막 지역에서 겨울 시즌 모터스포츠, 전통문화, 가족 프로그램, 사막 엔터테인먼트가 함께 열리는 대형 축제다.",https://liwainternationalfestival.ae/,true,29
+MIDDLE_EAST,AE,아랍에미리트,아부다비,도심/해안 공공공간,1,마나르 아부다비,ART,"아부다비의 공공공간과 해안 일대에서 빛 설치, 미디어아트, 야간 예술 프로그램이 펼쳐지는 공공예술 행사다.",https://abudhabiculture.ae/en/Cultural-Programmes/Public-Art-Abu-Dhabi/Manar-Abu-Dhabi,true,30
+MIDDLE_EAST,AE,아랍에미리트,아부다비,코니시,1,MOTN 페스티벌,SEASONAL,"아부다비 코니시에서 가족 공연, 음식, 놀이, 엔터테인먼트 프로그램이 열리는 겨울 시즌형 도시 축제다.",https://www.motn.ae/en/auh/festival,true,31
+MIDDLE_EAST,AE,아랍에미리트,아부다비,카스르 알 호슨,1,알 호슨 페스티벌,CULTURAL_FESTIVAL,"카스르 알 호슨 일대에서 에미라티 전통, 공예, 공연, 역사 체험 프로그램이 열리는 아부다비 대표 유산 축제다.",https://abudhabiculture.ae/en/Cultural-Programmes/Heritage-Festivals/Al-Hosn-Festival,true,32
+MIDDLE_EAST,AE,아랍에미리트,아부다비,알 와트바,2,셰이크 자이드 페스티벌,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 1분기까지 이어지는 시즌형 문화축제로, 에미라티 전통, 국가관, 공연, 음식, 불꽃놀이를 즐길 수 있다.",https://zayedfestival.ae/en,true,33
+MIDDLE_EAST,AE,아랍에미리트,아부다비,도심/문화공간 일대,2,아부다비 라마단 문화 시즌,RELIGIOUS_CULTURAL,"라마단은 이슬람력 기준이라 매년 양력 날짜가 달라질 수 있으며, 이 기간 아부다비 전역에서 이프타르, 문화 공연, 가족 프로그램이 열린다.",https://visitabudhabi.ae/en/campaign/ramadan,true,34
+MIDDLE_EAST,AE,아랍에미리트,아부다비,알 와트바,3,셰이크 자이드 페스티벌,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 1분기까지 이어지는 시즌형 문화축제로, 에미라티 전통, 국가관, 공연, 음식, 불꽃놀이를 즐길 수 있다.",https://zayedfestival.ae/en,true,35
+MIDDLE_EAST,AE,아랍에미리트,아부다비,도심/문화공간 일대,3,아부다비 라마단 문화 시즌,RELIGIOUS_CULTURAL,"라마단은 이슬람력 기준이라 매년 양력 날짜가 달라질 수 있으며, 이 기간 아부다비 전역에서 이프타르, 문화 공연, 가족 프로그램이 열린다.",https://visitabudhabi.ae/en/campaign/ramadan,true,36
+MIDDLE_EAST,AE,아랍에미리트,아부다비,에미리츠 팰리스/문화공간 일대,4,아부다비 페스티벌,ART,"클래식 음악, 오페라, 공연예술, 문화 협업 프로그램이 열리는 아부다비 대표 예술 축제다.",https://abudhabifestival.ae/,true,37
+MIDDLE_EAST,AE,아랍에미리트,아부다비,에미리츠 팰리스/문화공간 일대,5,아부다비 페스티벌,ART,"클래식 음악, 오페라, 공연예술, 문화 협업 프로그램이 열리는 아부다비 대표 예술 축제다.",https://abudhabifestival.ae/,true,38
+MIDDLE_EAST,AE,아랍에미리트,아부다비,아부다비 전역,5,이드 알 아드하 아부다비,RELIGIOUS_CULTURAL,"이슬람력과 달 관측에 따라 매년 날짜가 달라질 수 있으며, 이드 알 아드하 기간 공연, 가족 행사, 불꽃놀이가 진행된다.",https://visitabudhabi.ae/en/events,true,39
+MIDDLE_EAST,AE,아랍에미리트,아부다비,아부다비 전역,6,아부다비 서머 시즌,SEASONAL,"여름철 실내 엔터테인먼트, 가족 프로그램, 공연, 관광 프로모션이 아부다비 전역에서 이어지는 시즌형 행사다.",https://visitabudhabi.ae/en/events,true,40
+MIDDLE_EAST,AE,아랍에미리트,아부다비,알 다프라/리와,7,리와 데이트 페스티벌,CULTURAL_FESTIVAL,"대추야자 수확과 에미라티 농업 문화를 기념하며 품평회, 전통시장, 가족 프로그램이 열리는 알 다프라 대표 축제다.",https://visitabudhabi.ae/en/events/liwa-date-festival,true,41
+MIDDLE_EAST,AE,아랍에미리트,아부다비,ADNEC,8,아부다비 국제 사냥 및 승마 박람회,CULTURAL_FESTIVAL,"매 사냥, 승마, 낙타 문화, 사막 생활, 전통 장비와 관련 프로그램을 소개하는 UAE 대표 전통문화 박람회다.",https://www.adnec.ae/en/eventlisting/abu-dhabi-international-hunting-and-equestrian-exhibition-adihex-2026,true,42
+MIDDLE_EAST,AE,아랍에미리트,아부다비,ADNEC,9,아부다비 국제 사냥 및 승마 박람회,CULTURAL_FESTIVAL,"매 사냥, 승마, 낙타 문화, 사막 생활, 전통 장비와 관련 프로그램을 소개하는 UAE 대표 전통문화 박람회다.",https://www.adnec.ae/en/eventlisting/abu-dhabi-international-hunting-and-equestrian-exhibition-adihex-2026,true,43
+MIDDLE_EAST,AE,아랍에미리트,아부다비,야스 베이/도심 주요 명소,9,아부다비 사우디 국경일 축하 이벤트,CULTURAL_FESTIVAL,"9월 23일 사우디아라비아 국경일을 맞아 아부다비 주요 랜드마크, 야스 베이, 공연장과 관광지에서 조명, 불꽃놀이, 공연, 가족 프로그램이 진행되는 축하 이벤트다.",https://visitabudhabi.ae/en/campaign/ksa-national-day,true,44
+MIDDLE_EAST,AE,아랍에미리트,아부다비,아부다비 참여 레스토랑,10,아부다비 컬리너리 시즌,FOOD_FESTIVAL,"아부다비 여러 레스토랑과 미식 명소에서 특별 메뉴, 셰프 이벤트, 음식 축제 프로그램이 이어지는 미식 시즌이다.",https://visitabudhabi.ae/en/events,true,45
+MIDDLE_EAST,AE,아랍에미리트,아부다비,알 와트바,11,셰이크 자이드 페스티벌,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 1분기까지 이어지는 시즌형 문화축제로, 새 시즌 운영 기간은 해마다 달라질 수 있다.",https://zayedfestival.ae/en,true,46
+MIDDLE_EAST,AE,아랍에미리트,아부다비,도심/해안 공공공간,11,마나르 아부다비,ART,"아부다비의 공공공간과 해안 일대에서 빛 설치, 미디어아트, 야간 예술 프로그램이 펼쳐지는 공공예술 행사다.",https://abudhabiculture.ae/en/Cultural-Programmes/Public-Art-Abu-Dhabi/Manar-Abu-Dhabi,true,47
+MIDDLE_EAST,AE,아랍에미리트,아부다비,알 와트바,12,셰이크 자이드 페스티벌,CULTURAL_FESTIVAL,"매년 하반기부터 다음 해 1분기까지 이어지는 시즌형 문화축제로, 새 시즌 운영 기간은 해마다 달라질 수 있다.",https://zayedfestival.ae/en,true,48
+MIDDLE_EAST,AE,아랍에미리트,아부다비,리와/알 다프라,12,리와 국제 페스티벌,CULTURAL_FESTIVAL,"알 다프라 사막 지역에서 겨울 시즌 모터스포츠, 전통문화, 가족 프로그램, 사막 엔터테인먼트가 함께 열리는 대형 축제다.",https://liwainternationalfestival.ae/,true,49
+MIDDLE_EAST,AE,아랍에미리트,아부다비,코니시,12,MOTN 페스티벌,SEASONAL,"아부다비 코니시에서 가족 공연, 음식, 놀이, 엔터테인먼트 프로그램이 열리는 겨울 시즌형 도시 축제다.",https://www.motn.ae/en/auh/festival,true,50
+MIDDLE_EAST,AE,아랍에미리트,아부다비,도심/해안 공공공간,12,마나르 아부다비,ART,"아부다비의 공공공간과 해안 일대에서 빛 설치, 미디어아트, 야간 예술 프로그램이 펼쳐지는 공공예술 행사다.",https://abudhabiculture.ae/en/Cultural-Programmes/Public-Art-Abu-Dhabi/Manar-Abu-Dhabi,true,51
+MIDDLE_EAST,AE,아랍에미리트,아부다비,아부다비 전역,12,아부다비 이드 알 이티하드 시즌,NATIONAL_HOLIDAY,"12월 2일 UAE 연합기념일을 맞아 아부다비 전역에서 문화 공연, 가족 이벤트, 불꽃놀이가 열리는 국가 기념 시즌이다.",https://visitabudhabi.ae/en/campaign/eid-al-etihad,true,52
+MIDDLE_EAST,AE,아랍에미리트,아부다비,코니시/야스 아일랜드/알 마리야 아일랜드,12,아부다비 새해 전야 불꽃놀이,HOLIDAY,"아부다비 코니시, 야스 아일랜드, 알 마리야 아일랜드 등 주요 명소에서 카운트다운과 불꽃놀이로 새해를 맞이하는 연말 행사다.",https://visitabudhabi.ae/en/campaign/new-year-fireworks,true,53
+MIDDLE_EAST,AE,아랍에미리트,샤르자,샤르자 문화공간 일대,1,샤르자 아랍 시 페스티벌,ART,"아랍 시와 문학을 주제로 낭송, 문학 행사, 문화 프로그램이 열리는 샤르자의 대표 문학 축제다.",https://sdc.gov.ae/en/media-center/events,true,54
+MIDDLE_EAST,AE,아랍에미리트,샤르자,코르파칸,1,코르파칸 극장 페스티벌,ART,"코르파칸에서 연극 공연, 지역 예술 프로그램, 문화 행사가 열리는 샤르자 동부 해안 지역의 공연예술 축제다.",https://sdc.gov.ae/en/media-center/events,true,55
+MIDDLE_EAST,AE,아랍에미리트,샤르자,샤르자 전역 전시공간,1,샤르자 이슬람 예술 페스티벌,ART,"보통 11월~1월 사이 이어지는 시즌형 예술 행사로, 이슬람 예술, 서예, 설치미술, 전시 프로그램이 열린다.",https://sdc.gov.ae/en/media-center/events/19/11/2025/sharjah-islamic-arts-festival-26,true,56
+MIDDLE_EAST,AE,아랍에미리트,샤르자,샤르자 주요 랜드마크,2,샤르자 라이트 페스티벌,ART,"샤르자 주요 랜드마크와 건축물을 빛, 프로젝션, 미디어아트로 꾸미는 대표 겨울 조명 축제다.",https://www.sharjahlightfestival.ae/,true,57
+MIDDLE_EAST,AE,아랍에미리트,샤르자,하트 오브 샤르자,2,샤르자 헤리티지 데이즈,CULTURAL_FESTIVAL,"전통 가옥, 공예, 에미라티 음식, 민속 공연을 통해 UAE와 아랍권 유산을 체험하는 샤르자 대표 전통문화 축제다.",https://www.visitsharjah.com/events/sharjah-heritage-days/,true,58
+MIDDLE_EAST,AE,아랍에미리트,샤르자,샤르자 전역,2,샤르자 레트로 페스티벌,CULTURAL_FESTIVAL,"복고 음악, 영화, 팝컬처와 가족형 엔터테인먼트가 결합된 샤르자의 레트로 테마 축제다.",https://www.sharjahevents.ae/,true,59
+MIDDLE_EAST,AE,아랍에미리트,샤르자,샤르자 전역,4,이드 알 피트르 샤르자,RELIGIOUS_CULTURAL,"이슬람력과 달 관측에 따라 매년 날짜가 달라질 수 있으며, 이드 알 피트르 기간 가족 행사, 공연, 문화 프로그램이 진행된다.",https://www.visitsharjah.com/,true,60
+MIDDLE_EAST,AE,아랍에미리트,샤르자,시르 부 나이르 섬/샤르자,10,시르 부 나이르 페스티벌,CULTURAL_FESTIVAL,"시르 부 나이르 섬의 자연, 해양 유산, 환경 보호, 전통문화를 주제로 열리는 샤르자의 섬 문화 축제다.",https://www.visitsharjah.com/sir-bu-nair-festival/,true,61
+MIDDLE_EAST,AE,아랍에미리트,샤르자,믈레이하/사막 지역,11,탄위어 페스티벌,ART,"음악, 예술, 웰니스, 문화 프로그램이 사막 풍경 속에서 열리는 샤르자의 야외 문화예술 축제다.",https://tanweerfestival.com/,true,62
+MIDDLE_EAST,AE,아랍에미리트,샤르자,샤르자 전역 전시공간,11,샤르자 이슬람 예술 페스티벌,ART,"보통 11월~1월 사이 이어지는 시즌형 예술 행사로, 이슬람 예술, 서예, 설치미술, 전시 프로그램이 열린다.",https://sdc.gov.ae/en/media-center/events/19/11/2025/sharjah-islamic-arts-festival-26,true,63
+MIDDLE_EAST,AE,아랍에미리트,샤르자,샤르자 전역 전시공간,12,샤르자 이슬람 예술 페스티벌,ART,"보통 11월~1월 사이 이어지는 시즌형 예술 행사로, 이슬람 예술, 서예, 설치미술, 전시 프로그램이 열린다.",https://sdc.gov.ae/en/media-center/events/19/11/2025/sharjah-islamic-arts-festival-26,true,64
+MIDDLE_EAST,AE,아랍에미리트,샤르자,믈레이하/부하이스 지질공원,12,부하이스 윈터,SEASONAL,"겨울철 부하이스 지질공원과 사막 지역에서 가족 프로그램, 야외 체험, 자연·문화 활동이 열리는 시즌 행사다.",https://www.sharjahevents.ae/,true,65
+MIDDLE_EAST,AE,아랍에미리트,샤르자,알 마자즈 원형극장/샤르자 전역,12,샤르자 이벤트 페스티벌,SEASONAL,"샤르자의 주요 연말 행사와 가족 프로그램을 소개하며 공연, 체험, 엔터테인먼트가 함께 열리는 도시형 이벤트 축제다.",https://www.sharjahevents.ae/,true,66
+MIDDLE_EAST,AE,아랍에미리트,샤르자,샤르자 전역,12,샤르자 이드 알 이티하드 시즌,NATIONAL_HOLIDAY,"12월 2일 UAE 연합기념일을 맞아 샤르자 전역에서 문화 공연, 퍼레이드, 가족 이벤트, 축하 행사가 열리는 국가 기념 시즌이다.",https://www.sharjahevents.ae/,true,67

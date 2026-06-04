@@ -1,6 +1,7 @@
-package com.money.event.dto;
+package com.money.recommendation.dto.timing;
 
-import com.money.recommendation.dto.RoundTripDatePriceDto;
+import com.money.event.dto.TravelEventResponseDto;
+import com.money.recommendation.dto.flight.RoundTripDatePriceDto;
 import lombok.Getter;
 
 import java.math.BigDecimal;
@@ -45,7 +46,8 @@ public class MonthlyTravelTimingRecommendationDto {
     }
 
     public static MonthlyTravelTimingRecommendationDto of(String month, TravelTimingScoreDto score, BigDecimal minRoundTripPrice, BigDecimal maxRoundTripPrice, BigDecimal cheapTop5AveragePrice, List<RoundTripDatePriceDto> cheapestDates, List<RoundTripDatePriceDto> expensiveDates, String cheapestWeekdayName, String expensiveWeekdayName, BigDecimal averageRate, int rateDateCount, List<TravelEventResponseDto> events) {
-        return new MonthlyTravelTimingRecommendationDto(month, createMonthLabel(month), score.getTotalScore(), createGrade(score.getTotalScore()), score, minRoundTripPrice, maxRoundTripPrice, cheapTop5AveragePrice, cheapestDates, expensiveDates, cheapestWeekdayName, expensiveWeekdayName, averageRate, rateDateCount, events.size(), events);
+        List<TravelEventResponseDto> eventSize = events == null ? List.of() : events;
+        return new MonthlyTravelTimingRecommendationDto(month, createMonthLabel(month), score.getTotalScore(), createGrade(score.getTotalScore()), score, minRoundTripPrice, maxRoundTripPrice, cheapTop5AveragePrice, cheapestDates, expensiveDates, cheapestWeekdayName, expensiveWeekdayName, averageRate, rateDateCount, eventSize.size(), events);
     }
 
     private static String createMonthLabel(String month) {

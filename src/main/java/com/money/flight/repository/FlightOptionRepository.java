@@ -100,7 +100,7 @@ public interface FlightOptionRepository extends JpaRepository<FlightOption, Long
             and da.code = :destinationCode
             and fo.departureDate between :startDate and :endDate
             and fo.enabled = true
-            and (:connectionType is null or fo.connectionType = :connectionTpe)
+            and (:connectionType is null or fo.connectionType = :connectionType)
             and (:seatClass is null or fo.seatClass = :seatClass)
             order by fo.departureDate asc, fo.price asc
             """)

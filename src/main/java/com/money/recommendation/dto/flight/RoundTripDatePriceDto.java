@@ -1,4 +1,4 @@
-package com.money.recommendation.dto;
+package com.money.recommendation.dto.flight;
 
 import lombok.Getter;
 

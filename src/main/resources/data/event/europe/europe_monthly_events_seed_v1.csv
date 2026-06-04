@@ -1,0 +1,644 @@
+﻿region,country_code,country_name,city_name,event_area,month,event_name,event_type,description,event_url,enabled,display_order
+EUROPE,FR,프랑스,파리,"샹젤리제, 방돔광장, 몽테뉴가, 백화점 쇼윈도 등",1,파리 크리스마스 일루미네이션 시즌,SEASON,"11월 중순부터 1월 초까지 파리 주요 거리와 광장, 백화점 쇼윈도에서 이어지는 연말 조명 시즌입니다. 겨울 파리의 야간 산책과 사진 촬영을 즐기기 좋은 대표 시즌 이벤트입니다.",https://parisjetaime.com/eng/article/christmas-lights-in-paris-a016,true,1
+EUROPE,FR,프랑스,파리,"샹젤리제 거리, 개선문 일대",1,파리 샹젤리제 & 개선문 새해 카운트다운,HOLIDAY,"12월 31일 밤부터 1월 1일 새벽까지 샹젤리제와 개선문 일대에서 열리는 파리 대표 새해맞이 행사입니다. 카운트다운, 조명 연출, 불꽃놀이 분위기를 함께 즐길 수 있습니다.",https://parisjetaime.com/eng/event/lightshow-firework-new-year-s-eve-paris-e325,true,2
+EUROPE,FR,프랑스,파리,"파리 13구, 벨빌, 마레 등 중국계 커뮤니티 지역",2,파리 중국 설날 퍼레이드,CULTURAL_FESTIVAL,"중국 설날을 맞아 파리 여러 지역에서 열리는 문화 퍼레이드와 축제입니다. 사자춤, 용춤, 거리 행진, 전통 공연을 통해 파리의 다문화 축제 분위기를 느낄 수 있습니다.",https://parisjetaime.com/eng/event/chinese-new-year-in-paris-e106,true,3
+EUROPE,FR,프랑스,파리,그랑 팔레,4,아트파리 아트페어,ART,그랑 팔레에서 열리는 파리의 대표 현대미술 아트페어입니다. 프랑스와 해외 갤러리의 현대미술 작품을 한자리에서 볼 수 있어 예술 여행 일정에 넣기 좋습니다.,https://www.artparis.com/en/edition,true,4
+EUROPE,FR,프랑스,파리,파리 주요 박물관과 문화시설,5,유럽 박물관의 밤,CULTURE,유럽 전역에서 열리는 박물관 야간 개방 행사입니다. 파리의 여러 박물관과 문화시설이 저녁 시간 특별 프로그램과 무료 또는 특별 관람을 제공해 색다른 문화 경험을 할 수 있습니다.,https://parisjetaime.com/eng/article/the-european-night-of-museums-paris-a951,true,5
+EUROPE,FR,프랑스,파리,"생제르맹데프레 일대, 교회와 공연장 등",5,생제르맹데프레 재즈 페스티벌,CULTURE,생제르맹데프레 지역의 역사적인 공연장과 교회 등에서 열리는 재즈 페스티벌입니다. 파리 좌안의 문화 분위기와 재즈 공연을 함께 즐길 수 있습니다.,https://festivaljazzsaintgermainparis.com/en/,true,6
+EUROPE,FR,프랑스,파리,파리 및 일드프랑스의 공원과 정원,6,랑데부 오 자르뎅,NATURE,"프랑스 문화부가 주관하는 정원 개방 행사입니다. 파리와 일드프랑스의 공원, 정원, 문화유산 공간에서 가이드 투어와 정원 관련 프로그램을 즐길 수 있습니다.",https://rendezvousauxjardins.culture.gouv.fr/,true,7
+EUROPE,FR,프랑스,파리,파리 시내 주요 문화 공간과 야외 설치 장소,6,뉘 블랑쉬,ART,"파리 전역에서 밤새 열리는 현대예술 축제입니다. 설치미술, 공연, 전시, 야간 산책 코스를 통해 도시 전체가 예술 공간처럼 변하는 분위기를 경험할 수 있습니다.",https://parisjetaime.com/eng/event/nuit-blanche-in-paris-e015,true,8
+EUROPE,FR,프랑스,파리,"파리 시내 거리, 광장, 공연장 일대",6,페트 드 라 뮈지크,CULTURAL_FESTIVAL,"하지 무렵 프랑스 전역에서 열리는 음악 축제입니다. 파리 곳곳의 거리와 광장, 공연장에서 무료 공연과 거리 음악을 즐길 수 있습니다.",https://fetedelamusique.culture.gouv.fr/,true,9
+EUROPE,FR,프랑스,파리,"샹 드 마르스, 에펠탑, 센강 일대 등",7,프랑스 혁명기념일 행사,NATIONAL_HOLIDAY,"프랑스 국경일을 기념하는 대표 행사입니다. 파리에서는 군사 퍼레이드, 축하 분위기, 에펠탑 불꽃놀이 등 도시 전체의 특별한 축제 분위기를 느낄 수 있습니다.",https://www.toureiffel.paris/en/news/events/fireworks-display-14-july,true,10
+EUROPE,FR,프랑스,파리,"센강변, 빌레트 운하, 생마르탱 운하 등",7,파리 플라주,SEASON,"여름철 파리 시내 강변과 운하 주변을 휴식 공간처럼 조성하는 시즌 이벤트입니다. 선베드, 수상 활동, 가족 프로그램, 여름 산책 분위기를 즐기기 좋습니다.",https://parisjetaime.com/eng/event/paris-plages-e013,true,11
+EUROPE,FR,프랑스,파리,파리 및 일드프랑스의 공연장과 공공 공간,7,파리 레테 페스티벌,CULTURE,"파리와 일드프랑스 여러 장소에서 열리는 여름 공연예술 축제입니다. 무용, 연극, 서커스, 거리 공연 등 다양한 장르의 공연을 도심 곳곳에서 만날 수 있습니다.",https://www.parislete.fr/en,true,12
+EUROPE,FR,프랑스,파리,"센강변, 빌레트 운하, 생마르탱 운하 등",8,파리 플라주,SEASON,"7월부터 8월까지 이어지는 파리의 대표 여름 시즌 이벤트입니다. 도심 속 강변 휴식 공간과 물놀이, 문화 프로그램을 통해 여름 파리의 분위기를 느낄 수 있습니다.",https://parisjetaime.com/eng/event/paris-plages-e013,true,13
+EUROPE,FR,프랑스,파리,"생클루 국립공원, 파리 서쪽 근교",8,락엉센 뮤직 페스티벌,CULTURE,파리 근교 생클루 국립공원에서 열리는 대형 음악 페스티벌입니다. 여름 끝자락에 다양한 해외 및 프랑스 아티스트의 공연을 즐길 수 있습니다.,https://www.rockenseine.com/en/,true,14
+EUROPE,FR,프랑스,파리,"파리 주요 문화유산 건축물, 박물관, 관공서 등",9,유럽 문화유산의 날,CULTURE,"유럽 전역에서 열리는 문화유산 개방 행사입니다. 파리에서는 평소 접근하기 어려운 역사 건축물, 관공서, 문화시설을 특별 개방해 도시의 문화유산을 깊이 있게 볼 수 있습니다.",https://journeesdupatrimoine.culture.gouv.fr/,true,15
+EUROPE,FR,프랑스,파리,파리 시내 공원과 정원,9,파리 정원 축제,NATURE,"파리 시내 공원과 정원에서 열리는 자연·정원 중심 행사입니다. 정원 산책, 도시 자연 체험, 가족 프로그램 등을 통해 파리의 녹지 공간을 즐길 수 있습니다.",https://www.paris.fr/evenements/fete-des-jardins-vive-la-nature-en-ville-88862,true,16
+EUROPE,FR,프랑스,파리,"몽마르트 언덕, 18구 일대",10,몽마르트 포도수확 축제,FOOD_FESTIVAL,"몽마르트의 포도 수확 전통을 기념하는 파리 대표 지역 축제입니다. 퍼레이드, 시음, 공연, 지역 음식 행사가 함께 열려 몽마르트 특유의 축제 분위기를 느낄 수 있습니다.",https://fetedesvendangesdemontmartre.com/,true,17
+EUROPE,FR,프랑스,파리,그랑 팔레,10,아트 바젤 파리,ART,그랑 팔레에서 열리는 세계적인 현대미술 페어입니다. 국제 갤러리와 현대미술 작품을 중심으로 파리의 가을 예술 분위기를 경험할 수 있습니다.,https://www.artbasel.com/?lang=en,true,18
+EUROPE,FR,프랑스,파리,파리 엑스포 포르트 드 베르사유,10,살롱 뒤 쇼콜라,FOOD,"초콜릿과 페이스트리를 주제로 한 파리의 대표 식문화 행사입니다. 세계 각국의 초콜릿 브랜드, 디저트, 시연 프로그램을 통해 달콤한 미식 경험을 할 수 있습니다.",https://www.salon-du-chocolat.com/en,true,19
+EUROPE,FR,프랑스,파리,"샹젤리제, 방돔광장, 몽테뉴가, 백화점 쇼윈도 등",11,파리 크리스마스 일루미네이션 시즌,SEASON,"11월 중순부터 파리 주요 거리와 광장, 백화점 쇼윈도에서 시작되는 크리스마스 조명 시즌입니다. 연말 여행 분위기를 가장 먼저 느낄 수 있는 겨울 시즌 이벤트입니다.",https://parisjetaime.com/eng/article/christmas-lights-in-paris-a016,true,20
+EUROPE,FR,프랑스,파리,"샹젤리제, 방돔광장, 몽테뉴가, 백화점 쇼윈도 등",12,파리 크리스마스 일루미네이션 시즌,SEASON,"12월 파리 전역에서 이어지는 크리스마스 조명 시즌입니다. 샹젤리제와 주요 백화점, 광장 일대의 장식과 조명으로 겨울 파리의 대표적인 야경을 즐길 수 있습니다.",https://parisjetaime.com/eng/article/christmas-lights-in-paris-a016,true,21
+EUROPE,FR,프랑스,파리,"튈르리 정원, 노트르담 주변, 라데팡스 등",12,파리 크리스마스 마켓 시즌,SEASON,"12월 파리 곳곳에서 열리는 크리스마스 마켓 시즌입니다. 목조 부스, 겨울 간식, 수공예품, 연말 장식을 둘러보며 유럽식 겨울 분위기를 즐길 수 있습니다.",https://parisjetaime.com/eng/article/christmas-markets-in-paris-a018,true,22
+EUROPE,FR,프랑스,니스,"마세나 광장, 알베르 1세 정원, 니스 시내 일대",1,니스 크리스마스 빌리지 시즌,SEASON,"니스 도심에서 크리스마스 마켓, 조명, 겨울 장식과 가족 행사를 즐길 수 있는 겨울 시즌 이벤트입니다. 보통 11월 말부터 1월 초까지 이어져 1월 초 여행에서도 축제 분위기를 느끼기 좋습니다.",https://cotedazurfrance.com/discover/christmas-on-the-cote-dazur/christmas-in-nice/,true,23
+EUROPE,FR,프랑스,니스,"마세나 광장, 영국인의 산책로, 니스 도심 일대",2,니스 카니발,FESTIVAL,"니스의 대표 겨울 축제로 화려한 퍼레이드, 꽃 전쟁, 야간 행렬이 열립니다. 매년 주제를 바꿔 진행되는 프랑스 남부의 대표 카니발입니다.",https://www.nicecarnaval.com/en/2026-edition/official-programme/,true,24
+EUROPE,FR,프랑스,니스,"망통, 비오베 정원과 시내 일대",2,망통 레몬축제,FESTIVAL,"니스 인근 망통에서 열리는 대표적인 겨울 축제로, 레몬과 감귤 조형물, 퍼레이드, 정원 전시를 즐길 수 있습니다. 공항 도시는 아니지만 니스 여행권에서 함께 보기 좋은 근교 행사입니다.",https://www.fete-du-citron.com/?lang=en,true,25
+EUROPE,FR,프랑스,니스,시미에 아레나 정원,3,쿠그루동 축제,TRADITION,"시미에 지역에서 열리는 니스 전통 축제로, 쿠그루동 공예와 민속 음악, 전통 춤, 지역 음식 분위기를 함께 즐길 수 있습니다.",https://www.nice.fr/agenda/la-fete-des-cougourdons/20260329-1000/,true,26
+EUROPE,FR,프랑스,니스,시미에 아레나 정원,5,니스 5월 축제,TRADITION,"봄을 맞아 시미에 정원에서 열리는 니스 전통 축제입니다. 민속 공연, 전통 춤, 가족 행사와 지역 분위기를 함께 느낄 수 있습니다.",https://www.nice.fr/la-fete-des-mai/,true,27
+EUROPE,FR,프랑스,니스,니스 시립 박물관 및 문화시설 일대,5,유럽 박물관의 밤 니스,CULTURE,유럽 박물관의 밤 기간에 니스의 여러 박물관과 문화시설이 야간 개방과 특별 프로그램을 운영하는 문화 행사입니다.,https://www.nice.fr/nuit-europeenne-des-musees/,true,28
+EUROPE,FR,프랑스,니스,"Le 109, 니스 현대문화공간 일대",5,크로스오버 페스티벌,CULTURE,"니스의 현대문화공간 Le 109를 중심으로 열리는 도시형 문화 페스티벌입니다. 음악과 공연, 현대적인 도시 문화 분위기를 함께 즐길 수 있습니다.",https://le109.nice.fr/programmation/crossover-festival-1,true,29
+EUROPE,FR,프랑스,니스,"니스 시내 광장, 공원, 거리 공연장 일대",6,페트 드 라 뮈지크 니스,CULTURAL_FESTIVAL,"프랑스 전역에서 6월 21일 열리는 음악 축제로, 니스에서도 거리와 광장 곳곳에서 무료 공연과 야외 음악 행사가 진행됩니다.",https://fetedelamusique.culture.gouv.fr/,true,30
+EUROPE,FR,프랑스,니스,"니스 항구, 노트르담 뒤 포르 성당 주변",6,니스 성 피에르 축제,RELIGIOUS_CULTURAL,"어부들의 수호성인 성 베드로를 기리는 전통 행사입니다. 미사, 행렬, 항구 주변 축제 분위기가 어우러지는 니스의 해양 전통 행사입니다.",https://www.nice.fr/agenda/fete-de-la-saint-pierre/20260627-1830/,true,31
+EUROPE,FR,프랑스,니스,"니스 해변, 영국인의 산책로, 도심 일대",7,프랑스 혁명기념일 니스 시즌,NATIONAL_HOLIDAY,7월 14일 프랑스 혁명기념일을 맞아 니스 도심과 해변 일대에서 기념 분위기를 느낄 수 있는 국가 기념일 시즌입니다.,https://www.nice.fr/,true,32
+EUROPE,FR,프랑스,니스,"칸, 크루아제트 해변과 만 일대",7,칸 불꽃 축제,FESTIVAL,니스 인근 칸에서 여름에 열리는 국제 불꽃 행사입니다. 공항 도시는 아니지만 니스 여행권에서 함께 방문하기 좋은 대표 여름 야간 이벤트입니다.,https://www.festival-pyrotechnique-cannes.com/,true,33
+EUROPE,FR,프랑스,니스,"칸, 크루아제트 해변과 만 일대",8,칸 불꽃 축제,FESTIVAL,"7월부터 8월까지 이어지는 칸의 여름 불꽃 축제로, 니스 근교 여행 중 야간 이벤트로 즐기기 좋습니다.",https://www.festival-pyrotechnique-cannes.com/,true,34
+EUROPE,FR,프랑스,니스,"니스 역사 지구, 박물관, 문화유산 시설 일대",9,유럽 문화유산의 날 니스,CULTURE,유럽 문화유산의 날 기간에 니스의 문화유산 시설과 역사 공간을 둘러볼 수 있는 문화 행사입니다.,https://www.nice.fr/journees-europeennes-du-patrimoine/,true,35
+EUROPE,FR,프랑스,니스,"마세나 광장, 알베르 1세 정원, 니스 시내 일대",12,니스 크리스마스 시즌,SEASON,"니스 도심이 크리스마스 마켓과 조명, 겨울 장식으로 꾸며지는 연말 시즌 이벤트입니다. 남프랑스의 따뜻한 겨울 분위기와 축제 분위기를 함께 즐길 수 있습니다.",https://cotedazurfrance.com/discover/christmas-on-the-cote-dazur/christmas-in-nice/,true,36
+EUROPE,FR,프랑스,리옹,푸르비에르 고대극장 일대,5,뉘 드 푸르비에르,CULTURE,"푸르비에르 고대극장을 중심으로 열리는 리옹의 대표 공연예술 축제입니다. 음악, 연극, 무용, 서커스 등 다양한 장르의 공연을 야외 고대극장에서 즐길 수 있습니다.",https://www.nuitsdefourviere.com/,true,37
+EUROPE,FR,프랑스,리옹,푸르비에르 고대극장 일대,6,뉘 드 푸르비에르,CULTURE,"초여름부터 여름까지 이어지는 리옹 대표 공연예술 축제로, 고대극장이라는 독특한 공간에서 다양한 공연을 감상할 수 있습니다.",https://www.nuitsdefourviere.com/,true,38
+EUROPE,FR,프랑스,리옹,"리옹 시청, 미술관, 문화공간 일대",6,리옹 BD 페스티벌,LITERATURE,"만화와 그래픽 노블을 중심으로 열리는 리옹의 국제 만화 축제입니다. 작가 만남, 전시, 사인회, 도시 곳곳의 문화 프로그램을 함께 즐길 수 있습니다.",https://www.lyonbd.com/,true,39
+EUROPE,FR,프랑스,리옹,"리옹 시내 광장, 거리, 공원 일대",6,페트 드 라 뮈지크 리옹,CULTURAL_FESTIVAL,프랑스 전역의 음악 축제인 페트 드 라 뮈지크가 리옹에서도 열립니다. 도시 곳곳에서 무료 공연과 거리 음악을 즐길 수 있습니다.,https://www.lyon.fr/fete-de-la-musique,true,40
+EUROPE,FR,프랑스,리옹,푸르비에르 고대극장 일대,7,뉘 드 푸르비에르,CULTURE,"리옹의 대표 여름 공연예술 축제로, 7월까지 고대극장 일대에서 공연과 문화 행사가 이어집니다.",https://www.nuitsdefourviere.com/,true,41
+EUROPE,FR,프랑스,리옹,"리옹 전역의 공원, 광장, 야외 문화공간",7,투 르 몽드 드오르,CULTURE,"리옹 전역에서 열리는 여름 야외 문화 행사입니다. 공연, 영화, 워크숍, 거리 예술 등이 무료로 진행되어 여름 도시 분위기를 즐기기 좋습니다.",https://en.visiterlyon.com/out-and-about/what-s-on/festivals/tout-l-monde-dehors,true,42
+EUROPE,FR,프랑스,리옹,"푸르비에르 언덕, 벨쿠르 광장 일대",7,프랑스 혁명기념일 리옹 시즌,NATIONAL_HOLIDAY,7월 14일 프랑스 혁명기념일을 맞아 리옹에서 기념 행사와 불꽃놀이를 즐길 수 있는 국가 기념일 시즌입니다.,https://en.visiterlyon.com/out-and-about/what-s-on/seasonal-festivities/lyon-fireworks-on-july-14th,true,43
+EUROPE,FR,프랑스,리옹,"리옹 전역의 공원, 광장, 야외 문화공간",8,투 르 몽드 드오르,CULTURE,7월부터 8월까지 이어지는 리옹의 여름 야외 문화 프로그램입니다. 도시 곳곳의 무료 공연과 야외 행사를 통해 현지 여름 분위기를 느낄 수 있습니다.,https://en.visiterlyon.com/out-and-about/what-s-on/festivals/tout-l-monde-dehors,true,44
+EUROPE,FR,프랑스,리옹,"리옹 구시가지, 박물관, 역사 건축물 일대",9,유럽 문화유산의 날 리옹,CULTURE,"유럽 문화유산의 날 기간에 리옹의 역사 건축물, 문화시설, 박물관을 특별 개방하거나 관련 프로그램을 운영하는 문화 행사입니다.",https://journeesdupatrimoine.culture.gouv.fr/,true,45
+EUROPE,FR,프랑스,리옹,카르노 광장과 리옹 도심 일대,11,리옹 크리스마스 마켓 시즌,SEASON,리옹 도심에서 크리스마스 마켓과 연말 장식을 즐길 수 있는 겨울 시즌 이벤트입니다. 11월 말부터 12월까지 이어지는 연말 분위기를 느끼기 좋습니다.,https://en.visiterlyon.com/out-and-about/what-s-on/bon-plan/christmas-markets-in-lyon-and-the-surrounding-area,true,46
+EUROPE,FR,프랑스,리옹,"리옹 도심, 푸르비에르 언덕, 주요 광장 일대",12,리옹 빛 축제,FESTIVAL,"리옹을 대표하는 겨울 빛 축제로, 도시 곳곳의 건물과 광장이 조명 예술 작품으로 꾸며집니다. 리옹의 대표적인 연말 문화 이벤트입니다.",https://www.fetedeslumieres.lyon.fr/fr,true,47
+EUROPE,FR,프랑스,리옹,카르노 광장과 리옹 도심 일대,12,리옹 크리스마스 마켓 시즌,SEASON,"12월 리옹 도심에서 크리스마스 마켓과 연말 장식, 겨울 먹거리를 즐길 수 있는 시즌 이벤트입니다.",https://en.visiterlyon.com/out-and-about/what-s-on/bon-plan/christmas-markets-in-lyon-and-the-surrounding-area,true,48
+EUROPE,FR,프랑스,마르세유,"카네비에르 거리, 구항 주변, 도심 일대",1,마르세유 산통 박람회,TRADITION,마르세유의 전통 성탄 장식인 산통을 만날 수 있는 겨울 전통 박람회입니다. 보통 11월 말부터 1월 초까지 이어져 연초에도 일부 시즌 분위기를 즐길 수 있습니다.,https://www.marseille-tourisme.com/en/vivez-marseille/blog-marseille/christmas-in-marseille/,true,49
+EUROPE,FR,프랑스,마르세유,"생빅토르 수도원, 푸르 데 나베트 주변",2,마르세유 성촉절과 나베트 전통,RELIGIOUS_CULTURAL,성촉절을 맞아 생빅토르 수도원과 나베트 전통 빵을 중심으로 이어지는 마르세유의 종교·지역 전통 행사입니다.,https://www.marseille-tourisme.com/decouvrez-marseille/traditions/la-chandeleur-a-marseille/,true,50
+EUROPE,FR,프랑스,마르세유,"마르세유 구항, 도심 행진 구간 일대",4,마르세유 카니발,FESTIVAL,마르세유 시에서 여는 봄 카니발입니다. 개최 시기와 장소가 해마다 달라질 수 있어 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.marseille.fr/sports-loisirs/actualites/carnaval-de-marseille,true,51
+EUROPE,FR,프랑스,마르세유,"라 크리에, 라 프리슈 벨 드 메, Mucem, 도심 문화공간 일대",6,마르세유 페스티벌,CULTURE,"마르세유 전역의 공연장과 공공 공간에서 열리는 현대 공연예술 축제입니다. 무용, 공연, 영화, 음악 등 다양한 문화 프로그램을 만날 수 있습니다.",https://www.festivaldemarseille.com/,true,52
+EUROPE,FR,프랑스,마르세유,"마르세유 시내 거리, 광장, 문화공간 일대",6,페트 드 라 뮈지크 마르세유,CULTURAL_FESTIVAL,프랑스 전역에서 열리는 음악 축제인 페트 드 라 뮈지크가 마르세유에서도 진행됩니다. 도시 곳곳에서 무료 공연과 야외 음악을 즐길 수 있습니다.,https://fetedelamusique.culture.gouv.fr/,true,53
+EUROPE,FR,프랑스,마르세유,파니에 지구 골목과 광장 일대,6,페트 뒤 파니에,STREET_FESTIVAL,"마르세유의 오래된 파니에 지구에서 열리는 지역 거리 축제입니다. 골목 공연, 주민 참여 행사, 음식과 문화 프로그램이 어우러지는 마을 축제 분위기를 느낄 수 있습니다.",https://www.marseille.fr/evenements/fetes-de-quartiers-panier-fete-des-ruelles,true,54
+EUROPE,FR,프랑스,마르세유,프라도 해변 일대,7,델타 페스티벌,FESTIVAL,"마르세유 프라도 해변에서 열리는 대형 여름 페스티벌입니다. 음악과 해변 축제 분위기가 결합된 여름 이벤트로, 젊은 여행자에게 인기 있는 시즌 행사입니다.",https://delta-festival.com/,true,55
+EUROPE,FR,프랑스,마르세유,"구항, 해안가, 마르세유 도심 일대",7,프랑스 혁명기념일 마르세유 시즌,NATIONAL_HOLIDAY,7월 14일 프랑스 혁명기념일을 맞아 마르세유 도심과 해안가에서 기념 분위기를 느낄 수 있는 국가 기념일 시즌입니다.,https://www.marseille.fr/,true,56
+EUROPE,FR,프랑스,마르세유,마르세유 도심 공연장 및 축제 공간 일대,10,피에스타 데 쉬드,FESTIVAL,"마르세유의 대표적인 남부 문화 페스티벌로, 음악과 지중해권 문화 분위기를 함께 즐길 수 있는 가을 축제입니다.",https://fiestadessuds.com/,true,57
+EUROPE,FR,프랑스,마르세유,"카네비에르 거리, 구항 주변, 도심 일대",11,마르세유 산통 박람회,TRADITION,마르세유의 전통 성탄 장식 인형인 산통을 전시·판매하는 오래된 전통 박람회입니다. 11월부터 연말까지 마르세유의 겨울 분위기를 보여줍니다.,https://www.marseille-tourisme.com/en/vivez-marseille/blog-marseille/christmas-in-marseille/,true,58
+EUROPE,FR,프랑스,마르세유,"구항, 카네비에르 거리, 도심 크리스마스 장식 일대",11,마르세유 크리스마스 시즌,SEASON,"마르세유 도심이 크리스마스 조명과 겨울 장식, 연말 행사로 꾸며지는 시즌입니다. 산통 박람회와 함께 연말 분위기를 느끼기 좋습니다.",https://www.marseille-tourisme.com/en/vivez-marseille/blog-marseille/christmas-in-marseille/,true,59
+EUROPE,FR,프랑스,마르세유,"카네비에르 거리, 구항 주변, 도심 일대",12,마르세유 산통 박람회,TRADITION,12월 마르세유에서 전통 산통 인형과 크리스마스 장식을 만날 수 있는 대표적인 겨울 전통 행사입니다.,https://www.marseille-tourisme.com/en/vivez-marseille/blog-marseille/christmas-in-marseille/,true,60
+EUROPE,FR,프랑스,마르세유,"구항, 카네비에르 거리, 도심 크리스마스 장식 일대",12,마르세유 크리스마스 시즌,SEASON,"12월 마르세유 도심에서 크리스마스 조명, 마켓, 겨울 장식을 즐길 수 있는 연말 시즌 이벤트입니다.",https://www.marseille-tourisme.com/en/vivez-marseille/blog-marseille/christmas-in-marseille/,true,61
+EUROPE,DE,독일,프랑크푸르트,"시내 중심가, 뢰머베르크 일대",2,프랑크푸르트 카니발,TRADITION,사순절 전 카니발 시즌에 맞춰 열리는 프랑크푸르트의 전통 퍼레이드 행사입니다. 개최일은 부활절·사순절 일정에 따라 해마다 달라질 수 있어 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.grosser-rat.de/fastnachtszug/,true,62
+EUROPE,DE,독일,프랑크푸르트,라츠베크 축제장,3,프랑크푸르트 봄 디페메스,FESTIVAL,"프랑크푸르트 대표 민속 축제인 디페메스의 봄 시즌으로, 놀이기구와 먹거리, 가족형 축제 분위기를 즐길 수 있습니다. 봄 디페메스는 보통 부활절 전후에 열려 3월 말부터 4월까지 이어질 수 있습니다.",https://www.visitfrankfurt.travel/en/experience/festival-and-events/dippemess,true,63
+EUROPE,DE,독일,프랑크푸르트,라츠베크 축제장,4,프랑크푸르트 봄 디페메스,FESTIVAL,"프랑크푸르트 대표 민속 축제인 디페메스의 봄 시즌으로, 놀이기구와 먹거리, 가족형 축제 분위기를 즐길 수 있습니다. 봄 디페메스는 보통 부활절 전후에 열려 3월 말부터 4월까지 이어질 수 있습니다.",https://www.visitfrankfurt.travel/en/experience/festival-and-events/dippemess,true,64
+EUROPE,DE,독일,프랑크푸르트,도시 숲(Stadtwald) 내 오버포르스트하우스(Oberforsthaus) 주변,5,벨트헤스탁 / 프랑크푸르트 도시 숲 축제,TRADITION,성령강림절 무렵 프랑크푸르트 도시 숲에서 열리는 전통 민속 축제입니다. 개최일은 성령강림절 일정에 따라 해마다 달라질 수 있어 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.visitfrankfurt.travel/en/experience/festival-and-events/waeldchestag,true,65
+EUROPE,DE,독일,프랑크푸르트,프레스가스 거리와 오페라 광장 일대,5,프레스가스 거리 축제,STREET_FESTIVAL,"프랑크푸르트 중심가의 프레스가스 거리에서 열리는 거리 축제로, 음식과 음료, 음악, 도심 산책 분위기를 함께 즐길 수 있습니다.",https://fressgassfest.de/startseite/,true,66
+EUROPE,DE,독일,프랑크푸르트,오스트하펜 항구 일대,7,오스트하펜 페스티벌,CULTURAL_FESTIVAL,"프랑크푸르트 동부 항구 지역에서 열리는 항구·음악·문화 축제로, 라이브 무대와 항구 체험, 가족 프로그램이 함께 진행됩니다.",https://www.osthafenfestival.de/das-osthafenfestival/,true,67
+EUROPE,DE,독일,프랑크푸르트,마인카이와 파흐토어 일대,7,프랑크푸르트 마인 페스트,FESTIVAL,"마인강변에서 열리는 프랑크푸르트의 전통 여름 축제로, 강변 축제와 먹거리, 놀이시설, 불꽃놀이가 함께 어우러집니다. 일정은 보통 7월 말부터 8월 초까지 이어집니다.",https://www.visitfrankfurt.travel/en/experience/festival-and-events/main-festival,true,68
+EUROPE,DE,독일,프랑크푸르트,마인강 양안 박물관 지구,8,박물관 강변 축제,CULTURAL_FESTIVAL,"마인강변 박물관 지구에서 열리는 프랑크푸르트 대표 문화 축제로, 박물관 프로그램과 공연, 음식, 야외 행사가 함께 진행됩니다.",https://www.visitfrankfurt.travel/en/experience/festival-and-events/museum-embankment-festival,true,69
+EUROPE,DE,독일,프랑크푸르트,마인카이와 파흐토어 일대,8,프랑크푸르트 마인 페스트,FESTIVAL,"마인강변에서 열리는 프랑크푸르트의 전통 여름 축제로, 강변 축제와 먹거리, 놀이시설, 불꽃놀이가 함께 어우러집니다. 일정은 보통 7월 말부터 8월 초까지 이어집니다.",https://www.visitfrankfurt.travel/en/experience/festival-and-events/main-festival,true,70
+EUROPE,DE,독일,프랑크푸르트,로스마르크트 일대,8,프랑크푸르트 애플와인 축제,FOOD_FESTIVAL,"헤센 지역의 대표 음료인 애플와인을 중심으로 열리는 음식 축제로, 지역 음식과 애플와인, 무대 프로그램을 함께 즐길 수 있습니다.",https://www.visitfrankfurt.travel/en/experience/festival-and-events/frankfurt-apple-wine-festival,true,71
+EUROPE,DE,독일,프랑크푸르트,라츠베크 축제장,9,프랑크푸르트 가을 디페메스,FESTIVAL,"디페메스의 가을 시즌으로, 봄 축제보다 전통적인 가족형 민속 축제 분위기가 강한 프랑크푸르트의 대표 가을 행사입니다.",https://www.visitfrankfurt.travel/en/experience/festival-and-events/dippemess/autumn-dippemess,true,72
+EUROPE,DE,독일,프랑크푸르트,도이체 방크 파크 인근 축제장,9,프랑크푸르트 옥토버페스트,FESTIVAL,뮌헨 옥토버페스트 분위기를 프랑크푸르트에서 즐길 수 있는 가을 맥주 축제입니다. 축제 기간은 9월부터 10월 초까지 이어질 수 있습니다.,https://frankfurter-oktoberfest.de/,true,73
+EUROPE,DE,독일,프랑크푸르트,뢰머베르크와 구시가지 일대,10,뢰머베르크 재즈 시즌,CULTURE,독일 통일의 날을 전후해 프랑크푸르트 구시가지와 뢰머베르크 일대가 재즈 공연 무대로 바뀌는 문화 행사입니다.,https://www.visitfrankfurt.travel/en/experience/festival-and-events/jazz-on-the-third,true,74
+EUROPE,DE,독일,프랑크푸르트,도이체 방크 파크 인근 축제장,10,프랑크푸르트 옥토버페스트,FESTIVAL,뮌헨 옥토버페스트 분위기를 프랑크푸르트에서 즐길 수 있는 가을 맥주 축제입니다. 축제 기간은 9월부터 10월 초까지 이어질 수 있습니다.,https://frankfurter-oktoberfest.de/,true,75
+EUROPE,DE,독일,프랑크푸르트,뢰머베르크과 파울스플라츠 일대,12,프랑크푸르트 크리스마스 마켓 시즌,SEASON,"뢰머베르크과 구시가지 일대에서 열리는 독일 대표 크리스마스 마켓 시즌으로, 전통 장식과 먹거리, 겨울 분위기를 즐길 수 있습니다.",https://www.visitfrankfurt.travel/en/experience/festival-and-events/frankfurt-christmas-market,true,76
+EUROPE,DE,독일,뮌헨,파울라너 노커베르크와 주요 양조장 일대,3,뮌헨 슈타르크비어 시즌,SEASON,사순절 무렵 뮌헨 양조장과 비어홀에서 열리는 강한 맥주 시즌입니다. 개최 기간은 사순절 일정에 따라 해마다 달라질 수 있습니다.,https://www.munich.travel/en/topics/markets-festivals/munich-strong-beer-season,true,77
+EUROPE,DE,독일,뮌헨,테레지엔비제,4,뮌헨 봄 축제,FESTIVAL,"테레지엔비제에서 열리는 뮌헨의 봄 민속 축제로, 놀이기구와 맥주 텐트, 먹거리, 가족형 축제 분위기를 즐길 수 있습니다. 보통 4월 말부터 5월 초까지 이어집니다.",https://www.munich.travel/en/pois/markets-festivals/fruehlingsfest-munich,true,78
+EUROPE,DE,독일,뮌헨,테레지엔비제,5,뮌헨 봄 축제,FESTIVAL,"테레지엔비제에서 열리는 뮌헨의 봄 민속 축제로, 놀이기구와 맥주 텐트, 먹거리, 가족형 축제 분위기를 즐길 수 있습니다. 보통 4월 말부터 5월 초까지 이어집니다.",https://www.munich.travel/en/pois/markets-festivals/fruehlingsfest-munich,true,79
+EUROPE,DE,독일,뮌헨,마리아힐프플라츠,5,아우어 마이둘트,TRADITION,"마리아힐프플라츠에서 열리는 뮌헨 전통 장터 아우어 둘트의 봄 시즌으로, 생활용품 시장과 먹거리, 소규모 놀이시설을 함께 즐길 수 있습니다.",https://www.munich.travel/en/pois/markets-festivals/auer-dult,true,80
+EUROPE,DE,독일,뮌헨,마리엔플라츠와 구시가지 일대,6,뮌헨 도시 창립 기념일 축제,CITY_ANNIVERSARY,"뮌헨 구시가지에서 열리는 도시 창립 기념 축제로, 전통 공연과 음악, 수공예 마을, 도심 축제 프로그램을 즐길 수 있습니다.",https://www.munich.travel/en/topics/markets-festivals/city-anniversary-2026,true,81
+EUROPE,DE,독일,뮌헨,마리엔플라츠,6,뮌헨 양조업자의 날,TRADITION,마리엔플라츠에서 뮌헨 양조 문화와 젊은 양조업자 전통을 기념하는 행사입니다. 격년으로 열리는 행사라 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.muenchen.travel/pois/maerkte-feste/muenchner-brauertag,true,82
+EUROPE,DE,독일,뮌헨,레오폴트 거리와 슈바빙 일대,6,코르소 레오폴트,STREET_FESTIVAL,"레오폴트 거리를 차 없는 거리로 바꾸고 예술, 음악, 시민 참여 프로그램을 여는 뮌헨의 대표 거리 문화 축제입니다.",https://corso-leopold.de/,true,83
+EUROPE,DE,독일,뮌헨,올림피아파크 남쪽,6,톨우드 여름 페스티벌,CULTURAL_FESTIVAL,"올림피아파크에서 열리는 여름 문화 축제로, 음악, 공연, 국제 음식, 공예 마켓, 환경·사회 주제 프로그램이 함께 진행됩니다.",https://www.tollwood.de/en/tollwood-sommerfestival/,true,84
+EUROPE,DE,독일,뮌헨,마리아힐프플라츠,7,아우어 야코비둘트,TRADITION,"아우어 둘트의 여름 시즌으로, 전통 장터와 먹거리, 놀이시설이 함께 열리는 뮌헨의 지역 축제입니다.",https://www.munich.travel/en/pois/markets-festivals/auer-dult,true,85
+EUROPE,DE,독일,뮌헨,올림피아파크 남쪽,7,톨우드 여름 페스티벌,CULTURAL_FESTIVAL,"올림피아파크에서 열리는 여름 문화 축제로, 음악, 공연, 국제 음식, 공예 마켓, 환경·사회 주제 프로그램이 함께 진행됩니다.",https://www.tollwood.de/en/tollwood-sommerfestival/,true,86
+EUROPE,DE,독일,뮌헨,테레지엔비제,9,옥토버페스트,FESTIVAL,"테레지엔비제에서 열리는 세계적인 맥주·민속 축제로, 맥주 텐트와 전통 의상, 퍼레이드, 놀이시설이 함께하는 뮌헨 대표 행사입니다.",https://www.oktoberfest.de/en,true,87
+EUROPE,DE,독일,뮌헨,레오폴트 거리와 슈바빙 일대,9,코르소 레오폴트,STREET_FESTIVAL,"레오폴트 거리를 차 없는 거리로 바꾸고 예술, 음악, 시민 참여 프로그램을 여는 뮌헨의 대표 거리 문화 축제입니다.",https://corso-leopold.de/,true,88
+EUROPE,DE,독일,뮌헨,뮌헨 시내 박물관과 갤러리 일대,10,뮌헨 박물관의 긴 밤,CULTURE,"뮌헨의 박물관과 갤러리, 문화 공간이 늦은 밤까지 문을 열고 특별 프로그램을 제공하는 가을 문화 행사입니다.",https://www.muenchner.de/museumsnacht/en/,true,89
+EUROPE,DE,독일,뮌헨,마리아힐프플라츠,10,아우어 둘트,TRADITION,"아우어 둘트의 가을 시즌으로, 마리아힐프플라츠에서 열리는 전통 장터와 지역 축제 분위기를 즐길 수 있습니다.",https://www.munich.travel/en/pois/markets-festivals/auer-dult,true,90
+EUROPE,DE,독일,뮌헨,테레지엔비제,10,옥토버페스트,FESTIVAL,"테레지엔비제에서 열리는 세계적인 맥주·민속 축제로, 맥주 텐트와 전통 의상, 퍼레이드, 놀이시설이 함께하는 뮌헨 대표 행사입니다.",https://www.oktoberfest.de/en,true,91
+EUROPE,DE,독일,뮌헨,테레지엔비제,11,톨우드 겨울 페스티벌,CULTURAL_FESTIVAL,"테레지엔비제에서 열리는 겨울 문화 축제로, 공연과 국제 음식, 공예 마켓, 크리스마스 시즌 분위기를 함께 즐길 수 있습니다.",https://www.tollwood.de/en/,true,92
+EUROPE,DE,독일,뮌헨,마리엔플라츠와 구시가지 일대,12,뮌헨 크리스마스 마켓 시즌,SEASON,"마리엔플라츠와 구시가지 일대에서 열리는 뮌헨 대표 크리스마스 마켓 시즌으로, 전통 장식과 겨울 먹거리, 연말 분위기를 즐길 수 있습니다.",https://www.munich.travel/en/pois/markets-festivals/christkindlmarkt,true,93
+EUROPE,DE,독일,뮌헨,테레지엔비제,12,톨우드 겨울 페스티벌,CULTURAL_FESTIVAL,"테레지엔비제에서 열리는 겨울 문화 축제로, 공연과 국제 음식, 공예 마켓, 크리스마스 시즌 분위기를 함께 즐길 수 있습니다.",https://www.tollwood.de/en/,true,94
+EUROPE,DE,독일,베를린,베를리날레 팔라스트 등 도시 전역,2,베를린 국제영화제,CULTURE,"세계적으로 알려진 영화제로, 베를린 전역의 극장과 문화 공간에서 상영과 문화 행사가 열립니다.",https://www.berlinale.de/en/2026/news-press-releases/267074.html,true,95
+EUROPE,DE,독일,베를린,쿠르트슈마허담 중앙 축제장,3,베를린 봄 축제,FESTIVAL,"베를린 중앙 축제장에서 열리는 봄 민속 축제로, 놀이기구와 먹거리, 가족형 축제 분위기를 즐길 수 있습니다. 2026년 기준 3월 말부터 5월 초까지 이어집니다.",https://www.schaustellerverband-berlin.de/,true,96
+EUROPE,DE,독일,베를린,쿠르트슈마허담 중앙 축제장,4,베를린 봄 축제,FESTIVAL,베를린 봄 축제의 4월 기간입니다. 개최 기간은 해마다 달라질 수 있어 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.schaustellerverband-berlin.de/,true,97
+EUROPE,DE,독일,베를린,크로이츠베르크·프랑크푸르터 알레 일대,5,베를린 문화 카니발,CULTURAL_FESTIVAL,"다양한 문화 공동체가 참여하는 베를린 대표 거리 문화 축제로, 퍼레이드와 거리 축제 프로그램이 함께 열립니다.",https://www.visitberlin.de/en/event/carnival-cultures,true,98
+EUROPE,DE,독일,베를린,베를린 전역,6,페트 드 라 뮈지크 베를린,CULTURE,여름의 시작을 기념해 도시 곳곳에서 무료 음악 공연이 열리는 거리 음악 축제입니다.,https://www.fetedelamusique.de/,true,99
+EUROPE,DE,독일,베를린,쿠르트슈마허담 중앙 축제장,7,베를린 민속 축제의 여름,FESTIVAL,"중앙 축제장에서 열리는 베를린의 여름 민속 축제로, 놀이기구와 먹거리, 가족형 축제 분위기를 즐길 수 있습니다.",https://www.visitberlin.de/de/event/63-berliner-volksfestsommer,true,100
+EUROPE,DE,독일,베를린,젠다르멘마르크트,7,클래식 오픈 에어,CULTURE,"젠다르멘마르크트를 무대로 열리는 야외 클래식·공연예술 축제로, 여름밤의 문화 행사 분위기를 즐길 수 있습니다.",https://classicopenair.de/,true,101
+EUROPE,DE,독일,베를린,쿠르트슈마허담 중앙 축제장,8,베를린 민속 축제의 여름,FESTIVAL,베를린 민속 축제의 여름 시즌 중 8월 초까지 이어지는 기간입니다.,https://www.visitberlin.de/de/event/63-berliner-volksfestsommer,true,102
+EUROPE,DE,독일,베를린,베를린 주요 박물관·문화공간,8,베를린 박물관의 긴 밤,CULTURE,"베를린의 여러 박물관과 문화공간이 밤늦게까지 개방하며 특별 전시와 투어, 공연 프로그램을 제공하는 문화 행사입니다.",https://langenachtdermuseen.berlin/en/,true,103
+EUROPE,DE,독일,베를린,테겔 바이트만슬루스터 담 일대,8,슐렌페스트,FESTIVAL,"베를린 테겔에서 열리는 오래된 민속 축제로, 가족형 놀이기구와 지역 축제 분위기를 즐길 수 있습니다.",https://www.visitberlin.de/en/event/123nd-schollenfest,true,104
+EUROPE,DE,독일,베를린,테겔 바이트만슬루스터 담 일대,9,슐렌페스트,FESTIVAL,슐렌페스트의 9월 초 기간입니다. 2026년 기준 8월 말부터 9월 초까지 이어집니다.,https://www.visitberlin.de/en/event/123nd-schollenfest,true,105
+EUROPE,DE,독일,베를린,베를린 주요 갤러리·미술 공간,9,베를린 아트 위크,ART,베를린의 주요 갤러리와 미술 기관이 참여하는 현대미술 중심의 도시 예술 주간입니다.,https://berlinartweek.de/en/,true,106
+EUROPE,DE,독일,베를린,쿠르트슈마허담 중앙 축제장 등,9,베를린 옥토버페스트,FESTIVAL,"베를린에서 열리는 옥토버페스트 시즌 행사로, 바이에른식 축제 분위기와 맥주 텐트, 전통 먹거리를 즐길 수 있습니다.",https://www.spreewiesn-berlin.de/,true,107
+EUROPE,DE,독일,베를린,쿠르트슈마허담 중앙 축제장 등,10,베를린 옥토버페스트,FESTIVAL,베를린 옥토버페스트의 10월 기간입니다. 개최 장소와 세부 일정은 해마다 달라질 수 있습니다.,https://www.spreewiesn-berlin.de/,true,108
+EUROPE,DE,독일,베를린,"브란덴부르크문, 베를린 돔 등 주요 랜드마크",10,베를린 빛 축제,ART,베를린 주요 랜드마크가 빛과 미디어아트로 연출되는 가을 대표 야간 예술 축제입니다.,https://festival-of-lights.de/en/,true,109
+EUROPE,DE,독일,베를린,"젠다르멘마르크트, 알렉산더플라츠 등 도심 일대",12,베를린 크리스마스 마켓 시즌,SEASON,"베를린 도심 곳곳에서 열리는 크리스마스 마켓 시즌으로, 겨울 장식과 먹거리, 전통 마켓 분위기를 즐길 수 있습니다.",https://www.visitberlin.de/en/christmas-markets-berlin,true,110
+EUROPE,DE,독일,베를린,브란덴부르크문 일대,12,브란덴부르크문 새해맞이 시즌,HOLIDAY,"브란덴부르크문 주변에서 열리는 연말·새해맞이 시즌 행사로, 새해 카운트다운 분위기를 즐길 수 있습니다.",https://www.visitberlin.de/en/new-years-eve-berlin,true,111
+EUROPE,DE,독일,뒤셀도르프,"구시가지, 라인강변, 주요 카니발 행사장 일대",2,뒤셀도르프 카니발 시즌,FESTIVAL,"사순절 전 본격적으로 열리는 라인란트 카니발 시즌으로, 거리 행렬과 분장, 음악 행사가 이어집니다. 카니발 일정은 부활절·사순절 일정에 따라 해마다 달라질 수 있습니다.",https://www.karneval-in-duesseldorf.de/carnival-in-dusseldorf.php,true,112
+EUROPE,DE,독일,뒤셀도르프,"라인강변 산책로, 구시가지, 리틀 도쿄 일대",5,뒤셀도르프 재팬데이,CULTURAL_FESTIVAL,"뒤셀도르프의 일본 커뮤니티와 함께 열리는 대표 문화 행사로, 일본 전통·현대 문화 공연과 체험, 불꽃놀이를 즐길 수 있습니다.",https://www.visitduesseldorf.de/en/experience/events/japan-tag-japan-day-dusseldorf-nrw,true,113
+EUROPE,DE,독일,뒤셀도르프,메쎄 뒤셀도르프 일대,5,도코미 일본·애니메이션 문화 엑스포,CULTURE,"애니메이션, 만화, 코스프레, 일본 대중문화를 중심으로 열리는 대형 문화 행사입니다. 컨벤션 성격이 있지만 여행자가 즐길 수 있는 일본·애니메이션 문화 축제로 분류했습니다.",https://www.dokomi.de/en/event/when-and-where,true,114
+EUROPE,DE,독일,뒤셀도르프,"부르크광장, 라인강변 구시가지 일대",7,뒤셀도르프 프랑스 축제,CULTURAL_FESTIVAL,"프랑스 음식, 음악, 문화 프로그램이 뒤셀도르프 구시가지와 라인강변에서 열리는 문화 축제입니다.",https://www.duesseldorfer-frankreich-fest.de/,true,115
+EUROPE,DE,독일,뒤셀도르프,오버카셀 라인 강변 축제장,7,라인키르메스 대축제,FESTIVAL,"라인강변에서 열리는 뒤셀도르프 대표 민속 축제로, 대형 놀이기구와 전통 맥주 텐트, 야간 축제 분위기를 함께 즐길 수 있습니다.",https://rheinkirmes-duesseldorf.de/,true,116
+EUROPE,DE,독일,뒤셀도르프,뒤셀도르프 시내 공연장과 문화공간 일대,7,아스팔트 페스티벌,ART,"연극, 음악, 퍼포먼스, 문학, 사진 예술이 어우러지는 여름 예술 축제로, 프로그램과 장소는 해마다 달라질 수 있습니다.",https://www.asphalt-festival.de/en/,true,117
+EUROPE,DE,독일,뒤셀도르프,"시청 앞 마르크트광장, 구시가지 일대",11,뒤셀도르프 카니발 개막 시즌,TRADITION,"매년 11월 11일 11시 11분에 시작되는 뒤셀도르프 카니발 개막 시즌으로, 호페디츠 개막 행사와 전통 카니발 분위기를 만날 수 있습니다.",https://www.karneval-in-duesseldorf.de/carnival-in-dusseldorf.php,true,118
+EUROPE,DE,독일,뒤셀도르프,"구시가지, 쾨니히스알레, 샤도우광장 등 도심 일대",11,뒤셀도르프 크리스마스 마켓 시즌,SEASON,도심 여러 광장에서 열리는 크리스마스 마켓과 조명 장식 시즌입니다. 11월 말부터 연말까지 도시 전체가 겨울 축제 분위기로 바뀝니다.,https://www.visitduesseldorf.de/erleben/veranstaltungen/weihnachten-in-duesseldorf,true,119
+EUROPE,DE,독일,뒤셀도르프,"구시가지, 쾨니히스알레, 샤도우광장 등 도심 일대",12,뒤셀도르프 크리스마스 마켓 시즌,SEASON,"크리스마스 마켓, 도심 조명, 겨울 장식이 이어지는 대표 연말 시즌 행사입니다.",https://www.visitduesseldorf.de/erleben/veranstaltungen/weihnachten-in-duesseldorf,true,120
+EUROPE,DE,독일,함부르크,하일리겐가이스트펠트,3,함부르크 돔(봄 시즌),FESTIVAL,"함부르크를 대표하는 대형 민속 축제인 돔의 봄 시즌으로, 놀이기구와 먹거리, 가족형 축제 분위기를 즐길 수 있습니다. 2026년 기준 3월 말부터 4월까지 이어집니다.",https://www.hamburg-travel.com/see-explore/events/hamburger-dom/,true,121
+EUROPE,DE,독일,함부르크,하일리겐가이스트펠트,4,함부르크 돔(봄 시즌),FESTIVAL,함부르크 돔 봄 시즌의 4월 기간입니다. 개최 기간은 해마다 달라질 수 있어 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.hamburg-travel.com/see-explore/events/hamburger-dom/,true,122
+EUROPE,DE,독일,함부르크,알스터 호수 주변,5,함부르크 일본 벚꽃 축제,CULTURAL_FESTIVAL,"함부르크와 일본의 우호 관계를 기념하는 봄 문화 행사로, 알스터 호수 주변의 벚꽃과 불꽃놀이, 일본 문화 프로그램을 함께 즐길 수 있습니다. 개최일과 세부 프로그램은 해마다 달라질 수 있어 방문 전 공식 일정을 확인하는 것이 좋습니다.",https://www.hamburg-travel.com/see-explore/events/japanese-cherry-blossom-festival/,true,123
+EUROPE,DE,독일,함부르크,엘베강 항구 일대,5,함부르크 항구 개항 기념 축제,CULTURAL_FESTIVAL,"함부르크 항구의 역사를 기념하는 대형 해양 축제로, 선박 퍼레이드와 항구 주변 공연·행사가 이어지는 도시 대표 이벤트입니다.",https://www.hafen-hamburg.de/en/events/port-anniversary/,true,124
+EUROPE,DE,독일,함부르크,알토나 지구 일대,6,알토날레 문화 축제,CULTURAL_FESTIVAL,"함부르크 알토나 지역에서 열리는 문화 축제로, 거리 공연과 전시, 음악, 지역 프로그램이 함께 진행되는 도심형 문화 행사입니다. 프로그램은 해마다 달라질 수 있습니다.",https://www.altonale.de/altonale-festival/,true,125
+EUROPE,DE,독일,함부르크,함부르크 항구·엘베필하모니 주변,6,엘브재즈 페스티벌,CULTURE,함부르크 항구와 공연장을 배경으로 열리는 재즈 중심의 음악·문화 축제입니다.,https://elbjazz.de/en/start-english/,true,126
+EUROPE,DE,독일,함부르크,플란텐 운 블로멘,7,함부르크 동포의 날,CULTURAL_FESTIVAL,"함부르크 한인회가 주최하는 한국 문화 행사로, K-푸드와 K-팝 등 한국 문화를 소개합니다. 2026년 제2회 행사 기준이며, 새롭게 성장 중인 연례 문화 행사입니다.",https://www.hamburghaninhoe.de/post/hamburger-koreatag-2026-hamburg-event-planten-un-blomen,true,127
+EUROPE,DE,독일,함부르크,장크트파울리·레퍼반 일대,7,슐라거무브,STREET_FESTIVAL,화려한 트럭 퍼레이드와 대중음악을 중심으로 열리는 함부르크의 거리 축제입니다.,https://www.hamburg.de/freizeit/strassenfeste/schlagermove-338506,true,128
+EUROPE,DE,독일,함부르크,하일리겐가이스트펠트,7,함부르크 돔(여름 시즌),FESTIVAL,"함부르크 돔의 여름 시즌으로, 놀이기구와 먹거리, 야간 축제 분위기를 즐길 수 있습니다.",https://www.hamburg-travel.com/see-explore/events/hamburger-dom/,true,129
+EUROPE,DE,독일,함부르크,하일리겐가이스트펠트,8,함부르크 돔(여름 시즌),FESTIVAL,함부르크 돔 여름 시즌의 8월 기간입니다. 여름 휴가철과 겹쳐 가족 여행객이 즐기기 좋은 시즌 행사입니다.,https://www.hamburg-travel.com/see-explore/events/hamburger-dom/,true,130
+EUROPE,DE,독일,함부르크,레퍼반·장크트파울리 일대,9,리퍼반 페스티벌,CULTURE,"함부르크 레퍼반 일대에서 열리는 음악·문화 페스티벌로, 공연과 도시 문화 행사가 함께 진행됩니다.",https://www.hamburg-travel.com/see-explore/events/reeperbahn-festival/,true,131
+EUROPE,DE,독일,함부르크,하일리겐가이스트펠트,11,함부르크 돔(겨울 시즌),FESTIVAL,"함부르크 돔의 겨울 시즌으로, 늦가을부터 겨울 초입까지 이어지는 대형 민속 축제입니다.",https://www.hamburg-travel.com/see-explore/events/hamburger-dom/,true,132
+EUROPE,DE,독일,함부르크,하일리겐가이스트펠트,12,함부르크 돔(겨울 시즌),FESTIVAL,함부르크 돔 겨울 시즌의 12월 기간입니다. 2026년 기준 12월 초까지 이어질 수 있습니다.,https://www.hamburg-travel.com/see-explore/events/hamburger-dom/,true,133
+EUROPE,DE,독일,함부르크,"시청광장, 융페른슈티크 등 도심 일대",12,함부르크 크리스마스 마켓 시즌,SEASON,"함부르크 도심 곳곳에서 열리는 크리스마스 마켓 시즌으로, 전통 장식과 겨울 먹거리, 조명 분위기를 즐길 수 있습니다.",https://www.hamburg-travel.com/see-explore/events/christmas-markets/,true,134
+EUROPE,IT,이탈리아,로마,피아자 나보나,1,피아자 나보나 크리스마스 마켓 시즌,SEASON,"12월부터 1월 초까지 피아자 나보나에서 이어지는 로마의 대표 크리스마스·베파나 마켓 시즌입니다. 장식, 겨울 간식, 가족 행사를 함께 즐기며 로마의 겨울 분위기를 느낄 수 있습니다.",https://turismoroma.it/en/events/christmas-markets-and-villages-rome-2025-26,true,135
+EUROPE,IT,이탈리아,로마,"로마 도심, 피아자 나보나, 스페인 광장, 공원·문화시설 등",2,로마 카니발 축제,FESTIVAL,"사순절 전 로마 곳곳에서 가면, 어린이 행사, 거리 분위기를 즐길 수 있는 카니발 시즌입니다. 베네치아처럼 대규모 퍼레이드 중심은 아니지만 도심 광장과 문화시설 주변에서 축제 분위기를 느끼기 좋습니다.",https://www.getyourguide.com/ko-kr/explorer/rome-ttd33/rome-in-february/,true,136
+EUROPE,IT,이탈리아,로마,"바티칸 성 베드로 광장, 성 베드로 대성당, 콜로세움 일대",4,로마 부활절 성주간 행사,RELIGIOUS_SEASON,부활절을 전후해 바티칸과 로마 주요 성지에서 이어지는 성주간 종교 행사입니다. 해마다 날짜가 3월 말~4월 사이로 달라질 수 있으므로 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.vatican.va/content/vatican/en/special/2026/settimana-santa2026.html,true,137
+EUROPE,IT,이탈리아,로마,"캄피돌리오, 포로 로마노, 막시무스 경기장 등 로마 도심",4,로마 건국 기념일,CITY_ANNIVERSARY,"4월 21일 로마 건국을 기념해 열리는 도시 기념 행사입니다. 고대 로마 재현 행사, 문화 프로그램, 도심 곳곳의 무료 행사로 로마의 역사적 분위기를 느낄 수 있습니다.",https://www.turismoroma.it/it/eventi/natale-di-roma-2026,true,138
+EUROPE,IT,이탈리아,로마,"비토리아노, 포리 임페리알리 거리, 로마 도심",6,이탈리아 공화국의 날 로마 시즌,NATIONAL_HOLIDAY,"6월 2일 이탈리아 공화국 수립을 기념하는 국가 기념일입니다. 로마에서는 포리 임페리알리 거리 행진, 공식 의식, 공군 곡예비행 등 상징적인 행사를 볼 수 있습니다.",https://www.turismoroma.it/en/events/2-giugno-2026-festa-della-repubblica,true,139
+EUROPE,IT,이탈리아,로마,"성 베드로 대성당, 로마 도심, 테베레강 일대",6,성 베드로와 바오로 축일 로마 시즌,RELIGIOUS_CULTURAL,"6월 29일 로마의 수호성인인 성 베드로와 성 바오로를 기념하는 로마의 대표 종교·문화 시즌입니다. 성지 방문, 종교 행사, 도심 분위기를 함께 느낄 수 있습니다.",https://www.turismoroma.it/en/events/29-june-2025-saints-peter-and-paul,true,140
+EUROPE,IT,이탈리아,로마,"로마 도심 광장, 공원, 오스티아 해안 등",6,로마 여름 문화 축제,CULTURE,"여름 동안 로마 곳곳에서 영화, 공연, 전시, 음악, 야외 문화 프로그램이 이어지는 시즌입니다. 6월부터 본격적으로 시작되어 로마의 야간 문화 분위기를 즐기기 좋습니다.",https://www.turismoroma.it/en/events/estate-romana-2025,true,141
+EUROPE,IT,이탈리아,로마,"로마 도심 광장, 공원, 오스티아 해안 등",7,로마 여름 문화 축제,CULTURE,"7월 로마 전역에서 이어지는 여름 문화 프로그램입니다. 야외 영화, 음악, 공연, 지역 축제가 함께 열려 더운 계절에도 저녁 시간대 로마를 즐기기 좋습니다.",https://www.turismoroma.it/en/events/estate-romana-2025,true,142
+EUROPE,IT,이탈리아,로마,"트라스테베레 지구, 산타 마리아 인 트라스테베레 주변",7,페스타 데 노안트리,RELIGIOUS_CULTURAL,"트라스테베레 지역의 전통 축제로, 종교 행렬과 지역 축제 분위기가 함께 이어지는 로마의 여름 대표 행사입니다. 골목과 광장에서 로마 지역 공동체의 전통을 느낄 수 있습니다.",https://turismoroma.it/en/events/festa-de-noantri-2025,true,143
+EUROPE,IT,이탈리아,로마,"로마 도심 광장, 공원, 오스티아 해안 등",8,로마 여름 문화 축제,CULTURE,"8월에도 로마의 광장, 공원, 야외 공간에서 문화 행사가 이어지는 여름 시즌입니다. 야간 공연과 야외 프로그램을 통해 한여름 로마의 분위기를 즐길 수 있습니다.",https://www.turismoroma.it/en/events/estate-romana-2025,true,144
+EUROPE,IT,이탈리아,로마,산타 마리아 마조레 대성당,8,산타 마리아 마조레 대성당 눈 축제,RELIGIOUS_CULTURAL,8월 5일 산타 마리아 마조레 대성당에서 성모설지전과 성당 봉헌을 기념하는 전통 행사입니다. 성당 안팎에서 마돈나 델라 네베 전승과 관련된 예식과 상징적인 눈 연출을 볼 수 있습니다.,https://www.basilicasantamariamaggiore.va/it/eventi-e-novita/2025/solennita-della-madonna-della-neve.html,true,145
+EUROPE,IT,이탈리아,로마,"로마 시내 공연장, 극장, 문화공간 등",9,로마유로파 페스티벌,ART,"매년 가을 로마에서 열리는 현대 공연예술 축제입니다. 연극, 무용, 음악, 미디어아트 등 다양한 장르의 작품을 로마 여러 문화공간에서 만날 수 있습니다.",https://romaeuropa.net/en/,true,146
+EUROPE,IT,이탈리아,로마,"로마 시내 공연장, 극장, 문화공간 등",10,로마유로파 페스티벌,ART,10월에도 이어지는 로마의 대표 현대 공연예술 축제입니다. 국제 예술가들의 공연과 전시를 통해 가을 로마의 문화 일정을 즐기기 좋습니다.,https://romaeuropa.net/en/,true,147
+EUROPE,IT,이탈리아,로마,"로마 시내 공연장, 극장, 문화공간 등",11,로마유로파 페스티벌,ART,11월까지 이어지는 로마의 현대 공연예술 시즌입니다. 극장과 문화공간을 중심으로 다양한 공연예술 프로그램이 진행됩니다.,https://romaeuropa.net/en/,true,148
+EUROPE,IT,이탈리아,로마,피아자 나보나,12,피아자 나보나 크리스마스 마켓 시즌,SEASON,"12월 피아자 나보나에서 열리는 로마 대표 크리스마스 마켓 시즌입니다. 전통 장식, 겨울 간식, 가족 행사와 함께 로마의 연말 분위기를 느끼기 좋습니다.",https://turismoroma.it/en/events/christmas-markets-and-villages-rome-2025-26,true,149
+EUROPE,IT,이탈리아,밀라노,"밀라노 도심, 퍼레이드·문화 행사 구역",2,밀라노 암브로시아 카니발,CULTURAL_FESTIVAL,밀라노의 암브로시아 전례권 전통에 따라 일반 카니발보다 늦게 이어지는 카니발 시즌입니다. 사순절 일정에 따라 개최일이 달라질 수 있어 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.yesmilano.it/en/whats-on/all-events/carnival-milano,true,150
+EUROPE,IT,이탈리아,밀라노,"밀라노 시내 공연장, 박물관, 공원, 광장 일대",5,피아노 시티 밀라노,CULTURE,"도시 곳곳의 실내외 공간에서 피아노 공연이 이어지는 밀라노 대표 음악 문화 행사입니다. 박물관, 공원, 광장 등 다양한 장소에서 공연을 즐길 수 있습니다.",https://www.yesmilano.it/en/whats-on/all-events/piano-city-milano,true,151
+EUROPE,IT,이탈리아,밀라노,스포르체스코 성 Cortile delle Armi 일대,6,밀라노 스포르체스코 성 여름 축제,CULTURE,"스포르체스코 성에서 여름 동안 공연, 음악, 연극, 영화 등 다양한 문화 프로그램이 열리는 시즌 행사입니다. 프로그램은 해마다 달라질 수 있습니다.",https://www.yesmilano.it/estatealcastello,true,152
+EUROPE,IT,이탈리아,밀라노,MIND Live Theatre 및 밀라노 라틴 페스티벌 행사장 일대,6,밀라노 라틴 페스티벌,CULTURAL_FESTIVAL,"라틴아메리카와 카리브 문화, 음악, 춤, 음식이 함께하는 여름 시즌 축제로, 2026년 기준 6월부터 8월까지 이어집니다.",https://www.milanolatinfestival.it/,true,153
+EUROPE,IT,이탈리아,밀라노,스포르체스코 성 Cortile delle Armi 일대,7,밀라노 스포르체스코 성 여름 축제,CULTURE,"스포르체스코 성에서 여름 동안 공연, 음악, 연극, 영화 등 다양한 문화 프로그램이 열리는 시즌 행사입니다. 프로그램은 해마다 달라질 수 있습니다.",https://www.yesmilano.it/estatealcastello,true,154
+EUROPE,IT,이탈리아,밀라노,MIND Live Theatre 및 밀라노 라틴 페스티벌 행사장 일대,7,밀라노 라틴 페스티벌,CULTURAL_FESTIVAL,"라틴아메리카와 카리브 문화, 음악, 춤, 음식이 함께하는 여름 시즌 축제로, 2026년 기준 6월부터 8월까지 이어집니다.",https://www.milanolatinfestival.it/,true,155
+EUROPE,IT,이탈리아,밀라노,스포르체스코 성 Cortile delle Armi 일대,8,밀라노 스포르체스코 성 여름 축제,CULTURE,"스포르체스코 성에서 여름 동안 공연, 음악, 연극, 영화 등 다양한 문화 프로그램이 열리는 시즌 행사입니다. 프로그램은 해마다 달라질 수 있습니다.",https://www.yesmilano.it/estatealcastello,true,156
+EUROPE,IT,이탈리아,밀라노,MIND Live Theatre 및 밀라노 라틴 페스티벌 행사장 일대,8,밀라노 라틴 페스티벌,CULTURAL_FESTIVAL,"라틴아메리카와 카리브 문화, 음악, 춤, 음식이 함께하는 여름 시즌 축제로, 2026년 기준 6월부터 8월까지 이어집니다.",https://www.milanolatinfestival.it/,true,157
+EUROPE,IT,이탈리아,밀라노,스포르체스코 성 Cortile delle Armi 일대,9,밀라노 스포르체스코 성 여름 축제,CULTURE,"스포르체스코 성에서 여름 동안 공연, 음악, 연극, 영화 등 다양한 문화 프로그램이 열리는 시즌 행사입니다. 프로그램은 해마다 달라질 수 있습니다.",https://www.yesmilano.it/estatealcastello,true,158
+EUROPE,IT,이탈리아,밀라노,밀라노 시내 문화유산·박물관·역사 공간 일대,9,유럽 문화유산의 날 밀라노,CULTURE,"유럽 전역에서 열리는 문화유산 개방 행사로, 밀라노에서도 박물관과 역사 공간을 중심으로 특별 관람과 문화 프로그램이 진행됩니다.",https://www.europeanheritagedays.com/,true,159
+EUROPE,IT,이탈리아,밀라노,산탐브로지오 성당 및 밀라노 도심 일대,12,산탐브로지오 축일,RELIGIOUS_CULTURAL,12월 7일 밀라노 수호성인 성 암브로시오를 기념하는 전통 축일입니다. 종교 행사와 도시 축제 분위기가 함께 이어지며 밀라노 겨울 시즌의 시작을 알립니다.,https://www.yesmilano.it/en/whats-on/all-events/feast-sant-ambrogio-traditions,true,160
+EUROPE,IT,이탈리아,밀라노,스포르체스코 성 주변 및 밀라노 중심부,12,오 베이 오 베이 전통시장,TRADITION,"산탐브로지오 축일 무렵 열리는 밀라노의 오래된 전통시장으로, 수공예품과 먹거리, 크리스마스 분위기를 함께 즐길 수 있습니다.",https://www.yesmilano.it/en/whats-on/all-events/oh-bej-oh-bej-christmas-market,true,161
+EUROPE,IT,이탈리아,밀라노,라 스칼라 극장,12,스칼라 극장 시즌 개막,CULTURE,매년 12월 7일 산탐브로지오 축일에 열리는 라 스칼라 극장의 시즌 개막 행사입니다. 밀라노의 대표적인 클래식 문화 행사로 알려져 있습니다.,https://www.teatroallascala.org/en/support-us/companies/openingnight.html,true,162
+EUROPE,IT,이탈리아,밀라노,"두오모 광장, 스포르체스코 성, 밀라노 도심 일대",12,밀라노 크리스마스 시즌,SEASON,"12월 밀라노 도심의 크리스마스 마켓, 조명, 트리 장식이 이어지는 겨울 시즌 행사입니다. 두오모 광장과 주요 도심 구역에서 연말 분위기를 즐길 수 있습니다.",https://www.yesmilano.it/en/whats-on/all-events/christmas-markets-milano,true,163
+EUROPE,IT,이탈리아,베네치아,"산마르코 광장, 리알토, 대운하와 베네치아 시내 일대",1,베네치아 카니발,CULTURAL_FESTIVAL,"베네치아를 대표하는 전통 가면 축제로, 산마르코 광장과 운하 주변에서 가면 행렬과 공연, 도시 전역의 카니발 분위기를 즐길 수 있습니다.",https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/carnevale-di-venezia-2026,true,164
+EUROPE,IT,이탈리아,베네치아,"산마르코 광장, 리알토, 대운하와 베네치아 시내 일대",2,베네치아 카니발,CULTURAL_FESTIVAL,"베네치아를 대표하는 전통 가면 축제로, 산마르코 광장과 운하 주변에서 가면 행렬과 공연, 도시 전역의 카니발 분위기를 즐길 수 있습니다.",https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/carnevale-di-venezia-2026,true,165
+EUROPE,IT,이탈리아,베네치아,"산마르코 광장, 산마르코 대성당 일대",4,산마르코 축일,RELIGIOUS_CULTURAL,"베네치아 수호성인 산마르코를 기념하는 날로, 보콜로라 불리는 장미 봉오리를 선물하는 전통과 산마르코 광장·대성당 주변의 기념 분위기를 함께 볼 수 있습니다.",https://www.italia.it/en/veneto/venice/things-to-do/festa-del-bocolo-and-di-san-marco-in-venice,true,166
+EUROPE,IT,이탈리아,베네치아,"산마르코 광장, 리도 앞바다, 베네치아 석호 일대",5,센사 축제,HISTORICAL_FESTIVAL,"베네치아와 바다의 오래된 관계를 기념하는 전통 축제로, 리도 앞바다에서 열리는 ‘바다와의 결혼식’ 의식과 수상 퍼레이드가 대표적입니다.",https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/festa-della-sensa,true,167
+EUROPE,IT,이탈리아,베네치아,"자르디니, 아르세날레, 베네치아 시내 전시장 일대",6,베네치아 비엔날레 시즌,ART,"베네치아를 대표하는 국제 예술 행사 시즌으로, 2026년에는 제61회 베네치아 비엔날레 미술전이 자르디니와 아르세날레, 시내 전시장 곳곳에서 진행됩니다.",https://www.labiennale.org/en/art/2026,true,168
+EUROPE,IT,이탈리아,베네치아,산마르코 광장,6,산마르코 광장 여름 콘서트 시즌,CULTURE,"산마르코 광장을 무대로 열리는 여름 야외 콘서트 시즌입니다. 2026년 공식 일정 기준이며, 공연 프로그램과 세부 일정은 해마다 달라질 수 있습니다.",https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/concerti-in-piazza-san-marco-2026,true,169
+EUROPE,IT,이탈리아,베네치아,"주데카 섬, 자테레, 산마르코 만 일대",7,레덴토레 축제,RELIGIOUS_FESTIVAL,"베네치아의 대표적인 전통·종교 축제로, 주데카 섬 레덴토레 성당을 향한 임시 다리와 산마르코 만 일대의 야간 불꽃놀이가 유명합니다.",https://redentore.veneziaunica.it/en,true,170
+EUROPE,IT,이탈리아,베네치아,산마르코 광장,7,산마르코 광장 여름 콘서트 시즌,CULTURE,"산마르코 광장을 무대로 열리는 여름 야외 콘서트 시즌입니다. 2026년 공식 일정 기준이며, 공연 프로그램과 세부 일정은 해마다 달라질 수 있습니다.",https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/concerti-in-piazza-san-marco-2026,true,171
+EUROPE,IT,이탈리아,베네치아,"대운하, 산마르코 일대",9,레가타 스토리카,HISTORICAL_FESTIVAL,"대운하에서 열리는 베네치아의 대표 전통 수상 행사로, 역사 의상 행렬과 전통 보트 경주가 함께 진행되는 도시 대표 축제입니다.",https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/regata-storica-di-venezia-2026,true,172
+EUROPE,IT,이탈리아,베네치아,"산타 마리아 델라 살루테 성당, 대운하 임시 다리 일대",11,마돈나 델라 살루테 축제,RELIGIOUS_FESTIVAL,"베네치아 시민들이 산타 마리아 델라 살루테 성당을 찾아가는 전통 순례 행사로, 대운하 위 임시 다리와 성당 주변의 종교적 분위기가 특징입니다.",https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/festa-della-madonna-della-salute-2025,true,173
+EUROPE,IT,이탈리아,베네치아,"산마르코 광장, 베네치아 본섬과 메스트레 일대",12,베네치아 크리스마스 시즌,SEASON,"베네치아와 메스트레 일대가 조명, 장식, 겨울 이벤트로 꾸며지는 연말 시즌입니다. 광장과 운하 주변에서 크리스마스 분위기를 즐길 수 있습니다.",https://www.veneziaunica.it/it/cosa-fare-a-venezia/eventi/natale-venezia-2025,true,174
+EUROPE,IT,이탈리아,나폴리,비아 산 그레고리오 아르메노 일대,1,산 그레고리오 아르메노 크리스마스·프레세페 시즌,SEASON,나폴리의 전통 프레세페 공방 거리인 산 그레고리오 아르메노에서 크리스마스 장식과 수공예 성탄 장면을 볼 수 있는 시즌입니다. 1월 초까지 연말 분위기가 이어집니다.,https://www.visitnaples.eu/en/neapolitanity/discover-naples/san-gregorio-armeno-the-street-of-the-neapolitan-nativity-scene,true,175
+EUROPE,IT,이탈리아,나폴리,피아차 메르카토 및 나폴리 도심 일대,1,나폴리 베파나 축제,HOLIDAY,"1월 6일 주현절과 베파나 전통을 중심으로 하는 이탈리아 겨울 명절 시즌입니다. 나폴리에서는 선물과 과자, 도심 시장 분위기를 함께 즐길 수 있습니다.",https://www.visitnaples.eu/en/neapolitanity/tales-of-naples/befana-christmas-witch-that-brings-candy,true,176
+EUROPE,IT,이탈리아,나폴리,나폴리 도심 광장과 거리 일대,2,나폴리 카니발 시즌,SEASONAL,사순절 전 카니발 기간에 나폴리의 전통 음식과 거리 분위기를 즐길 수 있는 시즌입니다. 대형 퍼레이드 중심보다는 지역 전통 간식과 도심 축제 분위기 중심으로 즐기는 성격이 강합니다.,https://www.visitnaples.eu/en/neapolitanity/discover-naples/how-do-people-celebrate-carnival-in-naples-origins-and-traditions,true,177
+EUROPE,IT,이탈리아,나폴리,나폴리 역사 지구와 문화유산 공간 일대,5,마조 데이 모누멘티,CULTURE,"5월 나폴리에서 열리는 문화유산 중심 행사로, 도시의 역사 공간과 예술 프로그램을 통해 나폴리의 문화를 깊이 볼 수 있습니다.",https://www.comune.napoli.it/vivere-il-comune/eventi/maggio-dei-monumenti-2026/,true,178
+EUROPE,IT,이탈리아,나폴리,나폴리 주요 공연장과 문화 공간 일대,6,캄파니아 테아트로 페스티벌,CULTURE,"나폴리를 중심으로 열리는 국제 공연예술 축제로, 연극과 공연, 전시 등 다양한 문화 프로그램이 진행됩니다.",https://campaniateatrofestival.it/,true,179
+EUROPE,IT,이탈리아,나폴리,나폴리 주요 공연장과 문화 공간 일대,7,캄파니아 테아트로 페스티벌,CULTURE,"나폴리를 중심으로 열리는 국제 공연예술 축제로, 연극과 공연, 전시 등 다양한 문화 프로그램이 진행됩니다.",https://campaniateatrofestival.it/,true,180
+EUROPE,IT,이탈리아,나폴리,나폴리 및 행사장 일대,7,나폴리 피자 빌리지,FOOD_FESTIVAL,나폴리 피자를 중심으로 한 대형 음식 축제입니다. 개최 시기와 장소는 해마다 달라질 수 있어 방문 전 공식 일정을 확인하는 것이 좋습니다.,https://www.pizzavillage.it/en/,true,181
+EUROPE,IT,이탈리아,나폴리,"나폴리 해변, 도심, 여름 휴가 구역 일대",8,나폴리 페라구스토 시즌,HOLIDAY,"8월 15일 페라구스토를 중심으로 나폴리의 해변, 도심 산책, 여름 휴가 분위기를 즐길 수 있는 시즌입니다. 특정 단일 축제라기보다 여름 공휴일과 지역 휴가 문화가 결합된 행사입니다.",https://www.visitnaples.eu/en/neapolitanity/discover-naples/mid-august-in-naples-what-to-do-on-august-15th,true,182
+EUROPE,IT,이탈리아,나폴리,나폴리 대성당 및 도심 일대,9,산 제나로 축제,RELIGIOUS_FESTIVAL,9월 19일 나폴리 수호성인 산 제나로를 기념하는 대표 종교·전통 행사입니다. 성인의 피가 액화되는 기적으로 알려진 의식과 도시의 신앙 문화를 볼 수 있습니다.,https://www.italia.it/en/campania/naples/things-to-do/feast-of-san-gennaro-in-naples,true,183
+EUROPE,IT,이탈리아,나폴리,"메르젤리나, 피에디그로타 성당 주변 일대",9,피에디그로타 축제,RELIGIOUS_CULTURAL,나폴리의 전통 음악과 종교 문화가 결합된 피에디그로타 지역의 전통 행사입니다. 해마다 세부 일정과 프로그램이 달라질 수 있습니다.,https://www.visitnaples.eu/en/neapolitanity/discover-naples/festivals-in-naples-you-cant-miss-in-summer-2025,true,184
+EUROPE,IT,이탈리아,나폴리,비아 산 그레고리오 아르메노 일대,11,산 그레고리오 아르메노 크리스마스·프레세페 시즌,SEASON,11월부터 나폴리의 전통 프레세페 공방 거리인 산 그레고리오 아르메노가 크리스마스 장식과 수공예 성탄 장면으로 활기를 띠는 시즌입니다.,https://www.visitnaples.eu/en/neapolitanity/discover-naples/san-gregorio-armeno-the-street-of-the-neapolitan-nativity-scene,true,185
+EUROPE,IT,이탈리아,나폴리,"나폴리 도심, 플레비스키토 광장, 크리스마스 마켓 구역",11,나폴리 크리스마스 시즌,SEASON,"나폴리 도심의 조명, 시장, 프레세페 전통이 이어지는 겨울 시즌입니다. 11월 말부터 주요 광장과 거리에서 연말 분위기를 느낄 수 있습니다.",https://www.visitnaples.eu/en/neapolitanity/discover-naples/christmas-in-naples,true,186
+EUROPE,IT,이탈리아,나폴리,비아 산 그레고리오 아르메노 일대,12,산 그레고리오 아르메노 크리스마스·프레세페 시즌,SEASON,12월 산 그레고리오 아르메노 거리에는 전통 프레세페 장식과 수공예 피규어를 찾는 사람들로 활기가 넘칩니다. 나폴리 크리스마스 여행의 대표 코스입니다.,https://www.visitnaples.eu/en/neapolitanity/discover-naples/san-gregorio-armeno-the-street-of-the-neapolitan-nativity-scene,true,187
+EUROPE,IT,이탈리아,나폴리,"나폴리 도심, 플레비스키토 광장, 크리스마스 마켓 구역",12,나폴리 크리스마스 시즌,SEASON,"나폴리 도심의 크리스마스 조명, 마켓, 전통 디저트와 프레세페 문화가 어우러지는 12월 대표 시즌입니다.",https://www.visitnaples.eu/en/neapolitanity/discover-naples/christmas-in-naples,true,188
+EUROPE,IT,이탈리아,나폴리,플레비스키토 광장과 나폴리 도심 일대,12,나폴리 연말 시즌,SEASON,"12월 말 나폴리 도심의 조명, 광장 행사, 연말 분위기를 즐길 수 있는 시즌입니다. 크리스마스 이후 새해맞이 분위기까지 이어집니다.",https://www.visitnaples.eu/en/neapolitanity/discover-naples/christmas-in-naples,true,189
+EUROPE,ES,스페인,마드리드,마드리드,1,동방박사 퍼레이드,HOLIDAY,1월 5일 저녁 도심에서 열리는 스페인 크리스마스 시즌 대표 퍼레이드다.,https://www.esmadrid.com/en/whats-on/three-kings-parade,true,190
+EUROPE,ES,스페인,마드리드,마드리드,2,마드리드 카니발,CULTURAL_FESTIVAL,"사순절 전후로 열리는 카니발 시즌 행사로, 해마다 날짜가 달라질 수 있다.",https://www.esmadrid.com/en/whats-on/carnival-madrid,true,191
+EUROPE,ES,스페인,마드리드,마드리드,3,마드리드 세마나 산타,RELIGIOUS_CULTURAL,부활절 전 성주간에 열리는 종교·전통 행사다. 부활절 날짜에 따라 3월 또는 4월에 걸칠 수 있다.,https://www.esmadrid.com/en/whats-on/easter-madrid,true,192
+EUROPE,ES,스페인,마드리드,마드리드~아란후에스,3,딸기 기차,SEASONAL,마드리드와 아란후에스를 잇는 봄 시즌 관광 열차 행사다.,https://www.esmadrid.com/en/whats-on/strawberry-train,true,193
+EUROPE,ES,스페인,마드리드,마드리드,4,마드리드 세마나 산타,RELIGIOUS_CULTURAL,부활절 전 성주간에 열리는 종교·전통 행사다. 부활절 날짜에 따라 3월 또는 4월에 걸칠 수 있다.,https://www.esmadrid.com/en/whats-on/easter-madrid,true,194
+EUROPE,ES,스페인,마드리드,마드리드~아란후에스,4,딸기 기차,SEASONAL,마드리드와 아란후에스를 잇는 봄 시즌 관광 열차 행사다.,https://www.esmadrid.com/en/whats-on/strawberry-train,true,195
+EUROPE,ES,스페인,마드리드,마드리드~아란후에스,5,딸기 기차,SEASONAL,마드리드와 아란후에스를 잇는 봄 시즌 관광 열차 행사다.,https://www.esmadrid.com/en/whats-on/strawberry-train,true,196
+EUROPE,ES,스페인,마드리드,마드리드,5,산 이시드로 축제,TRADITION,마드리드 수호성인 산 이시드로를 기념하는 대표 전통 축제다.,https://www.esmadrid.com/en/whats-on/sanisidro,true,197
+EUROPE,ES,스페인,마드리드,레티로 공원,5,마드리드 도서전,LITERATURE,레티로 공원에서 열리는 마드리드 대표 도서·문학 행사다.,https://www.esmadrid.com/en/whats-on/madrid-book-fair-el-retiro-park,true,198
+EUROPE,ES,스페인,마드리드,마드리드,5,마드리드 국제 박물관의 날,ART,5월 18일 국제 박물관의 날을 전후해 주요 박물관 무료 입장이나 특별 프로그램이 운영될 수 있다.,https://www.esmadrid.com/en/tourist-information/national-archaeological-museum,true,199
+EUROPE,ES,스페인,마드리드,마드리드~아란후에스,6,딸기 기차,SEASONAL,마드리드와 아란후에스를 잇는 봄 시즌 관광 열차 행사다.,https://www.esmadrid.com/en/whats-on/strawberry-train,true,200
+EUROPE,ES,스페인,마드리드,레티로 공원,6,마드리드 도서전,LITERATURE,레티로 공원에서 열리는 마드리드 대표 도서·문학 행사다.,https://www.esmadrid.com/en/whats-on/madrid-book-fair-el-retiro-park,true,201
+EUROPE,ES,스페인,마드리드,마드리드,7,베라노스 데 라 비야,ART,여름철 마드리드 전역에서 열리는 공연·문화 프로그램이다.,https://www.esmadrid.com/en/whats-on/veranos-villa,true,202
+EUROPE,ES,스페인,마드리드,마드리드,8,베라노스 데 라 비야,ART,여름철 마드리드 전역에서 열리는 공연·문화 프로그램이다.,https://www.esmadrid.com/en/whats-on/veranos-villa,true,203
+EUROPE,ES,스페인,마드리드,마드리드,8,마드리드 3대 전통 축제(베르베나스 데 아고스토),TRADITION,"산 카예타노, 산 로렌소, 라 팔로마 성모 축제를 잇는 8월 전통 축제 시즌이다.",https://www.esmadrid.com/en/whats-on/august-fiestas,true,204
+EUROPE,ES,스페인,마드리드,마드리드,10,스페인 국경일 퍼레이드,NATIONAL_HOLIDAY,10월 12일 스페인 국경일을 기념해 마드리드에서 열리는 공식 퍼레이드다.,https://www.esmadrid.com/en/whats-on/hispanidad,true,205
+EUROPE,ES,스페인,마드리드,마드리드,11,알무데나 성모 축제,RELIGIOUS_CULTURAL,마드리드의 수호성모 알무데나를 기념하는 11월 전통·종교 행사다.,https://www.esmadrid.com/en/whats-on/virgen-almudena,true,206
+EUROPE,ES,스페인,마드리드,마드리드,12,마드리드 크리스마스 시즌,SEASONAL,"조명, 마켓, 퍼레이드 준비 등으로 이어지는 마드리드 겨울 시즌 행사다.",https://www.esmadrid.com/en/whats-on/christmas-madrid,true,207
+EUROPE,ES,스페인,바르셀로나,바르셀로나,1,동방박사 퍼레이드,HOLIDAY,1월 5일 바르셀로나 도심에서 열리는 크리스마스 시즌 대표 퍼레이드다.,https://www.barcelonaturisme.com/wv3/en/page/3911/christmas-in-barcelona.html,true,208
+EUROPE,ES,스페인,바르셀로나,바르셀로나,1,바르셀로나 크리스마스 시즌,SEASONAL,크리스마스 조명과 동방박사 퍼레이드로 이어지는 겨울 시즌 행사다.,https://www.barcelonaturisme.com/wv3/en/page/3911/christmas-in-barcelona.html,true,209
+EUROPE,ES,스페인,바르셀로나,바르셀로나,2,산타 에울랄리아 축제,RELIGIOUS_CULTURAL,바르셀로나의 공동 수호성녀를 기념하는 겨울 전통 축제다.,https://www.barcelonaturisme.com/wv3/en/page/3181/santa-eulalia.html,true,210
+EUROPE,ES,스페인,바르셀로나,바르셀로나,2,바르셀로나 카니발,CULTURAL_FESTIVAL,"사순절 전후로 열리는 카니발 행사로, 해마다 날짜가 달라질 수 있다.",https://agenda500.barcelona.cat/en/detall/carnaval-de-barcelona_99400031534.html,true,211
+EUROPE,ES,스페인,바르셀로나,그라시아,3,산 메디르 축제,TRADITION,매년 3월 3일 그라시아 일대에서 사탕 행렬로 유명한 전통 축제다.,https://www.barcelonaturisme.com/wv3/en/page/4569/sant-medir.html,true,212
+EUROPE,ES,스페인,바르셀로나,바르셀로나,4,산 조르디의 날,LITERATURE,4월 23일 책과 장미를 중심으로 열리는 카탈루냐 대표 문화 행사다.,https://www.barcelonaturisme.com/wv3/en/search/results_t.html?nresultats=250&pg=0&tag=3,true,213
+EUROPE,ES,스페인,바르셀로나,바르셀로나,5,프리마베라 사운드,FESTIVAL,"바르셀로나를 대표하는 대형 음악 축제로, 개최일이 5월 말~6월 초에 걸칠 수 있다.",https://www.primaverasound.com/en/barcelona,true,214
+EUROPE,ES,스페인,바르셀로나,바르셀로나,6,프리마베라 사운드,FESTIVAL,"바르셀로나를 대표하는 대형 음악 축제로, 개최일이 5월 말~6월 초에 걸칠 수 있다.",https://www.primaverasound.com/en/barcelona,true,215
+EUROPE,ES,스페인,바르셀로나,바르셀로나,6,산 후안 전야제,SEASONAL,6월 23일 밤 여름의 시작을 기념하는 전통 축제다.,https://www.barcelonaturisme.com/wv3/en/page/5277/la-revetlla-de-sant-joan.html,true,216
+EUROPE,ES,스페인,바르셀로나,바르셀로나,6,소나르 페스티벌,FESTIVAL,"음악, 창의성, 기술을 결합한 바르셀로나 대표 국제 축제다.",https://sonar.es/en/tickets,true,217
+EUROPE,ES,스페인,바르셀로나,바르셀로나,7,그렉 페스티벌 바르셀로나,ART,"연극, 무용, 음악, 서커스 등 공연예술 중심의 여름 문화 축제다.",https://www.barcelonaturisme.com/wv3/en/agenda/14601/grec-festival-de-barcelona.html,true,218
+EUROPE,ES,스페인,바르셀로나,그라시아,8,그라시아 거리 축제,STREET_FESTIVAL,8월 중순 그라시아 지구 거리 장식과 공연으로 유명한 지역 축제다.,https://www.barcelonaturisme.com/wv3/en/page/1072/gracia-and-park-guell.html,true,219
+EUROPE,ES,스페인,바르셀로나,바르셀로나,9,라 메르세 축제,CULTURAL_FESTIVAL,9월 24일을 중심으로 열리는 바르셀로나의 대표 도시 축제다.,https://www.barcelonaturisme.com/wv3/en/page/3187/virgin-of-la-merce.html,true,220
+EUROPE,ES,스페인,바르셀로나,바르셀로나,12,바르셀로나 크리스마스 시즌,SEASONAL,크리스마스 조명과 동방박사 퍼레이드로 이어지는 겨울 시즌 행사다.,https://www.barcelonaturisme.com/wv3/en/page/3911/christmas-in-barcelona.html,true,221
+EUROPE,ES,스페인,말라가,말라가,1,동방박사 퍼레이드,HOLIDAY,1월 5일 말라가 도심에서 열리는 크리스마스 시즌 대표 퍼레이드다.,https://visita.malaga.eu/en/meet-malaga/festivals/cabalgata-de-reyes-magos,true,222
+EUROPE,ES,스페인,말라가,말라가,1,말라가 크리스마스 조명 시즌,SEASONAL,말라가 도심 크리스마스 조명과 겨울 프로그램이 이어지는 시즌이다.,https://visita.malaga.eu/en/what-to-see-and-do/blog/christmas-in-malaga-a-guide-of-plans-to-make-sure-you-don-39-t-miss-a-thing-p1813,true,223
+EUROPE,ES,스페인,말라가,말라가,2,말라가 카니발,CULTURAL_FESTIVAL,"사순절 전후로 열리는 말라가 카니발로, 해마다 날짜가 달라질 수 있다.",https://visita.malaga.eu/en/meet-malaga/festivals/carnival,true,224
+EUROPE,ES,스페인,말라가,말라가,3,말라가 세마나 산타,RELIGIOUS_CULTURAL,"말라가의 대표 성주간 행사로, 부활절 날짜에 따라 3월 또는 4월에 걸칠 수 있다.",https://visita.malaga.eu/en/meet-malaga/festivals/easter-week,true,225
+EUROPE,ES,스페인,말라가,말라가,4,말라가 세마나 산타,RELIGIOUS_CULTURAL,"말라가의 대표 성주간 행사로, 부활절 날짜에 따라 3월 또는 4월에 걸칠 수 있다.",https://visita.malaga.eu/en/meet-malaga/festivals/easter-week,true,226
+EUROPE,ES,스페인,말라가,말라가,5,말라가 백야 축제,ART,도심 전역에서 문화·예술 프로그램이 밤까지 이어지는 행사다.,https://visita.malaga.eu/en/meet-malaga/festivals/la-noche-en-blanco,true,227
+EUROPE,ES,스페인,말라가,말라가,6,산 후안의 밤,SEASONAL,6월 23일 밤 해변과 도심에서 여름의 시작을 기념하는 행사다.,https://visita.malaga.eu/en/meet-malaga/festivals/noche-de-san-juan,true,228
+EUROPE,ES,스페인,말라가,말라가,6,말라가 테랄 여름 음악 축제,FESTIVAL,테아트로 세르반테스에서 진행되는 말라가 여름 음악 축제 프로그램이다.,https://www.teatrocervantes.com/en/genero/musica/terral-2026/,true,229
+EUROPE,ES,스페인,말라가,말라가,7,비르헨 델 카르멘 축제,RELIGIOUS_CULTURAL,해안 지역에서 카르멘 성모를 기념하는 전통 해양·종교 축제다.,https://visita.malaga.eu/en/what-to-see-and-do/blog/the-traditional-virgen-del-carmen-festival-in-malaga-p1809,true,230
+EUROPE,ES,스페인,말라가,말라가,8,말라가 페리아,CULTURAL_FESTIVAL,8월에 열리는 말라가의 대표 여름 대축제다.,https://visita.malaga.eu/en/meet-malaga/festivals/august-fair,true,231
+EUROPE,ES,스페인,말라가,말라가,9,산타 마리아 데 라 빅토리아 축제,RELIGIOUS_CULTURAL,9월 8일 말라가 수호성모를 기념하는 축제다.,https://visita.malaga.eu/en/meet-malaga/festivals/santa-maria-de-la-victoria,true,232
+EUROPE,ES,스페인,말라가,말라가,11,말라가 크리스마스 조명 시즌,SEASONAL,말라가 도심 크리스마스 조명과 겨울 프로그램이 이어지는 시즌이다.,https://visita.malaga.eu/en/what-to-see-and-do/blog/christmas-in-malaga-a-guide-of-plans-to-make-sure-you-don-39-t-miss-a-thing-p1813,true,233
+EUROPE,ES,스페인,말라가,말라가,12,말라가 크리스마스 조명 시즌,SEASONAL,말라가 도심 크리스마스 조명과 겨울 프로그램이 이어지는 시즌이다.,https://visita.malaga.eu/en/what-to-see-and-do/blog/christmas-in-malaga-a-guide-of-plans-to-make-sure-you-don-39-t-miss-a-thing-p1813,true,234
+EUROPE,ES,스페인,말라가,말라가,12,베르디알레스 축제,TRADITION,12월 말 말라가 전통 음악·민속문화를 기념하는 축제다.,https://visita.malaga.eu/en/meet-malaga/folklore/verdiales,true,235
+EUROPE,ES,스페인,팔마 데 마요르카,팔마,1,동방박사 퍼레이드,HOLIDAY,1월 5일 팔마에서 열리는 크리스마스 시즌 대표 퍼레이드다.,https://visitpalma.com/en/dir/palma-in-winter/,true,236
+EUROPE,ES,스페인,팔마 데 마요르카,팔마,1,산 세바스티아 축제,TRADITION,팔마 수호성인 산 세바스티아를 기념하는 대표 겨울 축제다.,https://visitpalma.com/en/dir/the-sant-sebastia-festival/,true,237
+EUROPE,ES,스페인,팔마 데 마요르카,팔마,2,사 루아 카니발,CULTURAL_FESTIVAL,"팔마에서 열리는 카니발 퍼레이드 행사로, 해마다 날짜가 달라질 수 있다.",https://participacio.palma.es/,true,238
+EUROPE,ES,스페인,팔마 데 마요르카,팔마,5,스프링 인 팔마 문화 프로그램,CULTURE,봄 시즌 팔마 도심 곳곳에서 열리는 음악·문화 프로그램이다.,https://visitpalma.com/en/event/spring-in-palma/,true,239
+EUROPE,ES,스페인,팔마 데 마요르카,팔마,6,스프링 인 팔마 문화 프로그램,CULTURE,봄 시즌 팔마 도심 곳곳에서 열리는 음악·문화 프로그램이다.,https://visitpalma.com/en/event/spring-in-palma/,true,240
+EUROPE,ES,스페인,팔마 데 마요르카,팔마,9,닛 데 라르트,ART,팔마 구시가지 갤러리와 문화공간이 참여하는 현대미술 축제다.,https://visitpalma.com/en/event/nit-de-lart-2025/,true,241
+EUROPE,ES,스페인,팔마 데 마요르카,비니살렘,9,에스 베르마르 와인 축제,FOOD_FESTIVAL,비니살렘에서 포도 수확과 와인 문화를 기념하는 마요르카 대표 축제다.,https://www.illesbalears.travel/en/mallorca/events-festa-des-vermar,true,242
+EUROPE,ES,스페인,팔마 데 마요르카,팔마,12,팔마 크리스마스 시즌,SEASONAL,팔마 도심에서 크리스마스 조명과 겨울 프로그램이 이어지는 시즌이다.,https://visitpalma.com/en/dir/palma-in-winter/,true,243
+EUROPE,ES,스페인,발렌시아,발렌시아,1,발렌시아 크리스마스 시즌,SEASONAL,크리스마스 조명과 겨울 프로그램이 이어지는 발렌시아의 연말연시 시즌이다.,https://www.visitvalencia.com/en/christmas,true,244
+EUROPE,ES,스페인,발렌시아,발렌시아,1,성 빈센트 마르티르 축일,RELIGIOUS_CULTURAL,1월 22일 발렌시아 수호성인 성 빈센트 마르티르를 기념하는 축일이다.,https://www.visitvalencia.com/en/events-valencia/celebrating-saint-vincent-martyr-festival,true,245
+EUROPE,ES,스페인,발렌시아,발렌시아,3,라스 파야스,CULTURAL_FESTIVAL,"거대한 조형물, 불꽃, 꽃 봉헌으로 유명한 발렌시아 대표 축제다.",https://www.visitvalencia.com/en/events-valencia/festivities/the-fallas,true,246
+EUROPE,ES,스페인,발렌시아,발렌시아 해양 지구,3,해양 세마나 산타,RELIGIOUS_CULTURAL,"발렌시아 해양 지구에서 열리는 성주간 행사로, 부활절 날짜에 따라 3월 또는 4월에 걸칠 수 있다.",https://www.visitvalencia.com/en/events-valencia/festivities/maritime-holy-week,true,247
+EUROPE,ES,스페인,발렌시아,발렌시아 해양 지구,4,해양 세마나 산타,RELIGIOUS_CULTURAL,"발렌시아 해양 지구에서 열리는 성주간 행사로, 부활절 날짜에 따라 3월 또는 4월에 걸칠 수 있다.",https://www.visitvalencia.com/en/events-valencia/festivities/maritime-holy-week,true,248
+EUROPE,ES,스페인,발렌시아,발렌시아,5,데삼파라도스 성모 축제,RELIGIOUS_CULTURAL,5월 둘째 일요일을 중심으로 발렌시아의 수호성모를 기념하는 축제다.,https://www.visitvalencia.com/en/events-valencia/festivities/our-lady-of-the-forsaken-festival,true,249
+EUROPE,ES,스페인,발렌시아,발렌시아,6,라 페스타 그로사(성체성혈대축일),RELIGIOUS_CULTURAL,발렌시아에서 성체성혈대축일을 기념하는 전통 종교 축제다.,https://www.valencia.es/-/infociudad-corpus-christi-la-festa-grossa-?lang=en,true,250
+EUROPE,ES,스페인,발렌시아,발렌시아,6,산 후안의 밤,SEASONAL,6월 23일 밤 발렌시아 해변에서 여름의 시작을 기념하는 행사다.,https://www.visitvalencia.com/en/events-valencia/welcome-summer-celebrating-night-san-juan,true,251
+EUROPE,ES,스페인,발렌시아,발렌시아,7,발렌시아 7월 페리아,CULTURAL_FESTIVAL,7월 한 달 동안 공연과 불꽃 등 다양한 프로그램이 열리는 여름 축제다.,https://www.visitvalencia.com/en/events-valencia/festivities/great-july-fair-valencia,true,252
+EUROPE,ES,스페인,발렌시아,부뇰,8,라 토마티나,FOOD_FESTIVAL,발렌시아 인근 부뇰에서 열리는 세계적으로 유명한 토마토 축제다.,https://www.visitvalencia.com/en/events-valencia/la-tomatina-bunol,true,253
+EUROPE,ES,스페인,발렌시아,발렌시아,10,발렌시아 공동체의 날,NATIONAL_HOLIDAY,10월 9일 발렌시아 공동체의 공식 기념일이다.,https://www.visitvalencia.com/en/events-valencia/valencian-community-day-9-october,true,254
+EUROPE,ES,스페인,발렌시아,발렌시아,12,발렌시아 크리스마스 시즌,SEASONAL,크리스마스 조명과 겨울 프로그램이 이어지는 발렌시아의 연말연시 시즌이다.,https://www.visitvalencia.com/en/christmas,true,255
+EUROPE,GB,영국,런던,런던 중심부,1,런던 새해 첫날 퍼레이드,STREET_FESTIVAL,"런던 도심에서 새해 첫날 열리는 대규모 퍼레이드로, 행진·공연·음악을 통해 새해 분위기를 즐길 수 있는 대표 행사다.",https://londonparade.com/,true,256
+EUROPE,GB,영국,런던,런던 전역,1,런던 크리스마스 시즌,SEASONAL,"런던 전역의 조명, 겨울 행사, 크리스마스 마켓을 함께 즐길 수 있는 연말연시 시즌 행사다.",https://www.visitlondon.com/things-to-do/whats-on/christmas,true,257
+EUROPE,GB,영국,런던,하이드파크,1,하이드파크 윈터 원더랜드,SEASONAL,"하이드파크에서 열리는 런던 대표 겨울 축제로, 놀이기구, 아이스링크, 크리스마스 마켓, 공연을 함께 즐길 수 있다.",https://hydeparkwinterwonderland.com/,true,258
+EUROPE,GB,영국,런던,차이나타운·웨스트엔드,2,런던 중국 설날 축제,CULTURAL_FESTIVAL,"차이나타운과 웨스트엔드 일대에서 열리는 음력 설 축제로, 퍼레이드와 문화 공연을 중심으로 진행된다.",https://www.visitlondon.com/things-to-do/whats-on/special-events/london-events-calendar,true,259
+EUROPE,GB,영국,런던,런던 중심부,3,런던 성 패트릭의 날 축제,CULTURAL_FESTIVAL,"아일랜드 문화를 기념하는 런던의 봄 축제로, 퍼레이드와 공연, 문화 행사가 함께 열린다.",https://www.visitlondon.com/things-to-do/whats-on/special-events/london-events-calendar,true,260
+EUROPE,GB,영국,런던,트라팔가 광장,4,런던 바이사키 축제,RELIGIOUS_CULTURAL,"시크교 새해와 수확을 기념하는 문화·종교 축제로, 트라팔가 광장 일대에서 공연과 체험 행사가 열린다.",https://www.visitlondon.com/things-to-do/whats-on/special-events/london-events-calendar,true,261
+EUROPE,GB,영국,런던,런던 중심부,4,성 조지의 날 축제,CULTURAL_FESTIVAL,"잉글랜드의 수호성인 성 조지를 기념하는 행사로, 전통 공연과 가족 친화적인 문화 프로그램이 진행된다.",https://www.visitlondon.com/things-to-do/whats-on/special-events/london-events-calendar,true,262
+EUROPE,GB,영국,런던,템스강 퍼트니-모틀레이크,4,옥스퍼드 vs 케임브리지 조정 경기,TRADITION,옥스퍼드와 케임브리지 대학이 템스강에서 벌이는 전통 조정 경기다. 스포츠 행사지만 1829년부터 이어진 전통성과 관광 관람성이 강해 예외적으로 포함했다.,https://www.theboatrace.org/the-boat-race-2026,true,263
+EUROPE,GB,영국,런던,첼시,5,첼시 플라워 쇼,NATURE,"왕립원예협회가 주관하는 세계적인 원예·정원 행사로, 런던 봄 시즌의 대표적인 꽃·정원 축제다.",https://www.rhs.org.uk/shows-events/rhs-chelsea-flower-show,true,264
+EUROPE,GB,영국,런던,화이트홀·버킹엄궁 일대,6,국왕 공식 생일 퍼레이드(트루핑 더 컬러),TRADITION,"영국 군주 공식 생일을 기념하는 군기 분열식이자 왕실 퍼레이드로, 근위병 행진과 왕실 전통을 볼 수 있는 행사다.",https://www.visitlondon.com/things-to-do/whats-on/special-events/london-events-calendar,true,265
+EUROPE,GB,영국,런던,트라팔가 광장,6,웨스트엔드 라이브,ART,런던 웨스트엔드 뮤지컬과 공연을 트라팔가 광장에서 무료로 즐길 수 있는 대중 공연 행사다.,https://www.westendlive.co.uk/,true,266
+EUROPE,GB,영국,런던,노팅힐,8,노팅힐 카니발,STREET_FESTIVAL,"카리브해 문화를 중심으로 한 런던의 대표 거리 축제로, 퍼레이드, 음악, 춤, 음식 문화가 어우러진다.",https://nhcarnival.org/,true,267
+EUROPE,GB,영국,런던,템스강 일대,9,토털리 템스 페스티벌,CULTURE,"9월 한 달 동안 템스강을 중심으로 예술, 문화, 역사, 환경 프로그램이 열리는 강변 문화 축제다.",https://thamesfestivaltrust.org/artistic-programme/totally-thames/,true,268
+EUROPE,GB,영국,런던,트라팔가 광장,10,디왈리 온 더 스퀘어,RELIGIOUS_CULTURAL,"트라팔가 광장에서 열리는 디왈리 축제로, 빛의 축제를 주제로 남아시아 문화 공연과 체험 행사가 진행된다.",https://www.diwaliinlondon.com/main-stage-programme,true,269
+EUROPE,GB,영국,런던,런던 전역,11,본파이어 나이트 / 가이 포크스의 밤,TRADITION,"가이 포크스의 밤을 기념하는 영국 전통 행사로, 런던 곳곳에서 불꽃놀이와 모닥불 행사가 열린다.",https://www.visitlondon.com/things-to-do/whats-on/special-events/london-events-calendar,true,270
+EUROPE,GB,영국,런던,시티 오브 런던,11,로드 메이어스 쇼,TRADITION,"13세기부터 이어진 시티 오브 런던의 시민 퍼레이드로, 새 로드 메이어 취임을 기념하는 전통 행렬이다.",https://lordmayorsshow.london/,true,271
+EUROPE,GB,영국,런던,런던 전역,11,런던 크리스마스 시즌,SEASONAL,"런던 전역의 조명, 겨울 행사, 크리스마스 마켓을 함께 즐길 수 있는 연말연시 시즌 행사다.",https://www.visitlondon.com/things-to-do/whats-on/christmas,true,272
+EUROPE,GB,영국,런던,하이드파크,11,하이드파크 윈터 원더랜드,SEASONAL,"하이드파크에서 열리는 런던 대표 겨울 축제로, 놀이기구, 아이스링크, 크리스마스 마켓, 공연을 함께 즐길 수 있다.",https://hydeparkwinterwonderland.com/,true,273
+EUROPE,GB,영국,런던,런던 전역,12,런던 크리스마스 시즌,SEASONAL,"런던 전역의 조명, 겨울 행사, 크리스마스 마켓을 함께 즐길 수 있는 연말연시 시즌 행사다.",https://www.visitlondon.com/things-to-do/whats-on/christmas,true,274
+EUROPE,GB,영국,런던,하이드파크,12,하이드파크 윈터 원더랜드,SEASONAL,"하이드파크에서 열리는 런던 대표 겨울 축제로, 놀이기구, 아이스링크, 크리스마스 마켓, 공연을 함께 즐길 수 있다.",https://hydeparkwinterwonderland.com/,true,275
+EUROPE,GB,영국,런던,템스강·런던 아이 일대,12,런던 새해 전야 불꽃놀이,SEASONAL,런던 아이와 템스강 일대에서 열리는 새해맞이 카운트다운 불꽃놀이 행사다. 보통 사전 티켓 예약이 필요하다.,https://www.visitlondon.com/things-to-do/whats-on/special-events/london-events-calendar,true,276
+EUROPE,GB,영국,맨체스터,맨체스터 도심·차이나타운,2,맨체스터 중국 설날 축제,CULTURAL_FESTIVAL,"맨체스터 차이나타운과 도심에서 열리는 음력 설 축제로, 용춤 퍼레이드와 문화 행사가 진행된다.",https://www.visitmanchester.com/chinese-new-year/,true,277
+EUROPE,GB,영국,맨체스터,맨체스터 도심,3,맨체스터 아이리시 페스티벌,CULTURAL_FESTIVAL,"성 패트릭의 날을 전후해 열리는 아일랜드 문화 축제로, 음악, 음식, 문화 행사가 함께 진행된다.",https://www.manchester.gov.uk/news-stories/2026/manchester-celebrates-all-things-irish-this-weekend-with-fantastic-parade-and-live-music-ahead-of-st-patricks-day-next-week,true,278
+EUROPE,GB,영국,맨체스터,맨체스터 도심,3,맨체스터 성 패트릭의 날 퍼레이드,STREET_FESTIVAL,"아일랜드 문화를 기념하는 퍼레이드로, 성 패트릭의 날 전후 맨체스터 도심에서 진행된다.",https://www.manchester.gov.uk/news-stories/2026/manchester-celebrates-all-things-irish-this-weekend-with-fantastic-parade-and-live-music-ahead-of-st-patricks-day-next-week,true,279
+EUROPE,GB,영국,맨체스터,맨체스터 도심,5,맨체스터 플라워 페스티벌,NATURE,"맨체스터 도심 곳곳을 꽃과 설치물로 꾸미는 봄 행사로, 거리 산책과 사진 명소 중심의 시즌 축제다.",https://www.visitmanchester.com/the-manchester-flower-festival/,true,280
+EUROPE,GB,영국,맨체스터,히턴 파크,6,파크라이프 페스티벌,FESTIVAL,히턴 파크에서 열리는 맨체스터 대표 대형 음악 축제다. 음악 축제지만 도시 대표성이 강해 포함했다.,https://parklife.uk.com/,true,281
+EUROPE,GB,영국,맨체스터,맨체스터 도심,7,맨체스터 데이,STREET_FESTIVAL,"맨체스터 도심에서 열리는 대규모 퍼레이드와 거리 공연 행사로, 도시의 문화와 공동체 분위기를 보여주는 대표 축제다.",https://www.visitmanchester.com/event/manchester-day-2026/33204101/,true,282
+EUROPE,GB,영국,맨체스터,맨체스터 도심,7,맨체스터 재즈 페스티벌,ART,"맨체스터 전역의 공연장에서 열리는 재즈 축제로, 국내외 재즈 음악가들의 공연을 만날 수 있다.",https://manchesterjazz.com/mjf2026-at-a-glance/,true,283
+EUROPE,GB,영국,맨체스터,알렉산드라 파크,8,맨체스터 캐리비안 카니발,CULTURAL_FESTIVAL,"카리브해 문화를 기념하는 맨체스터의 대표 카니발로, 퍼레이드, 음악, 춤, 음식 문화가 어우러진다.",https://themanchestercarnival.com/,true,284
+EUROPE,GB,영국,맨체스터,맨체스터 게이 빌리지,8,맨체스터 프라이드 페스티벌,CULTURE,맨체스터 빌리지 일대를 중심으로 열리는 다양성과 포용을 주제로 한 문화 축제다.,https://www.manchesterpride.com/,true,285
+EUROPE,GB,영국,맨체스터,맨체스터 도심,10,핼러윈 인 더 시티,SEASONAL,"맨체스터 도심에서 열리는 핼러윈 시즌 행사로, 대형 몬스터 설치물과 가족 친화 프로그램이 진행된다.",https://www.visitmanchester.com/halloween-in-the-city/,true,286
+EUROPE,GB,영국,맨체스터,맨체스터 도심,11,맨체스터 크리스마스 마켓,SEASONAL,"맨체스터 도심 곳곳에서 열리는 겨울 크리스마스 마켓 시즌으로, 음식, 수공예품, 연말 조명을 즐길 수 있다.",https://www.visitmanchester.com/ideas-and-inspiration/christmas/christmas-markets/,true,287
+EUROPE,GB,영국,맨체스터,맨체스터 도심,12,맨체스터 크리스마스 마켓,SEASONAL,"맨체스터 도심 곳곳에서 열리는 겨울 크리스마스 마켓 시즌으로, 음식, 수공예품, 연말 조명을 즐길 수 있다.",https://www.visitmanchester.com/ideas-and-inspiration/christmas/christmas-markets/,true,288
+EUROPE,GB,영국,에든버러,에든버러 도심,1,에든버러 호그머네이,TRADITION,"스코틀랜드의 새해맞이 전통을 대표하는 에든버러 겨울 축제로, 새해 전야와 새해 초까지 이어지는 행사가 열린다.",https://edwinterfest.com/hogmanay,true,289
+EUROPE,GB,영국,에든버러,칼턴 힐,4,벨테인 파이어 페스티벌,TRADITION,"칼턴 힐에서 열리는 켈트 전통 기반의 불 축제로, 여름의 시작을 상징하는 공연과 의식이 진행된다.",https://beltane.org/beltane-fire-festival-2026/,true,290
+EUROPE,GB,영국,에든버러,에든버러 전역,6,에든버러 국제 어린이 페스티벌,ART,"어린이와 가족 관객을 위한 국제 공연예술 축제로, 연극과 무용 중심의 프로그램이 열린다.",https://www.edinburghfestivalcity.com/festivals/edinburgh-international-childrens-festival,true,291
+EUROPE,GB,영국,에든버러,리스,6,리스 페스티벌,CULTURE,"에든버러 리스 지역에서 열리는 지역 커뮤니티 축제로, 퍼레이드, 공연, 역사·문화 프로그램이 함께 진행된다.",https://leithfestival.com/,true,292
+EUROPE,GB,영국,에든버러,잉글리스턴,6,로열 하이랜드 쇼,FOOD,"잉글리스턴의 로열 하이랜드 센터에서 열리는 스코틀랜드 농촌문화, 음식, 농업, 지역 생활을 소개하는 연례 행사다.",https://www.royalhighlandshow.org/,true,293
+EUROPE,GB,영국,에든버러,에든버러 전역,7,에든버러 재즈 앤 블루스 페스티벌,ART,"에든버러에서 열리는 재즈·블루스 음악 축제로, 여러 공연장에서 국내외 음악가들의 공연이 진행된다.",https://ejbf.co.uk/,true,294
+EUROPE,GB,영국,에든버러,에든버러 전역,8,에든버러 페스티벌 프린지,ART,"세계 최대 규모의 공연예술 축제 중 하나로, 코미디, 연극, 음악, 퍼포먼스 등 다양한 장르의 공연이 열린다.",https://www.edfringe.com/,true,295
+EUROPE,GB,영국,에든버러,에든버러 전역,8,에든버러 국제 페스티벌,ART,"오페라, 음악, 연극, 무용을 중심으로 세계적인 예술가들이 참여하는 에든버러의 대표 국제 예술 축제다.",https://www.eif.co.uk/,true,296
+EUROPE,GB,영국,에든버러,에든버러 전역,8,에든버러 아트 페스티벌,ART,"에든버러에서 열리는 영국 최대 규모의 시각예술 축제로, 갤러리와 도시 곳곳에서 전시가 진행된다.",https://edinburghartfestival.com/,true,297
+EUROPE,GB,영국,에든버러,에든버러 성,8,로열 에든버러 밀리터리 타투,TRADITION,"에든버러 성을 배경으로 군악대, 퍼레이드, 전통 공연이 펼쳐지는 스코틀랜드 대표 야외 공연 행사다.",https://www.edintattoo.co.uk/,true,298
+EUROPE,GB,영국,에든버러,스코틀랜드 스토리텔링 센터,10,스코틀랜드 국제 스토리텔링 페스티벌,LITERATURE,"전통 이야기, 현대 서사, 음악, 인물 이야기를 통해 스코틀랜드와 세계의 구술문화를 소개하는 이야기 축제다.",https://www.sisf.org.uk/,true,299
+EUROPE,GB,영국,에든버러,에든버러 도심,10,삼후인 파이어 페스티벌,TRADITION,"켈트 전통의 겨울 시작을 현대적으로 재해석한 불 축제로, 음악, 춤, 퍼포먼스가 결합된 야외 공연 형식으로 진행된다.",https://beltane.org/,true,300
+EUROPE,GB,영국,에든버러,에든버러 도심,11,에든버러 크리스마스 시즌,SEASONAL,"에든버러 도심에서 열리는 겨울 축제 시즌으로, 크리스마스 마켓, 조명, 가족 친화 행사가 함께 열린다.",https://edwinterfest.com/edinburgh-christmas,true,301
+EUROPE,GB,영국,에든버러,에든버러 도심,12,에든버러 크리스마스 시즌,SEASONAL,"에든버러 도심에서 열리는 겨울 축제 시즌으로, 크리스마스 마켓, 조명, 가족 친화 행사가 함께 열린다.",https://edwinterfest.com/edinburgh-christmas,true,302
+EUROPE,GB,영국,에든버러,에든버러 도심,12,에든버러 호그머네이,TRADITION,"스코틀랜드의 새해맞이 전통을 대표하는 에든버러 겨울 축제로, 새해 전야와 새해 초까지 이어지는 행사가 열린다.",https://edwinterfest.com/hogmanay,true,303
+EUROPE,GR,그리스,아테네,아테네,1,아테네 크리스마스 팩토리,SEASONAL,"아테네의 겨울 대표 가족형 크리스마스 이벤트로, 놀이시설, 공연, 장식, 시즌 프로그램을 즐길 수 있다.",https://www.thechristmasfactory.gr/,true,304
+EUROPE,GR,그리스,아테네,아테네,1,아테네 주현절 물 축복 의식,RELIGIOUS,그리스 주현절에 항구나 바다에서 물을 축복하고 십자가를 던져 회수하는 전통 의식이다. 도시와 항구별 행사 규모와 세부 일정은 해마다 달라질 수 있다.,https://www.greece-is.com/blessing-waters-january-traditions/,true,305
+EUROPE,GR,그리스,아테네,아테네,2,아테네 아포크리에스 카니발,CULTURAL_FESTIVAL,"사순절 전 열리는 그리스식 카니발 시즌으로, 가장무도회, 거리 공연, 전통 복장, 음악 행사 등이 이어진다. 세부 일정은 정교회 달력에 따라 해마다 달라질 수 있다.",https://www.visitgreece.gr/experiences/carnival-celebrations-in-greece/,true,306
+EUROPE,GR,그리스,아테네,아테네,3,그리스 독립기념일 군사 퍼레이드,NATIONAL_HOLIDAY,"아테네에서 열리는 그리스 독립기념일 대표 국가 행사로, 군사 퍼레이드와 공식 기념식이 진행된다.",https://www.visitgreece.gr/events/,true,307
+EUROPE,GR,그리스,아테네,아테네,4,아테네 정교회 부활절 주간,RELIGIOUS_SEASON,"그리스 정교회 최대 명절 중 하나로, 성금요일 행렬, 촛불 예식, 부활절 자정 미사, 가족 식사 전통이 이어진다. 날짜는 정교회 달력에 따라 매년 달라지며 보통 4월 또는 5월에 열린다.",https://www.visitgreece.gr/inspirations/easter-in-greece/,true,308
+EUROPE,GR,그리스,아테네,아테네,5,디스 이즈 아테네 시티 페스티벌,CULTURAL_FESTIVAL,"아테네 전역에서 열리는 도시 문화 축제로, 음악, 거리 공연, 음식, 가족 프로그램 등 다양한 무료 행사가 진행된다.",https://cityfestival.thisisathens.org/en/,true,309
+EUROPE,GR,그리스,아테네,아테네·에피다우로스,6,아테네 에피다우로스 페스티벌,ART,"고대극장과 아테네 공연장을 중심으로 연극, 음악, 무용, 오페라 등이 열리는 그리스 대표 공연예술 축제다.",https://aefestival.gr/?lang=en,true,310
+EUROPE,GR,그리스,아테네,아테네,6,컬러데이 페스티벌,FESTIVAL,"컬러 파우더와 음악 공연이 결합된 아테네 여름 축제로, 젊은 여행객과 현지인이 함께 즐기는 대형 야외 이벤트다.",https://colourdayfestival.com/greece/en/,true,311
+EUROPE,GR,그리스,아테네,아테네·에피다우로스,7,아테네 에피다우로스 페스티벌,ART,"고대극장과 아테네 공연장을 중심으로 연극, 음악, 무용, 오페라 등이 열리는 그리스 대표 공연예술 축제다.",https://aefestival.gr/?lang=en,true,312
+EUROPE,GR,그리스,아테네,아테네·에피다우로스,8,아테네 에피다우로스 페스티벌,ART,"고대극장과 아테네 공연장을 중심으로 연극, 음악, 무용, 오페라 등이 열리는 그리스 대표 공연예술 축제다.",https://aefestival.gr/?lang=en,true,313
+EUROPE,GR,그리스,아테네,아테네,8,아테네 8월 보름 문화 행사,CULTURE,"8월 보름을 전후해 고고학 유적지와 문화 공간에서 야간 개방, 공연, 음악 행사가 열리는 여름 문화 행사다.",https://www.thisisathens.org/arts-entertainment/performing-arts/34-athens-festivals,true,314
+EUROPE,GR,그리스,아테네,아테네,8,여름의 부활절,RELIGIOUS,"성모 안식 축일인 8월 15일 전후에 그리스 전역에서 가족 귀향, 교회 예식, 지역 축제와 전통 음식 행사가 이어지는 큰 여름 종교 명절이다. 현지에서는 여름의 부활절처럼 여겨질 정도로 중요한 시기다.",https://www.visitgreece.gr/inspirations/the-day-of-virgin-mary/,true,315
+EUROPE,GR,그리스,아테네,아테네,10,오히 데이 퍼레이드,NATIONAL_HOLIDAY,10월 28일 오히 데이를 기념해 아테네에서 열리는 국가 기념 퍼레이드와 공식 행사다.,https://www.visitgreece.gr/events/,true,316
+EUROPE,GR,그리스,아테네,아테네,11,아테네 크리스마스 팩토리,SEASONAL,"아테네의 겨울 대표 가족형 크리스마스 이벤트로, 놀이시설, 공연, 장식, 시즌 프로그램을 즐길 수 있다.",https://www.thechristmasfactory.gr/,true,317
+EUROPE,GR,그리스,아테네,아테네,12,아테네 크리스마스 팩토리,SEASONAL,"아테네의 겨울 대표 가족형 크리스마스 이벤트로, 놀이시설, 공연, 장식, 시즌 프로그램을 즐길 수 있다.",https://www.thechristmasfactory.gr/,true,318
+EUROPE,GR,그리스,테살로니키,테살로니키,1,테살로니키 크리스마스 마켓,SEASONAL,"테살로니키 도심에서 열리는 겨울 시즌 행사로, 크리스마스 조명, 마켓, 공연, 가족 프로그램이 이어진다.",https://thessaloniki.travel/,true,319
+EUROPE,GR,그리스,테살로니키,테살로니키,1,테살로니키 주현절 물 축복 의식,RELIGIOUS,그리스 주현절에 항구나 바다에서 물을 축복하고 십자가를 던져 회수하는 전통 의식이다. 도시와 항구별 행사 규모와 세부 일정은 해마다 달라질 수 있다.,https://www.greece-is.com/blessing-waters-january-traditions/,true,320
+EUROPE,GR,그리스,테살로니키,테살로니키,2,테살로니키 아포크리에스 카니발,CULTURAL_FESTIVAL,"사순절 전 열리는 그리스식 카니발 시즌으로, 가장무도회, 거리 공연, 전통 복장, 음악 행사 등이 이어진다. 세부 일정은 정교회 달력에 따라 해마다 달라질 수 있다.",https://www.visitgreece.gr/experiences/carnival-celebrations-in-greece/,true,321
+EUROPE,GR,그리스,테살로니키,테살로니키,3,그리스 독립기념일 기념 퍼레이드,NATIONAL_HOLIDAY,"3월 25일 그리스 독립기념일을 기념하는 국가 행사로, 도시별로 퍼레이드와 기념식이 열린다. 행사 규모와 세부 프로그램은 지역에 따라 다를 수 있다.",https://www.visitgreece.gr/events/,true,322
+EUROPE,GR,그리스,테살로니키,테살로니키,4,테살로니키 정교회 부활절 주간,RELIGIOUS_SEASON,"그리스 정교회 최대 명절 중 하나로, 성금요일 행렬, 촛불 예식, 부활절 자정 미사, 가족 식사 전통이 이어진다. 날짜는 정교회 달력에 따라 매년 달라지며 보통 4월 또는 5월에 열린다.",https://www.visitgreece.gr/inspirations/easter-in-greece/,true,323
+EUROPE,GR,그리스,테살로니키,헵타피르기온 요새,6,헵타피르기온 페스티벌,ART,"테살로니키의 헵타피르기온 요새를 배경으로 열리는 여름 문화예술 축제로, 콘서트, 오페라, 시 낭독 등 공연 프로그램이 진행된다.",https://visit-centralmacedonia.gr/en/167/events/1182/eptapyrgio-festival-2026,true,324
+EUROPE,GR,그리스,테살로니키,헵타피르기온 요새,7,헵타피르기온 페스티벌,ART,"테살로니키의 헵타피르기온 요새를 배경으로 열리는 여름 문화예술 축제로, 콘서트, 오페라, 시 낭독 등 공연 프로그램이 진행된다.",https://visit-centralmacedonia.gr/en/167/events/1182/eptapyrgio-festival-2026,true,325
+EUROPE,GR,그리스,테살로니키,테살로니키,8,여름의 부활절,RELIGIOUS,"성모 안식 축일인 8월 15일 전후에 그리스 전역에서 가족 귀향, 교회 예식, 지역 축제와 전통 음식 행사가 이어지는 큰 여름 종교 명절이다. 현지에서는 여름의 부활절처럼 여겨질 정도로 중요한 시기다.",https://www.visitgreece.gr/inspirations/the-day-of-virgin-mary/,true,326
+EUROPE,GR,그리스,테살로니키,테살로니키,9,보로이나 와인 페스티벌,FOOD,"북그리스 와이너리들이 참여하는 테살로니키의 와인·스피릿 행사로, 지역 와인 시음과 생산자 교류 프로그램이 진행된다.",https://thessaloniki.travel/things-to-do/festivals/voroina-festival/,true,327
+EUROPE,GR,그리스,테살로니키,테살로니키,9,디미트리아 페스티벌,CULTURAL_FESTIVAL,"테살로니키의 대표 문화예술 축제로, 공연, 전시, 음악, 연극 등 다양한 도시 문화 프로그램이 이어진다.",https://thessaloniki.travel/event/dimitria-festival/,true,328
+EUROPE,GR,그리스,테살로니키,테살로니키,10,디미트리아 페스티벌,CULTURAL_FESTIVAL,"테살로니키의 대표 문화예술 축제로, 공연, 전시, 음악, 연극 등 다양한 도시 문화 프로그램이 이어진다.",https://thessaloniki.travel/event/dimitria-festival/,true,329
+EUROPE,GR,그리스,테살로니키,테살로니키,10,성 데메트리오스 축일,RELIGIOUS,"테살로니키의 수호성인 성 데메트리오스를 기념하는 10월 축일로, 교회 예식과 도시 기념 분위기가 이어진다.",https://thessaloniki.travel/,true,330
+EUROPE,GR,그리스,테살로니키,테살로니키,10,오히 데이 기념 퍼레이드,NATIONAL_HOLIDAY,"10월 28일 오히 데이를 기념하는 그리스 전국 공휴일 행사로, 도시별 퍼레이드와 기념식이 열린다. 행사 규모와 세부 프로그램은 지역에 따라 다를 수 있다.",https://www.visitgreece.gr/events/,true,331
+EUROPE,GR,그리스,테살로니키,테살로니키,12,테살로니키 크리스마스 마켓,SEASONAL,"테살로니키 도심에서 열리는 겨울 시즌 행사로, 크리스마스 조명, 마켓, 공연, 가족 프로그램이 이어진다.",https://thessaloniki.travel/,true,332
+EUROPE,GR,그리스,이라클리온,이라클리온,1,이라클리온 크리스마스 시즌,SEASONAL,"그리스의 겨울 명절 시즌으로 크리스마스 장식, 조명, 마켓, 공연, 교회 예식 등이 이어진다. 도시별 프로그램과 운영 규모는 해마다 달라질 수 있다.",https://www.heraklion.gr/en,true,333
+EUROPE,GR,그리스,이라클리온,이라클리온,1,이라클리온 주현절 물 축복 의식,RELIGIOUS,그리스 주현절에 항구나 바다에서 물을 축복하고 십자가를 던져 회수하는 전통 의식이다. 도시와 항구별 행사 규모와 세부 일정은 해마다 달라질 수 있다.,https://www.greece-is.com/blessing-waters-january-traditions/,true,334
+EUROPE,GR,그리스,이라클리온,이라클리온,2,이라클리온 카니발,CULTURAL_FESTIVAL,"사순절 전 열리는 그리스식 카니발 시즌의 이라클리온 지역 행사로, 가장무도회, 거리 분위기, 음악과 전통 행사가 이어진다.",https://www.visitgreece.gr/experiences/carnival-celebrations-in-greece/,true,335
+EUROPE,GR,그리스,이라클리온,이라클리온,3,그리스 독립기념일 기념 행사,NATIONAL_HOLIDAY,"3월 25일 그리스 독립기념일을 기념하는 국가 행사로, 도시별로 퍼레이드와 기념식이 열린다. 행사 규모와 세부 프로그램은 지역에 따라 다를 수 있다.",https://www.visitgreece.gr/events/,true,336
+EUROPE,GR,그리스,이라클리온,이라클리온,4,이라클리온 정교회 부활절 주간,RELIGIOUS_SEASON,"그리스 정교회 최대 명절 중 하나로, 성금요일 행렬, 촛불 예식, 부활절 자정 미사, 가족 식사 전통이 이어진다. 날짜는 정교회 달력에 따라 매년 달라지며 보통 4월 또는 5월에 열린다.",https://www.visitgreece.gr/inspirations/easter-in-greece/,true,337
+EUROPE,GR,그리스,이라클리온,이라클리온,7,이라클리온 여름 예술 축제,ART,"이라클리온 여름 시즌에 열리는 문화예술 축제로, 베네치아 성벽 인근 야외극장과 문화공간에서 공연이 이어진다.",https://islandsevents.com/island/crete/heraklion-summer-arts-festival-2026,true,338
+EUROPE,GR,그리스,이라클리온,이라클리온,8,이라클리온 여름 예술 축제,ART,"이라클리온 여름 시즌에 열리는 문화예술 축제로, 베네치아 성벽 인근 야외극장과 문화공간에서 공연이 이어진다.",https://islandsevents.com/island/crete/heraklion-summer-arts-festival-2026,true,339
+EUROPE,GR,그리스,이라클리온,이라클리온,8,여름의 부활절,RELIGIOUS,"성모 안식 축일인 8월 15일 전후에 그리스 전역에서 가족 귀향, 교회 예식, 지역 축제와 전통 음식 행사가 이어지는 큰 여름 종교 명절이다. 현지에서는 여름의 부활절처럼 여겨질 정도로 중요한 시기다.",https://www.visitgreece.gr/inspirations/the-day-of-virgin-mary/,true,340
+EUROPE,GR,그리스,이라클리온,이라클리온,8,성 티투스 축일,RELIGIOUS,"이라클리온의 수호성인 성 티투스를 기념하는 축일로, 교회 예식과 지역 기념 분위기가 이어진다.",https://maria.catholic.or.kr/sa_ho/list/view.asp?menugubun=saint&ctxtSaintID=4525,true,341
+EUROPE,GR,그리스,이라클리온,이라클리온,9,이라클리온 여름 예술 축제,ART,"이라클리온 여름 시즌에 열리는 문화예술 축제로, 베네치아 성벽 인근 야외극장과 문화공간에서 공연이 이어진다.",https://islandsevents.com/island/crete/heraklion-summer-arts-festival-2026,true,342
+EUROPE,GR,그리스,이라클리온,베네치아 성벽,9,칸디아 성벽 페스티벌,CULTURE,"이라클리온의 베네치아 성벽을 배경으로 열리는 문화 행사로, 야외 공연과 예술 프로그램을 통해 도시의 역사 공간을 활용한다.",https://www.ticketservices.gr/event/candia-walls-festival/?lang=en,true,343
+EUROPE,GR,그리스,이라클리온,이라클리온,10,오히 데이 기념 행사,NATIONAL_HOLIDAY,"10월 28일 오히 데이를 기념하는 그리스 전국 공휴일 행사로, 도시별 퍼레이드와 기념식이 열린다. 행사 규모와 세부 프로그램은 지역에 따라 다를 수 있다.",https://www.visitgreece.gr/events/,true,344
+EUROPE,GR,그리스,이라클리온,크레타 와이너리,11,크레타 와인 관광의 날,FOOD,"크레타 지역 와이너리들이 참여하는 와인 관광 행사로, 와이너리 투어, 생산자 만남, 시음 프로그램이 진행된다. 이라클리온권 와이너리 방문과 함께 보기 좋다.",https://www.winesofcrete.gr/en/news/winetourismday24/,true,345
+EUROPE,GR,그리스,이라클리온,이라클리온,12,이라클리온 크리스마스 시즌,SEASONAL,"그리스의 겨울 명절 시즌으로 크리스마스 장식, 조명, 마켓, 공연, 교회 예식 등이 이어진다. 도시별 프로그램과 운영 규모는 해마다 달라질 수 있다.",https://www.heraklion.gr/en,true,346
+EUROPE,GR,그리스,로도스,로도스,1,로도스 크리스마스 시즌,SEASONAL,"그리스의 겨울 명절 시즌으로 크리스마스 장식, 조명, 마켓, 공연, 교회 예식 등이 이어진다. 도시별 프로그램과 운영 규모는 해마다 달라질 수 있다.",https://visit-rhodes.gr/,true,347
+EUROPE,GR,그리스,로도스,로도스,1,로도스 주현절 물 축복 의식,RELIGIOUS,그리스 주현절에 항구나 바다에서 물을 축복하고 십자가를 던져 회수하는 전통 의식이다. 도시와 항구별 행사 규모와 세부 일정은 해마다 달라질 수 있다.,https://www.greece-is.com/blessing-waters-january-traditions/,true,348
+EUROPE,GR,그리스,로도스,로도스,2,로도스 카니발,CULTURAL_FESTIVAL,"사순절 전 열리는 그리스식 카니발 시즌의 로도스 지역 행사로, 가장무도회, 거리 분위기, 음악과 전통 행사가 이어진다.",https://www.visitgreece.gr/experiences/carnival-celebrations-in-greece/,true,349
+EUROPE,GR,그리스,로도스,로도스,3,그리스 독립기념일 기념 행사,NATIONAL_HOLIDAY,"3월 25일 그리스 독립기념일을 기념하는 국가 행사로, 도시별로 퍼레이드와 기념식이 열린다. 행사 규모와 세부 프로그램은 지역에 따라 다를 수 있다.",https://www.visitgreece.gr/events/,true,350
+EUROPE,GR,그리스,로도스,로도스,4,로도스 정교회 부활절 주간,RELIGIOUS_SEASON,"그리스 정교회 최대 명절 중 하나로, 성금요일 행렬, 촛불 예식, 부활절 자정 미사, 가족 식사 전통이 이어진다. 날짜는 정교회 달력에 따라 매년 달라지며 보통 4월 또는 5월에 열린다.",https://www.visitgreece.gr/inspirations/easter-in-greece/,true,351
+EUROPE,GR,그리스,로도스,파라디시,5,파라디시 딸기 축제,FOOD_FESTIVAL,"로도스 파라디시 지역의 딸기 수확을 기념하는 지역 음식 축제로, 딸기와 지역 먹거리, 음악, 마을 행사가 함께 열린다.",https://www.rhodes-events.gr/en/event/strawberry-festival-at-paradeisi/,true,352
+EUROPE,GR,그리스,로도스,로도스,5,로도스 꽃 축제,NATURE,"봄철 꽃과 자연을 주제로 한 로도스 지역 시즌 행사로, 도시와 마을의 봄 분위기를 즐길 수 있다.",https://www.rhodes-events.gr/en/home/events/,true,353
+EUROPE,GR,그리스,로도스,로도스,6,성 요한 클리도나스 축제,TRADITION,"하지 무렵 이어지는 그리스 전통 행사로, 불넘기와 민속 관습을 통해 여름의 시작을 기념한다. 지역별 세부 프로그램은 달라질 수 있다.",https://www.greecetravelsecrets.com/traditional-holidays-in-greece/,true,354
+EUROPE,GR,그리스,로도스,남로도스,7,남로도스 수박 축제,FOOD_FESTIVAL,"남로도스 아폴라키아 지역에서 열리는 수박 축제로, 지역 농산물, 음악, 춤, 음식 프로그램이 함께 진행된다.",https://www.rhodes-events.gr/en/event/watermelon-festival/,true,355
+EUROPE,GR,그리스,로도스,로도스,8,여름의 부활절,RELIGIOUS,"성모 안식 축일인 8월 15일 전후에 그리스 전역에서 가족 귀향, 교회 예식, 지역 축제와 전통 음식 행사가 이어지는 큰 여름 종교 명절이다. 현지에서는 여름의 부활절처럼 여겨질 정도로 중요한 시기다.",https://www.visitgreece.gr/inspirations/the-day-of-virgin-mary/,true,356
+EUROPE,GR,그리스,로도스,파네스,9,파네스 포도밭 축제,FOOD_FESTIVAL,"로도스 파네스 지역의 포도와 와인 문화를 기념하는 마을 축제로, 포도 밟기, 지역 음식, 음악 행사가 이어진다.",https://www.aegeangastronomy.gr/calendar-events-dodecanese/,true,357
+EUROPE,GR,그리스,로도스,로도스,9,로도스 국제 페스티벌,ART,"로도스에서 열리는 예술 축제로, 클래식 음악, 오페라, 영화음악, 뮤지컬 등 공연예술 프로그램을 중심으로 진행된다.",https://rhodes-festival.gr/,true,358
+EUROPE,GR,그리스,로도스,로도스 중세도시,10,로도스 중세 장미 축제,HISTORICAL_FESTIVAL,"로도스 중세 도시의 역사와 문화를 바탕으로 한 축제로, 중세 의상, 공연, 전통 체험 프로그램이 진행된다.",https://www.festivalfinder.eu/festivals/medieval-rose-festival-2,true,359
+EUROPE,GR,그리스,로도스,로도스,10,오히 데이 기념 행사,NATIONAL_HOLIDAY,"10월 28일 오히 데이를 기념하는 그리스 전국 공휴일 행사로, 도시별 퍼레이드와 기념식이 열린다. 행사 규모와 세부 프로그램은 지역에 따라 다를 수 있다.",https://www.visitgreece.gr/events/,true,360
+EUROPE,GR,그리스,로도스,로도스,12,로도스 크리스마스 시즌,SEASONAL,"그리스의 겨울 명절 시즌으로 크리스마스 장식, 조명, 마켓, 공연, 교회 예식 등이 이어진다. 도시별 프로그램과 운영 규모는 해마다 달라질 수 있다.",https://visit-rhodes.gr/,true,361
+EUROPE,GR,그리스,산토리니,산토리니,1,산토리니 크리스마스 시즌,SEASONAL,"산토리니의 겨울 명절 시즌으로, 크리스마스 장식, 교회 예식, 계절 음식과 현지 중심의 조용한 겨울 분위기를 경험할 수 있다.",https://visitsantorini.travel/santorini-christmas-getaway-what-to-do-and-see/,true,362
+EUROPE,GR,그리스,산토리니,산토리니,1,산토리니 주현절 물 축복 의식,RELIGIOUS,그리스 주현절에 항구나 바다에서 물을 축복하고 십자가를 던져 회수하는 전통 의식이다. 도시와 항구별 행사 규모와 세부 일정은 해마다 달라질 수 있다.,https://www.greece-is.com/blessing-waters-january-traditions/,true,363
+EUROPE,GR,그리스,산토리니,산토리니,2,산토리니 아포크리에스 시즌,CULTURAL_FESTIVAL,"사순절 전 열리는 그리스식 카니발 시즌으로, 가장무도회, 거리 공연, 전통 복장, 음악 행사 등이 이어진다. 세부 일정은 정교회 달력에 따라 해마다 달라질 수 있다.",https://www.visitgreece.gr/experiences/carnival-celebrations-in-greece/,true,364
+EUROPE,GR,그리스,산토리니,산토리니,3,그리스 독립기념일 기념 행사,NATIONAL_HOLIDAY,"3월 25일 그리스 독립기념일을 기념하는 국가 행사로, 도시별로 퍼레이드와 기념식이 열린다. 행사 규모와 세부 프로그램은 지역에 따라 다를 수 있다.",https://www.visitgreece.gr/events/,true,365
+EUROPE,GR,그리스,산토리니,산토리니,4,산토리니 정교회 부활절 주간,RELIGIOUS_SEASON,"그리스 정교회 최대 명절 중 하나로, 성금요일 행렬, 촛불 예식, 부활절 자정 미사, 가족 식사 전통이 이어진다. 날짜는 정교회 달력에 따라 매년 달라지며 보통 4월 또는 5월에 열린다.",https://www.visitgreece.gr/inspirations/easter-in-greece/,true,366
+EUROPE,GR,그리스,산토리니,피라,8,메가로 기지 페스티벌,ART,"피라의 메가로 기지 문화공간에서 매년 8월 열리는 문화예술 축제로, 음악회, 전시, 공연 프로그램이 진행된다.",https://santorini.gr/museums/megaro-gyzi/,true,367
+EUROPE,GR,그리스,산토리니,카마리,8,산토리니 재즈 페스티벌,ART,"산토리니에서 열리는 여름 재즈 축제로, 현지와 해외 재즈 뮤지션 공연을 섬의 야외 분위기와 함께 즐길 수 있다.",https://visitsantorini.travel/santorinis-festivals-and-cultural-events/,true,368
+EUROPE,GR,그리스,산토리니,산토리니,8,여름의 부활절,RELIGIOUS,"성모 안식 축일인 8월 15일 전후에 그리스 전역에서 가족 귀향, 교회 예식, 지역 축제와 전통 음식 행사가 이어지는 큰 여름 종교 명절이다. 현지에서는 여름의 부활절처럼 여겨질 정도로 중요한 시기다.",https://www.visitgreece.gr/inspirations/the-day-of-virgin-mary/,true,369
+EUROPE,GR,그리스,산토리니,칼데라,9,이페스티아 화산 축제,FESTIVAL,"산토리니 화산의 역사와 섬의 정체성을 기념하는 축제로, 칼데라 위 불꽃놀이와 화산 분출 재현 연출이 대표 프로그램이다.",https://www.discovergreece.com/it/node/16693,true,370
+EUROPE,GR,그리스,산토리니,산토리니,10,오히 데이 기념 행사,NATIONAL_HOLIDAY,"10월 28일 오히 데이를 기념하는 그리스 전국 공휴일 행사로, 도시별 퍼레이드와 기념식이 열린다. 행사 규모와 세부 프로그램은 지역에 따라 다를 수 있다.",https://www.visitgreece.gr/events/,true,371
+EUROPE,GR,그리스,산토리니,산토리니,12,산토리니 크리스마스 시즌,SEASONAL,"산토리니의 겨울 명절 시즌으로, 크리스마스 장식, 교회 예식, 계절 음식과 현지 중심의 조용한 겨울 분위기를 경험할 수 있다.",https://visitsantorini.travel/santorini-christmas-getaway-what-to-do-and-see/,true,372
+EUROPE,PT,포르투갈,리스본,리스본,2,리스본 카니발,CULTURAL_FESTIVAL,"사순절 전 열리는 카니발 시즌 행사로, 가면과 음악, 거리 공연, 파티 분위기가 이어진다. 날짜는 부활절과 사순절 일정에 따라 해마다 달라질 수 있다.",https://www.visitlisboa.com/,true,373
+EUROPE,PT,포르투갈,리스본,리스본,4,피셰 임 리스보아,FOOD_FESTIVAL,"리스본에서 열리는 대표 미식 행사로, 포르투갈 셰프와 레스토랑이 참여해 생선·해산물 중심의 요리와 시식 프로그램을 선보인다.",https://www.peixemlisboa.com/,true,374
+EUROPE,PT,포르투갈,리스본,리스본,5,아웃 재즈 페스티벌,ART,"봄부터 초가을까지 리스본의 공원과 야외 공간에서 열리는 무료 야외 음악 축제로, 재즈와 소울, 펑크 공연을 편하게 즐길 수 있다.",https://www.visitportugal.com/en/content/out-jazz-festival,true,375
+EUROPE,PT,포르투갈,리스본,리스본,6,리스본 성 안토니오 축제,RELIGIOUS_CULTURAL,"리스본의 수호성인 성 안토니오를 기념하는 6월 대표 축제로, 동네별 아하이알, 거리 장식, 정어리 구이, 음악과 전통 행사가 이어진다.",https://egeac.pt/festas/festas-de-lisboa/,true,376
+EUROPE,PT,포르투갈,리스본,리스본,6,리스본 인민 행진,TRADITION,"성 안토니오 축제 시즌의 대표 행사로, 리스본 각 구역이 전통 의상과 음악, 안무를 준비해 아베니다 다 리베르다드에서 행진한다.",https://egeac.pt/festas/festas-de-lisboa/,true,377
+EUROPE,PT,포르투갈,리스본,리스본,6,아웃 재즈 페스티벌,ART,"봄부터 초가을까지 리스본의 공원과 야외 공간에서 열리는 무료 야외 음악 축제로, 재즈와 소울, 펑크 공연을 편하게 즐길 수 있다.",https://www.visitportugal.com/en/content/out-jazz-festival,true,378
+EUROPE,PT,포르투갈,리스본,리스본,6,록 인 리오 리스보아,FESTIVAL,"리스본에서 열리는 대형 음악 축제로, 세계적인 아티스트 공연과 엔터테인먼트 프로그램이 함께 진행된다. 보통 2년 주기로 열리므로 개최 연도 확인이 필요하다.",https://rockinriolisboa.pt/,true,379
+EUROPE,PT,포르투갈,리스본,알제스,7,NOS 얼라이브 페스티벌,FESTIVAL,"리스본 근교 알제스에서 열리는 대형 여름 음악 축제로, 해외 관광객도 많이 찾는 포르투갈 대표 음악 페스티벌이다.",https://nosalive.com/en/,true,380
+EUROPE,PT,포르투갈,리스본,리스본,7,밀레니엄 페스티벌 아오 라르고,ART,"리스본 도심 야외 공간에서 열리는 무료 여름 공연예술 행사로, 클래식 음악, 오페라, 무용 등 다양한 공연을 즐길 수 있다.",https://www.festivalaolargo.pt/,true,381
+EUROPE,PT,포르투갈,리스본,리스본,7,아웃 재즈 페스티벌,ART,"봄부터 초가을까지 리스본의 공원과 야외 공간에서 열리는 무료 야외 음악 축제로, 재즈와 소울, 펑크 공연을 편하게 즐길 수 있다.",https://www.visitportugal.com/en/content/out-jazz-festival,true,382
+EUROPE,PT,포르투갈,리스본,리스본,8,아웃 재즈 페스티벌,ART,"봄부터 초가을까지 리스본의 공원과 야외 공간에서 열리는 무료 야외 음악 축제로, 재즈와 소울, 펑크 공연을 편하게 즐길 수 있다.",https://www.visitportugal.com/en/content/out-jazz-festival,true,383
+EUROPE,PT,포르투갈,리스본,리스본,9,페스타스 나 루아,CULTURE,"리스본 거리와 광장에서 열리는 야외 문화 프로그램으로, 공연, 음악, 무용, 거리예술 등 도시형 문화 행사가 이어진다.",https://egeac.pt/,true,384
+EUROPE,PT,포르투갈,리스본,알파마,9,산타 카사 알파마 페스티벌,ART,"리스본 알파마 지역에서 열리는 파두 중심 음악 축제로, 전통 음악과 동네 분위기를 함께 즐길 수 있는 지역성 강한 행사다.",https://www.santacasaalfama.com/,true,385
+EUROPE,PT,포르투갈,리스본,리스본,9,아웃 재즈 페스티벌,ART,"봄부터 초가을까지 리스본의 공원과 야외 공간에서 열리는 무료 야외 음악 축제로, 재즈와 소울, 펑크 공연을 편하게 즐길 수 있다.",https://www.visitportugal.com/en/content/out-jazz-festival,true,386
+EUROPE,PT,포르투갈,리스본,리스본,11,리스본 크리스마스 시즌,SEASONAL,"포르투갈의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 공연이 이어진다. 세부 프로그램과 운영 기간은 해마다 달라질 수 있다.",https://www.visitportugal.com/en/content/christmas-markets-portugal,true,387
+EUROPE,PT,포르투갈,리스본,리스본,12,리스본 크리스마스 시즌,SEASONAL,"포르투갈의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 공연이 이어진다. 세부 프로그램과 운영 기간은 해마다 달라질 수 있다.",https://www.visitportugal.com/en/content/christmas-markets-portugal,true,388
+EUROPE,PT,포르투갈,리스본,테헤이루 두 파수,12,리스본 새해 전야 불꽃놀이,SEASONAL,"리스본 테헤이루 두 파수와 강변 일대에서 열리는 새해맞이 카운트다운 행사로, 공연과 불꽃놀이가 이어진다.",https://www.visitlisboa.com/,true,389
+EUROPE,PT,포르투갈,포르투,포르투,1,포르투 크리스마스 시즌,SEASONAL,"포르투갈의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 공연이 이어진다. 세부 프로그램과 운영 기간은 해마다 달라질 수 있다.",https://visitporto.travel/,true,390
+EUROPE,PT,포르투갈,포르투,팔라시우 다 볼사,2,에센시아 두 비뉴 포르투,FOOD,"포르투 팔라시우 다 볼사에서 열리는 와인 행사로, 포르투갈 와인 생산자와 시음 프로그램이 중심이 되는 대표 와인 관광 이벤트다.",https://palaciodabolsa.com/event/essencia-do-vinho-2026-mais-de-quatro-mil-propostas-para-conhecer-no-palacio-da-bolsa/,true,391
+EUROPE,PT,포르투갈,포르투,팔라시우 다 볼사,3,에센시아 두 비뉴 포르투,FOOD,"포르투 팔라시우 다 볼사에서 열리는 와인 행사로, 포르투갈 와인 생산자와 시음 프로그램이 중심이 되는 대표 와인 관광 이벤트다.",https://palaciodabolsa.com/event/essencia-do-vinho-2026-mais-de-quatro-mil-propostas-para-conhecer-no-palacio-da-bolsa/,true,392
+EUROPE,PT,포르투갈,포르투,포르투,5,케이마 다스 피타스 두 포르투,TRADITION,"포르투 대학생 전통 축제로, 졸업과 학업의 상징인 리본을 태우는 의식과 행진, 음악 행사가 함께 열린다.",https://visitporto.travel/,true,393
+EUROPE,PT,포르투갈,포르투,세랄베스,5,세랄베스 엠 페스타,ART,"세랄베스 재단이 주관하는 대형 현대예술 축제로, 50시간 연속 공연, 전시, 음악, 퍼포먼스가 무료로 이어진다.",https://www.serralves.pt/atividades-serralves/serralves-em-festa-2026/,true,394
+EUROPE,PT,포르투갈,포르투,포르투,6,포르투 성 요한 축제,RELIGIOUS_CULTURAL,"포르투의 대표 6월 축제로, 성 요한 전야에 거리 파티, 음악, 전통 음식, 불꽃놀이가 이어지는 도시 대표 축제다.",https://www.visitportugal.com/en/content/popular-saints-festivals,true,395
+EUROPE,PT,포르투갈,포르투,포르투,6,프리마베라 사운드 포르투,FESTIVAL,"포르투에서 열리는 대형 음악 축제로, 국제 아티스트 공연과 도시형 페스티벌 분위기를 함께 즐길 수 있다.",https://www.primaverasound.com/en/porto,true,396
+EUROPE,PT,포르투갈,포르투,빌라노바드가이아,7,MEO 마레스 비바스 페스티벌,FESTIVAL,"포르투권 빌라노바드가이아에서 열리는 여름 음악 축제로, 두루강과 해안권 분위기 속에서 대형 공연을 즐길 수 있다.",https://maresvivas.meo.pt/,true,397
+EUROPE,PT,포르투갈,포르투,포르투,10,포르투 반도마 성모 축일,RELIGIOUS,"포르투의 수호성인으로 여겨지는 반도마 성모를 기념하는 축일로, 도시의 종교 전통과 지역 정체성을 보여주는 행사다.",https://visitporto.travel/,true,398
+EUROPE,PT,포르투갈,포르투,포르투,11,포르투 크리스마스 시즌,SEASONAL,"포르투갈의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 공연이 이어진다. 세부 프로그램과 운영 기간은 해마다 달라질 수 있다.",https://visitporto.travel/,true,399
+EUROPE,PT,포르투갈,포르투,포르투,12,포르투 크리스마스 시즌,SEASONAL,"포르투갈의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 공연이 이어진다. 세부 프로그램과 운영 기간은 해마다 달라질 수 있다.",https://visitporto.travel/,true,400
+EUROPE,PT,포르투갈,포르투,포르투,12,포르투 새해 전야 행사,SEASONAL,"포르투 도심에서 열리는 새해맞이 행사로, 카운트다운, 공연, 불꽃놀이 등 연말 분위기를 즐길 수 있다.",https://visitporto.travel/,true,401
+EUROPE,PT,포르투갈,파루,파루,1,파루 샤롤라스 축제,TRADITION,"파루 지역에서 이어지는 새해 전통 노래 행사로, 그룹들이 지역을 돌며 전통 노래와 축하 인사를 전한다.",https://www.cm-faro.pt/7707/charolas.aspx,true,402
+EUROPE,PT,포르투갈,파루,파루,2,파루 카니발 아 롤라르,CULTURAL_FESTIVAL,"파루 시가 주관하는 카니발 행사로, 가족 친화적인 거리 분위기와 퍼레이드, 음악 프로그램이 이어진다.",https://www.cm-faro.pt/,true,403
+EUROPE,PT,포르투갈,파루,파루,4,파루 부활절 성 주간,RELIGIOUS_SEASON,"부활절을 앞두고 파루에서 열리는 성주간 종교 행사로, 성금요일 행렬과 교회 예식 등 전통적인 부활절 분위기를 볼 수 있다.",https://www.visitalgarve.pt/,true,404
+EUROPE,PT,포르투갈,파루,파루,7,아소테이아 파루 루프톱 페스티벌,CULTURE,"파루의 옥상 공간을 활용한 도시형 문화 축제로, 음악, 공연, 전시와 도시 전망을 함께 즐길 수 있다.",https://www.acoteia.pt/home,true,405
+EUROPE,PT,포르투갈,파루,리아 포르모사,7,리아 포르모사 축제,FOOD_FESTIVAL,"리아 포르모사 자연공원과 해산물 문화를 주제로 한 파루 대표 여름 음식 축제로, 조개·해산물 요리와 지역 공연이 함께 열린다.",https://www.visitalgarve.pt/,true,406
+EUROPE,PT,포르투갈,파루,리아 포르모사,8,리아 포르모사 축제,FOOD_FESTIVAL,"리아 포르모사 자연공원과 해산물 문화를 주제로 한 파루 대표 여름 음식 축제로, 조개·해산물 요리와 지역 공연이 함께 열린다.",https://www.visitalgarve.pt/,true,407
+EUROPE,PT,포르투갈,파루,파루,8,포크파루 국제 민속 축제,CULTURAL_FESTIVAL,"파루에서 열리는 국제 민속 축제로, 여러 나라와 지역의 전통 춤, 음악, 의상 문화를 소개한다.",https://www.cm-faro.pt/8065/folkfaro---folclore-internacional-da-cidade-de-faro.aspx,true,408
+EUROPE,PT,포르투갈,파루,파루,9,페스티벌 F,FESTIVAL,"파루 구시가지와 리아 포르모사 인근에서 열리는 음악·문화 축제로, 포르투갈 음악과 도시 야간 문화를 함께 즐길 수 있다.",https://festivalf.pt/,true,409
+EUROPE,PT,포르투갈,파루,파루,10,산타 이리아 박람회,TRADITION,"파루에서 오래 이어진 전통 박람회로, 놀이기구, 지역 먹거리, 판매 부스, 가족 행사가 함께 열리는 가을 대표 행사다.",https://www.cm-faro.pt/,true,410
+EUROPE,PT,포르투갈,파루,파루,11,파루 오르간 페스티벌,ART,"파루의 교회와 공연 공간에서 열리는 오르간 음악 축제로, 역사적인 악기와 종교 공간의 분위기를 함께 느낄 수 있다.",https://www.festivaldeorgaofaro.com/,true,411
+EUROPE,PT,포르투갈,파루,파루,12,파루 크리스마스 시즌,SEASONAL,"포르투갈의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 공연이 이어진다. 세부 프로그램과 운영 기간은 해마다 달라질 수 있다.",https://www.cm-faro.pt/,true,412
+EUROPE,NL,네덜란드,암스테르담,암스테르담,1,암스테르담 라이트 페스티벌,ART,"암스테르담 운하와 도심 곳곳에 조명 예술 작품을 설치하는 겨울 빛 축제로, 보트 투어나 도보로 작품을 감상할 수 있다.",https://amsterdamlightfestival.com/,true,413
+EUROPE,NL,네덜란드,암스테르담,암스테르담,1,국립 튤립의 날,NATURE,"네덜란드 튤립 시즌의 시작을 알리는 행사로, 암스테르담 도심에서 대형 튤립 정원과 무료 튤립 나눔 행사가 열린다.",https://tulipfestivalamsterdam.com/national-tulip-day/,true,414
+EUROPE,NL,네덜란드,암스테르담,암스테르담,2,암스테르담 음력설 축제,CULTURAL_FESTIVAL,"암스테르담 차이나타운과 도심에서 열리는 음력설 행사로, 사자춤, 퍼레이드, 아시아 문화 공연과 음식 문화를 즐길 수 있다.",https://www.iamsterdam.com/,true,415
+EUROPE,NL,네덜란드,암스테르담,암스테르담,3,암스테르담 튤프 페스티벌,NATURE,암스테르담 곳곳에서 튤립을 감상할 수 있는 봄 시즌 행사다. 튤립 개화와 전시 시기는 날씨와 프로그램에 따라 해마다 달라질 수 있다.,https://tulpfestival.com/,true,416
+EUROPE,NL,네덜란드,암스테르담,암스테르담,4,암스테르담 튤프 페스티벌,NATURE,"암스테르담 곳곳에서 튤립을 감상할 수 있는 봄 시즌 행사다. 공원, 광장, 박물관, 호텔 등 도시 곳곳의 튤립 전시를 볼 수 있다.",https://tulpfestival.com/,true,417
+EUROPE,NL,네덜란드,암스테르담,암스테르담,4,암스테르담 국왕의 날,NATIONAL_HOLIDAY,"네덜란드 국왕의 생일을 기념하는 전국 공휴일로, 암스테르담에서는 운하와 거리에서 오렌지색 축제 분위기, 벼룩시장, 음악 행사가 이어진다.",https://www.iamsterdam.com/en/whats-on/kings-day,true,418
+EUROPE,NL,네덜란드,암스테르담,암스테르담,5,암스테르담 해방의 날 기념 행사,NATIONAL_HOLIDAY,"5월 5일 네덜란드 해방의 날을 기념하는 행사로, 암스테르담에서는 자유와 평화를 주제로 한 공연과 기념 프로그램이 열린다.",https://www.iamsterdam.com/,true,419
+EUROPE,NL,네덜란드,암스테르담,베스터파크,5,롤링 키친스,FOOD_FESTIVAL,"암스테르담 베스터파크에서 열리는 야외 푸드트럭 축제로, 다양한 음식, 음료, 음악과 피크닉 분위기를 즐길 수 있다.",https://rollendekeukens.amsterdam/,true,420
+EUROPE,NL,네덜란드,암스테르담,암스테르담,6,홀란드 페스티벌,ART,"암스테르담에서 열리는 국제 공연예술 축제로, 연극, 무용, 음악, 오페라, 실험예술 등 다양한 프로그램이 진행된다.",https://www.hollandfestival.nl/en,true,421
+EUROPE,NL,네덜란드,암스테르담,암스테르담 운하 지구,6,암스테르담 운하 정원 오픈 데이즈,NATURE,"암스테르담 운하 주택 뒤편의 숨겨진 정원을 공개하는 행사로, 평소 보기 어려운 사유 정원과 역사적인 운하 주택 문화를 둘러볼 수 있다.",https://www.opentuinendagen.nl/,true,422
+EUROPE,NL,네덜란드,암스테르담,암스테르담,7,케티 코티 축제,HISTORICAL_FESTIVAL,"네덜란드 식민지 노예제 폐지를 기념하는 행사로, 추모와 자유의 의미를 담은 퍼레이드, 음악, 문화 프로그램이 열린다.",https://www.iamsterdam.com/,true,423
+EUROPE,NL,네덜란드,암스테르담,넬슨 만델라 파크,7,쿠와크 서머 페스티벌,CULTURAL_FESTIVAL,"암스테르담 남동부에서 열리는 다문화 여름 축제로, 음악, 음식, 가족 프로그램, 카리브·수리남 문화가 어우러진다.",https://kwakufestival.nl/,true,424
+EUROPE,NL,네덜란드,암스테르담,넬슨 만델라 파크,8,쿠와크 서머 페스티벌,CULTURAL_FESTIVAL,"암스테르담 남동부에서 열리는 다문화 여름 축제로, 음악, 음식, 가족 프로그램, 카리브·수리남 문화가 어우러진다.",https://kwakufestival.nl/,true,425
+EUROPE,NL,네덜란드,암스테르담,암스테르담 운하,8,암스테르담 운하 페스티벌,ART,"암스테르담 운하와 역사적인 장소를 무대로 클래식 음악, 재즈, 실내악 공연이 열리는 여름 음악 축제다.",https://www.grachtenfestival.nl/en/,true,426
+EUROPE,NL,네덜란드,암스테르담,암스테르담,10,암스테르담 댄스 이벤트,FESTIVAL,"암스테르담 전역에서 열리는 대형 전자음악 축제로, 공연과 클럽 이벤트가 도시 곳곳에서 진행된다. 콘퍼런스 성격도 함께 가진다.",https://www.amsterdam-dance-event.nl/,true,427
+EUROPE,NL,네덜란드,암스테르담,암스테르담,11,암스테르담 뮤지엄 나이트,CULTURE,"암스테르담의 여러 박물관이 밤 늦게까지 개방하며 특별 전시, 공연, 워크숍을 진행하는 야간 문화 행사다.",https://museumnacht.amsterdam/,true,428
+EUROPE,NL,네덜란드,암스테르담,암스테르담,11,신터클라스 암스테르담 입성,TRADITION,"네덜란드 전통 겨울 명절인 신터클라스의 암스테르담 입성 행사로, 보트 행렬과 퍼레이드, 가족 행사가 이어진다.",https://sintinamsterdam.nl/,true,429
+EUROPE,NL,네덜란드,암스테르담,암스테르담,11,암스테르담 라이트 페스티벌,ART,"암스테르담 운하와 도심 곳곳에 조명 예술 작품을 설치하는 겨울 빛 축제로, 보트 투어나 도보로 작품을 감상할 수 있다.",https://amsterdamlightfestival.com/,true,430
+EUROPE,NL,네덜란드,암스테르담,암스테르담,12,암스테르담 라이트 페스티벌,ART,"암스테르담 운하와 도심 곳곳에 조명 예술 작품을 설치하는 겨울 빛 축제로, 보트 투어나 도보로 작품을 감상할 수 있다.",https://amsterdamlightfestival.com/,true,431
+EUROPE,NL,네덜란드,암스테르담,암스테르담,12,암스테르담 크리스마스 시즌,SEASONAL,"암스테르담의 겨울 명절 시즌으로, 크리스마스 조명, 마켓, 아이스링크, 박물관·공연 프로그램이 이어진다.",https://www.iamsterdam.com/,true,432
+EUROPE,NL,네덜란드,에인트호번,에인트호번,2,람페갓 카니발,CULTURAL_FESTIVAL,"카니발 기간에 에인트호번이 전통적으로 람페갓으로 불리며 열리는 지역 카니발 행사로, 퍼레이드, 의상, 음악과 거리 축제 분위기가 이어진다.",https://lampegat.com/,true,433
+EUROPE,NL,네덜란드,에인트호번,에인트호번,4,에인트호번 국왕의 밤 & 국왕의 날,NATIONAL_HOLIDAY,"네덜란드 국왕의 날 전야와 당일에 에인트호번 도심에서 열리는 음악, 거리 행사, 야외 축제 분위기의 기념 행사다.",https://www.thisiseindhoven.com/,true,434
+EUROPE,NL,네덜란드,에인트호번,에인트호번,8,파크 힐라리아,SEASONAL,"에인트호번 도심에 임시 놀이공원과 먹거리, 가족 프로그램이 들어서는 여름 시즌 행사다.",https://www.thisiseindhoven.com/en/events/park-hilaria-2026,true,435
+EUROPE,NL,네덜란드,에인트호번,에인트호번,9,에인트호번 리흐체스라우터,TRADITION,제2차 세계대전 해방을 기념해 에인트호번 거리를 조명 장식으로 밝히는 전통 빛 행사다.,https://www.lichtjesroute.org/,true,436
+EUROPE,NL,네덜란드,에인트호번,에인트호번,10,에인트호번 리흐체스라우터,TRADITION,제2차 세계대전 해방을 기념해 에인트호번 거리를 조명 장식으로 밝히는 전통 빛 행사다.,https://www.lichtjesroute.org/,true,437
+EUROPE,NL,네덜란드,에인트호번,에인트호번,11,글로우 에인트호번,ART,"에인트호번 도심을 빛 예술 작품으로 채우는 대형 조명 예술 축제로, 건물과 거리, 공공 공간을 활용한 작품을 감상할 수 있다.",https://gloweindhoven.nl/,true,438
+EUROPE,NL,네덜란드,에인트호번,에인트호번,12,에인트호번 겨울·크리스마스 시즌,SEASONAL,"에인트호번의 겨울 명절 시즌으로, 도심 조명, 크리스마스 분위기, 가족 친화 행사와 겨울 프로그램이 이어진다.",https://www.thisiseindhoven.com/,true,439
+EUROPE,NL,네덜란드,로테르담,로테르담,4,로테르담 국왕의 날,NATIONAL_HOLIDAY,"네덜란드 국왕의 날을 기념하는 로테르담의 거리 행사로, 도심 곳곳에서 음악, 벼룩시장, 야외 축제 분위기를 즐길 수 있다.",https://www.rotterdam.info/,true,440
+EUROPE,NL,네덜란드,로테르담,로테르담,5,로테르담 해방의 날 기념 행사,NATIONAL_HOLIDAY,"5월 5일 네덜란드 해방의 날을 기념하는 로테르담의 행사로, 자유와 평화를 주제로 한 공연과 기념 프로그램이 열린다.",https://www.rotterdam.info/,true,441
+EUROPE,NL,네덜란드,로테르담,로테르담,6,로테르담 건축의 달,CULTURE,"건축 도시 로테르담의 정체성을 보여주는 한 달간의 건축 문화 행사로, 투어, 전시, 강연, 도시 공간 프로그램이 진행된다.",https://rotterdamarchitecturemonth.com/,true,442
+EUROPE,NL,네덜란드,로테르담,로테르담,6,노스 Sea 라운드 타운,ART,"노스 Sea 재즈 페스티벌을 전후해 로테르담 곳곳에서 열리는 재즈·음악 프로그램으로, 도시 전역의 공연장과 야외 공간에서 공연이 이어진다.",https://www.northsearoundtown.nl/,true,443
+EUROPE,NL,네덜란드,로테르담,로테르담,7,노스 Sea 라운드 타운,ART,"노스 Sea 재즈 페스티벌을 전후해 로테르담 곳곳에서 열리는 재즈·음악 프로그램으로, 도시 전역의 공연장과 야외 공간에서 공연이 이어진다.",https://www.northsearoundtown.nl/,true,444
+EUROPE,NL,네덜란드,로테르담,로테르담,7,로테르담 언리미티드 여름 카니발,CULTURAL_FESTIVAL,"로테르담의 대표 여름 카니발로, 카리브해와 다양한 문화권의 퍼레이드, 음악, 춤, 거리 행사가 어우러진다.",https://www.rotterdamunlimited.com/,true,445
+EUROPE,NL,네덜란드,로테르담,로테르담 항구,9,세계 항구의 날,CITY_ANNIVERSARY,"로테르담 항구를 중심으로 열리는 대형 항구 축제로, 선박 공개, 항구 투어, 해양 문화 프로그램을 통해 항구 도시 로테르담을 체험할 수 있다.",https://wereldhavendagen.nl/en/,true,446
+EUROPE,NL,네덜란드,로테르담,로테르담,9,카메라 재팬 페스티벌,CULTURAL_FESTIVAL,"일본 영화, 예술, 음식, 음악과 문화를 소개하는 로테르담 기반 복합 문화 축제로, 일본 문화 체험 프로그램이 함께 열린다.",https://camerajapan.nl/,true,447
+EUROPE,NL,네덜란드,로테르담,로테르담,12,로테르담 겨울·크리스마스 시즌,SEASONAL,"로테르담의 겨울 명절 시즌으로, 도심 조명, 크리스마스 분위기, 겨울 마켓과 가족 친화 행사가 이어진다.",https://www.rotterdam.info/,true,448
+EUROPE,NL,네덜란드,로테르담,로테르담,12,로테르담 새해 전야 행사,SEASONAL,"로테르담의 새해맞이 행사로, 도심과 강변을 중심으로 카운트다운과 불꽃놀이 분위기를 즐길 수 있다.",https://www.rotterdam.info/,true,449
+EUROPE,AT,오스트리아,빈,빈,1,빈 크리스마스 시즌,SEASONAL,"빈의 겨울 명절 시즌으로, 일부 크리스마스 마켓과 겨울 행사가 1월 초까지 이어질 수 있다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.wien.info/en/shopping-wining-dining/markets/christmas-markets,true,450
+EUROPE,AT,오스트리아,빈,라트하우스 광장,1,빈 아이스월드,SEASONAL,"빈 시청 앞 라트하우스 광장을 중심으로 열리는 대형 겨울 아이스스케이팅 행사로, 도심 겨울 분위기를 즐길 수 있다.",https://www.wienereistraum.com/,true,451
+EUROPE,AT,오스트리아,빈,빈 국립오페라극장,2,빈 오페라 무도회,TRADITION,"빈 국립오페라극장에서 열리는 대표 무도회로, 오스트리아의 무도회 문화와 클래식한 사교 전통을 보여주는 행사다.",https://www.wien.info/en/see-do/music-stage-shows/dance/balls/vienna-opera-ball-356774,true,452
+EUROPE,AT,오스트리아,빈,빈,3,빈 부활절 마켓,SEASONAL,"부활절을 앞두고 열리는 봄 시즌 마켓으로, 수공예품, 부활절 장식, 전통 음식과 가족 프로그램을 즐길 수 있다. 부활절 날짜에 따라 세부 일정은 해마다 달라질 수 있다.",https://www.wien.info/en/shopping-wining-dining/markets/easter-markets-341866,true,453
+EUROPE,AT,오스트리아,빈,빈,4,빈 부활절 마켓,SEASONAL,"부활절을 앞두고 열리는 봄 시즌 마켓으로, 수공예품, 부활절 장식, 전통 음식과 가족 프로그램을 즐길 수 있다. 부활절 날짜에 따라 세부 일정은 해마다 달라질 수 있다.",https://www.wien.info/en/shopping-wining-dining/markets/easter-markets-341866,true,454
+EUROPE,AT,오스트리아,빈,시립공원,5,빈 제누스 페스티벌,FOOD_FESTIVAL,"빈 시립공원에서 열리는 오스트리아 미식 축제로, 지역 생산자와 음식 장인이 참여해 전통 음식, 와인, 치즈, 디저트 등을 선보인다.",https://www.wien.info/en/dine-drink/vienna-genussfestival-delights-363228,true,455
+EUROPE,AT,오스트리아,빈,빈,5,빈 페스티벌,ART,"빈 전역에서 열리는 대형 공연예술 축제로, 오페라, 연극, 무용, 음악, 퍼포먼스 등 다양한 현대 예술 프로그램이 진행된다.",https://www.festwochen.at/,true,456
+EUROPE,AT,오스트리아,빈,빈,6,빈 페스티벌,ART,"빈 전역에서 열리는 대형 공연예술 축제로, 오페라, 연극, 무용, 음악, 퍼포먼스 등 다양한 현대 예술 프로그램이 진행된다.",https://www.festwochen.at/,true,457
+EUROPE,AT,오스트리아,빈,쇤브룬 궁전,6,쇤브룬 여름밤 콘서트,ART,"빈 필하모닉이 쇤브룬 궁전 정원을 배경으로 여는 야외 클래식 콘서트로, 빈의 여름 대표 음악 행사다.",https://www.sommernachtskonzert.at/,true,458
+EUROPE,AT,오스트리아,빈,도나우섬,7,도나우인젤페스트,FESTIVAL,"도나우섬에서 열리는 대형 야외 음악·문화 축제로, 여러 무대의 무료 공연과 음식, 가족 프로그램이 이어진다.",https://donauinselfest.at/,true,459
+EUROPE,AT,오스트리아,빈,라트하우스 광장,7,빈 라트하우스 광장 영화제,ART,"빈 시청 앞 광장에서 열리는 여름 야외 영화·음악 행사로, 대형 스크린 공연 영상과 음식 부스를 함께 즐길 수 있다.",https://filmfestival-rathausplatz.at/,true,460
+EUROPE,AT,오스트리아,빈,라트하우스 광장,8,빈 라트하우스 광장 영화제,ART,"빈 시청 앞 광장에서 열리는 여름 야외 영화·음악 행사로, 대형 스크린 공연 영상과 음식 부스를 함께 즐길 수 있다.",https://filmfestival-rathausplatz.at/,true,461
+EUROPE,AT,오스트리아,빈,라트하우스 광장,9,빈 라트하우스 광장 영화제,ART,"빈 시청 앞 광장에서 열리는 여름 야외 영화·음악 행사로, 대형 스크린 공연 영상과 음식 부스를 함께 즐길 수 있다.",https://filmfestival-rathausplatz.at/,true,462
+EUROPE,AT,오스트리아,빈,빈 포도밭,9,빈 와인 하이킹 데이,FOOD,"빈 주변 포도밭을 걸으며 와인과 도시 전망을 함께 즐기는 가을 행사로, 와인 생산지와 도시 산책을 연결한 빈의 대표 계절 행사다.",https://www.wien.info/en/dine-drink/wine/wine-hiking-day-345320,true,463
+EUROPE,AT,오스트리아,빈,프라터 카이저비제,9,비엔나 카이저 비즌,TRADITION,"프라터의 카이저비제에서 열리는 전통 민속 축제로, 오스트리아 전통 의상, 음식, 맥주, 음악과 가족 프로그램이 이어진다.",https://kaiserwiesn.at/,true,464
+EUROPE,AT,오스트리아,빈,프라터 카이저비제,10,비엔나 카이저 비즌,TRADITION,"프라터의 카이저비제에서 열리는 전통 민속 축제로, 오스트리아 전통 의상, 음식, 맥주, 음악과 가족 프로그램이 이어진다.",https://kaiserwiesn.at/,true,465
+EUROPE,AT,오스트리아,빈,빈,11,빈 크리스마스 마켓,SEASONAL,"오스트리아의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 공연, 전통 음식과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.wien.info/en/shopping-wining-dining/markets/christmas-markets,true,466
+EUROPE,AT,오스트리아,빈,빈,12,빈 크리스마스 마켓,SEASONAL,"오스트리아의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 공연, 전통 음식과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.wien.info/en/shopping-wining-dining/markets/christmas-markets,true,467
+EUROPE,AT,오스트리아,빈,빈 도심,12,빈 실베스터파드,SEASONAL,"빈 도심에서 열리는 새해 전야 행사로, 여러 무대의 음악, 춤, 먹거리, 카운트다운 분위기를 즐길 수 있다.",https://www.wien.info/en/see-do/silvesterpfad-new-years-eve,true,468
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,1,모차르트 주간,ART,"모차르트의 생일을 전후해 잘츠부르크에서 열리는 클래식 음악 축제로, 모차르트 작품과 관련 공연이 중심이 된다.",https://mozarteum.at/en/mozartwoche/,true,469
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,3,잘츠부르크 부활절 페스티벌,ART,부활절 시기를 전후해 열리는 잘츠부르크의 클래식 음악·오페라 중심 축제다. 부활절 날짜에 따라 3월 또는 4월에 걸칠 수 있으므로 실제 일정은 매년 확인이 필요하다.,https://www.osterfestspiele.at/,true,470
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,4,잘츠부르크 부활절 페스티벌,ART,부활절 시기를 전후해 열리는 잘츠부르크의 클래식 음악·오페라 중심 축제다. 부활절 날짜에 따라 3월 또는 4월에 걸칠 수 있으므로 실제 일정은 매년 확인이 필요하다.,https://www.osterfestspiele.at/,true,471
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,5,잘츠부르크 성령강림절 페스티벌,ART,"성령강림절 시기에 열리는 잘츠부르크의 음악 축제로, 오페라와 클래식 공연을 중심으로 짧고 집중적인 프로그램이 진행된다.",https://www.salzburgerfestspiele.at/en/whitsun,true,472
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크 도심,6,잘츠부르크 시티 페스티벌,CULTURAL_FESTIVAL,"잘츠부르크 도심에서 열리는 도시 축제로, 음악, 예술, 음식, 가족 프로그램이 거리와 광장 곳곳에서 진행된다.",https://www.salzburg.info/en/events/events-calendar/salzburg-city-festival_event_39153842,true,473
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크링,7,일렉트릭 러브 페스티벌,FESTIVAL,"잘츠부르크링에서 열리는 대형 전자음악 축제로, 국제 아티스트 공연과 여름 페스티벌 분위기를 즐길 수 있다.",https://www.electriclove.at/en/,true,474
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,7,잘츠부르크 페스티벌,ART,"오페라, 연극, 클래식 음악을 중심으로 열리는 세계적인 공연예술 축제로, 잘츠부르크 여름을 대표하는 행사다.",https://www.salzburgerfestspiele.at/en/,true,475
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,8,잘츠부르크 페스티벌,ART,"오페라, 연극, 클래식 음악을 중심으로 열리는 세계적인 공연예술 축제로, 잘츠부르크 여름을 대표하는 행사다.",https://www.salzburgerfestspiele.at/en/,true,476
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크 구시가지,9,루페르티키르탁 민속 축제,TRADITION,"잘츠부르크 수호성인 성 루페르트를 기념하는 전통 민속 축제로, 장터, 놀이기구, 전통 음식과 음악이 구시가지에 이어진다.",https://www.salzburg.info/en/events/events-calendar/st.rupert-s-day-fair_event_38693321,true,477
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크 구시가지,10,재즈 앤 더 시티,ART,"잘츠부르크 구시가지 곳곳에서 열리는 무료 재즈·즉흥음악 축제로, 다양한 공연장과 거리 공간이 음악 무대가 된다.",https://www.salzburgjazz.com/,true,478
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,11,잘츠부르크 크리스마스 시즌,SEASONAL,"오스트리아의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 공연, 전통 음식과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.salzburg.info/en/salzburg/advent,true,479
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,11,빈터페스트 잘츠부르크,ART,"잘츠부르크에서 열리는 현대 서커스·공연예술 중심의 겨울 축제로, 국제 서커스와 무대 공연 프로그램이 진행된다.",https://www.winterfest.at/,true,480
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,12,잘츠부르크 크리스마스 시즌,SEASONAL,"오스트리아의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 공연, 전통 음식과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.salzburg.info/en/salzburg/advent,true,481
+EUROPE,AT,오스트리아,잘츠부르크,잘츠부르크,12,빈터페스트 잘츠부르크,ART,"잘츠부르크에서 열리는 현대 서커스·공연예술 중심의 겨울 축제로, 국제 서커스와 무대 공연 프로그램이 진행된다.",https://www.winterfest.at/,true,482
+EUROPE,AT,오스트리아,인스브루크,인스브루크,1,인스브루크 크리스마스 마켓 시즌,SEASONAL,"인스브루크의 겨울 명절 시즌으로, 일부 크리스마스 마켓과 산악 지역 겨울 프로그램이 1월 초까지 이어질 수 있다. 운영 기간은 해마다 달라질 수 있다.",https://www.innsbruck.info/en/customs-and-events/highlights/advent-and-christmas/christmas-markets.html,true,483
+EUROPE,AT,오스트리아,인스브루크,인스브루크,4,인스브루크 부활절 시즌,SEASONAL,"인스브루크의 봄 부활절 시즌으로, 부활절 마켓, 성주간 전통, 종교 예식과 봄 장식 행사가 이어진다. 부활절 날짜에 따라 세부 일정은 해마다 달라질 수 있다.",https://www.innsbruck.info/en/customs-and-events/highlights/easter.html,true,484
+EUROPE,AT,오스트리아,인스브루크,노르트케테,6,노르트케테 하지 불꽃 축제,TRADITION,"노르트케테 산악 지대에서 여름 하지 무렵 열리는 불꽃 전통 행사로, 산 위의 불빛과 야경을 함께 즐길 수 있다.",https://nordkette.com/en/event/2026-06-20_1800/nordkette-mountain-solstice/,true,485
+EUROPE,AT,오스트리아,인스브루크,호프부르크,7,인스브루크 프롬나드 콘서트,ART,"인스브루크 호프부르크 안뜰에서 열리는 여름 야외 음악회로, 관악·클래식·전통 음악 공연이 이어진다.",https://www.innsbruck.info/en/events/d/promenade-concerts.html,true,486
+EUROPE,AT,오스트리아,인스브루크,인스브루크,7,인스브루크 고음악 페스티벌,ART,"바로크와 르네상스 음악 등 고음악을 중심으로 한 인스브루크의 대표 음악 축제로, 역사적 공연장과 오페라 프로그램이 특징이다.",https://www.altemusik.at/en/,true,487
+EUROPE,AT,오스트리아,인스브루크,인스브루크,8,인스브루크 고음악 페스티벌,ART,"바로크와 르네상스 음악 등 고음악을 중심으로 한 인스브루크의 대표 음악 축제로, 역사적 공연장과 오페라 프로그램이 특징이다.",https://www.altemusik.at/en/,true,488
+EUROPE,AT,오스트리아,인스브루크,인스브루크,8,크라폴디 거리 극장 페스티벌,STREET_FESTIVAL,"인스브루크에서 열리는 거리극과 현대 서커스 중심의 축제로, 야외 공연과 가족 친화적인 거리예술 프로그램이 진행된다.",https://www.krapoldi.at/en/,true,489
+EUROPE,AT,오스트리아,인스브루크,무터스,9,인스브루크 알름압트리프 전통 축제,TRADITION,"여름 동안 알프스 목초지에 있던 소들이 장식된 모습으로 마을로 내려오는 티롤 전통 행사로, 음악과 지역 음식이 함께 이어진다.",https://www.innsbruck.info/en/events/e/122220072.html,true,490
+EUROPE,AT,오스트리아,인스브루크,인스브루크,11,인스브루크 크리스마스 마켓 시즌,SEASONAL,"오스트리아의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 공연, 전통 음식과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.innsbruck.info/en/customs-and-events/highlights/advent-and-christmas/christmas-markets.html,true,491
+EUROPE,AT,오스트리아,인스브루크,인스브루크,11,인스브루크 산악 크리스마스,SEASONAL,"인스브루크의 산악 도시 분위기와 크리스마스 마켓, 알프스 전망, 겨울 조명이 결합된 대표 겨울 시즌 행사다.",https://www.innsbruck.info/en/customs-and-events/highlights/advent-and-christmas.html,true,492
+EUROPE,AT,오스트리아,인스브루크,인스브루크,12,인스브루크 크리스마스 마켓 시즌,SEASONAL,"오스트리아의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 공연, 전통 음식과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.innsbruck.info/en/customs-and-events/highlights/advent-and-christmas/christmas-markets.html,true,493
+EUROPE,AT,오스트리아,인스브루크,인스브루크,12,인스브루크 산악 크리스마스,SEASONAL,"인스브루크의 산악 도시 분위기와 크리스마스 마켓, 알프스 전망, 겨울 조명이 결합된 대표 겨울 시즌 행사다.",https://www.innsbruck.info/en/customs-and-events/highlights/advent-and-christmas.html,true,494
+EUROPE,AT,오스트리아,인스브루크,인스브루크·티롤,12,크람푸스와 성 니콜라우스 전통,TRADITION,"12월 초 인스브루크와 티롤 지역에서 이어지는 겨울 전통 행사로, 성 니콜라우스와 크람푸스 퍼레이드·전통 복장 행사가 열린다. 세부 장소와 일정은 마을별로 달라질 수 있다.",https://www.innsbruck.info/en/customs-and-events.html,true,495
+EUROPE,AT,오스트리아,인스브루크,인스브루크,12,인스브루크 산악 새해 전야,SEASONAL,"인스브루크의 산악 도시 분위기 속에서 열리는 새해맞이 행사로, 도심 카운트다운과 겨울 야경을 함께 즐길 수 있다.",https://www.innsbruck.info/en/customs-and-events/highlights/new-year.html,true,496
+EUROPE,CH,스위스,취리히,취리히,3,취리히 봄 메를리트람,SEASONAL,"젝셀로이텐 봄 축제와 연결된 어린이 동화 트램 행사로, 봄 분위기의 특별 트램과 취리히 전통 이야기를 함께 즐길 수 있다. 2026년 봄 에디션 기준이며 향후 운영 여부는 해마다 확인이 필요하다.",https://www.zuerich.com/de/freizeit/zueri-maerlitram,true,497
+EUROPE,CH,스위스,취리히,취리히,4,취리히 봄 메를리트람,SEASONAL,"젝셀로이텐 봄 축제와 연결된 어린이 동화 트램 행사로, 봄 분위기의 특별 트램과 취리히 전통 이야기를 함께 즐길 수 있다. 2026년 봄 에디션 기준이며 향후 운영 여부는 해마다 확인이 필요하다.",https://www.zuerich.com/de/freizeit/zueri-maerlitram,true,498
+EUROPE,CH,스위스,취리히,취리히,4,취리히 젝셀로이텐,TRADITION,"취리히의 대표 봄 전통 축제로, 길드 행렬과 음악대, 전통 의상, Böögg 태우기 의식이 이어진다. Böögg가 빨리 폭발할수록 좋은 여름이 온다는 전통 이야기가 있다.",https://www.zuerich.com/de/events-nachtleben/typische-events/sechselaeuten,true,499
+EUROPE,CH,스위스,취리히,취리히,5,취리히 탄츠트,ART,"취리히 전역에서 열리는 댄스 축제로, 공연, 워크숍, 파티와 참여형 프로그램을 통해 도시 곳곳이 춤 무대가 된다.",https://zuerichtanzt.ch/,true,500
+EUROPE,CH,스위스,취리히,취리히,6,취리히 프라이드 페스티벌,CULTURE,"취리히에서 매년 6월 열리는 LGBTQIA+ 커뮤니티와 다양성을 주제로 한 대표 행사다. 일반적으로 행진, 문화 프로그램, 음악 공연이 함께 열리며, 2026년은 예외적으로 공식 페스티벌 없이 행진 중심으로 진행된다.",https://zurichpridefestival.ch/festival/,true,501
+EUROPE,CH,스위스,취리히,취리히,6,취리히 알바 페스티벌,CULTURAL_FESTIVAL,"취리히에서 열리는 알바니아 음악·문화 축제로, 음악 공연과 음식, 커뮤니티 행사를 통해 알바니아 문화를 소개한다.",https://www.alba-festival.ch/,true,502
+EUROPE,CH,스위스,취리히,취리히 오페라하우스,6,취리히 오페라 포 올,ART,"취리히 오페라하우스 공연을 야외 대형 스크린으로 함께 즐길 수 있는 무료 음악 행사로, 시민과 관광객이 클래식 공연을 쉽게 접할 수 있다.",https://www.opernhaus.ch/,true,503
+EUROPE,CH,스위스,취리히,취리히,7,칼리엔테 라틴 페스티벌,CULTURAL_FESTIVAL,"라틴 아메리카 음악, 춤, 음식과 문화를 즐길 수 있는 취리히의 여름 다문화 축제다.",https://www.caliente.ch/,true,504
+EUROPE,CH,스위스,취리히,취리히,8,취리히 스트리트 퍼레이드,FESTIVAL,"취리히 호수 주변에서 열리는 대형 전자음악 퍼레이드로, 음악 트럭, 댄스, 거리 축제 분위기가 어우러진다.",https://www.streetparade.com/,true,505
+EUROPE,CH,스위스,취리히,취리히 호수,8,취리히 극장 스펙타클,ART,"취리히 호숫가에서 열리는 국제 공연예술 축제로, 연극, 무용, 음악, 서커스와 실험적 공연이 함께 진행된다.",https://www.theaterspektakel.ch/,true,506
+EUROPE,CH,스위스,취리히,취리히,8,취리히 스위스 국경일 행사,NATIONAL_HOLIDAY,"8월 1일 스위스 국경일을 기념하는 취리히의 행사로, 불꽃놀이, 연설, 음악, 가족 행사가 도시와 호수 주변에서 열린다.",https://www.zuerich.com/,true,507
+EUROPE,CH,스위스,취리히,취리히,9,크나벤쉬센 전통 축제,TRADITION,"취리히의 오래된 전통 민속 축제로, 청소년 사격 대회와 놀이공원, 음식, 가족 행사가 함께 열리는 가을 대표 행사다.",https://www.knabenschiessen.ch/,true,508
+EUROPE,CH,스위스,취리히,취리히,9,취리히 박물관의 밤,CULTURE,"취리히의 여러 박물관과 문화공간이 밤 늦게까지 개방하며 특별 전시, 공연, 워크숍을 진행하는 야간 문화 행사다.",https://www.langenacht-zuerich.ch/,true,509
+EUROPE,CH,스위스,취리히,취리히 호수,11,엑스포비나 와인 선상 박람회,FOOD,"취리히 호수 위 선박에서 열리는 와인 행사로, 여러 와인 생산자와 수입사의 시음 프로그램을 한 공간에서 경험할 수 있다.",https://www.expovina.ch/,true,510
+EUROPE,CH,스위스,취리히,취리히,11,취리히 크리스마스 마켓 시즌,SEASONAL,"스위스의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 시즌 공연이 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.zuerich.com/en/visit/christmas-in-zurich,true,511
+EUROPE,CH,스위스,취리히,취리히,11,취리히 메를리트람,SEASONAL,"취리히 겨울 시즌의 어린이 동화 트램 행사로, 신터클라스·크리스마스 분위기와 함께 도심을 달리는 가족 친화 프로그램이다.",https://www.zuerich.com/de/freizeit/zueri-maerlitram,true,512
+EUROPE,CH,스위스,취리히,스위스 국립박물관,11,취리히 일루미나리움,ART,"스위스 국립박물관 안뜰에서 열리는 겨울 빛 축제로, 조명 설치, 영상 연출, 음식과 겨울 분위기를 함께 즐길 수 있다.",https://illuminarium.ch/,true,513
+EUROPE,CH,스위스,취리히,취리히,12,취리히 크리스마스 마켓 시즌,SEASONAL,"스위스의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 시즌 공연이 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.zuerich.com/en/visit/christmas-in-zurich,true,514
+EUROPE,CH,스위스,취리히,취리히,12,취리히 메를리트람,SEASONAL,"취리히 겨울 시즌의 어린이 동화 트램 행사로, 신터클라스·크리스마스 분위기와 함께 도심을 달리는 가족 친화 프로그램이다.",https://www.zuerich.com/de/freizeit/zueri-maerlitram,true,515
+EUROPE,CH,스위스,취리히,취리히 호수,12,취리히 새해 전야 행사,SEASONAL,"취리히 호수 주변에서 열리는 새해맞이 행사로, 카운트다운과 불꽃놀이, 도심 연말 분위기를 함께 즐길 수 있다.",https://www.zuerich.com/,true,516
+EUROPE,CH,스위스,제네바,제네바,6,제네바 음악 축제,ART,"제네바 전역의 거리, 광장, 공연장에서 열리는 무료 음악 축제로, 다양한 장르의 공연을 도시 곳곳에서 즐길 수 있다.",https://www.geneve.com/,true,517
+EUROPE,CH,스위스,제네바,제네바,6,제네바 스트리트푸드 페스티벌,FOOD_FESTIVAL,"제네바에서 열리는 음식 축제로, 다양한 푸드트럭과 음식 부스, 지역 셰프 프로그램을 통해 여러 나라의 음식을 즐길 수 있다.",https://www.geneve.com/en/events/geneva-street-food-festival-5802398,true,518
+EUROPE,CH,스위스,제네바,제네바,7,제네바 스트리트푸드 페스티벌,FOOD_FESTIVAL,"제네바에서 열리는 음식 축제로, 다양한 푸드트럭과 음식 부스, 지역 셰프 프로그램을 통해 여러 나라의 음식을 즐길 수 있다.",https://www.geneve.com/en/events/geneva-street-food-festival-5802398,true,519
+EUROPE,CH,스위스,제네바,제네바 호수,7,레이크 퍼레이드,FESTIVAL,"제네바 호숫가를 따라 열리는 전자음악 퍼레이드로, 음악 차량과 호수 주변 축제 분위기가 결합된 여름 행사다. 세부 일정은 매년 공식 발표 기준으로 확인하는 것이 좋다.",https://lakeparade.ch/,true,520
+EUROPE,CH,스위스,제네바,제네바,8,라 바티 제네바 페스티벌,ART,"제네바에서 열리는 다장르 예술 축제로, 연극, 음악, 무용, 공연예술 프로그램이 도시 곳곳에서 진행된다.",https://www.batie.ch/,true,521
+EUROPE,CH,스위스,제네바,제네바,9,라 바티 제네바 페스티벌,ART,"제네바에서 열리는 다장르 예술 축제로, 연극, 음악, 무용, 공연예술 프로그램이 도시 곳곳에서 진행된다.",https://www.batie.ch/,true,522
+EUROPE,CH,스위스,제네바,제네바,9,주네브 금식일,TRADITION,"제네바 주의 전통 공휴일로, 금식일과 함께 자두 타르트를 먹는 지역 전통이 이어진다. 날짜는 매년 9월 둘째 목요일이다.",https://www.ge.ch/vacances-scolaires-jours-feries/jours-feries-officiels,true,523
+EUROPE,CH,스위스,제네바,제네바,11,제네바 크리스마스 마켓 노엘 오 케,SEASONAL,"스위스의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 시즌 공연이 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.noel-au-quai.ch/,true,524
+EUROPE,CH,스위스,제네바,제네바,12,제네바 크리스마스 마켓 노엘 오 케,SEASONAL,"스위스의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 시즌 공연이 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.noel-au-quai.ch/,true,525
+EUROPE,CH,스위스,제네바,제네바 구시가지,12,제네바 에스칼라드 축제,HISTORICAL_FESTIVAL,"1602년 사보이 공작의 야간 습격을 막아낸 사건을 기념하는 제네바 대표 역사 전통 축제로, 중세 복장 행렬, 횃불, 초콜릿 냄비 전통이 이어진다.",https://www.geneve.com/en/see-do/history-culture/fete-de-lescalade,true,526
+EUROPE,CH,스위스,바젤,클라인바젤,1,포겔 그리프 전통 축제,TRADITION,"클라인바젤의 세 전통 인물인 포겔 그리프, 빌데 만, 라이엔을 중심으로 행렬과 춤이 이어지는 바젤의 오래된 지역 전통 행사다.",https://www.basel.com/,true,527
+EUROPE,CH,스위스,바젤,바젤 도심,2,바젤 카니발,TRADITION,"바젤의 대표 전통 카니발로, 새벽 Morgenstreich, 등불, 피리와 북 행렬, 가면 문화가 이어진다. 사순절 기준으로 날짜가 해마다 달라져 2월 또는 3월에 열릴 수 있다.",https://www.basel.com/en/events/carnival,true,528
+EUROPE,CH,스위스,바젤,바젤,6,이매진 페스티벌,CULTURAL_FESTIVAL,"바젤에서 열리는 청년 중심 문화 축제로, 다양성, 반인종차별, 음악, 워크숍과 도시 문화 프로그램이 함께 진행된다.",https://www.bs.ch/en/events/imagine-festival,true,529
+EUROPE,CH,스위스,바젤,바젤,7,바젤 타투,TRADITION,"군악대, 퍼레이드, 전통 공연이 결합된 바젤의 여름 야외 공연 행사로, 음악과 의식적인 퍼포먼스를 함께 볼 수 있다.",https://www.baseltattoo.ch/,true,530
+EUROPE,CH,스위스,바젤,라인강,7,라인강 스위스 국경일 전야 축제,NATIONAL_HOLIDAY,"스위스 국경일 전야에 바젤 라인강 일대에서 열리는 축제로, 강변 분위기와 불꽃놀이, 지역 행사가 이어진다.",https://www.basel.com/,true,531
+EUROPE,CH,스위스,바젤,라인강,8,바젤 라인 수영 행사,SEASONAL,"바젤의 여름 전통 중 하나로, 참가자들이 Wickelfisch 방수 가방과 함께 라인강을 따라 수영하며 도시를 즐기는 행사다.",https://www.basel.com/,true,532
+EUROPE,CH,스위스,바젤,바젤,10,바젤 가을 박람회,TRADITION,"1471년부터 이어진 바젤의 전통 가을 박람회로, 놀이기구, 시장, 먹거리와 도심 축제 분위기가 이어진다.",https://www.basel.com/,true,533
+EUROPE,CH,스위스,바젤,바젤,10,발루아즈 세션,ART,"바젤에서 열리는 음악 축제로, 국제 아티스트 공연과 실내 콘서트 중심의 프로그램이 진행된다.",https://www.baloisesession.ch/en,true,534
+EUROPE,CH,스위스,바젤,바젤,11,발루아즈 세션,ART,"바젤에서 열리는 음악 축제로, 국제 아티스트 공연과 실내 콘서트 중심의 프로그램이 진행된다.",https://www.baloisesession.ch/en,true,535
+EUROPE,CH,스위스,바젤,바젤,11,바젤 가을 박람회,TRADITION,"1471년부터 이어진 바젤의 전통 가을 박람회로, 놀이기구, 시장, 먹거리와 도심 축제 분위기가 이어진다.",https://www.basel.com/,true,536
+EUROPE,CH,스위스,바젤,바젤,11,바젤 크리스마스 마켓,SEASONAL,"스위스의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 시즌 공연이 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.basel.com/,true,537
+EUROPE,CH,스위스,바젤,바젤,12,바젤 크리스마스 마켓,SEASONAL,"스위스의 겨울 명절 시즌으로, 도심 조명, 크리스마스 마켓, 가족 행사와 시즌 공연이 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.basel.com/,true,538
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,1,코펜하겐 라이트 페스티벌,ART,"겨울 코펜하겐 도심과 항구, 운하 주변에 조명 예술 작품을 설치하는 빛 축제로, 도보와 보트 투어로 작품을 감상할 수 있다.",https://copenhagenlightfestival.org/,true,539
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,2,코펜하겐 라이트 페스티벌,ART,"겨울 코펜하겐 도심과 항구, 운하 주변에 조명 예술 작품을 설치하는 빛 축제로, 도보와 보트 투어로 작품을 감상할 수 있다.",https://copenhagenlightfestival.org/,true,540
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,2,빈터재즈 코펜하겐,ART,"덴마크 전역에서 열리는 겨울 재즈 축제의 코펜하겐 프로그램으로, 재즈 클럽과 공연장에서 다양한 재즈 공연이 열린다.",https://jazz.dk/vinterjazz/,true,541
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,3,코펜하겐 패밀리 컬처 나이트,CULTURE,"가족과 어린이를 위한 코펜하겐 문화 야간 행사로, 박물관, 공연장, 문화기관이 특별 프로그램을 운영한다.",https://kulturnatten.dk/en/,true,542
+EUROPE,DK,덴마크,코펜하겐,랑겔리니 공원,4,코펜하겐 사쿠라 페스티벌,CULTURAL_FESTIVAL,"코펜하겐 랑겔리니 공원에서 열리는 일본 문화와 벚꽃 축제로, 공연, 전통 체험, 음식과 가족 프로그램이 함께 진행된다.",https://sakurafestival.dk/,true,543
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,6,코펜하겐 디스토션,STREET_FESTIVAL,"코펜하겐 거리와 클럽을 무대로 열리는 도시형 음악·거리 축제로, 블록 파티, 전자음악 공연, 야외 무대가 이어진다.",https://www.cphdistortion.dk/,true,544
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,6,코펜하겐 카니발,CULTURAL_FESTIVAL,"세계 각국의 음악과 춤, 삼바 블로코, 거리 퍼레이드, 무료 콘서트, 댄스 쇼와 가족 친화 공연이 이어지는 코펜하겐의 다문화 카니발이다.",https://copenhagencarnival.dk/,true,545
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,6,상트 한스 전야제,TRADITION,"덴마크 전역에서 6월 23일 전후 열리는 성 요한 전야 전통 행사로, 모닥불, 연설, 노래와 지역 모임이 이어진다. 지역별 행사 규모는 해마다 달라질 수 있다.",https://www.visitdenmark.com/denmark/things-do/sankt-hans-aften-midsummer-celebrations-gdk1100650,true,546
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,7,코펜하겐 재즈 페스티벌,ART,"코펜하겐 전역의 공연장, 거리, 광장에서 열리는 대형 재즈 축제로, 국내외 재즈 공연을 도시 곳곳에서 즐길 수 있다.",https://jazz.dk/copenhagen-jazz-festival/,true,547
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,8,코펜하겐 쿠킹,FOOD_FESTIVAL,"코펜하겐에서 열리는 음식 축제로, 레스토랑, 셰프, 생산자가 참여해 덴마크 음식 문화와 미식 프로그램을 선보인다.",https://www.copenhagencooking.dk/,true,548
+EUROPE,DK,덴마크,코펜하겐,발뷔파르켄,8,시드 포 솔렌,FESTIVAL,"코펜하겐 발뷔파르켄에서 열리는 여름 음악 축제로, 야외 무대와 국제 아티스트 공연을 중심으로 진행된다.",https://sydforsolen.dk/,true,549
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,9,골든 데이즈 페스티벌,CULTURE,"역사와 문화, 예술을 주제로 코펜하겐 곳곳에서 열리는 문화사 축제로, 강연, 전시, 공연, 도시 프로그램이 이어진다.",https://goldendays.dk/,true,550
+EUROPE,DK,덴마크,코펜하겐,코펜하겐,10,코펜하겐 컬처 나이트,CULTURE,"코펜하겐의 박물관, 의회, 문화기관, 교회, 공연장이 밤 늦게까지 문을 열고 특별 프로그램을 운영하는 대표 문화 행사다.",https://kulturnatten.dk/en/,true,551
+EUROPE,DK,덴마크,코펜하겐,티볼리 가든,10,티볼리 가든 할로윈,SEASONAL,"티볼리 가든이 호박 장식과 할로윈 테마, 조명, 가족 프로그램으로 꾸며지는 가을 시즌 행사다.",https://www.tivoli.dk/en,true,552
+EUROPE,DK,덴마크,코펜하겐,티볼리 가든,11,티볼리 가든 크리스마스 시즌,SEASONAL,"티볼리 가든이 크리스마스 조명, 마켓, 놀이기구, 시즌 공연으로 꾸며지는 코펜하겐 대표 겨울 행사다.",https://www.tivoli.dk/en,true,553
+EUROPE,DK,덴마크,코펜하겐,티볼리 가든,12,티볼리 가든 크리스마스 시즌,SEASONAL,"티볼리 가든이 크리스마스 조명, 마켓, 놀이기구, 시즌 공연으로 꾸며지는 코펜하겐 대표 겨울 행사다.",https://www.tivoli.dk/en,true,554
+EUROPE,DK,덴마크,코펜하겐,티볼리 가든,12,티볼리 가든 새해 전야 행사,SEASONAL,"티볼리 가든에서 열리는 새해맞이 행사로, 연말 조명, 공연, 카운트다운과 불꽃놀이 분위기를 즐길 수 있다.",https://www.tivoli.dk/en,true,555
+EUROPE,DK,덴마크,빌룬,레고랜드 빌룬,5,레고랜드 LEGO 페스티벌,FESTIVAL,"레고랜드 빌룬에서 열리는 LEGO 테마 봄 시즌 행사로, 브릭 놀이, 가족 체험, 캐릭터 프로그램이 이어진다. 2026 세부 일정은 공식 발표 기준으로 확인이 필요하다.",https://www.legoland.dk/en/explore/festive-events-this-year/,true,556
+EUROPE,DK,덴마크,빌룬,레고랜드 빌룬,6,레고랜드 LEGO 페스티벌,FESTIVAL,"레고랜드 빌룬에서 열리는 LEGO 테마 봄 시즌 행사로, 브릭 놀이, 가족 체험, 캐릭터 프로그램이 이어진다. 2026 세부 일정은 공식 발표 기준으로 확인이 필요하다.",https://www.legoland.dk/en/explore/festive-events-this-year/,true,557
+EUROPE,DK,덴마크,빌룬,빌룬,6,빌룬 상트 한스 전야제,TRADITION,"덴마크 전역에서 6월 23일 전후 열리는 성 요한 전야 전통 행사로, 모닥불, 연설, 노래와 지역 모임이 이어진다. 지역별 행사 규모는 해마다 달라질 수 있다.",https://www.visitdenmark.com/denmark/things-do/sankt-hans-aften-midsummer-celebrations-gdk1100650,true,558
+EUROPE,DK,덴마크,빌룬,트레칸트 지역,8,트레칸트 지역 축제 주간,CULTURE,"빌룬이 속한 트레칸트 지역에서 열리는 지역 문화주간으로, 공연, 전시, 가족 프로그램, 지역 커뮤니티 행사가 도시별로 진행된다.",https://www.trekantomraadet.dk/,true,559
+EUROPE,DK,덴마크,빌룬,트레칸트 지역,9,트레칸트 지역 축제 주간,CULTURE,"빌룬이 속한 트레칸트 지역에서 열리는 지역 문화주간으로, 공연, 전시, 가족 프로그램, 지역 커뮤니티 행사가 도시별로 진행된다.",https://www.trekantomraadet.dk/,true,560
+EUROPE,DK,덴마크,빌룬,레고랜드 빌룬,10,레고랜드 할로윈 몬스터 파티,SEASONAL,"레고랜드 빌룬의 할로윈 시즌 행사로, 몬스터 테마 장식, 가족 체험, 할로윈 놀이 프로그램이 이어진다. 2026년은 10월 중심으로 운영된다.",https://www.legoland.dk/en/explore/festive-events-this-year/halloween-monster-party/,true,561
+EUROPE,DK,덴마크,빌룬,레고랜드 빌룬,11,레고랜드 크리스마스 시즌,SEASONAL,"레고랜드 빌룬의 겨울 시즌 행사로, 크리스마스 장식, 조명, LEGO 테마 가족 프로그램과 연말 분위기를 즐길 수 있다.",https://www.legoland.dk/en/explore/festive-events-this-year/christmas-at-legoland/,true,562
+EUROPE,DK,덴마크,빌룬,레고랜드 빌룬,12,레고랜드 크리스마스 시즌,SEASONAL,"레고랜드 빌룬의 겨울 시즌 행사로, 크리스마스 장식, 조명, LEGO 테마 가족 프로그램과 연말 분위기를 즐길 수 있다.",https://www.legoland.dk/en/explore/festive-events-this-year/christmas-at-legoland/,true,563
+EUROPE,DK,덴마크,올보르,올보르,2,올보르 파스텔라운,TRADITION,"사순절 전 열리는 덴마크 전통 카니발 풍습으로, 어린이 의상, 고양이 통 치기 놀이, 가족 행사 등이 이어진다. 올보르 지역별 프로그램은 해마다 달라질 수 있다.",https://www.visitdenmark.com/denmark/things-do/danish-traditions/fastelavn,true,564
+EUROPE,DK,덴마크,올보르,올보르,5,올보르 카니발,CULTURAL_FESTIVAL,"북유럽 최대급 카니발 중 하나로 알려진 올보르 대표 거리 축제이며, 퍼레이드, 의상, 음악과 도시 전역의 축제 분위기가 이어진다.",https://www.enjoynordjylland.com/north-jutland/plan-your-trip/aalborg-carnival-gdk596158,true,565
+EUROPE,DK,덴마크,올보르,니베,7,니베 페스티벌,FESTIVAL,"올보르 인근 니베에서 열리는 여름 음악 축제로, 다양한 공연과 캠핑형 축제 분위기를 즐길 수 있다.",https://nibefestival.dk/,true,566
+EUROPE,DK,덴마크,올보르,올보르 항구,7,올보르 레가타,CULTURAL_FESTIVAL,"올보르 항구를 중심으로 열리는 해양 가족 행사로, 선박, 항구 프로그램, 공연, 음식, 가족 친화 행사가 이어진다.",https://www.enjoynordjylland.com/north-jutland/plan-your-trip/aalborg-regatta-gdk731754,true,567
+EUROPE,DK,덴마크,올보르,올보르 항구,8,올보르 레가타,CULTURAL_FESTIVAL,"올보르 항구를 중심으로 열리는 해양 가족 행사로, 선박, 항구 프로그램, 공연, 음식, 가족 친화 행사가 이어진다.",https://www.enjoynordjylland.com/north-jutland/plan-your-trip/aalborg-regatta-gdk731754,true,568
+EUROPE,DK,덴마크,올보르,올보르,8,올보르 오페라 페스티벌,ART,"올보르 곳곳에서 열리는 오페라 축제로, 공연, 콘서트, 영화, 워크숍 등 다양한 방식으로 오페라를 접할 수 있다.",https://www.visitdenmark.com/denmark/plan-your-trip/aalborg-opera-festival-gdk798741,true,569
+EUROPE,DK,덴마크,올보르,올보르,11,올보르 크리스마스 마켓,SEASONAL,"올보르 도심에서 열리는 전통 크리스마스 마켓으로, 장식, 음식, 수공예품, 가족 행사와 연말 분위기가 이어진다.",https://www.enjoynordjylland.com/north-jutland/plan-your-trip/aalborg-christmas-market-gdk596125,true,570
+EUROPE,DK,덴마크,올보르,올보르,11,올보르 크리스마스 시즌,SEASONAL,"덴마크의 겨울 명절 시즌으로, 크리스마스 장식, 조명, 마켓, 가족 행사와 시즌 공연이 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.enjoynordjylland.com/,true,571
+EUROPE,DK,덴마크,올보르,올보르,12,올보르 크리스마스 마켓,SEASONAL,"올보르 도심에서 열리는 전통 크리스마스 마켓으로, 장식, 음식, 수공예품, 가족 행사와 연말 분위기가 이어진다.",https://www.enjoynordjylland.com/north-jutland/plan-your-trip/aalborg-christmas-market-gdk596125,true,572
+EUROPE,DK,덴마크,올보르,올보르,12,올보르 크리스마스 시즌,SEASONAL,"덴마크의 겨울 명절 시즌으로, 크리스마스 장식, 조명, 마켓, 가족 행사와 시즌 공연이 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.enjoynordjylland.com/,true,573
+EUROPE,SE,스웨덴,스톡홀름,스톡홀름,4,스톡홀름 컬처 나이트,CULTURE,"스톡홀름의 박물관, 공연장, 문화기관이 밤 늦게까지 문을 열고 특별 전시, 공연, 투어와 체험 프로그램을 운영하는 봄 문화 행사다.",https://kulturnattstockholm.se/,true,574
+EUROPE,SE,스웨덴,스톡홀름,스톡홀름,6,스톡홀름 미드소마르,TRADITION,"스웨덴의 대표 여름 전통 명절로, 꽃관 만들기, 미드소마르 폴 주변 춤, 전통 음식과 노래가 이어진다. 도시별 행사 규모와 장소는 해마다 달라질 수 있다.",https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/midsummer-tradition/midsummer/,true,575
+EUROPE,SE,스웨덴,스톡홀름,로젠달,6,로젠달 가든 파티,FESTIVAL,"스톡홀름 로젠달 지역에서 열리는 여름 음악·문화 행사로, 야외 공연과 정원 분위기를 함께 즐길 수 있다.",https://www.rosendal.com/,true,576
+EUROPE,SE,스웨덴,스톡홀름,스톡홀름,8,스톡홀름 컬처 페스티벌,CULTURE,"스톡홀름 도심에서 열리는 대형 무료 문화 축제로, 음악, 공연, 거리예술, 가족 프로그램이 도시 곳곳에서 진행된다.",https://kulturfestivalen.stockholm/,true,577
+EUROPE,SE,스웨덴,스톡홀름,스톡홀름,11,스톡홀름 크리스마스 마켓 시즌,SEASONAL,"스웨덴의 겨울 명절 시즌으로, 크리스마스 마켓, 조명, 전통 음식, 공연과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.visitstockholm.com/see-do/attractions/christmas-markets-in-stockholm/,true,578
+EUROPE,SE,스웨덴,스톡홀름,스톡홀름,12,스톡홀름 크리스마스 마켓 시즌,SEASONAL,"스웨덴의 겨울 명절 시즌으로, 크리스마스 마켓, 조명, 전통 음식, 공연과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.visitstockholm.com/see-do/attractions/christmas-markets-in-stockholm/,true,579
+EUROPE,SE,스웨덴,스톡홀름,스톡홀름,12,스톡홀름 루시아 축제,TRADITION,"12월 13일 전후 스웨덴 전역에서 열리는 빛의 전통 행사로, 루시아 행렬, 촛불, 합창, 전통 빵과 겨울 분위기가 이어진다.",https://www.skansen.se/,true,580
+EUROPE,SE,스웨덴,스톡홀름,스톡홀름,12,노벨 위크 라이트,ART,"노벨 주간을 전후해 스톡홀름 도심과 주요 장소에서 열리는 빛 예술 행사로, 노벨상과 과학·예술을 주제로 한 조명 작품을 감상할 수 있다.",https://nobelweeklights.se/,true,581
+EUROPE,SE,스웨덴,예테보리,예테보리,4,발보리 전야제,TRADITION,"봄을 맞이하는 스웨덴의 전통 행사로, 4월 말 모닥불, 합창, 연설과 지역 모임이 이어진다. 도시별 프로그램은 해마다 달라질 수 있다.",https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/walpurgis-night-valborg/,true,582
+EUROPE,SE,스웨덴,예테보리,함마르쿨렌,5,함마르쿨렌 카니발,CULTURAL_FESTIVAL,"예테보리 함마르쿨렌 지역에서 열리는 다문화 카니발로, 퍼레이드, 음악, 춤, 음식과 커뮤니티 프로그램이 이어진다.",https://www.goteborg.com/,true,583
+EUROPE,SE,스웨덴,예테보리,예테보리,6,예테보리 미드소마르,TRADITION,"스웨덴의 대표 여름 전통 명절로, 꽃관 만들기, 미드소마르 폴 주변 춤, 전통 음식과 노래가 이어진다. 도시별 행사 규모와 장소는 해마다 달라질 수 있다.",https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/midsummer-tradition/midsummer/,true,584
+EUROPE,SE,스웨덴,예테보리,예테보리,6,웨스트 프라이드,CULTURE,"예테보리에서 열리는 다양성과 인권 중심의 문화 행사로, 퍼레이드, 공연, 강연, 커뮤니티 프로그램이 함께 진행된다.",https://westpride.se/,true,585
+EUROPE,SE,스웨덴,예테보리,슬로츠스코겐,8,웨이 아웃 웨스트,FESTIVAL,"예테보리 슬로츠스코겐에서 열리는 대표 여름 음악·문화 축제로, 국제 아티스트 공연, 영화, 예술 프로그램이 함께 진행된다.",https://www.wayoutwest.se/,true,586
+EUROPE,SE,스웨덴,예테보리,예테보리,8,예테보리 칼라세트,CULTURAL_FESTIVAL,"예테보리 도심에서 열리는 무료 도시 축제로, 음악, 음식, 거리 프로그램, 가족 행사가 이어진다.",https://goteborgskalaset.se/,true,587
+EUROPE,SE,스웨덴,예테보리,리세베리,11,리세베리 크리스마스 시즌,SEASONAL,"리세베리 놀이공원이 크리스마스 조명, 마켓, 겨울 놀이와 가족 프로그램으로 꾸며지는 예테보리 대표 겨울 행사다.",https://www.liseberg.com/,true,588
+EUROPE,SE,스웨덴,예테보리,리세베리,12,리세베리 크리스마스 시즌,SEASONAL,"리세베리 놀이공원이 크리스마스 조명, 마켓, 겨울 놀이와 가족 프로그램으로 꾸며지는 예테보리 대표 겨울 행사다.",https://www.liseberg.com/,true,589
+EUROPE,SE,스웨덴,예테보리,예테보리,12,예테보리 루시아 축제,TRADITION,"12월 13일 전후 스웨덴 전역에서 열리는 빛의 전통 행사로, 루시아 행렬, 촛불, 합창, 전통 빵과 겨울 분위기가 이어진다.",https://www.goteborg.com/,true,590
+EUROPE,SE,스웨덴,말뫼,말뫼,4,말뫼 발보리 전야제,TRADITION,"봄을 맞이하는 스웨덴의 전통 행사로, 4월 말 모닥불, 합창, 연설과 지역 모임이 이어진다. 도시별 프로그램은 해마다 달라질 수 있다.",https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/walpurgis-night-valborg/,true,591
+EUROPE,SE,스웨덴,말뫼,말뫼,6,말뫼 미드소마르,TRADITION,"스웨덴의 대표 여름 전통 명절로, 꽃관 만들기, 미드소마르 폴 주변 춤, 전통 음식과 노래가 이어진다. 도시별 행사 규모와 장소는 해마다 달라질 수 있다.",https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/midsummer-tradition/midsummer/,true,592
+EUROPE,SE,스웨덴,말뫼,말뫼,6,솜마르셴 말뫼,CULTURE,"말뫼 시가 여름 동안 운영하는 무료 문화 프로그램으로, 공연, 음악, 연극, 가족 행사가 도시 곳곳에서 열린다.",https://malmo.se/Malmo-Sommarscen.html,true,593
+EUROPE,SE,스웨덴,말뫼,말뫼,7,솜마르셴 말뫼,CULTURE,"말뫼 시가 여름 동안 운영하는 무료 문화 프로그램으로, 공연, 음악, 연극, 가족 행사가 도시 곳곳에서 열린다.",https://malmo.se/Malmo-Sommarscen.html,true,594
+EUROPE,SE,스웨덴,말뫼,말뫼,8,솜마르셴 말뫼,CULTURE,"말뫼 시가 여름 동안 운영하는 무료 문화 프로그램으로, 공연, 음악, 연극, 가족 행사가 도시 곳곳에서 열린다.",https://malmo.se/Malmo-Sommarscen.html,true,595
+EUROPE,SE,스웨덴,말뫼,말뫼,8,말뫼 페스티벌,CULTURAL_FESTIVAL,"말뫼 도심에서 열리는 대형 도시 축제로, 음악, 음식, 거리공연, 가족 프로그램이 무료로 진행된다.",https://www.malmofestivalen.se/,true,596
+EUROPE,SE,스웨덴,말뫼,말뫼,9,말뫼 갤러리 위켄드,ART,"말뫼 전역의 갤러리와 예술 공간이 참여하는 연례 아트 행사로, 전시, 오픈 스튜디오, 예술 프로그램을 둘러볼 수 있다.",https://malmogallerihelg.se/,true,597
+EUROPE,SE,스웨덴,말뫼,말뫼,11,말뫼 크리스마스 시즌,SEASONAL,"스웨덴의 겨울 명절 시즌으로, 크리스마스 마켓, 조명, 전통 음식, 공연과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://visitskane.com/,true,598
+EUROPE,SE,스웨덴,말뫼,말뫼,12,말뫼 크리스마스 시즌,SEASONAL,"스웨덴의 겨울 명절 시즌으로, 크리스마스 마켓, 조명, 전통 음식, 공연과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://visitskane.com/,true,599
+EUROPE,SE,스웨덴,말뫼,말뫼,12,말뫼 루시아 축제,TRADITION,"12월 13일 전후 스웨덴 전역에서 열리는 빛의 전통 행사로, 루시아 행렬, 촛불, 합창, 전통 빵과 겨울 분위기가 이어진다.",https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/lucia/,true,600
+EUROPE,NO,노르웨이,오슬로,오슬로,3,오슬로 국제 교회음악 페스티벌,ART,"오슬로 대성당과 여러 교회를 중심으로 열리는 교회음악 축제로, 합창, 오르간, 성악, 현대·고전 종교음악 공연이 이어진다.",https://www.kirkemusikkfestivalen.no/,true,601
+EUROPE,NO,노르웨이,오슬로,오슬로,5,오슬로 노르웨이 헌법기념일,NATIONAL_HOLIDAY,"5월 17일 노르웨이 헌법기념일을 기념하는 전국 행사로, 어린이 퍼레이드, 전통 의상 부나드, 국기 장식, 음악과 가족 행사가 도시별로 이어진다.",https://www.visitnorway.com/typically-norwegian/norways-national-day/,true,602
+EUROPE,NO,노르웨이,오슬로,오슬로,6,오슬로 상크트한스 전야제,TRADITION,"노르웨이에서 6월 23일 전후 열리는 성 요한 전야 전통 행사로, 모닥불, 야외 모임, 음악과 여름맞이 분위기가 이어진다. 도시별 장소와 규모는 해마다 달라질 수 있다.",https://www.visitnorway.com/typically-norwegian/sankthans-midsummer/,true,603
+EUROPE,NO,노르웨이,오슬로,오슬로,6,오슬로 국립 음악의 날,ART,"오슬로 전역의 야외 무대와 공연 공간에서 무료 콘서트가 열리는 음악 행사로, 다양한 장르의 공연을 하루 동안 즐길 수 있다.",https://www.visitnorway.com/events//national-music-day-oslo/505141/,true,604
+EUROPE,NO,노르웨이,오슬로,그레프센콜렌,6,오버오슬로 페스티벌,FESTIVAL,"오슬로 전망을 내려다볼 수 있는 그레프센콜렌에서 열리는 여름 음악 축제로, 야외 공연과 도시 전망을 함께 즐길 수 있다.",https://overoslo.no/,true,605
+EUROPE,NO,노르웨이,오슬로,오슬로,8,오슬로 재즈 페스티벌,ART,"오슬로 여러 공연장에서 열리는 재즈 축제로, 노르웨이와 해외 재즈 아티스트들의 공연이 도시 곳곳에서 진행된다.",https://oslojazz.no/,true,606
+EUROPE,NO,노르웨이,오슬로,토옌파르켄,8,외야 페스티벌,FESTIVAL,"오슬로 토옌파르켄에서 열리는 대표 여름 음악 축제로, 대형 야외 공연, 음식, 친환경 축제 운영이 특징이다.",https://oyafestivalen.no/,true,607
+EUROPE,NO,노르웨이,오슬로,오슬로,8,오슬로 멜라 페스티벌,CULTURAL_FESTIVAL,"오슬로에서 열리는 다문화 음악·예술 축제로, 세계 여러 지역의 음악, 춤, 음식과 가족 프로그램이 함께 진행된다.",https://www.mela.no/,true,608
+EUROPE,NO,노르웨이,오슬로,오슬로,9,오슬로 컬처 나이트,CULTURE,"오슬로의 박물관, 공연장, 문화기관이 밤 늦게까지 문을 열고 특별 전시, 공연, 투어와 체험 프로그램을 제공하는 문화 행사다.",https://www.oslokulturnatt.no/,true,609
+EUROPE,NO,노르웨이,오슬로,오슬로,11,오슬로 크리스마스 시즌,SEASONAL,"노르웨이의 겨울 명절 시즌으로, 크리스마스 마켓, 조명, 전통 음식, 공연과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.visitoslo.com/en/whats-on/christmas/,true,610
+EUROPE,NO,노르웨이,오슬로,오슬로,12,오슬로 크리스마스 시즌,SEASONAL,"노르웨이의 겨울 명절 시즌으로, 크리스마스 마켓, 조명, 전통 음식, 공연과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://www.visitoslo.com/en/whats-on/christmas/,true,611
+EUROPE,NO,노르웨이,오슬로,오슬로,12,오슬로 크리스마스 마켓,SEASONAL,"오슬로 도심에서 열리는 크리스마스 마켓으로, 겨울 조명, 음식, 선물 부스, 가족 프로그램과 연말 분위기를 즐길 수 있다.",https://www.visitoslo.com/en/whats-on/christmas/,true,612
+EUROPE,NO,노르웨이,베르겐,베르겐,5,베르겐 노르웨이 헌법기념일,NATIONAL_HOLIDAY,"5월 17일 노르웨이 헌법기념일을 기념하는 전국 행사로, 어린이 퍼레이드, 전통 의상 부나드, 국기 장식, 음악과 가족 행사가 도시별로 이어진다.",https://www.visitnorway.com/typically-norwegian/norways-national-day/,true,613
+EUROPE,NO,노르웨이,베르겐,베르겐,5,베르겐 국제 페스티벌,ART,"베르겐을 대표하는 국제 예술 축제로, 클래식 음악, 연극, 무용, 현대 공연예술과 도시 문화 프로그램이 이어진다.",https://www.fib.no/en/,true,614
+EUROPE,NO,노르웨이,베르겐,베르겐,5,나트재즈,ART,"베르겐에서 열리는 재즈 축제로, 밤 시간대 공연과 다양한 재즈·즉흥음악 프로그램이 도시 공연장에서 진행된다.",https://nattjazz.no/,true,615
+EUROPE,NO,노르웨이,베르겐,베르겐,5,베르겐 스트리트 푸드 페스티벌,FOOD_FESTIVAL,"베르겐에서 열리는 거리 음식 축제로, 푸드트럭, 지역 음식, 세계 음식과 야외 축제 분위기를 함께 즐길 수 있다.",https://www.visitbergen.com/,true,616
+EUROPE,NO,노르웨이,베르겐,베르겐,6,베르겐 국제 페스티벌,ART,"베르겐을 대표하는 국제 예술 축제로, 클래식 음악, 연극, 무용, 현대 공연예술과 도시 문화 프로그램이 이어진다.",https://www.fib.no/en/,true,617
+EUROPE,NO,노르웨이,베르겐,베르겐,6,나트재즈,ART,"베르겐에서 열리는 재즈 축제로, 밤 시간대 공연과 다양한 재즈·즉흥음악 프로그램이 도시 공연장에서 진행된다.",https://nattjazz.no/,true,618
+EUROPE,NO,노르웨이,베르겐,베르겐후스 요새,6,베르겐페스트,FESTIVAL,"베르겐후스 요새에서 열리는 여름 음악 축제로, 국내외 아티스트 공연과 야외 축제 분위기를 즐길 수 있다.",https://www.bergenfest.no/,true,619
+EUROPE,NO,노르웨이,베르겐,브뤼겐·항구 일대,6,토르그다겐 베르겐,TRADITION,"베르겐 항구와 시장 전통을 기념하는 행사로, 오래된 배, 전통 복장, 해안 문화, 시장 분위기와 지역 음식이 함께 이어진다.",https://www.visitbergen.com/,true,620
+EUROPE,NO,노르웨이,베르겐,베르겐,6,베르겐 상크트한스 전야제,TRADITION,"노르웨이에서 6월 23일 전후 열리는 성 요한 전야 전통 행사로, 모닥불, 야외 모임, 음악과 여름맞이 분위기가 이어진다. 도시별 장소와 규모는 해마다 달라질 수 있다.",https://www.visitnorway.com/typically-norwegian/sankthans-midsummer/,true,621
+EUROPE,NO,노르웨이,베르겐,트롤하우겐,6,트롤하우겐 그리그 여름 콘서트,ART,"에드바르 그리그의 집 트롤하우겐에서 여름 동안 열리는 클래식 콘서트로, 그리그의 피아노 음악과 노르웨이 음악 전통을 감상할 수 있다.",https://en.visitbergen.com/whats-on/summer-concerts-at-troldhaugen-piano-works-by-edvard-grieg-p8405263,true,622
+EUROPE,NO,노르웨이,베르겐,트롤하우겐,7,트롤하우겐 그리그 여름 콘서트,ART,"에드바르 그리그의 집 트롤하우겐에서 여름 동안 열리는 클래식 콘서트로, 그리그의 피아노 음악과 노르웨이 음악 전통을 감상할 수 있다.",https://en.visitbergen.com/whats-on/summer-concerts-at-troldhaugen-piano-works-by-edvard-grieg-p8405263,true,623
+EUROPE,NO,노르웨이,베르겐,트롤하우겐,8,트롤하우겐 그리그 여름 콘서트,ART,"에드바르 그리그의 집 트롤하우겐에서 여름 동안 열리는 클래식 콘서트로, 그리그의 피아노 음악과 노르웨이 음악 전통을 감상할 수 있다.",https://en.visitbergen.com/whats-on/summer-concerts-at-troldhaugen-piano-works-by-edvard-grieg-p8405263,true,624
+EUROPE,NO,노르웨이,베르겐,트롤하우겐,9,트롤하우겐 그리그 여름 콘서트,ART,"에드바르 그리그의 집 트롤하우겐에서 여름 동안 열리는 클래식 콘서트로, 그리그의 피아노 음악과 노르웨이 음악 전통을 감상할 수 있다.",https://en.visitbergen.com/whats-on/summer-concerts-at-troldhaugen-piano-works-by-edvard-grieg-p8405263,true,625
+EUROPE,NO,노르웨이,베르겐,베르겐,9,베르겐 푸드 페스티벌,FOOD_FESTIVAL,"베르겐과 서부 노르웨이의 지역 음식, 생산자, 레스토랑과 미식 프로그램을 소개하는 음식 축제다.",https://en.visitbergen.com/whats-on/bergen-matfestival-food-festival-p1372883,true,626
+EUROPE,NO,노르웨이,베르겐,베르겐,11,베르겐 크리스마스 마켓,SEASONAL,"베르겐 도심에서 열리는 크리스마스 마켓으로, 겨울 조명, 음식, 선물 부스와 가족 프로그램이 이어진다.",https://en.visitbergen.com/whats-on/christmas-market-in-bergen-p638683,true,627
+EUROPE,NO,노르웨이,베르겐,베르겐,11,베르겐 페퍼카케뷔엔,SEASONAL,"베르겐의 겨울 전통 행사로, 시민과 학교, 단체가 만든 진저브레드 집들이 모여 거대한 진저브레드 도시를 이룬다.",https://www.pepperkakebyen.org/,true,628
+EUROPE,NO,노르웨이,베르겐,베르겐,12,베르겐 크리스마스 마켓,SEASONAL,"베르겐 도심에서 열리는 크리스마스 마켓으로, 겨울 조명, 음식, 선물 부스와 가족 프로그램이 이어진다.",https://en.visitbergen.com/whats-on/christmas-market-in-bergen-p638683,true,629
+EUROPE,NO,노르웨이,베르겐,베르겐,12,베르겐 페퍼카케뷔엔,SEASONAL,"베르겐의 겨울 전통 행사로, 시민과 학교, 단체가 만든 진저브레드 집들이 모여 거대한 진저브레드 도시를 이룬다.",https://www.pepperkakebyen.org/,true,630
+EUROPE,NO,노르웨이,트론헤임,트론헤임,2,바로크페스트 트론헤임,ART,"트론헤임에서 열리는 바로크 음악 축제로, 고음악 공연, 오르간, 실내악과 역사적 연주 프로그램이 이어진다.",https://www.barokkfest.no/,true,631
+EUROPE,NO,노르웨이,트론헤임,트론헤임,3,바로크페스트 트론헤임,ART,"트론헤임에서 열리는 바로크 음악 축제로, 고음악 공연, 오르간, 실내악과 역사적 연주 프로그램이 이어진다.",https://www.barokkfest.no/,true,632
+EUROPE,NO,노르웨이,트론헤임,트론헤임,5,트론헤임 노르웨이 헌법기념일,NATIONAL_HOLIDAY,"5월 17일 노르웨이 헌법기념일을 기념하는 전국 행사로, 어린이 퍼레이드, 전통 의상 부나드, 국기 장식, 음악과 가족 행사가 도시별로 이어진다.",https://www.visitnorway.com/typically-norwegian/norways-national-day/,true,633
+EUROPE,NO,노르웨이,트론헤임,트론헤임,6,트론헤임 상크트한스 전야제,TRADITION,"노르웨이에서 6월 23일 전후 열리는 성 요한 전야 전통 행사로, 모닥불, 야외 모임, 음악과 여름맞이 분위기가 이어진다. 도시별 장소와 규모는 해마다 달라질 수 있다.",https://www.visitnorway.com/typically-norwegian/sankthans-midsummer/,true,634
+EUROPE,NO,노르웨이,트론헤임,트론헤임·니다로스 대성당,7,올라브스페스트,RELIGIOUS_CULTURAL,"성 올라브 전통과 니다로스 대성당을 중심으로 열리는 트론헤임 대표 문화축제로, 음악, 예술, 강연, 순례와 도시 행사가 이어진다.",https://olavsfest.no/,true,635
+EUROPE,NO,노르웨이,트론헤임,트론헤임·니다로스 대성당,8,올라브스페스트,RELIGIOUS_CULTURAL,"성 올라브 전통과 니다로스 대성당을 중심으로 열리는 트론헤임 대표 문화축제로, 음악, 예술, 강연, 순례와 도시 행사가 이어진다.",https://olavsfest.no/,true,636
+EUROPE,NO,노르웨이,트론헤임,트론헤임,8,트뢰네르스크 푸드 페스티벌,FOOD_FESTIVAL,"트뢴델라그 지역의 음식 생산자, 레스토랑, 전통 식재료와 미식 문화를 소개하는 지역 음식 축제다.",https://www.visittrondheim.no/,true,637
+EUROPE,NO,노르웨이,트론헤임,트론헤임,8,트론헤임 브루어리 페스티벌,FOOD_FESTIVAL,"트론헤임에서 열리는 맥주 축제로, 지역 양조장, 시음 프로그램, 음식과 도시 축제 분위기가 함께 이어진다.",https://www.visittrondheim.no/,true,638
+EUROPE,NO,노르웨이,트론헤임,마리넨,8,프스테레오 페스티벌,FESTIVAL,"트론헤임 마리넨에서 열리는 여름 음악 축제로, 국내외 아티스트 공연과 도심 야외 축제 분위기를 즐길 수 있다.",https://pstereo.no/,true,639
+EUROPE,NO,노르웨이,트론헤임,트론헤임,9,트론헤임 컬처 나이트,CULTURE,"트론헤임의 박물관, 미술관, 역사 공간과 문화기관이 밤 늦게까지 문을 열고 무료 공연, 전시, 투어와 체험 프로그램을 제공하는 하루 문화 행사다.",https://kulturnatt-trondheim.no/en/home/,true,640
+EUROPE,NO,노르웨이,트론헤임,트론헤임,11,트론헤임 크리스마스 시즌,SEASONAL,"노르웨이의 겨울 명절 시즌으로, 크리스마스 마켓, 조명, 전통 음식, 공연과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://visittrondheim.no/en/christmas/,true,641
+EUROPE,NO,노르웨이,트론헤임,트론헤임,12,트론헤임 크리스마스 마켓,SEASONAL,"트론헤임 도심 광장에서 열리는 크리스마스 마켓으로, 수공예품, 음식, 조명, 가족 프로그램과 겨울 분위기를 즐길 수 있다.",https://julemarkedet-trondheim.no/en/welcome-to-the-christmas-market/,true,642
+EUROPE,NO,노르웨이,트론헤임,트론헤임,12,트론헤임 크리스마스 시즌,SEASONAL,"노르웨이의 겨울 명절 시즌으로, 크리스마스 마켓, 조명, 전통 음식, 공연과 가족 행사가 이어진다. 세부 운영 기간은 해마다 달라질 수 있다.",https://visittrondheim.no/en/christmas/,true,643

@@ -1,9 +1,12 @@
 package com.money.event.controller;
 
 import com.money.event.dto.TravelEventCalendarResponseDto;
+import com.money.event.dto.TravelEventLocationResponseDto;
 import com.money.event.service.TravelEventQueryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/events")
@@ -27,6 +30,11 @@ public class TravelEventApiController {
         }
 
         return travelEventQueryService.getMonthlyEventsByCountryAndCityAndMonth(countryCode, cityName, month);
+    }
+
+    @GetMapping("/locations")
+    public List<TravelEventLocationResponseDto> getEventLocations(){
+        return travelEventQueryService.getEventLocations();
     }
 
 }

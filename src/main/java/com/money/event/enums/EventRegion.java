@@ -4,7 +4,7 @@ public enum EventRegion {
     ASIA("ASIA", "data/event/asia/asia_monthly_events_seed_v1.csv"),
     EUROPE("EUROPE", "data/event/europe/europe_monthly_events_seed_v1.csv"),
     OCEANIA("OCEANIA", "data/event/oceania/oceania_monthly_events_seed_v1.csv"),
-    NORTH_AMERICA("NORTH_AMERICA", "data/event/north-america/north_america_monthly_events_seed_v1.csv"),
+    AMERICA("AMERICA", "data/event/america/america_monthly_events_seed_v1.csv"),
     MIDDLE_EAST("MIDDLE_EAST", "data/event/middle-east/middle_east_monthly_events_seed_v1.csv");
 
     private final String code;

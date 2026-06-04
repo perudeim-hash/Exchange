@@ -16,8 +16,15 @@ public interface TravelEventRepository extends JpaRepository<TravelEvent, Long> 
 
     List<TravelEvent> findByCountryCodeAndCityNameAndMonthAndEnabledTrueOrderByDisplayOrderAsc(String countryCode, String cityName, Integer month);
 
+    List<TravelEvent> findByEnabledTrueOrderByCountryNameAscCityNameAsc();
+
+    List<TravelEvent> findByEnabledTrueOrderByRegionAscCountryNameAscCityNameAsc();
+
     long countByRegion(String region);
+
     long countByCountryCode(String countryCode);
+
     boolean existsByCountryCodeAndCityNameAndMonthAndEventName(String CountryCode, String cityName, Integer month, String eventName);
+
     void deleteByRegion(String region);
 }
