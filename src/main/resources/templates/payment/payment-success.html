@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>결제 완료 | Travel Money</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/payment.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main class="payment-result-page">
+    <section class="payment-result-card success">
+        <div class="result-icon">✓</div>
+        <p class="payment-label">Payment Complete</p>
+        <h1>결제가 완료되었습니다</h1>
+        <p class="result-description">
+            항공권 예약과 결제 처리가 정상적으로 완료되었습니다.
+        </p>
+
+        <div class="result-info-list" th:if="${payment != null}">
+            <div>
+                <span>예약 번호</span>
+                <strong th:text="${payment.reservationNumber}">RSV-20260605-000001</strong>
+            </div>
+
+            <div>
+                <span>주문 번호</span>
+                <strong th:text="${payment.orderId}">RSV-20260605-000001</strong>
+            </div>
+
+            <div>
+                <span>결제 상태</span>
+                <strong th:text="${payment.status}">PAID</strong>
+            </div>
+
+            <div>
+                <span>결제 금액</span>
+                <strong th:text="${#numbers.formatInteger(payment.amount, 3, 'COMMA')} + '원'">450,000원</strong>
+            </div>
+
+            <div>
+                <span>결제 수단</span>
+                <strong th:text="${payment.paymentMethod != null ? payment.paymentMethod : '-'}">CARD</strong>
+            </div>
+
+            <div>
+                <span>Toss 승인 상태</span>
+                <strong th:text="${payment.providerStatus != null ? payment.providerStatus : '-'}">DONE</strong>
+            </div>
+        </div>
+
+        <div class="result-action-row">
+            <a th:if="${payment != null and payment.receiptUrl != null}"
+               th:href="${payment.receiptUrl}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="payment-main-button link-button">
+                영수증 보기
+            </a>
+
+            <a th:href="@{/}" class="payment-secondary-link">
+                메인으로 돌아가기
+            </a>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

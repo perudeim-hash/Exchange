@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>결제 실패 | Travel Money</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" th:href="@{/css/common.css}">
+  <link rel="stylesheet" th:href="@{/css/payment.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main class="payment-result-page">
+  <section class="payment-result-card fail">
+    <div class="result-icon">!</div>
+    <p class="payment-label">Payment Failed</p>
+    <h1>결제에 실패했습니다</h1>
+
+    <p class="result-description"
+       th:text="${errorMessage != null ? errorMessage : '결제가 취소되었거나 승인 처리 중 문제가 발생했습니다.'}">
+      결제가 취소되었거나 승인 처리 중 문제가 발생했습니다.
+    </p>
+
+    <div class="result-info-list" th:if="${payment != null}">
+      <div>
+        <span>예약 번호</span>
+        <strong th:text="${payment.reservationNumber}">RSV-20260605-000001</strong>
+      </div>
+
+      <div>
+        <span>주문 번호</span>
+        <strong th:text="${payment.orderId}">RSV-20260605-000001</strong>
+      </div>
+
+      <div>
+        <span>결제 상태</span>
+        <strong th:text="${payment.status}">FAILED</strong>
+      </div>
+
+      <div>
+        <span>실패 코드</span>
+        <strong th:text="${payment.failureCode != null ? payment.failureCode : '-'}">PAY_PROCESS_CANCELED</strong>
+      </div>
+
+      <div>
+        <span>실패 사유</span>
+        <strong th:text="${payment.failureReason != null ? payment.failureReason : '-'}">사용자가 결제를 취소했습니다.</strong>
+      </div>
+    </div>
+
+    <div class="result-info-list" th:if="${payment == null}">
+      <div th:if="${code != null}">
+        <span>실패 코드</span>
+        <strong th:text="${code}">PAY_PROCESS_CANCELED</strong>
+      </div>
+
+      <div th:if="${message != null}">
+        <span>실패 메시지</span>
+        <strong th:text="${message}">결제가 취소되었습니다.</strong>
+      </div>
+
+      <div th:if="${orderId != null}">
+        <span>주문 번호</span>
+        <strong th:text="${orderId}">RSV-20260605-000001</strong>
+      </div>
+    </div>
+
+    <div class="result-action-row">
+      <a th:href="@{/}" class="payment-secondary-link">
+        메인으로 돌아가기
+      </a>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

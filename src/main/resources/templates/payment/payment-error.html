@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>결제 오류 | Travel Money</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" th:href="@{/css/common.css}">
+  <link rel="stylesheet" th:href="@{/css/payment.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main class="payment-result-page">
+  <section class="payment-result-card error">
+    <div class="result-icon">?</div>
+    <p class="payment-label">Payment Error</p>
+    <h1>결제 처리 중 문제가 발생했습니다</h1>
+
+    <p class="result-description"
+       th:text="${reason != null ? reason : '결제 정보를 확인하는 중 문제가 발생했습니다.'}">
+      결제 정보를 확인하는 중 문제가 발생했습니다.
+    </p>
+
+    <div class="result-action-row">
+      <a th:href="@{/}" class="payment-secondary-link">
+        메인으로 돌아가기
+      </a>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

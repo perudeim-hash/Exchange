@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>항공권 결제 | Travel Money</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/payment.css}">
+
+    <script src="https://js.tosspayments.com/v2/standard"></script>
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main class="payment-page">
+    <section class="payment-hero">
+        <div class="payment-hero-inner">
+            <p class="payment-label">Flight Payment</p>
+            <h1>항공권 결제</h1>
+            <p>선택한 항공권 예약 정보를 확인한 뒤 Toss 테스트 결제를 진행합니다.</p>
+        </div>
+    </section>
+
+    <section class="payment-container">
+        <article class="payment-card"
+                 th:data-client-key="${payment.clientKey}"
+                 th:data-order-id="${payment.orderId}"
+                 th:data-order-name="${payment.orderName}"
+                 th:data-amount="${payment.amount}"
+                 th:data-customer-name="${payment.customerName}"
+                 th:data-customer-email="${payment.customerEmail}"
+                 th:data-success-url="${payment.successUrl}"
+                 th:data-fail-url="${payment.failUrl}">
+
+            <div class="payment-card-header">
+                <div>
+                    <p class="payment-card-label">예약 정보</p>
+                    <h2 th:text="${payment.orderName}">서울 -> 도쿄 항공권 예약</h2>
+                </div>
+                <span class="payment-status-badge">결제 대기</span>
+            </div>
+
+            <div class="payment-info-grid">
+                <div class="payment-info-item">
+                    <span>예약 번호</span>
+                    <strong th:text="${payment.reservationNumber}">RSV-20260605-000001</strong>
+                </div>
+
+                <div class="payment-info-item">
+                    <span>주문 번호</span>
+                    <strong th:text="${payment.orderId}">RSV-20260605-000001</strong>
+                </div>
+
+                <div class="payment-info-item">
+                    <span>예약자</span>
+                    <strong th:text="${payment.customerName}">테스트</strong>
+                </div>
+
+                <div class="payment-info-item">
+                    <span>이메일</span>
+                    <strong th:text="${payment.customerEmail}">test@example.com</strong>
+                </div>
+            </div>
+
+            <div class="payment-amount-box">
+                <span>최종 결제 금액</span>
+                <strong th:text="${#numbers.formatInteger(payment.amount, 3, 'COMMA')} + '원'">450,000원</strong>
+            </div>
+
+            <div id="paymentStatusMessage" class="payment-message hidden"></div>
+
+            <div class="payment-action-row">
+                <button type="button" id="tossPaymentButton" class="payment-main-button">
+                    Toss 테스트 결제하기
+                </button>
+
+                <a th:href="@{/}" class="payment-secondary-link">
+                    메인으로 돌아가기
+                </a>
+            </div>
+
+            <div class="payment-guide-box">
+                <strong>테스트 결제 안내</strong>
+                <p>
+                    테스트 키를 사용하는 경우 실제 결제수단에 청구되지 않습니다.
+                    결제창에서 인증이 완료되면 성공 URL로 이동하고, 서버에서 Toss 승인 API를 호출합니다.
+                </p>
+            </div>
+        </article>
+    </section>
+</main>
+
+<script th:src="@{/js/payment.js}"></script>
+</body>
+</html>
