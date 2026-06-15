@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>노선 보기</title>
+  <link rel="stylesheet" th:href="@{/css/flight-routes.css}">
+  <link rel="stylesheet" href="/css/common.css">
+
+</head>
+<body>
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main class="route-page">
+  <section class="route-hero">
+    <p class="route-label">FLIGHT ROUTE</p>
+    <h1>노선 보기</h1>
+    <p>국가, 도시, 공항을 선택해서 이용 가능한 항공 노선을 확인할 수 있습니다.</p>
+  </section>
+
+  <section class="route-search-box">
+    <h2>검색 조건</h2>
+    <p class="route-search-description">
+      출발지와 도착지를 국가, 도시, 공항 순서로 선택하면 해당 노선을 확인할 수 있습니다.
+    </p>
+
+    <div class="route-select-section">
+      <h3>출발지</h3>
+
+      <div class="route-select-grid">
+        <div class="route-input-group">
+          <label for="originCountrySelect">출발 국가</label>
+          <select id="originCountrySelect"></select>
+        </div>
+
+        <div class="route-input-group">
+          <label for="originCitySelect">출발 도시</label>
+          <select id="originCitySelect"></select>
+        </div>
+
+        <div class="route-input-group">
+          <label>출발 공항</label>
+          <div id="originAirportList" class="airport-radio-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="route-select-section">
+      <h3>도착지</h3>
+
+      <div class="route-select-grid">
+        <div class="route-input-group">
+          <label for="destinationCountrySelect">도착 국가</label>
+          <select id="destinationCountrySelect"></select>
+        </div>
+
+        <div class="route-input-group">
+          <label for="destinationCitySelect">도착 도시</label>
+          <select id="destinationCitySelect"></select>
+        </div>
+
+        <div class="route-input-group">
+          <label>도착 공항</label>
+          <div id="destinationAirportList" class="airport-radio-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="route-search-actions">
+      <button type="button" id="routeSearchButton">노선 검색</button>
+      <button type="button" id="routeResetButton">전체 노선 보기</button>
+    </div>
+  </section>
+
+  <section class="route-result-section">
+    <div class="route-section-title">
+      <h2>노선 목록</h2>
+      <p id="routeCountText">노선 정보를 불러오는 중입니다.</p>
+    </div>
+
+    <div id="routeList" class="route-list"></div>
+  </section>
+</main>
+
+<script th:src="@{/js/flight-routes.js}"></script>
+</body>
+</html>

@@ -18,7 +18,7 @@ public class TossPaymentGateway {
 
     private final TossPaymentProperties tossPaymentProperties;
     private final ObjectMapper objectMapper;
-    String TOSS_CONFIRM_URL = tossPaymentProperties.getBaseUrl() +"/confirm";
+    private static final String TOSS_CONFIRM_URL = "https://api.tosspayments.com/v1/payments/confirm";
 
     public TossPaymentConfirmResponseDto confirmPayment(String paymentKey, String orderId, Long amount) {
         validateConfirmRequest(paymentKey, orderId, amount);
