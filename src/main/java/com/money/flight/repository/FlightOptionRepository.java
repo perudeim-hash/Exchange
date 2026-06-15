@@ -111,6 +111,29 @@ public interface FlightOptionRepository extends JpaRepository<FlightOption, Long
                                                    @Param("connectionType") ConnectionType connectionType,
                                                    @Param("seatClass") SeatClass seatClass);
 
+    @Query("""
+            select distinct fo
+            from FlightOption fo
+            join fetch fo.flightRoute fr
+            join fetch fr.originAirport oa
+            join fetch  fr.destinationAirport da
+            join fetch fo.airline a
+            left join fetch fo.layoverAirport la
+            left join fetch fo.segments fs
+            left join fetch fs.originAirport soa
+            left join fetch fs.destinationAirport sda
+            where oa.code = :originCode
+            and da.code = :destinationCode
+            and fo.departureDate between :startDate and :endDate
+            and fo.enabled = true
+            and (:connectionType is null or fo.connectionType = :connectionType)
+            and (:seatClass is null or fo.seatClass = :seatClass)
+            order by fo.price asc, fo.departureDate asc, fo.departureTime asc
+            """)
+    List<FlightOption> findLowestPriceOptions(@Param("originCode") String originCode, @Param("destinationCode") String destinationCode,
+                                              @Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate,
+                                              @Param("connectionType") ConnectionType connectionType, @Param("seatClass") SeatClass seatClass, Pageable pageable);
+
     interface RouteDateProjection{
             Long getRouteId();
             LocalDate getDepartureDate();

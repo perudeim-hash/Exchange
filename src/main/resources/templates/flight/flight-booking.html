@@ -6,6 +6,7 @@
 
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/flight.css">
+  <link rel="stylesheet" href="/css/flight-booking.css">
 </head>
 
 <body>
@@ -15,9 +16,9 @@
   <section class="booking-hero">
     <div class="booking-hero-inner">
       <p class="page-label">Flight Detail</p>
-      <h1>선택한 항공권 상세 확인</h1>
-      <p class="booking-hero-description">
-        선택한 가는 편과 오는 편의 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.
+      <h1 id="bookingPageTitle">선택한 항공권 상세 확인</h1>
+      <p id="bookingPageDescription" class="booking-hero-description">
+        선택한 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.
       </p>
     </div>
   </section>
@@ -35,8 +36,8 @@
       <div class="booking-main">
         <div class="booking-summary-card">
           <div>
-            <p class="booking-card-label">선택한 여행</p>
-            <h2 id="bookingRouteTitle">왕복 항공권</h2>
+            <p id="bookingTripTypeLabel" class="booking-card-label">선택한 여행</p>
+            <h2 id="bookingRouteTitle">항공권</h2>
             <p id="bookingPassengerSummary" class="booking-sub-text">
               승객 정보를 불러오는 중입니다.
             </p>
@@ -47,10 +48,10 @@
           </button>
         </div>
 
-        <article class="booking-flight-card">
+        <article id="outboundFlightCard" class="booking-flight-card">
           <div class="booking-flight-header">
             <div>
-              <span class="booking-leg-badge">가는 편</span>
+              <span id="outboundBadge" class="booking-leg-badge">가는 편</span>
               <h3 id="outboundTitle">가는 편 항공권</h3>
             </div>
           </div>
@@ -60,7 +61,7 @@
           </div>
         </article>
 
-        <article class="booking-flight-card">
+        <article id="returnFlightCard" class="booking-flight-card">
           <div class="booking-flight-header">
             <div>
               <span class="booking-leg-badge return">오는 편</span>
@@ -79,11 +80,11 @@
           <p class="booking-card-label">요금 요약</p>
 
           <div class="booking-price-row">
-            <span>가는 편</span>
+            <span id="outboundPriceLabel">가는 편</span>
             <strong id="outboundPrice">-</strong>
           </div>
 
-          <div class="booking-price-row">
+          <div id="returnPriceRow" class="booking-price-row">
             <span>오는 편</span>
             <strong id="returnPrice">-</strong>
           </div>
@@ -112,6 +113,6 @@
   </section>
 </main>
 
-<script type="module" src="/js/flight-booking.js"></script>
+<script src="/js/flight-booking.js"></script>
 </body>
 </html>

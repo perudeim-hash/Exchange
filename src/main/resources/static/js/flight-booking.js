@@ -2,19 +2,29 @@ const bookingLoading = document.getElementById("bookingLoading");
 const bookingError = document.getElementById("bookingError");
 const bookingContent = document.getElementById("bookingContent");
 
+const bookingPageTitle = document.getElementById("bookingPageTitle");
+const bookingPageDescription = document.getElementById("bookingPageDescription");
+const bookingTripTypeLabel = document.getElementById("bookingTripTypeLabel");
+
 const bookingRouteTitle = document.getElementById("bookingRouteTitle");
 const bookingPassengerSummary = document.getElementById("bookingPassengerSummary");
 const pricePassengerSummary = document.getElementById("pricePassengerSummary");
 
 const backToResultsBtn = document.getElementById("backToResultsBtn");
 
+const outboundFlightCard = document.getElementById("outboundFlightCard");
+const returnFlightCard = document.getElementById("returnFlightCard");
+
+const outboundBadge = document.getElementById("outboundBadge");
 const outboundTitle = document.getElementById("outboundTitle");
 const returnTitle = document.getElementById("returnTitle");
 
 const outboundFlightDetail = document.getElementById("outboundFlightDetail");
 const returnFlightDetail = document.getElementById("returnFlightDetail");
 
+const outboundPriceLabel = document.getElementById("outboundPriceLabel");
 const outboundPrice = document.getElementById("outboundPrice");
+const returnPriceRow = document.getElementById("returnPriceRow");
 const returnPrice = document.getElementById("returnPrice");
 const totalPrice = document.getElementById("totalPrice");
 
@@ -32,18 +42,63 @@ function bindEvents() {
       return;
     }
 
-    window.location.href = "/flights/search";
+    window.location.href = "/flights/lowest-prices";
   });
 }
 
 async function fetchBookingDetail() {
   const params = new URLSearchParams(window.location.search);
 
+  if (isOneWayBookingPage()) {
+    await fetchOneWayBookingDetail(params);
+    return;
+  }
+
+  await fetchRoundTripBookingDetail(params);
+}
+
+function isOneWayBookingPage() {
+  return window.location.pathname.includes("/flights/booking/one-way");
+}
+
+async function fetchOneWayBookingDetail(params) {
+  const optionId = params.get("optionId");
+
+  if (!optionId) {
+    renderError("편도 항공권 선택 정보가 올바르지 않습니다. 다시 검색해 주세요.");
+    return;
+  }
+
+  renderLoading();
+
+  try {
+    const apiParams = new URLSearchParams();
+    apiParams.append("optionId", optionId);
+    apiParams.append("adultCount", params.get("adultCount") || "1");
+    apiParams.append("childCount", params.get("childCount") || "0");
+    apiParams.append("infantCount", params.get("infantCount") || "0");
+
+    const response = await fetch(`/api/flights/booking/one-way?${apiParams.toString()}`);
+
+    if (!response.ok) {
+      throw new Error("편도 항공권 상세 조회 실패");
+    }
+
+    const data = await response.json();
+
+    renderOneWayBookingDetail(data);
+  } catch (error) {
+    console.error(error);
+    renderError("편도 항공권 상세 정보를 불러오지 못했습니다. 다시 검색해 주세요.");
+  }
+}
+
+async function fetchRoundTripBookingDetail(params) {
   const outboundOptionId = params.get("outboundOptionId");
   const returnOptionId = params.get("returnOptionId");
 
   if (!outboundOptionId || !returnOptionId) {
-    renderError("항공권 선택 정보가 올바르지 않습니다. 다시 검색해 주세요.");
+    renderError("왕복 항공권 선택 정보가 올바르지 않습니다. 다시 검색해 주세요.");
     return;
   }
 
@@ -60,15 +115,15 @@ async function fetchBookingDetail() {
     const response = await fetch(`/api/flights/booking/round-trip?${apiParams.toString()}`);
 
     if (!response.ok) {
-      throw new Error("항공권 상세 조회 실패");
+      throw new Error("왕복 항공권 상세 조회 실패");
     }
 
     const data = await response.json();
 
-    renderBookingDetail(data);
+    renderRoundTripBookingDetail(data);
   } catch (error) {
     console.error(error);
-    renderError("항공권 상세 정보를 불러오지 못했습니다. 다시 검색해 주세요.");
+    renderError("왕복 항공권 상세 정보를 불러오지 못했습니다. 다시 검색해 주세요.");
   }
 }
 
@@ -85,7 +140,38 @@ function renderError(message) {
   bookingError.textContent = message;
 }
 
-function renderBookingDetail(data) {
+function renderOneWayBookingDetail(option) {
+  const originCode = getOriginAirportCode(option);
+  const destinationCode = getDestinationAirportCode(option);
+
+  bookingPageTitle.textContent = "선택한 편도 항공권 상세 확인";
+  bookingPageDescription.textContent =
+    "선택한 편도 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.";
+
+  bookingTripTypeLabel.textContent = "선택한 편도 여행";
+  bookingRouteTitle.textContent = `${originCode} → ${destinationCode} 편도 항공권`;
+
+  bookingPassengerSummary.textContent = option.passengerSummary || createPassengerSummary(option);
+  pricePassengerSummary.textContent = option.passengerSummary || createPassengerSummary(option);
+
+  outboundBadge.textContent = "편도";
+  outboundTitle.textContent = `${originCode} → ${destinationCode}`;
+  outboundFlightDetail.innerHTML = renderFlightOptionDetail("편도", option);
+
+  outboundPriceLabel.textContent = "항공권";
+  outboundPrice.textContent = `₩${formatPrice(option.totalPrice)}`;
+  totalPrice.textContent = `₩${formatPrice(option.totalPrice)}`;
+
+  returnFlightCard.style.display = "none";
+  returnPriceRow.style.display = "none";
+  returnPrice.textContent = "-";
+
+  bookingLoading.style.display = "none";
+  bookingError.style.display = "none";
+  bookingContent.style.display = "grid";
+}
+
+function renderRoundTripBookingDetail(data) {
   const outboundOption = data.outboundOption;
   const returnOption = data.returnOption;
 
@@ -95,12 +181,18 @@ function renderBookingDetail(data) {
   const returnOriginCode = getOriginAirportCode(returnOption);
   const returnDestinationCode = getDestinationAirportCode(returnOption);
 
+  bookingPageTitle.textContent = "선택한 왕복 항공권 상세 확인";
+  bookingPageDescription.textContent =
+    "선택한 가는 편과 오는 편의 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.";
+
+  bookingTripTypeLabel.textContent = "선택한 왕복 여행";
   bookingRouteTitle.textContent =
     `${outboundOriginCode} ↔ ${outboundDestinationCode} 왕복 항공권`;
 
   bookingPassengerSummary.textContent = data.passengerSummary || createPassengerSummary(data);
   pricePassengerSummary.textContent = data.passengerSummary || createPassengerSummary(data);
 
+  outboundBadge.textContent = "가는 편";
   outboundTitle.textContent =
     `${outboundOriginCode} → ${outboundDestinationCode}`;
 
@@ -110,9 +202,13 @@ function renderBookingDetail(data) {
   outboundFlightDetail.innerHTML = renderFlightOptionDetail("가는 편", outboundOption);
   returnFlightDetail.innerHTML = renderFlightOptionDetail("오는 편", returnOption);
 
+  outboundPriceLabel.textContent = "가는 편";
   outboundPrice.textContent = `₩${formatPrice(data.outboundTotalPrice)}`;
   returnPrice.textContent = `₩${formatPrice(data.returnTotalPrice)}`;
   totalPrice.textContent = `₩${formatPrice(data.totalPrice)}`;
+
+  returnFlightCard.style.display = "block";
+  returnPriceRow.style.display = "flex";
 
   bookingLoading.style.display = "none";
   bookingError.style.display = "none";
@@ -120,17 +216,27 @@ function renderBookingDetail(data) {
 }
 
 function renderFlightOptionDetail(label, option) {
+  const sortedSegments = getSortedSegments(option);
+  const firstSegment = sortedSegments.length > 0 ? sortedSegments[0] : null;
+  const lastSegment = sortedSegments.length > 0 ? sortedSegments[sortedSegments.length - 1] : null;
+
   const originCode = getOriginAirportCode(option);
   const destinationCode = getDestinationAirportCode(option);
   const segmentPathText = createSegmentPathText(option);
   const connectionText = createConnectionText(option);
 
+  const departureDate = firstSegment ? firstSegment.departureDate : null;
+  const departureTime = firstSegment ? firstSegment.departureTime : option.departureTime;
+
+  const arrivalDate = lastSegment ? lastSegment.arrivalDate : option.arrivalDate;
+  const arrivalTime = lastSegment ? lastSegment.arrivalTime : option.arrivalTime;
+
   return `
     <div class="booking-route-overview">
       <div class="booking-route-time-block">
-        <strong>${formatTime(option.departureTime)}</strong>
+        <strong>${formatTime(departureTime)}</strong>
         <span>${escapeHtml(originCode)}</span>
-        <small>${formatDate(option.departureDate)}</small>
+        <small>${formatDate(departureDate)}</small>
       </div>
 
       <div class="booking-route-center">
@@ -141,9 +247,9 @@ function renderFlightOptionDetail(label, option) {
       </div>
 
       <div class="booking-route-time-block right">
-        <strong>${formatTime(option.arrivalTime)}</strong>
+        <strong>${formatTime(arrivalTime)}</strong>
         <span>${escapeHtml(destinationCode)}</span>
-        <small>${formatDate(option.arrivalDate)}</small>
+        <small>${formatDate(arrivalDate)}</small>
       </div>
     </div>
 

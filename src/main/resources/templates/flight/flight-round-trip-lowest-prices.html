@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>왕복 최저가 항공권</title>
+
+  <link rel="stylesheet" th:href="@{/css/common.css}">
+  <link rel="stylesheet" th:href="@{/css/flight-round-trip-lowest-prices.css}">
+</head>
+<body>
+
+<div class="page">
+  <section class="page-header">
+    <p class="eyebrow">ROUND TRIP LOWEST PRICE</p>
+    <h1>왕복 최저가 항공권</h1>
+    <p class="page-description">
+      가는 편과 오는 편을 조합해서 총 가격이 낮은 왕복 항공권을 조회합니다.
+    </p>
+  </section>
+
+  <section class="search-panel">
+    <div class="search-grid">
+      <div class="field-group">
+        <label for="originInput">출발 공항 코드</label>
+        <input id="originInput" type="text" placeholder="ICN" value="ICN">
+      </div>
+
+      <div class="field-group">
+        <label for="destinationInput">도착 공항 코드</label>
+        <input id="destinationInput" type="text" placeholder="NRT" value="NRT">
+      </div>
+
+      <div class="field-group">
+        <label for="outboundStartDateInput">가는 편 시작일</label>
+        <input id="outboundStartDateInput" type="date">
+      </div>
+
+      <div class="field-group">
+        <label for="outboundEndDateInput">가는 편 종료일</label>
+        <input id="outboundEndDateInput" type="date">
+      </div>
+
+      <div class="field-group">
+        <label for="returnStartDateInput">오는 편 시작일</label>
+        <input id="returnStartDateInput" type="date">
+      </div>
+
+      <div class="field-group">
+        <label for="returnEndDateInput">오는 편 종료일</label>
+        <input id="returnEndDateInput" type="date">
+      </div>
+
+      <div class="field-group">
+        <label for="adultCountInput">성인</label>
+        <input id="adultCountInput" type="number" min="1" value="1">
+      </div>
+
+      <div class="field-group">
+        <label for="childCountInput">아동</label>
+        <input id="childCountInput" type="number" min="0" value="0">
+      </div>
+
+      <div class="field-group">
+        <label for="infantCountInput">유아</label>
+        <input id="infantCountInput" type="number" min="0" value="0">
+      </div>
+
+      <div class="field-group">
+        <label for="limitSelect">조회 개수</label>
+        <select id="limitSelect">
+          <option value="10">10개</option>
+          <option value="15">15개</option>
+          <option value="20">20개</option>
+          <option value="25">25개</option>
+          <option value="30">30개</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button id="searchButton" type="button">왕복 최저가 조회</button>
+    </div>
+  </section>
+
+  <section class="result-summary" id="resultSummary">
+    왕복 최저가 항공권을 조회해 주세요.
+  </section>
+
+  <section class="result-list" id="resultList"></section>
+</div>
+
+<script th:src="@{/js/flight-round-trip-lowest-prices.js}"></script>
+</body>
+</html>

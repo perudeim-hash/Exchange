@@ -1,5 +1,6 @@
 package com.money.flight.controller;
 
+import com.money.flight.dto.FlightOptionResponseDto;
 import com.money.flight.dto.RoundTripBookingResponseDto;
 import com.money.flight.service.FlightBookingService;
 import lombok.RequiredArgsConstructor;
@@ -29,4 +30,18 @@ public class FlightBookingController {
         return flightBookingService.getRoundTripBookingDetail(outboundOptionId, returnOptionId, adultCount, childCount, infantCount);
     }
 
-}
+    @GetMapping("/flights/booking/one-way")
+    public String oneWayBookingPage() {
+        return "flight/flight-booking";
+    }
+
+    @ResponseBody
+    @GetMapping("/api/flights/booking/one-way")
+    public FlightOptionResponseDto getOneWayBookingDetail(@RequestParam Long optionId,
+                                                          @RequestParam(defaultValue = "1") int adultCount,
+                                                          @RequestParam(defaultValue = "0") int childCount,
+                                                          @RequestParam(defaultValue = "0") int infantCount) {
+        return flightBookingService.getOneWayBookingDetail(optionId, adultCount, childCount, infantCount);
+    }
+
+    }

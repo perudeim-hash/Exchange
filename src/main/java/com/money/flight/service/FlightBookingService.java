@@ -35,7 +35,17 @@ public class FlightBookingService {
         return RoundTripBookingResponseDto.of(outboundOptionDto, returnOptionDto, adultCount, childCount, infantCount);
     }
 
+    @Transactional(readOnly = true)
+    public FlightOptionResponseDto getOneWayBookingDetail(Long optionId, int adultCount, int childCount, int infantCount) {
+        if (optionId == null) {
+            throw new IllegalArgumentException("편도 항공권 옵션 ID는 필수입니다.");
+        }
+        flightFareCalculator.validatePassengerCounts(adultCount, childCount, infantCount);
+        FlightOption option = getFlightOptionOrThrow(optionId);
+        PassengerFareDto passengerFare = flightFareCalculator.calculate(option.getPrice(), adultCount, childCount, infantCount);
 
+        return FlightOptionResponseDto.from(option, passengerFare);
+    }
 
     private void validateOptionIds(Long outboundOptionId, Long returnOptionId) {
         if (outboundOptionId == null) {

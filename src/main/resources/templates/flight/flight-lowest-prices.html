@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>최저가 항공권</title>
+
+  <link rel="stylesheet" th:href="@{/css/common.css}">
+  <link rel="stylesheet" th:href="@{/css/flight-lowest-prices.css}">
+</head>
+<body>
+
+<main class="lowest-price-page">
+
+  <section class="lowest-price-header">
+    <p class="page-eyebrow">LOWEST PRICE FLIGHT</p>
+    <h1>최저가 항공권 조회</h1>
+    <p class="page-description">
+      편도 또는 왕복 기준으로 가장 저렴한 항공권을 조회합니다.
+    </p>
+  </section>
+
+  <section class="search-panel">
+
+    <div class="trip-type-tabs">
+      <button type="button"
+              class="trip-type-button active"
+              id="oneWayTripButton"
+              data-trip-type="ONE_WAY">
+        편도 최저가
+      </button>
+
+      <button type="button"
+              class="trip-type-button"
+              id="roundTripTripButton"
+              data-trip-type="ROUND_TRIP">
+        왕복 최저가
+      </button>
+    </div>
+
+    <div class="airport-search-grid">
+
+      <div class="airport-box">
+        <h2>출발지</h2>
+
+        <div class="field-group">
+          <label for="originRegionSelect">대륙</label>
+          <select id="originRegionSelect">
+            <option value="">대륙 선택</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="originCountrySelect">나라</label>
+          <select id="originCountrySelect">
+            <option value="">나라 선택</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="originAirportSelect">공항</label>
+          <select id="originAirportSelect">
+            <option value="">공항 선택</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="airport-box">
+        <h2>도착지</h2>
+
+        <div class="field-group">
+          <label for="destinationRegionSelect">대륙</label>
+          <select id="destinationRegionSelect">
+            <option value="">대륙 선택</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="destinationCountrySelect">나라</label>
+          <select id="destinationCountrySelect">
+            <option value="">나라 선택</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="destinationAirportSelect">공항</label>
+          <select id="destinationAirportSelect">
+            <option value="">공항 선택</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="date-area" id="oneWayDateArea">
+      <div class="field-group">
+        <label for="startDateInput">조회 시작일</label>
+        <input type="date" id="startDateInput">
+      </div>
+
+      <div class="field-group">
+        <label for="endDateInput">조회 종료일</label>
+        <input type="date" id="endDateInput">
+      </div>
+    </div>
+
+    <div class="date-area" id="roundTripDateArea" style="display: none;">
+      <div class="field-group">
+        <label for="outboundStartDateInput">가는 편 시작일</label>
+        <input type="date" id="outboundStartDateInput">
+      </div>
+
+      <div class="field-group">
+        <label for="outboundEndDateInput">가는 편 종료일</label>
+        <input type="date" id="outboundEndDateInput">
+      </div>
+
+      <div class="field-group">
+        <label for="returnStartDateInput">오는 편 시작일</label>
+        <input type="date" id="returnStartDateInput">
+      </div>
+
+      <div class="field-group">
+        <label for="returnEndDateInput">오는 편 종료일</label>
+        <input type="date" id="returnEndDateInput">
+      </div>
+    </div>
+
+    <div class="option-grid">
+
+      <div class="field-group">
+        <label for="connectionTypeSelect">운항 방식</label>
+        <select id="connectionTypeSelect">
+          <option value="">전체</option>
+          <option value="DIRECT">직항</option>
+          <option value="ONE_STOP">1회 경유</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="seatClassSelect">좌석 등급</label>
+        <select id="seatClassSelect">
+          <option value="">전체</option>
+          <option value="ECONOMY">이코노미</option>
+          <option value="BUSINESS">비즈니스</option>
+          <option value="FIRST">퍼스트</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="adultCountInput">성인</label>
+        <input type="number" id="adultCountInput" min="1" value="1">
+      </div>
+
+      <div class="field-group">
+        <label for="childCountInput">아동</label>
+        <input type="number" id="childCountInput" min="0" value="0">
+      </div>
+
+      <div class="field-group">
+        <label for="infantCountInput">유아</label>
+        <input type="number" id="infantCountInput" min="0" value="0">
+      </div>
+
+      <div class="field-group">
+        <label for="limitSelect">조회 개수</label>
+        <select id="limitSelect">
+          <option value="10">10개</option>
+          <option value="15">15개</option>
+          <option value="20">20개</option>
+          <option value="25">25개</option>
+          <option value="30" selected>30개</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="search-button-row">
+      <button type="button" id="searchButton">
+        최저가 조회
+      </button>
+    </div>
+
+  </section>
+
+  <section class="result-summary" id="resultSummary">
+    조회 조건을 선택한 뒤 최저가 항공권을 조회해 주세요.
+  </section>
+
+  <section class="result-list" id="resultList"></section>
+
+</main>
+
+<script th:src="@{/js/flight-lowest-prices.js}"></script>
+</body>
+</html>
