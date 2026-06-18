@@ -8,6 +8,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class ReservationCreateRequestDto {
+    private String tripType;
     private Long outboundFlightOptionId;
     private Long returnFlightOptionId;
     private String originAirportCode;

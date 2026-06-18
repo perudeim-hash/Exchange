@@ -1,0 +1,394 @@
+.home-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 96px 0 88px;
+    background:
+            radial-gradient(circle at 82% 16%, rgba(56, 189, 248, 0.26), transparent 30%),
+            radial-gradient(circle at 10% 82%, rgba(37, 99, 235, 0.22), transparent 28%),
+            linear-gradient(135deg, #061d35 0%, #082746 48%, #0b3155 100%);
+    color: #ffffff;
+}
+
+.home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(90deg, rgba(6, 29, 53, 0.95), rgba(6, 29, 53, 0.55), rgba(6, 29, 53, 0.92)),
+            url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=80");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
+}
+
+.home-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.home-hero-title {
+    margin: 0;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.16;
+    letter-spacing: -0.06em;
+    font-weight: 900;
+}
+
+.home-hero-description {
+    max-width: 680px;
+    color: #dbeafe;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.home-hero-points {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 660px;
+}
+
+.home-point-item {
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+}
+
+.home-point-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.home-point-item span {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.home-search-preview-card {
+    position: relative;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.96);
+    color: #111827;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+}
+
+.home-search-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.home-search-card-header p {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.home-search-card-header h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.35;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.home-badge {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.home-route-box {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    background: #f8fafc;
+}
+
+.home-airport span {
+    display: block;
+    margin-bottom: 5px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.home-airport strong {
+    display: block;
+    color: #111827;
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.home-airport small {
+    display: block;
+    margin-top: 7px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.home-route-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #2563eb;
+    font-size: 24px;
+    font-weight: 900;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.home-flight-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.home-flight-info-grid div {
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.home-flight-info-grid span {
+    display: block;
+    margin-bottom: 6px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.home-flight-info-grid strong {
+    display: block;
+    color: #111827;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.home-service-section {
+    padding: 88px 0;
+    background: #f8fafc;
+}
+
+.home-section-heading h2 {
+    margin: 10px 0 12px;
+    color: #111827;
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+}
+
+.home-section-heading p:last-child {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.home-feature-card {
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 26px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.home-feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #bfdbfe;
+    box-shadow: 0 20px 46px rgba(15, 23, 42, 0.09);
+}
+
+.home-feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.home-feature-card h3 {
+    margin: 0 0 12px;
+    color: #111827;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+}
+
+.home-feature-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.home-feature-card a {
+    display: inline-flex;
+    margin-top: 22px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.home-feature-card a:hover {
+    color: #1d4ed8;
+}
+
+.home-flow-section {
+    padding: 86px 0 96px;
+    background: #ffffff;
+}
+
+.home-flow-section h2 {
+    margin: 10px 0 16px;
+    color: #111827;
+    font-size: 36px;
+    line-height: 1.28;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+}
+
+.home-flow-section p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.home-flow-list {
+    display: grid;
+    gap: 16px;
+}
+
+.home-flow-item {
+    display: grid;
+    grid-template-columns: 64px 160px 1fr;
+    gap: 18px;
+    align-items: center;
+    padding: 22px;
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    background: #f8fafc;
+}
+
+.home-flow-item span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.home-flow-item strong {
+    color: #111827;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.home-flow-item p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+    .home-hero {
+        padding: 72px 0;
+    }
+
+    .home-hero-points {
+        grid-template-columns: 1fr;
+    }
+
+    .home-search-preview-card {
+        margin-top: 12px;
+    }
+
+    .home-flow-item {
+        grid-template-columns: 56px 1fr;
+    }
+
+    .home-flow-item p {
+        grid-column: 2 / -1;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-hero {
+        padding: 56px 0;
+    }
+
+    .home-route-box {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .home-airport.text-end {
+        text-align: left !important;
+    }
+
+    .home-route-arrow {
+        transform: rotate(90deg);
+    }
+
+    .home-flight-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-search-preview-card {
+        padding: 22px;
+        border-radius: 24px;
+    }
+
+    .home-service-section,
+    .home-flow-section {
+        padding: 64px 0;
+    }
+
+    .home-section-heading h2,
+    .home-flow-section h2 {
+        font-size: 30px;
+    }
+}

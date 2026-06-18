@@ -39,7 +39,7 @@ public class FlightDataInitializer implements CommandLineRunner {
 
 
     private void initAirlinesFromCsv() throws Exception {
-        ClassPathResource resource = new ClassPathResource("data/airline.csv");
+        ClassPathResource resource = new ClassPathResource("data/flight/airline.csv");
         try (BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8))) {
             String line;
             boolean isHeader = true;
@@ -80,7 +80,7 @@ public class FlightDataInitializer implements CommandLineRunner {
     }
 
     private void initRoutesFromCsv() throws IOException {
-        ClassPathResource resource = new ClassPathResource("data/routes.csv");
+        ClassPathResource resource = new ClassPathResource("data/flight/routes.csv");
         try (BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8))) {
             String line;
             boolean isHeader = true;
@@ -139,7 +139,7 @@ public class FlightDataInitializer implements CommandLineRunner {
 
 
     private void initAirportFromCsv() throws IOException {
-        ClassPathResource resource = new ClassPathResource("data/airports.csv");
+        ClassPathResource resource = new ClassPathResource("data/flight/airports.csv");
         try (BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8))) {
             String line;
             boolean isHeader = true;

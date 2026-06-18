@@ -1,5 +1,6 @@
 package com.money.payment.service;
 
+import com.money.flight.enums.TripType;
 import com.money.payment.dto.ReservationCreateRequestDto;
 import com.money.payment.entity.Reservation;
 import com.money.payment.repository.ReservationRepository;
@@ -21,12 +22,17 @@ public class ReservationService {
     private static final SecureRandom RANDOM = new SecureRandom();
 
     public Reservation createReservation(ReservationCreateRequestDto request) {
-        validateCreateRequest(request);
+        TripType tripType = parseTripType(request);
+        validateCreateRequest(request, tripType);
         String reservationNumber = createReservationNumber();
+
+        Long returnFlightOptionId = tripType == TripType.ROUND_TRIP ? request.getReturnFlightOptionId() : null;
+        LocalDate returnDate = tripType == TripType.ROUND_TRIP ? request.getReturnDate() : null;
         Reservation reservation = Reservation.create(
                 reservationNumber,
+                tripType,
                 request.getOutboundFlightOptionId(),
-                request.getReturnFlightOptionId(),
+                returnFlightOptionId,
                 normalizeUpper(request.getOriginAirportCode()),
                 requireText(request.getOriginAirportName(), "출발 공항 이름은 필수 입니다."),
                 requireText(request.getOriginCityName(), "출발 도시는 필수 입니다."),
@@ -34,7 +40,7 @@ public class ReservationService {
                 requireText(request.getDestinationAirportName(), "도착 공항 이름은 필수 입니다."),
                 requireText(request.getDestinationCityName(), "도착 도시는 필수 입니다."),
                 request.getDepartureDate(),
-                request.getReturnDate(),
+                returnDate,
                 request.getAdultCount(),
                 request.getChildCount(),
                 request.getInfantCount(),
@@ -74,34 +80,6 @@ public class ReservationService {
         return reservation;
     }
 
-    private void validateCreateRequest(ReservationCreateRequestDto request) {
-        if (request == null) {
-            throw new IllegalArgumentException("예약 요청 정보가 없습니다.");
-        }
-
-        if (request.getOutboundFlightOptionId() == null) {
-            throw new IllegalArgumentException("출국 항공권 ID는 필수입니다.");
-        }
-
-        if (request.getReturnFlightOptionId() == null) {
-            throw new IllegalArgumentException("귀국 항공권 ID는 필수입니다.");
-        }
-
-        if (request.getDepartureDate() == null) {
-            throw new IllegalArgumentException("출발일은 필수입니다.");
-        }
-        if (request.getReturnDate() == null) {
-            throw new IllegalArgumentException("귀국일은 필수입니다.");
-        }
-        if (request.getReturnDate().isBefore(request.getDepartureDate())) {
-            throw new IllegalArgumentException("귀국일이 출발일보다 빠를 수 없습니다.");
-        }
-        validatePassengerCount(request.getAdultCount(), request.getChildCount(), request.getInfantCount());
-        if (request.getTotalAmount() == null || request.getTotalAmount() <= 0) {
-            throw new IllegalArgumentException("결제 금액은 0원보다 커야 합니다.");
-        }
-    }
-
     private void validatePassengerCount(int adultCount, int childCount, int infantCount) {
         if (adultCount < 1) {
             throw new IllegalArgumentException("성인은 최소 1명 이상이어야 합니다.");
@@ -118,6 +96,38 @@ public class ReservationService {
 
         if (infantCount > adultCount) {
             throw new IllegalArgumentException("유아 수는 성인 수보다 많을 수 없습니다.");
+        }
+    }
+
+    private void validateCreateRequest(ReservationCreateRequestDto request, TripType tripType) {
+        if (request == null) {
+            throw new IllegalArgumentException("예약 요청 정보가 없습니다.");
+        }
+        if (tripType == null) {
+            throw new IllegalArgumentException("여행 타입은 필수입니다.");
+        }
+        if (request.getOutboundFlightOptionId() == null) {
+            throw new IllegalArgumentException("출국 항공권 ID는 필수입니다.");
+        }
+
+        if (request.getDepartureDate() == null) {
+            throw new IllegalArgumentException("출발일은 필수입니다.");
+        }
+
+        if (tripType == TripType.ROUND_TRIP) {
+            if (request.getReturnFlightOptionId() == null) {
+                throw new IllegalArgumentException("귀국 항공권 ID는 필수입니다.");
+            }
+            if (request.getReturnDate() == null) {
+                throw new IllegalArgumentException("귀국일은 필수입니다.");
+            }
+            if (request.getReturnDate().isBefore(request.getDepartureDate())) {
+                throw new IllegalArgumentException("귀국일이 출발일보다 빠를수가 없습니다.");
+            }
+        }
+        validatePassengerCount(request.getAdultCount(), request.getChildCount(), request.getInfantCount());
+        if (request.getTotalAmount() == null || request.getTotalAmount() <= 0) {
+            throw new IllegalArgumentException("결제 금액은 0원보다 커야 합니다.");
         }
     }
 
@@ -146,5 +156,17 @@ public class ReservationService {
         return value.trim();
     }
 
+    private TripType parseTripType(ReservationCreateRequestDto request) {
+        if (request == null) {
+            throw new IllegalArgumentException("예약 요청 정보가 없습니다.");
+        }
+        String rawTripType = requireText(request.getTripType(), "여행 타입은 필수입니다.");
+        try {
+            return TripType.valueOf(rawTripType.trim().toUpperCase());
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("지원하지 않는 여행 타입입니다. tripType = " + rawTripType);
+        }
+
+    }
 }
 
