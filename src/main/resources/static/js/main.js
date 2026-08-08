@@ -1,398 +1,466 @@
-const currencyRates = window.__CURRENCY_RATES__ || [];
-const countryRates = window.__COUNTRY_RATES__ || [];
+import { getTodayText } from "./common/date-utils.js";
+import { moveTo } from "./common/url-utils.js";
+import {
+  getDefaultDestinationAirport,
+  getDefaultOriginAirport,
+  loadAirportsWithCache,
+} from "./flight/common/airport-service.js";
+import {
+  bindAirportAutocomplete,
+  closeAirportDropdowns,
+  renderSelectedAirport,
+} from "./flight/common/airport-autocomplete.js";
+import {
+  canChangePassengerCount,
+  createPassengerSummary,
+} from "./flight/common/passenger-utils.js";
+import { FLIGHT_PAGE, TRIP_TYPE } from "./flight/common/flight-constants.js";
 
-const fromAmountInput = document.getElementById("fromAmount");
-const toAmountInput = document.getElementById("toAmount");
-const fromCurrencySelect = document.getElementById("fromCurrencySelect");
-const toCurrencySelect = document.getElementById("toCurrencySelect");
-const swapCurrencyBtn = document.getElementById("swapCurrencyBtn");
+const dom = {};
 
-const rateGrid = document.getElementById("rateGrid");
-const rateSummary = document.getElementById("rateSummary");
-const rateInfoText = document.getElementById("rateInfoText");
-const currencySearchInput = document.getElementById("currencySearchInput");
-const regionFilterButtons = document.querySelectorAll(".region-filter-btn");
+let airports = [];
 
-const NO_DECIMAL_CODES = new Set(["KRW", "JPY", "IDR", "VND"]);
+let selectedOriginAirport = null;
+let selectedDestinationAirport = null;
+let selectedTripType = TRIP_TYPE.ROUND_TRIP;
 
-let isComposing = false;
-let selectedRegion = "ALL";
+let adultCount = 1;
+let childCount = 0;
+let infantCount = 0;
 
-const krwRate = {
-  currencyCode: "KRW",
-  countryName: "대한민국",
-  currencyName: "원",
-  symbol: "₩",
-  unit: 1,
-  rate: 1,
-  rateDate: getLatestRateDate(currencyRates),
-  source: "BASE",
-};
+let flightDatePicker = null;
 
-const currencies = [krwRate, ...currencyRates];
+document.addEventListener("DOMContentLoaded", initHomeQuickSearch);
 
-function init() {
-  renderCurrencyOptions();
-  setDefaultCurrencies();
-  renderRateInfo();
-  renderSummary();
+async function initHomeQuickSearch() {
+  cacheDom();
 
+  if (!dom.form) {
+    return;
+  }
+
+  initializeDateDefaults();
   bindEvents();
-  calculateAndRender();
+  initializeFlightDatePicker();
+  renderPassengerSummary();
+
+  await loadAirports();
+}
+
+function cacheDom() {
+  dom.form = document.getElementById("homeQuickSearchForm");
+
+  dom.originAirportInput = document.getElementById("homeOriginAirportInput");
+  dom.destinationAirportInput = document.getElementById("homeDestinationAirportInput");
+
+  dom.originAirportCodeBadge = document.getElementById("homeOriginAirportCodeBadge");
+  dom.destinationAirportCodeBadge = document.getElementById("homeDestinationAirportCodeBadge");
+
+  dom.originAirportDropdown = document.getElementById("homeOriginAirportDropdown");
+  dom.destinationAirportDropdown = document.getElementById("homeDestinationAirportDropdown");
+
+  dom.swapAirportBtn = document.getElementById("homeSwapAirportBtn");
+
+  dom.roundTripBtn = document.getElementById("homeRoundTripBtn");
+  dom.oneWayBtn = document.getElementById("homeOneWayBtn");
+
+  dom.departureDateInput = document.getElementById("homeDepartureDateInput");
+  dom.returnDateInput = document.getElementById("homeReturnDateInput");
+  dom.returnDateField = document.getElementById("homeReturnDateField");
+
+  dom.adultCountSelect = document.getElementById("homeAdultCountSelect");
+  dom.childCountSelect = document.getElementById("homeChildCountSelect");
+  dom.infantCountSelect = document.getElementById("homeInfantCountSelect");
+
+  dom.quickSummary = document.getElementById("homeQuickSummary");
+  dom.searchBtn = document.getElementById("homeQuickSearchBtn");
+}
+
+function initializeDateDefaults() {
+  if (dom.departureDateInput) {
+    dom.departureDateInput.value = "";
+    dom.departureDateInput.placeholder = "날짜 입력";
+  }
+
+  if (dom.returnDateInput) {
+    dom.returnDateInput.value = "";
+    dom.returnDateInput.placeholder = "날짜 입력";
+  }
 }
 
 function bindEvents() {
-  fromAmountInput.addEventListener("input", (event) => {
-    const onlyNumber = event.target.value.replace(/[^0-9]/g, "");
+  dom.form.addEventListener("submit", handleSubmit);
 
-    if (onlyNumber === "") {
-      event.target.value = "";
-      toAmountInput.value = "";
-      calculateAndRender();
+  dom.roundTripBtn.addEventListener("click", () => {
+    setTripType(TRIP_TYPE.ROUND_TRIP);
+  });
+
+  dom.oneWayBtn.addEventListener("click", () => {
+    setTripType(TRIP_TYPE.ONE_WAY);
+  });
+
+  dom.returnDateInput.addEventListener("click", () => {
+    if (flightDatePicker) {
+      flightDatePicker.open();
+    }
+  });
+
+  dom.swapAirportBtn.addEventListener("click", swapAirports);
+
+  dom.adultCountSelect.addEventListener("change", updatePassengerCountsFromSelects);
+  dom.childCountSelect.addEventListener("change", updatePassengerCountsFromSelects);
+  dom.infantCountSelect.addEventListener("change", updatePassengerCountsFromSelects);
+
+  bindAirportAutocomplete({
+    type: "home-origin",
+    input: dom.originAirportInput,
+    badge: dom.originAirportCodeBadge,
+    dropdown: dom.originAirportDropdown,
+    getAirports: () => airports,
+    getSelectedAirport: () => selectedOriginAirport,
+    setSelectedAirport: (airport) => {
+      selectedOriginAirport = airport;
+    },
+    onSelected: renderOriginAirport,
+  });
+
+  bindAirportAutocomplete({
+    type: "home-destination",
+    input: dom.destinationAirportInput,
+    badge: dom.destinationAirportCodeBadge,
+    dropdown: dom.destinationAirportDropdown,
+    getAirports: () => airports,
+    getSelectedAirport: () => selectedDestinationAirport,
+    setSelectedAirport: (airport) => {
+      selectedDestinationAirport = airport;
+    },
+    onSelected: renderDestinationAirport,
+  });
+
+  document.addEventListener("click", handleDocumentClick);
+  document.addEventListener("keydown", handleDocumentKeydown);
+}
+
+async function loadAirports() {
+  try {
+    disableSearchButton("공항 목록 조회 중");
+
+    airports = await loadAirportsWithCache();
+
+    setDefaultAirports();
+    enableSearchButton();
+  } catch (error) {
+    console.error(error);
+
+    dom.originAirportInput.placeholder = "공항 목록 조회 실패";
+    dom.destinationAirportInput.placeholder = "공항 목록 조회 실패";
+
+    disableSearchButton("공항 목록 조회 실패");
+  }
+}
+
+function setDefaultAirports() {
+  if (!Array.isArray(airports) || airports.length === 0) {
+    disableSearchButton("공항 없음");
+    return;
+  }
+
+  selectedOriginAirport = getDefaultOriginAirport(airports);
+  selectedDestinationAirport = getDefaultDestinationAirport(airports, selectedOriginAirport);
+
+  renderOriginAirport();
+  renderDestinationAirport();
+}
+
+function initializeFlightDatePicker() {
+  if (!window.flatpickr) {
+    console.error("Flatpickr 라이브러리가 로드되지 않았습니다.");
+    return;
+  }
+
+  rebuildFlightDatePicker();
+}
+
+function rebuildFlightDatePicker() {
+  if (flightDatePicker) {
+    flightDatePicker.destroy();
+    flightDatePicker = null;
+  }
+
+  const today = getTodayText();
+
+  flightDatePicker = flatpickr(dom.departureDateInput, {
+    mode: selectedTripType === TRIP_TYPE.ROUND_TRIP ? "range" : "single",
+    locale: "ko",
+    dateFormat: "Y-m-d",
+    minDate: today,
+    showMonths: 2,
+    static: false,
+    closeOnSelect: selectedTripType === TRIP_TYPE.ONE_WAY,
+    disableMobile: true,
+    monthSelectorType: "static",
+    prevArrow: "‹",
+    nextArrow: "›",
+    onReady: (_, __, instance) => {
+      addCalendarHeader(instance);
+      renderDateInputs(instance.selectedDates, instance);
+    },
+    onOpen: (_, __, instance) => {
+      addCalendarHeader(instance);
+      renderDateInputs(instance.selectedDates, instance);
+    },
+    onChange: (selectedDates, _, instance) => {
+      handleDatePickerChange(selectedDates, instance);
+    },
+    onValueUpdate: (selectedDates, _, instance) => {
+      renderDateInputs(selectedDates, instance);
+    },
+  });
+}
+
+function handleDatePickerChange(selectedDates, instance) {
+  renderDateInputs(selectedDates, instance);
+
+  if (selectedTripType === TRIP_TYPE.ONE_WAY && selectedDates.length >= 1) {
+    instance.close();
+    return;
+  }
+
+  if (selectedTripType === TRIP_TYPE.ROUND_TRIP && selectedDates.length >= 2) {
+    instance.close();
+  }
+}
+
+function renderDateInputs(selectedDates, instance) {
+  if (!dom.departureDateInput || !dom.returnDateInput) {
+    return;
+  }
+
+  if (!selectedDates || selectedDates.length === 0) {
+    dom.departureDateInput.value = "";
+    dom.returnDateInput.value = "";
+    return;
+  }
+
+  if (selectedTripType === TRIP_TYPE.ONE_WAY) {
+    dom.departureDateInput.value = instance.formatDate(selectedDates[0], "Y-m-d");
+    dom.returnDateInput.value = "";
+    return;
+  }
+
+  if (selectedDates.length >= 1) {
+    dom.departureDateInput.value = instance.formatDate(selectedDates[0], "Y-m-d");
+  } else {
+    dom.departureDateInput.value = "";
+  }
+
+  if (selectedDates.length >= 2) {
+    dom.returnDateInput.value = instance.formatDate(selectedDates[1], "Y-m-d");
+  } else {
+    dom.returnDateInput.value = "";
+  }
+}
+
+function addCalendarHeader(instance) {
+  const calendar = instance.calendarContainer;
+
+  if (!calendar || calendar.querySelector(".tm-flatpickr-top")) {
+    return;
+  }
+
+  const header = document.createElement("div");
+  header.className = "tm-flatpickr-top";
+  header.innerHTML = `
+    <div>
+        <strong>여행 날짜 선택</strong>
+        <span>휠로 이전/다음 달을 확인하세요</span>
+    </div>
+    <button type="button" class="tm-flatpickr-apply-btn">적용</button>
+  `;
+
+  const applyButton = header.querySelector(".tm-flatpickr-apply-btn");
+
+  applyButton.addEventListener("click", () => {
+    instance.close();
+  });
+
+  calendar.prepend(header);
+}
+
+
+function setTripType(tripType) {
+  selectedTripType = tripType === TRIP_TYPE.ONE_WAY
+    ? TRIP_TYPE.ONE_WAY
+    : TRIP_TYPE.ROUND_TRIP;
+
+  dom.roundTripBtn.classList.toggle("active", selectedTripType === TRIP_TYPE.ROUND_TRIP);
+  dom.oneWayBtn.classList.toggle("active", selectedTripType === TRIP_TYPE.ONE_WAY);
+
+  dom.returnDateField.classList.toggle("is-hidden", selectedTripType === TRIP_TYPE.ONE_WAY);
+
+  dom.departureDateInput.value = "";
+  dom.returnDateInput.value = "";
+
+  if (flightDatePicker) {
+    flightDatePicker.clear();
+  }
+
+  rebuildFlightDatePicker();
+  renderPassengerSummary();
+}
+
+function swapAirports() {
+  const origin = selectedOriginAirport;
+
+  selectedOriginAirport = selectedDestinationAirport;
+  selectedDestinationAirport = origin;
+
+  renderOriginAirport();
+  renderDestinationAirport();
+}
+
+function renderOriginAirport(fillInput = true) {
+  renderSelectedAirport(
+    dom.originAirportInput,
+    dom.originAirportCodeBadge,
+    selectedOriginAirport,
+    fillInput
+  );
+}
+
+function renderDestinationAirport(fillInput = true) {
+  renderSelectedAirport(
+    dom.destinationAirportInput,
+    dom.destinationAirportCodeBadge,
+    selectedDestinationAirport,
+    fillInput
+  );
+}
+
+function updatePassengerCountsFromSelects() {
+  const nextAdultCount = Number(dom.adultCountSelect.value);
+  const nextChildCount = Number(dom.childCountSelect.value);
+  const nextInfantCount = Number(dom.infantCountSelect.value);
+
+  if (!canChangePassengerCount(nextAdultCount, nextChildCount, nextInfantCount)) {
+    alert("전체 승객은 최대 9명까지 선택할 수 있고, 유아 수는 성인 수보다 많을 수 없습니다.");
+
+    dom.adultCountSelect.value = String(adultCount);
+    dom.childCountSelect.value = String(childCount);
+    dom.infantCountSelect.value = String(infantCount);
+
+    return;
+  }
+
+  adultCount = nextAdultCount;
+  childCount = nextChildCount;
+  infantCount = nextInfantCount;
+
+  renderPassengerSummary();
+}
+
+function renderPassengerSummary() {
+  dom.quickSummary.textContent = `${getTripTypeLabel()} · ${createPassengerSummary({
+    adultCount,
+    childCount,
+    infantCount,
+  })}`;
+}
+
+function getTripTypeLabel() {
+  return selectedTripType === TRIP_TYPE.ROUND_TRIP ? "왕복" : "편도";
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  if (!selectedOriginAirport) {
+    alert("출발지를 검색해서 선택해 주세요.");
+    dom.originAirportInput.focus();
+    return;
+  }
+
+  if (!selectedDestinationAirport) {
+    alert("도착지를 검색해서 선택해 주세요.");
+    dom.destinationAirportInput.focus();
+    return;
+  }
+
+  if (selectedOriginAirport.airportCode === selectedDestinationAirport.airportCode) {
+    alert("출발지와 도착지는 같을 수 없습니다.");
+    return;
+  }
+
+  const departureDate = dom.departureDateInput.value;
+  const returnDate = dom.returnDateInput.value;
+
+  if (!departureDate) {
+    alert("가는 날을 선택해 주세요.");
+    dom.departureDateInput.focus();
+    return;
+  }
+
+  if (departureDate < getTodayText()) {
+    alert("가는 날은 오늘 이후 날짜만 선택할 수 있습니다.");
+    return;
+  }
+
+  if (selectedTripType === TRIP_TYPE.ROUND_TRIP) {
+    if (!returnDate) {
+      alert("오는 날을 선택해 주세요.");
+      dom.returnDateInput.focus();
       return;
     }
 
-    const amount = Number(onlyNumber);
-    event.target.value = amount.toLocaleString("ko-KR");
-
-    calculateAndRender();
-  });
-
-  fromCurrencySelect.addEventListener("change", calculateAndRender);
-  toCurrencySelect.addEventListener("change", calculateAndRender);
-
-  swapCurrencyBtn.addEventListener("click", () => {
-    const fromCode = fromCurrencySelect.value;
-    const toCode = toCurrencySelect.value;
-
-    fromCurrencySelect.value = toCode;
-    toCurrencySelect.value = fromCode;
-
-    calculateAndRender();
-  });
-
-  if (currencySearchInput) {
-    currencySearchInput.addEventListener("compositionstart", () => {
-      isComposing = true;
-    });
-
-    currencySearchInput.addEventListener("compositionend", () => {
-      isComposing = false;
-      calculateAndRender();
-    });
-
-    currencySearchInput.addEventListener("input", () => {
-      if (isComposing) {
-        return;
-      }
-
-      calculateAndRender();
-    });
+    if (returnDate <= departureDate) {
+      alert("오는 날은 가는 날 이후여야 합니다.");
+      return;
+    }
   }
 
-  regionFilterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      selectedRegion = button.dataset.region || "ALL";
+  const params = new URLSearchParams();
 
-      regionFilterButtons.forEach((btn) => {
-        btn.classList.remove("active");
-      });
+  params.set("tripType", selectedTripType);
+  params.set("origin", selectedOriginAirport.airportCode);
+  params.set("destination", selectedDestinationAirport.airportCode);
+  params.set("departureDate", departureDate);
+  params.set("adultCount", String(adultCount));
+  params.set("childCount", String(childCount));
+  params.set("infantCount", String(infantCount));
 
-      button.classList.add("active");
+  if (selectedTripType === TRIP_TYPE.ROUND_TRIP) {
+    params.set("returnDate", returnDate);
+  }
 
-      calculateAndRender();
-    });
-  });
+  moveTo(FLIGHT_PAGE.RESULTS, params);
 }
 
-function renderCurrencyOptions() {
-  const optionHtml = currencies
-    .map((currency) => {
-      return `
-        <option value="${currency.currencyCode}">
-          ${currency.countryName} - ${currency.currencyName}
-        </option>
-      `;
-    })
-    .join("");
+function handleDocumentClick(event) {
+  const clickedInsideAirport =
+    dom.originAirportDropdown.contains(event.target) ||
+    dom.destinationAirportDropdown.contains(event.target) ||
+    dom.originAirportInput.contains(event.target) ||
+    dom.destinationAirportInput.contains(event.target);
 
-  fromCurrencySelect.innerHTML = optionHtml;
-  toCurrencySelect.innerHTML = optionHtml;
+  if (!clickedInsideAirport) {
+    closeAirportDropdowns(dom.originAirportDropdown, dom.destinationAirportDropdown);
+  }
 }
 
-function setDefaultCurrencies() {
-  fromCurrencySelect.value = "KRW";
-
-  const hasUsd = currencies.some((currency) => currency.currencyCode === "USD");
-
-  toCurrencySelect.value = hasUsd
-    ? "USD"
-    : currencies[1]?.currencyCode || "KRW";
-}
-
-function calculateAndRender() {
-  const amount = parseNumber(fromAmountInput.value);
-  const fromCurrency = findCurrency(fromCurrencySelect.value);
-  const toCurrency = findCurrency(toCurrencySelect.value);
-  const filteredCountryRates = filterCountryRates();
-
-  if (!amount || amount <= 0) {
-    toAmountInput.value = "";
-    renderGrid(filteredCountryRates, 0, fromCurrency);
+function handleDocumentKeydown(event) {
+  if (event.key !== "Escape") {
     return;
   }
 
-  if (!fromCurrency || !toCurrency) {
-    toAmountInput.value = "";
-    return;
-  }
-
-  const result = convertCurrency(amount, fromCurrency, toCurrency);
-  toAmountInput.value = formatCurrencyAmount(toCurrency, result);
-
-  renderGrid(filteredCountryRates, amount, fromCurrency);
+  closeAirportDropdowns(dom.originAirportDropdown, dom.destinationAirportDropdown);
 }
 
-function filterCountryRates() {
-  if (isComposing) {
-    return countryRates;
-  }
-
-  const keyword = currencySearchInput
-    ? currencySearchInput.value.trim().toLowerCase()
-    : "";
-
-  return countryRates.filter((rate) => {
-    const matchesRegion =
-      selectedRegion === "ALL" ||
-      normalizeRegion(rate.region) === selectedRegion;
-
-    const matchesKeyword =
-      keyword === "" ||
-      includesKeyword(rate.countryName, keyword) ||
-      includesKeyword(rate.currencyName, keyword) ||
-      includesKeyword(rate.currencyCode, keyword) ||
-      includesKeyword(rate.region, keyword);
-
-    return matchesRegion && matchesKeyword;
-  });
+function enableSearchButton() {
+  dom.searchBtn.disabled = false;
+  dom.searchBtn.textContent = "항공권 검색하기";
 }
 
-function normalizeRegion(region) {
-  if (!region) {
-    return "";
-  }
-
-  return String(region).trim().toUpperCase().replaceAll(" ", "_");
+function disableSearchButton(text) {
+  dom.searchBtn.disabled = true;
+  dom.searchBtn.textContent = text;
 }
-
-function includesKeyword(value, keyword) {
-  if (!value) {
-    return false;
-  }
-
-  return String(value).toLowerCase().includes(keyword);
-}
-
-function convertCurrency(amount, fromCurrency, toCurrency) {
-  const krwAmount = toKrw(amount, fromCurrency);
-  return fromKrw(krwAmount, toCurrency);
-}
-
-function toKrw(amount, currency) {
-  if (currency.currencyCode === "KRW") {
-    return amount;
-  }
-
-  const rate = Number(currency.rate);
-  const unit = Number(currency.unit);
-
-  return amount * (rate / unit);
-}
-
-function fromKrw(krwAmount, currency) {
-  if (currency.currencyCode === "KRW") {
-    return krwAmount;
-  }
-
-  const rate = Number(currency.rate);
-  const unit = Number(currency.unit);
-
-  return (krwAmount * unit) / rate;
-}
-
-function renderRateInfo() {
-  const latestDate = getLatestRateDate(currencyRates);
-
-  if (!latestDate) {
-    rateInfoText.textContent = "저장된 환율 데이터가 없습니다.";
-    return;
-  }
-
-  rateInfoText.textContent = `기준일: ${latestDate}`;
-}
-
-function renderSummary() {
-  if (!countryRates || countryRates.length === 0) {
-    rateSummary.textContent = "저장된 환율 데이터가 없습니다.";
-    return;
-  }
-
-  const latestDate = getLatestRateDate(countryRates);
-  rateSummary.textContent = `기준일: ${latestDate} / ${countryRates.length}개 통화`;
-}
-
-function renderGrid(rates, amount, fromCurrency) {
-  rateGrid.innerHTML = "";
-
-  if (!rates || rates.length === 0) {
-    rateGrid.innerHTML = `
-      <div class="col-12">
-        <div class="no-rate-result">
-          검색 결과가 없습니다. 국가명, 통화명, 통화 코드를 다시 입력해 주세요.
-        </div>
-      </div>
-    `;
-    return;
-  }
-
-  rates.forEach((rate) => {
-    const calculatedAmount =
-      amount > 0 && fromCurrency
-        ? convertCurrency(amount, fromCurrency, rate)
-        : null;
-
-    const fromText =
-      amount > 0 && fromCurrency
-        ? `${formatCurrencyAmount(fromCurrency, amount)} ${fromCurrency.currencyCode}`
-        : "-";
-
-    const toText =
-      calculatedAmount !== null
-        ? `${rate.symbol} ${formatCurrencyAmount(rate, calculatedAmount)}`
-        : "-";
-
-    const card = document.createElement("div");
-    card.className = "col-12 col-md-6 col-lg-4";
-
-    card.innerHTML = `
-      <div class="card h-100 rate-card">
-        <div class="card-body">
-          <div class="rate-card-top">
-            <div>
-              <h5 class="card-title">${rate.countryName}</h5>
-              <p class="currency-name">
-                ${rate.currencyName} (${rate.currencyCode})
-              </p>
-            </div>
-            <span class="region-badge">${formatRegionName(rate.region)}</span>
-          </div>
-
-          <div class="rate-info-list">
-            <div class="rate-info-row">
-              <span>기준일</span>
-              <strong>${rate.rateDate}</strong>
-            </div>
-
-            <div class="rate-info-row">
-              <span>환율</span>
-              <strong>${formatKrw(rate.rate)} 원</strong>
-            </div>
-
-            <div class="rate-info-row">
-              <span>기준 단위</span>
-              <strong>${rate.unit}${rate.currencyName}</strong>
-            </div>
-          </div>
-
-          <div class="calculated-box">
-            <div class="small-label">입력 금액 기준</div>
-            <div class="from-text">${fromText}</div>
-            <div class="to-text">= ${toText}</div>
-          </div>
-
-          <a href="/exchange/${rate.currencyCode}" class="history-link">
-            과거 환율 보기
-          </a>
-        </div>
-      </div>
-    `;
-
-    rateGrid.appendChild(card);
-  });
-}
-
-function formatRegionName(region) {
-  const normalizedRegion = normalizeRegion(region);
-
-  switch (normalizedRegion) {
-    case "ASIA":
-      return "ASIA";
-    case "EUROPE":
-      return "EUROPE";
-    case "AMERICA":
-    case "NORTH_AMERICA":
-      return "AMERICA";
-    case "OCEANIA":
-      return "OCEANIA";
-    case "MIDDLE_EAST":
-      return "MIDDLE EAST";
-    default:
-      return region || "-";
-  }
-}
-
-function findCurrency(currencyCode) {
-  return currencies.find((currency) => currency.currencyCode === currencyCode);
-}
-
-function parseNumber(value) {
-  const onlyNumber = String(value).replace(/[^0-9]/g, "");
-
-  if (onlyNumber === "") {
-    return 0;
-  }
-
-  return Number(onlyNumber);
-}
-
-function formatCurrencyAmount(currency, value) {
-  if (value === null || value === undefined || Number.isNaN(Number(value))) {
-    return "";
-  }
-
-  const number = Number(value);
-  const noDecimal = NO_DECIMAL_CODES.has(currency.currencyCode);
-
-  if (noDecimal) {
-    return Math.floor(number).toLocaleString("ko-KR");
-  }
-
-  return number.toLocaleString("ko-KR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-}
-
-function formatKrw(value) {
-  const number = Number(value);
-
-  if (Number.isNaN(number)) {
-    return "-";
-  }
-
-  return number.toLocaleString("ko-KR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-}
-
-function getLatestRateDate(rates) {
-  if (!rates || rates.length === 0) {
-    return "";
-  }
-
-  return rates[0].rateDate;
-}
-
-document.addEventListener("DOMContentLoaded", init);

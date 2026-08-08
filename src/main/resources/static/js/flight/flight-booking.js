@@ -18,7 +18,6 @@ const bookingReturnDateText = document.getElementById("bookingReturnDateText");
 
 const backToResultsBtn = document.getElementById("backToResultsBtn");
 
-const outboundFlightCard = document.getElementById("outboundFlightCard");
 const returnFlightCard = document.getElementById("returnFlightCard");
 
 const outboundBadge = document.getElementById("outboundBadge");
@@ -39,9 +38,6 @@ const bookingPaymentMessage = document.getElementById("bookingPaymentMessage");
 
 const RESERVATION_API_URL = "/api/reservations";
 const PAYMENT_READY_API_URL = "/api/payments/ready";
-
-// PaymentProvider enum 값이 TOSS가 아니면 여기만 바꾸면 됨.
-// 예: TOSS_PAYMENT, TOSS_PAYMENTS 등
 const PAYMENT_PROVIDER = "TOSS";
 
 let latestPaymentContext = null;
@@ -55,20 +51,26 @@ function init() {
 
 function bindEvents() {
   if (backToResultsBtn) {
-    backToResultsBtn.addEventListener("click", () => {
-      if (window.history.length > 1) {
-        window.history.back();
-        return;
-      }
-
-      window.location.href = "/flights/lowest-prices";
-    });
+    backToResultsBtn.addEventListener("click", moveBackToResults);
   }
 
   if (goPaymentButton) {
     goPaymentButton.addEventListener("click", moveToPaymentPage);
   }
 }
+
+function moveBackToResults() {
+  if (window.history.length > 1) {
+    window.history.back();
+    return;
+  }
+
+  window.location.href = "/flights/search";
+}
+
+/* ================================
+   Fetch Booking Detail
+   ================================ */
 
 async function fetchBookingDetail() {
   const params = new URLSearchParams(window.location.search);
@@ -149,6 +151,10 @@ async function fetchRoundTripBookingDetail(params) {
   }
 }
 
+/* ================================
+   Render State
+   ================================ */
+
 function renderLoading() {
   if (bookingLoading) {
     bookingLoading.style.display = "block";
@@ -182,19 +188,38 @@ function renderError(message) {
   disablePaymentButton("결제 화면으로 이동");
 }
 
+function showBookingContent() {
+  if (bookingLoading) {
+    bookingLoading.style.display = "none";
+  }
+
+  if (bookingError) {
+    bookingError.style.display = "none";
+  }
+
+  if (bookingContent) {
+    bookingContent.style.display = "grid";
+  }
+}
+
+/* ================================
+   Render Booking Detail
+   ================================ */
+
 function renderOneWayBookingDetail(option) {
   const originCode = getOriginAirportCode(option);
   const destinationCode = getDestinationAirportCode(option);
+  const passengerSummary = option.passengerSummary || createPassengerSummary(option);
 
   bookingPageTitle.textContent = "선택한 편도 항공권 상세 확인";
   bookingPageDescription.textContent =
-    "선택한 편도 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.";
+      "선택한 편도 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.";
 
   bookingTripTypeLabel.textContent = "선택한 편도 여행";
   bookingRouteTitle.textContent = `${originCode} → ${destinationCode} 편도 항공권`;
 
-  bookingPassengerSummary.textContent = option.passengerSummary || createPassengerSummary(option);
-  pricePassengerSummary.textContent = option.passengerSummary || createPassengerSummary(option);
+  bookingPassengerSummary.textContent = passengerSummary;
+  pricePassengerSummary.textContent = passengerSummary;
 
   renderBookingScheduleSummary({
     outboundLabel: "출발일",
@@ -218,10 +243,7 @@ function renderOneWayBookingDetail(option) {
 
   latestPaymentContext = createOneWayPaymentContext(option);
   enablePaymentButton();
-
-  bookingLoading.style.display = "none";
-  bookingError.style.display = "none";
-  bookingContent.style.display = "grid";
+  showBookingContent();
 }
 
 function renderRoundTripBookingDetail(data) {
@@ -234,16 +256,18 @@ function renderRoundTripBookingDetail(data) {
   const returnOriginCode = getOriginAirportCode(returnOption);
   const returnDestinationCode = getDestinationAirportCode(returnOption);
 
+  const passengerSummary = data.passengerSummary || createPassengerSummary(data);
+
   bookingPageTitle.textContent = "선택한 왕복 항공권 상세 확인";
   bookingPageDescription.textContent =
-    "선택한 가는 편과 오는 편의 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.";
+      "선택한 가는 편과 오는 편의 항공권 정보, 경유 구간, 승객 수, 예상 금액을 확인합니다.";
 
   bookingTripTypeLabel.textContent = "선택한 왕복 여행";
   bookingRouteTitle.textContent =
-    `${outboundOriginCode} ↔ ${outboundDestinationCode} 왕복 항공권`;
+      `${outboundOriginCode} ↔ ${outboundDestinationCode} 왕복 항공권`;
 
-  bookingPassengerSummary.textContent = data.passengerSummary || createPassengerSummary(data);
-  pricePassengerSummary.textContent = data.passengerSummary || createPassengerSummary(data);
+  bookingPassengerSummary.textContent = passengerSummary;
+  pricePassengerSummary.textContent = passengerSummary;
 
   renderBookingScheduleSummary({
     outboundLabel: "출국일",
@@ -254,11 +278,8 @@ function renderRoundTripBookingDetail(data) {
   });
 
   outboundBadge.textContent = "가는 편";
-  outboundTitle.textContent =
-    `${outboundOriginCode} → ${outboundDestinationCode}`;
-
-  returnTitle.textContent =
-    `${returnOriginCode} → ${returnDestinationCode}`;
+  outboundTitle.textContent = `${outboundOriginCode} → ${outboundDestinationCode}`;
+  returnTitle.textContent = `${returnOriginCode} → ${returnDestinationCode}`;
 
   outboundFlightDetail.innerHTML = renderFlightOptionDetail("가는 편", outboundOption);
   returnFlightDetail.innerHTML = renderFlightOptionDetail("오는 편", returnOption);
@@ -273,19 +294,16 @@ function renderRoundTripBookingDetail(data) {
 
   latestPaymentContext = createRoundTripPaymentContext(data);
   enablePaymentButton();
-
-  bookingLoading.style.display = "none";
-  bookingError.style.display = "none";
-  bookingContent.style.display = "grid";
+  showBookingContent();
 }
 
 function renderBookingScheduleSummary(config) {
   if (
-    !bookingOutboundDateLabel ||
-    !bookingOutboundDateText ||
-    !bookingReturnDateItem ||
-    !bookingReturnDateLabel ||
-    !bookingReturnDateText
+      !bookingOutboundDateLabel ||
+      !bookingOutboundDateText ||
+      !bookingReturnDateItem ||
+      !bookingReturnDateLabel ||
+      !bookingReturnDateText
   ) {
     return;
   }
@@ -301,24 +319,28 @@ function renderBookingScheduleSummary(config) {
 
 function renderFlightOptionDetail(label, option) {
   const sortedSegments = getSortedSegments(option);
-  const firstSegment = sortedSegments.length > 0 ? sortedSegments[0] : null;
-  const lastSegment = sortedSegments.length > 0 ? sortedSegments[sortedSegments.length - 1] : null;
+  const firstSegment = sortedSegments[0] || null;
+  const lastSegment = sortedSegments[sortedSegments.length - 1] || null;
 
   const originCode = getOriginAirportCode(option);
   const destinationCode = getDestinationAirportCode(option);
   const segmentPathText = createSegmentPathText(option);
   const connectionText = createConnectionText(option);
 
-  const departureDate = firstSegment ? firstSegment.departureDate : option.departureDate;
-  const departureTime = firstSegment ? firstSegment.departureTime : option.departureTime;
+  const departureDate = firstSegment?.departureDate || option.departureDate;
+  const departureTime = firstSegment?.departureTime || option.departureTime;
 
-  const arrivalDate = lastSegment ? lastSegment.arrivalDate : option.arrivalDate;
-  const arrivalTime = lastSegment ? lastSegment.arrivalTime : option.arrivalTime;
+  const arrivalDate = lastSegment?.arrivalDate || option.arrivalDate;
+  const arrivalTime = lastSegment?.arrivalTime || option.arrivalTime;
+
+  const arrivalDateSuffix = createArrivalDateSuffix(arrivalDate, departureDate);
 
   return `
     <div class="booking-route-overview">
       <div class="booking-route-time-block">
-        <strong>${formatTime(departureTime)}</strong>
+        <strong class="booking-time-with-badge">
+          ${formatTime(departureTime)}
+        </strong>
         <span>${escapeHtml(originCode)}</span>
         <small>${formatDate(departureDate)}</small>
       </div>
@@ -331,7 +353,10 @@ function renderFlightOptionDetail(label, option) {
       </div>
 
       <div class="booking-route-time-block right">
-        <strong>${formatTime(arrivalTime)}</strong>
+        <strong class="booking-time-with-badge">
+          ${formatTime(arrivalTime)}
+          ${arrivalDateSuffix}
+        </strong>
         <span>${escapeHtml(destinationCode)}</span>
         <small>${formatDate(arrivalDate)}</small>
       </div>
@@ -384,61 +409,68 @@ function renderSegments(option) {
   }
 
   return segments
-    .map((segment, index) => {
-      const hasLayover = segment.layoverAfterText;
+      .map((segment, index) => renderSegmentItem(segment, index))
+      .join("");
+}
 
-      return `
-        <div class="booking-segment-item">
-          <div class="booking-segment-order">
-            ${segment.segmentOrder || index + 1}
-          </div>
+function renderSegmentItem(segment, index) {
+  const hasLayover = segment.layoverAfterText;
 
-          <div class="booking-segment-main">
-            <div class="booking-segment-route">
-              <strong>
-                ${escapeHtml(segment.originAirportCode || "-")}
-                →
-                ${escapeHtml(segment.destinationAirportCode || "-")}
-              </strong>
-              <span>${escapeHtml(segment.durationText || "-")}</span>
-            </div>
+  return `
+    <div class="booking-segment-item">
+      <div class="booking-segment-order">
+        ${segment.segmentOrder || index + 1}
+      </div>
 
-            <div class="booking-segment-airports">
-              ${escapeHtml(segment.originAirportName || "-")}
-              →
-              ${escapeHtml(segment.destinationAirportName || "-")}
-            </div>
-
-            <div class="booking-segment-time">
-              ${formatDate(segment.departureDate)}
-              ${formatTime(segment.departureTime)}
-              출발
-              ·
-              ${formatDate(segment.arrivalDate)}
-              ${formatTime(segment.arrivalTime)}
-              도착
-            </div>
-
-            ${
-              hasLayover
-                ? `
-                  <div class="booking-layover-box">
-                    ${escapeHtml(segment.destinationAirportCode || "-")}에서
-                    ${escapeHtml(segment.layoverAfterText)}
-                    대기
-                  </div>
-                `
-                : ""
-            }
-          </div>
+      <div class="booking-segment-main">
+        <div class="booking-segment-route">
+          <strong>
+            ${escapeHtml(segment.originAirportCode || "-")}
+            →
+            ${escapeHtml(segment.destinationAirportCode || "-")}
+          </strong>
+          <span>${escapeHtml(segment.durationText || "-")}</span>
         </div>
-      `;
-    })
-    .join("");
+
+        <div class="booking-segment-airports">
+          ${escapeHtml(segment.originAirportName || "-")}
+          →
+          ${escapeHtml(segment.destinationAirportName || "-")}
+        </div>
+
+        <div class="booking-segment-time">
+          ${formatDate(segment.departureDate)}
+          ${formatTime(segment.departureTime)}
+          출발
+          ·
+          ${formatDate(segment.arrivalDate)}
+          ${formatTime(segment.arrivalTime)}
+          ${createArrivalDateSuffix(segment.arrivalDate, segment.departureDate)}
+          도착
+        </div>
+
+        ${renderLayoverBox(segment, hasLayover)}
+      </div>
+    </div>
+  `;
+}
+
+function renderLayoverBox(segment, hasLayover) {
+  if (!hasLayover) {
+    return "";
+  }
+
+  return `
+    <div class="booking-layover-box">
+      ${escapeHtml(segment.destinationAirportCode || "-")}에서
+      ${escapeHtml(segment.layoverAfterText)}
+      대기
+    </div>
+  `;
 }
 
 /* ================================
-   예약 생성 → 결제 준비 → 결제 화면 이동
+   Payment
    ================================ */
 
 async function moveToPaymentPage() {
@@ -453,7 +485,6 @@ async function moveToPaymentPage() {
 
     const reservationRequest = createReservationRequest(latestPaymentContext);
     const reservation = await postJson(RESERVATION_API_URL, reservationRequest);
-
     const reservationId = extractReservationId(reservation);
 
     if (!reservationId) {
@@ -465,7 +496,6 @@ async function moveToPaymentPage() {
 
     const paymentReadyRequest = createPaymentReadyRequest(reservationId);
     const paymentReady = await postJson(PAYMENT_READY_API_URL, paymentReadyRequest);
-
     const paymentId = extractPaymentId(paymentReady);
 
     if (!paymentId) {
@@ -500,7 +530,8 @@ async function postJson(url, body) {
 
 function createReservationRequest(context) {
   return {
-    tripType : context.tripType,
+    tripType: context.tripType,
+
     outboundFlightOptionId: toNullableNumber(context.outboundFlightOptionId),
     returnFlightOptionId: toNullableNumber(context.returnFlightOptionId),
 
@@ -539,7 +570,8 @@ function createOneWayPaymentContext(option) {
   const routeInfo = createRouteInfoFromOption(option);
 
   return {
-  tripType : "ONE_WAY",
+    tripType: "ONE_WAY",
+
     outboundFlightOptionId: option.flightOptionId || params.get("optionId"),
     returnFlightOptionId: null,
 
@@ -573,17 +605,17 @@ function createRoundTripPaymentContext(data) {
   const routeInfo = createRouteInfoFromOption(outboundOption);
 
   return {
-  tripType: "ROUND_TRIP",
+    tripType: "ROUND_TRIP",
 
     outboundFlightOptionId:
-      data.outboundOptionId ||
-      outboundOption?.flightOptionId ||
-      params.get("outboundOptionId"),
+        data.outboundOptionId ||
+        outboundOption?.flightOptionId ||
+        params.get("outboundOptionId"),
 
     returnFlightOptionId:
-      data.returnOptionId ||
-      returnOption?.flightOptionId ||
-      params.get("returnOptionId"),
+        data.returnOptionId ||
+        returnOption?.flightOptionId ||
+        params.get("returnOptionId"),
 
     originAirportCode: routeInfo.originAirportCode,
     originAirportName: routeInfo.originAirportName,
@@ -608,68 +640,8 @@ function createRoundTripPaymentContext(data) {
   };
 }
 
-function createRouteInfoFromOption(option) {
-  const segments = getSortedSegments(option);
-  const firstSegment = segments.length > 0 ? segments[0] : null;
-  const lastSegment = segments.length > 0 ? segments[segments.length - 1] : null;
-
-  return {
-    originAirportCode:
-      firstSegment?.originAirportCode ||
-      option?.originAirportCode ||
-      "-",
-
-    originAirportName:
-      firstSegment?.originAirportName ||
-      option?.originAirportName ||
-      firstSegment?.originAirportCode ||
-      "-",
-
-    originCityName:
-      firstSegment?.originCityName ||
-      option?.originCityName ||
-      guessCityName(firstSegment?.originAirportName) ||
-      firstSegment?.originAirportCode ||
-      "-",
-
-    destinationAirportCode:
-      lastSegment?.destinationAirportCode ||
-      option?.destinationAirportCode ||
-      "-",
-
-    destinationAirportName:
-      lastSegment?.destinationAirportName ||
-      option?.destinationAirportName ||
-      lastSegment?.destinationAirportCode ||
-      "-",
-
-    destinationCityName:
-      lastSegment?.destinationCityName ||
-      option?.destinationCityName ||
-      guessCityName(lastSegment?.destinationAirportName) ||
-      lastSegment?.destinationAirportCode ||
-      "-",
-  };
-}
-
-function extractReservationId(reservation) {
-  return reservation?.reservationId ||
-    reservation?.id ||
-    reservation?.reservation?.reservationId ||
-    reservation?.reservation?.id ||
-    null;
-}
-
-function extractPaymentId(paymentReady) {
-  return paymentReady?.paymentId ||
-    paymentReady?.id ||
-    paymentReady?.payment?.paymentId ||
-    paymentReady?.payment?.id ||
-    null;
-}
-
 /* ================================
-   항공권 데이터 유틸
+   Data Utils
    ================================ */
 
 function getSortedSegments(option) {
@@ -716,14 +688,54 @@ function getOptionArrivalDate(option) {
   const segments = getSortedSegments(option);
 
   if (segments.length > 0) {
-    const lastSegment = segments[segments.length - 1];
-
-    if (lastSegment.arrivalDate) {
-      return lastSegment.arrivalDate;
-    }
+    return segments[segments.length - 1].arrivalDate || option?.arrivalDate || null;
   }
 
   return option?.arrivalDate || null;
+}
+
+function createRouteInfoFromOption(option) {
+  const segments = getSortedSegments(option);
+  const firstSegment = segments[0] || null;
+  const lastSegment = segments[segments.length - 1] || null;
+
+  return {
+    originAirportCode:
+        firstSegment?.originAirportCode ||
+        option?.originAirportCode ||
+        "-",
+
+    originAirportName:
+        firstSegment?.originAirportName ||
+        option?.originAirportName ||
+        firstSegment?.originAirportCode ||
+        "-",
+
+    originCityName:
+        firstSegment?.originCityName ||
+        option?.originCityName ||
+        guessCityName(firstSegment?.originAirportName) ||
+        firstSegment?.originAirportCode ||
+        "-",
+
+    destinationAirportCode:
+        lastSegment?.destinationAirportCode ||
+        option?.destinationAirportCode ||
+        "-",
+
+    destinationAirportName:
+        lastSegment?.destinationAirportName ||
+        option?.destinationAirportName ||
+        lastSegment?.destinationAirportCode ||
+        "-",
+
+    destinationCityName:
+        lastSegment?.destinationCityName ||
+        option?.destinationCityName ||
+        guessCityName(lastSegment?.destinationAirportName) ||
+        lastSegment?.destinationAirportCode ||
+        "-",
+  };
 }
 
 function createSegmentPathText(option) {
@@ -733,17 +745,15 @@ function createSegmentPathText(option) {
     return "-";
   }
 
-  const airportCodes = [];
-
-  airportCodes.push(segments[0].originAirportCode);
+  const airportCodes = [segments[0].originAirportCode];
 
   segments.forEach((segment) => {
     airportCodes.push(segment.destinationAirportCode);
   });
 
   return airportCodes
-    .filter(Boolean)
-    .join(" → ");
+      .filter(Boolean)
+      .join(" → ");
 }
 
 function createConnectionText(option) {
@@ -754,15 +764,15 @@ function createConnectionText(option) {
   }
 
   const layoverTexts = segments
-    .slice(0, -1)
-    .map((segment) => {
-      const airportCode = segment.destinationAirportCode || "-";
-      const layoverText = segment.layoverAfterText
-        ? ` · 대기 ${segment.layoverAfterText}`
-        : "";
+      .slice(0, -1)
+      .map((segment) => {
+        const airportCode = segment.destinationAirportCode || "-";
+        const layoverText = segment.layoverAfterText
+            ? ` · 대기 ${segment.layoverAfterText}`
+            : "";
 
-      return `${airportCode}${layoverText}`;
-    });
+        return `${airportCode}${layoverText}`;
+      });
 
   return `경유 ${layoverTexts.join(", ")}`;
 }
@@ -782,7 +792,7 @@ function createPassengerSummary(data) {
 }
 
 /* ================================
-   버튼 / 메시지
+   Button / Message
    ================================ */
 
 function enablePaymentButton() {
@@ -820,6 +830,26 @@ function hideBookingPaymentMessage() {
 
   bookingPaymentMessage.textContent = "";
   bookingPaymentMessage.style.display = "none";
+}
+
+/* ================================
+   Extract
+   ================================ */
+
+function extractReservationId(reservation) {
+  return reservation?.reservationId ||
+      reservation?.id ||
+      reservation?.reservation?.reservationId ||
+      reservation?.reservation?.id ||
+      null;
+}
+
+function extractPaymentId(paymentReady) {
+  return paymentReady?.paymentId ||
+      paymentReady?.id ||
+      paymentReady?.payment?.paymentId ||
+      paymentReady?.payment?.id ||
+      null;
 }
 
 /* ================================
@@ -864,6 +894,14 @@ function formatTime(timeText) {
   return String(timeText).slice(0, 5);
 }
 
+function createArrivalDateSuffix(arrivalDate, departureDate) {
+  if (!arrivalDate || !departureDate || arrivalDate === departureDate) {
+    return "";
+  }
+
+  return `<em class="arrival-next-day">+1</em>`;
+}
+
 function formatPrice(price) {
   if (Number.isNaN(Number(price))) {
     return "-";
@@ -892,16 +930,16 @@ function guessCityName(airportName) {
   }
 
   return String(airportName)
-    .replace("국제공항", "")
-    .replace("공항", "")
-    .trim();
+      .replace("국제공항", "")
+      .replace("공항", "")
+      .trim();
 }
 
 function escapeHtml(value) {
   return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
 }

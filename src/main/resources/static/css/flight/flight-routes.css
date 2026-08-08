@@ -1,6 +1,7 @@
 .route-page {
     min-height: calc(100vh - 72px);
-    background: #f8fafc;
+    overflow-x: hidden;
+    background: #ffffff;
     color: #111827;
 }
 
@@ -9,17 +10,28 @@
     margin: 0 auto;
 }
 
-/* Compact Hero */
+/* ================================
+   Compact Hero
+   ================================ */
 
 .route-compact-hero {
-    padding: 28px 0;
+    position: relative;
+    overflow: hidden;
+    padding: 42px 0 40px;
     background:
-            radial-gradient(circle at 82% 16%, rgba(56, 189, 248, 0.18), transparent 30%),
-            linear-gradient(135deg, #061d35 0%, #082746 52%, #0b3155 100%);
-    color: #ffffff;
+            radial-gradient(circle at 12% 8%, rgba(125, 211, 252, 0.26), transparent 30%),
+            radial-gradient(circle at 88% 12%, rgba(191, 219, 254, 0.7), transparent 34%),
+            linear-gradient(180deg, #ffffff 0%, #f3f9ff 48%, #f8fbff 100%);
+    color: #111827;
+}
+
+.route-compact-hero::before {
+    display: none;
 }
 
 .route-compact-hero-inner {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,57 +39,66 @@
 }
 
 .route-compact-hero .tm-eyebrow {
-    color: #93c5fd;
+    color: #2563eb;
 }
 
 .route-compact-hero h1 {
-    margin: 6px 0 8px;
-    color: #ffffff;
-    font-size: 34px;
-    line-height: 1.2;
-    letter-spacing: -0.05em;
+    margin: 8px 0 10px;
+    color: #111827;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.16;
+    letter-spacing: -0.06em;
     font-weight: 900;
+    word-break: keep-all;
 }
 
 .route-compact-hero p {
     max-width: 780px;
     margin: 0;
-    color: #dbeafe;
-    font-size: 14px;
-    line-height: 1.7;
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 700;
+    word-break: keep-all;
 }
 
 .route-hero-mini-info {
     flex: 0 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 96px);
+    grid-template-columns: repeat(3, 104px);
     gap: 10px;
 }
 
 .route-hero-mini-info div {
-    padding: 13px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.08);
+    padding: 15px 14px;
+    border: 1px solid #bfdbfe;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 18px 46px rgba(37, 99, 235, 0.12);
+    backdrop-filter: none;
 }
 
 .route-hero-mini-info strong {
     display: block;
     margin-bottom: 3px;
-    color: #ffffff;
-    font-size: 17px;
+    color: #2563eb;
+    font-size: 18px;
     font-weight: 900;
 }
 
 .route-hero-mini-info span {
-    color: #cbd5e1;
-    font-size: 12px;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 800;
 }
 
-/* Workspace */
+/* ================================
+   Workspace
+   ================================ */
 
 .route-workspace-section {
-    padding: 28px 0 84px;
+    padding: 32px 0 88px;
+    background: #ffffff;
 }
 
 .route-workspace-layout {
@@ -88,40 +109,39 @@
 }
 
 .route-sidebar {
-    position: sticky;
-    top: 86px;
-    max-height: calc(100vh - 106px);
-    overflow-y: auto;
-    padding-right: 4px;
-}
-
-.route-sidebar::-webkit-scrollbar {
-    width: 6px;
-}
-
-.route-sidebar::-webkit-scrollbar-thumb {
-    border-radius: 999px;
-    background: #cbd5e1;
+    position: static;
+    top: auto;
+    max-height: none;
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
 }
 
 .route-result-content {
     min-width: 0;
 }
 
-/* Search Box */
+/* ================================
+   Search Box
+   ================================ */
 
 .route-search-box {
+    height: auto;
+    max-height: none;
+    overflow: visible;
     padding: 22px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid rgba(191, 219, 254, 0.9);
     border-radius: 24px;
-    background: #ffffff;
-    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+    background:
+            radial-gradient(circle at 100% 0%, rgba(40, 124, 255, 0.08), transparent 34%),
+            rgba(255, 255, 255, 0.97);
+    box-shadow: 0 22px 52px rgba(40, 124, 255, 0.14);
 }
 
 .route-search-header {
     padding-bottom: 18px;
     margin-bottom: 18px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #dbeafe;
 }
 
 .route-search-header .tm-eyebrow,
@@ -132,7 +152,7 @@
 .route-search-header h2 {
     margin: 6px 0 6px;
     color: #111827;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1.25;
     letter-spacing: -0.04em;
     font-weight: 900;
@@ -141,13 +161,15 @@
 .route-search-header p {
     margin: 0;
     color: #64748b;
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.65;
+    font-weight: 700;
+    word-break: keep-all;
 }
 
 .route-select-section {
     padding-top: 18px;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid #eff6ff;
 }
 
 .route-select-section:first-of-type {
@@ -170,19 +192,19 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: #eff6ff;
     color: #2563eb;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 900;
 }
 
 .route-section-heading h3 {
     margin: 0;
     color: #111827;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 900;
 }
 
@@ -204,20 +226,20 @@
     display: block;
     margin-bottom: 6px;
     color: #334155;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 900;
 }
 
 .route-input-group select {
     width: 100%;
-    height: 42px;
+    height: 44px;
     padding: 0 12px;
     border: 1px solid #dbe3ef;
     border-radius: 12px;
     background: #ffffff;
     color: #111827;
     outline: none;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 800;
 }
 
@@ -226,7 +248,62 @@
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
-/* Airport Radio */
+/* ================================
+   Date Range
+   공용 calendar.css의 달력 팝업은 유지
+   routes 화면의 input 모양만 보정
+   ================================ */
+
+.route-date-range-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.route-date-range-grid .route-input-group {
+    min-width: 0;
+}
+
+.route-input-group .route-calendar-input {
+    width: 100%;
+    max-width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #111827;
+    outline: none;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 44px;
+    box-sizing: border-box;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+}
+
+.route-input-group .route-calendar-input::placeholder {
+    color: #94a3b8;
+    font-weight: 800;
+}
+
+.route-input-group .route-calendar-input:hover {
+    border-color: #bfdbfe;
+    background: #f8fbff;
+}
+
+.route-input-group .route-calendar-input:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* ================================
+   Airport Radio
+   ================================ */
 
 .airport-radio-list {
     display: grid;
@@ -237,9 +314,9 @@
     display: flex;
     align-items: center;
     gap: 9px;
-    min-height: 44px;
-    padding: 9px 12px;
-    border: 1px solid #e5e7eb;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid #dbeafe;
     border-radius: 13px;
     background: #ffffff;
     cursor: pointer;
@@ -247,7 +324,7 @@
 }
 
 .airport-radio-item:hover {
-    border-color: #bfdbfe;
+    border-color: #93c5fd;
     background: #eff6ff;
 }
 
@@ -260,8 +337,9 @@
 
 .airport-radio-item span {
     color: #111827;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 900;
+    word-break: keep-all;
 }
 
 .airport-radio-item:has(input:checked) {
@@ -274,7 +352,7 @@
     margin: 0;
     min-height: 44px;
     padding: 12px;
-    border: 1px dashed #cbd5e1;
+    border: 1px dashed #bfdbfe;
     border-radius: 13px;
     background: #ffffff;
     color: #64748b;
@@ -282,13 +360,17 @@
     font-weight: 700;
 }
 
+/* ================================
+   Search Actions
+   ================================ */
+
 .route-search-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-top: 20px;
     padding-top: 18px;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #dbeafe;
 }
 
 .route-search-button,
@@ -297,23 +379,23 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 42px;
+    min-height: 44px;
     padding: 0 14px;
     border: 0;
     border-radius: 12px;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 900;
     cursor: pointer;
 }
 
 .route-search-button {
-    background: #2563eb;
-    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+    background: rgb(40, 124, 255);
+    box-shadow: 0 10px 24px rgba(40, 124, 255, 0.26);
 }
 
 .route-search-button:hover {
-    background: #1d4ed8;
+    background: rgb(21, 101, 235);
 }
 
 .route-reset-button {
@@ -324,7 +406,9 @@
     background: #334155;
 }
 
-/* Result */
+/* ================================
+   Result Header / Filter
+   ================================ */
 
 .route-result-section {
     min-width: 0;
@@ -337,7 +421,7 @@
 .route-section-title h2 {
     margin: 6px 0 6px;
     color: #111827;
-    font-size: 32px;
+    font-size: 34px;
     line-height: 1.2;
     letter-spacing: -0.05em;
     font-weight: 900;
@@ -346,8 +430,99 @@
 .route-section-title p {
     margin: 0;
     color: #64748b;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.7;
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+.route-filter-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 14px 0 18px;
+}
+
+.route-filter-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+.route-time-filter-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex: 0 0 auto;
+}
+
+.route-time-filter-label {
+    color: #475569;
+    font-size: 13px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.route-time-slot-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.route-time-slot-button {
+    min-height: 34px;
+    padding: 0 13px;
+    border: 1px solid #dbeafe;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.route-time-slot-button:hover {
+    border-color: #93c5fd;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.route-time-slot-button.active {
+    border-color: #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.18);
+}
+
+.route-filter-button {
+    min-height: 36px;
+    padding: 0 14px;
+    border: 1px solid #dbeafe;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.route-filter-button:hover {
+    border-color: #93c5fd;
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.route-filter-button.active {
+    border-color: rgb(40, 124, 255);
+    background: rgb(40, 124, 255);
+    color: #ffffff;
+    box-shadow: 0 10px 22px rgba(40, 124, 255, 0.22);
 }
 
 .route-list {
@@ -355,19 +530,25 @@
     gap: 16px;
 }
 
+/* ================================
+   Route Card
+   ================================ */
+
 .route-card {
     padding: 22px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid rgba(191, 219, 254, 0.95);
     border-radius: 24px;
-    background: #ffffff;
-    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+    background:
+            radial-gradient(circle at 100% 0%, rgba(40, 124, 255, 0.08), transparent 38%),
+            rgba(255, 255, 255, 0.98);
+    box-shadow: 0 18px 42px rgba(40, 124, 255, 0.12);
     transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
 }
 
 .route-card:hover {
     transform: translateY(-2px);
-    border-color: #bfdbfe;
-    box-shadow: 0 20px 48px rgba(15, 23, 42, 0.09);
+    border-color: rgba(40, 124, 255, 0.55);
+    box-shadow: 0 24px 54px rgba(40, 124, 255, 0.18);
 }
 
 .route-card-header {
@@ -378,31 +559,34 @@
 }
 
 .route-code {
-    margin: 0 0 5px;
+    margin: 0 0 6px;
     color: #2563eb;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 900;
 }
 
 .route-card h3 {
     margin: 0;
     color: #111827;
-    font-size: 25px;
+    font-size: 27px;
     font-weight: 900;
-    letter-spacing: -0.04em;
+    line-height: 1.3;
+    letter-spacing: -0.045em;
+    word-break: keep-all;
 }
 
 .route-badges {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    justify-content: flex-end;
     gap: 8px;
 }
 
 .route-badge {
     display: inline-flex;
     align-items: center;
-    height: 30px;
+    height: 31px;
     padding: 0 11px;
     border-radius: 999px;
     background: #eff6ff;
@@ -421,12 +605,14 @@
 .route-airports p {
     margin: 0;
     padding: 15px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #dbeafe;
     border-radius: 15px;
-    background: #f8fafc;
+    background: #f8fbff;
     color: #475569;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
+    font-weight: 700;
+    word-break: keep-all;
 }
 
 .route-airports strong {
@@ -437,6 +623,10 @@
     font-weight: 900;
 }
 
+/* ================================
+   Route Stats
+   ================================ */
+
 .route-stats {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -445,26 +635,46 @@
 }
 
 .route-stats div {
+    min-width: 0;
     padding: 15px;
+    border: 1px solid #dbeafe;
     border-radius: 15px;
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
+    background: #f8fbff;
 }
 
 .route-stats span {
     display: block;
     margin-bottom: 6px;
     color: #64748b;
-    font-size: 12px;
-    font-weight: 800;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 1.35;
+    word-break: keep-all;
 }
 
 .route-stats strong {
     display: block;
     color: #111827;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 900;
+    line-height: 1.35;
+    word-break: keep-all;
 }
+
+.route-stats em {
+    display: block;
+    margin-top: 5px;
+    color: rgb(40, 124, 255);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.35;
+    word-break: keep-all;
+}
+
+/* ================================
+   Route Actions
+   ================================ */
 
 .route-actions {
     display: flex;
@@ -473,11 +683,11 @@
 }
 
 .route-actions .route-search-link {
-    background: #2563eb;
+    background: rgb(40, 124, 255);
 }
 
 .route-actions .route-search-link:hover {
-    background: #1d4ed8;
+    background: rgb(21, 101, 235);
 }
 
 .route-actions .route-lowest-link {
@@ -488,10 +698,14 @@
     background: #0d5f59;
 }
 
+/* ================================
+   Empty / Error
+   ================================ */
+
 .route-error,
 .route-empty {
     padding: 34px 24px;
-    border: 1px dashed #cbd5e1;
+    border: 1px dashed #bfdbfe;
     border-radius: 22px;
     background: #ffffff;
     color: #64748b;
@@ -500,7 +714,9 @@
     font-weight: 700;
 }
 
-/* Responsive */
+/* ================================
+   Responsive
+   ================================ */
 
 @media (max-width: 1199px) {
     .route-workspace-layout {
@@ -510,6 +726,10 @@
 
     .route-wide-container {
         width: min(100% - 32px, 1200px);
+    }
+
+    .route-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -536,8 +756,7 @@
         margin-bottom: 24px;
     }
 
-    .route-airports,
-    .route-stats {
+    .route-airports {
         grid-template-columns: 1fr;
     }
 }
@@ -548,11 +767,16 @@
     }
 
     .route-compact-hero {
-        padding: 24px 0;
+        padding: 34px 0;
     }
 
     .route-compact-hero h1 {
-        font-size: 28px;
+        font-size: 32px;
+    }
+
+    .route-compact-hero p {
+        font-size: 14px;
+        line-height: 1.75;
     }
 
     .route-hero-mini-info {
@@ -560,14 +784,15 @@
     }
 
     .route-workspace-section {
-        padding: 20px 0 60px;
+        padding: 24px 0 64px;
     }
 
     .route-search-box {
         padding: 18px;
     }
 
-    .route-select-grid {
+    .route-select-grid,
+    .route-date-range-grid {
         grid-template-columns: 1fr;
     }
 
@@ -579,7 +804,31 @@
         grid-template-columns: 1fr;
     }
 
-    .route-card-header,
+    .route-section-title h2 {
+        font-size: 28px;
+    }
+
+    .route-card {
+        padding: 18px;
+    }
+
+    .route-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .route-badges {
+        justify-content: flex-start;
+    }
+
+    .route-card h3 {
+        font-size: 23px;
+    }
+
+    .route-stats {
+        grid-template-columns: 1fr;
+    }
+
     .route-actions {
         align-items: stretch;
         flex-direction: column;

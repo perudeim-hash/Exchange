@@ -3,7 +3,7 @@
     <div class="container">
 
       <a class="navbar-brand site-logo" href="/">
-        <span class="site-logo-mark">T</span>
+        <span class="site-logo-mark">TM</span>
         <span>Travel Money</span>
       </a>
 
@@ -13,102 +13,54 @@
               data-bs-target="#siteNavbar"
               aria-controls="siteNavbar"
               aria-expanded="false"
-              aria-label="Toggle navigation">
+              aria-label="메뉴 열기">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="siteNavbar">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"
-               href="#"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false">
+          <li class="nav-item">
+            <a class="nav-link" href="/flights/search">
               항공권
             </a>
-            <ul class="dropdown-menu site-dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="/flights/search">
-                  항공권 검색
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/flights/results">
-                  항공권 결과
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/flights/routes">
-                  노선 보기
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/flights/lowest-prices">
-                  최저가 항공권
-                </a>
-              </li>
-            </ul>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"
-               href="#"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false">
+          <li class="nav-item">
+            <a class="nav-link" href="/flights/routes">
+              노선보기
+            </a>
+          </li>
+          <li class="nav-item">
+          <a href="/flights/lowest-prices">최저가 비교</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/exchange">
               환율
             </a>
-            <ul class="dropdown-menu site-dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="/exchange">
-                  현재 환율
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/exchange">
-                  환율 계산기
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/exchange/USD">
-                  달러 환율 차트
-                </a>
-              </li>
-            </ul>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"
-               href="#"
-               role="button"
-               data-bs-toggle="dropdown"
-               aria-expanded="false">
-              여행 추천
+          <li class="nav-item">
+            <a class="nav-link" href="/travel/travel-timing">
+              여행 시기 추천
             </a>
-            <ul class="dropdown-menu site-dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="/recommendations/travel-timing">
-                  여행 가기 좋은 시기
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/events">
-                  이벤트 목록
-                </a>
-              </li>
-            </ul>
           </li>
 
-          <li class="nav-item ms-lg-2">
-            <a class="btn btn-primary site-header-button" href="/flights/search">
-              항공권 검색
+          <li class="nav-item">
+            <a class="nav-link" href="/events">
+              이벤트
+            </a>
+          </li>
+
+          <li class="nav-item ms-lg-3">
+            <a class="btn site-header-button" href="/flights/search">
+              항공권 검색하기
             </a>
           </li>
 
         </ul>
       </div>
+
     </div>
   </nav>
 </header>

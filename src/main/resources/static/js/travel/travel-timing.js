@@ -8,10 +8,9 @@ const destinationCountrySelect = document.getElementById("destinationCountrySele
 const destinationCitySelect = document.getElementById("destinationCitySelect");
 const destinationAirportArea = document.getElementById("destinationAirportArea");
 
+const stayDaysInput = document.getElementById("stayDays");
+
 const statusMessage = document.getElementById("statusMessage");
-const summaryArea = document.getElementById("summaryArea");
-const summaryTitle = document.getElementById("summaryTitle");
-const summaryInfo = document.getElementById("summaryInfo");
 
 const recommendedMonthsEl = document.getElementById("recommendedMonths");
 const expensiveMonthsEl = document.getElementById("expensiveMonths");
@@ -22,20 +21,24 @@ const monthDetailTitle = document.getElementById("monthDetailTitle");
 const cheapDateList = document.getElementById("cheapDateList");
 const expensiveDateList = document.getElementById("expensiveDateList");
 const eventList = document.getElementById("eventList");
+const DEFAULT_ORIGIN_AIRPORT_CODE = "ICN";
+
 
 let airportList = [];
 let airportLocationGroups = [];
 let latestRecommendationData = null;
-let latestMonthlyAnalyses = [];
 
-const DEFAULT_ORIGIN_AIRPORT_CODE = "ICN";
-const DEFAULT_DESTINATION_AIRPORT_CODE = "NRT";
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", init);
+
+async function init() {
   bindEvents();
+  initDatePicker();
+
   await loadAirportLocations();
   applyQueryParams();
-});
+  syncTravelDatePickerFromInputs();
+}
 
 function bindEvents() {
   originCountrySelect.addEventListener("change", () => handleCountryChange("origin"));
@@ -44,8 +47,178 @@ function bindEvents() {
   destinationCountrySelect.addEventListener("change", () => handleCountryChange("destination"));
   destinationCitySelect.addEventListener("change", () => handleCityChange("destination"));
 
-  searchBtn.addEventListener("click", loadRecommendation);
+  stayDaysInput.addEventListener("change", normalizeStayDays);
+  stayDaysInput.addEventListener("blur", normalizeStayDays);
+
+  searchBtn.addEventListener("click", () => loadRecommendation());
 }
+
+let startDatePicker = null;
+let endDatePicker = null;
+
+let travelDatePicker = null;
+
+function initDatePicker() {
+  if (typeof flatpickr !== "function") {
+    console.error("Flatpickr 라이브러리가 로드되지 않았습니다.");
+    return;
+  }
+
+  const startDateInput = document.getElementById("startDate");
+  const endDateInput = document.getElementById("endDate");
+
+  if (!startDateInput || !endDateInput) {
+    console.error("여행 시기 분석 날짜 입력 요소를 찾지 못했습니다.");
+    return;
+  }
+
+  if (travelDatePicker) {
+    travelDatePicker.destroy();
+    travelDatePicker = null;
+  }
+
+  travelDatePicker = flatpickr(startDateInput, {
+    mode: "range",
+    locale: "ko",
+    dateFormat: "Y-m-d",
+    minDate: "today",
+    showMonths: 2,
+    static: false,
+    closeOnSelect: false,
+    disableMobile: true,
+    monthSelectorType: "static",
+    prevArrow: "‹",
+    nextArrow: "›",
+    defaultDate: getTravelDatePickerDefaultDates(),
+
+    onReady: (_, __, instance) => {
+      addTravelCalendarHeader(instance);
+      renderTravelDateInputs(instance.selectedDates, instance);
+    },
+
+    onOpen: (_, __, instance) => {
+      addTravelCalendarHeader(instance);
+      renderTravelDateInputs(instance.selectedDates, instance);
+    },
+
+    onChange: (selectedDates, _, instance) => {
+      handleTravelDatePickerChange(selectedDates, instance);
+    },
+
+    onValueUpdate: (selectedDates, _, instance) => {
+      renderTravelDateInputs(selectedDates, instance);
+    },
+  });
+
+  const openTravelDatePicker = () => {
+    travelDatePicker?.open();
+  };
+
+  endDateInput.addEventListener("click", openTravelDatePicker);
+  endDateInput.addEventListener("focus", openTravelDatePicker);
+}
+
+function getTravelDatePickerDefaultDates() {
+  const startDate = getValue("startDate");
+  const endDate = getValue("endDate");
+
+  if (!startDate) {
+    return [];
+  }
+
+  if (endDate && endDate >= startDate) {
+    return [startDate, endDate];
+  }
+
+  return [startDate];
+}
+
+function handleTravelDatePickerChange(selectedDates, instance) {
+  renderTravelDateInputs(selectedDates, instance);
+
+  if (selectedDates.length >= 2) {
+    instance.close();
+  }
+}
+
+function renderTravelDateInputs(selectedDates, instance) {
+  const startDateInput = document.getElementById("startDate");
+  const endDateInput = document.getElementById("endDate");
+
+  if (!startDateInput || !endDateInput) {
+    return;
+  }
+
+  if (!selectedDates || selectedDates.length === 0) {
+    startDateInput.value = "";
+    endDateInput.value = "";
+    return;
+  }
+
+  startDateInput.value =
+      instance.formatDate(selectedDates[0], "Y-m-d");
+
+  if (selectedDates.length >= 2) {
+    endDateInput.value =
+        instance.formatDate(selectedDates[1], "Y-m-d");
+    return;
+  }
+
+  endDateInput.value = "";
+}
+
+function syncTravelDatePickerFromInputs() {
+  if (!travelDatePicker) {
+    return;
+  }
+
+  travelDatePicker.setDate(
+      getTravelDatePickerDefaultDates(),
+      false
+  );
+
+  renderTravelDateInputs(
+      travelDatePicker.selectedDates,
+      travelDatePicker
+  );
+}
+
+function addTravelCalendarHeader(instance) {
+  const calendar = instance.calendarContainer;
+
+  if (!calendar || calendar.querySelector(".tm-flatpickr-top")) {
+    return;
+  }
+
+  const header = document.createElement("div");
+  header.className = "tm-flatpickr-top";
+
+  header.innerHTML = `
+    <div>
+      <strong>여행 가능 기간 선택</strong>
+      <span>시작일과 종료일을 같은 달력에서 차례대로 선택하세요.</span>
+    </div>
+
+    <button
+      type="button"
+      class="tm-flatpickr-apply-btn">
+      적용
+    </button>
+  `;
+
+  const applyButton =
+      header.querySelector(".tm-flatpickr-apply-btn");
+
+  applyButton.addEventListener("click", () => {
+    instance.close();
+  });
+
+  calendar.prepend(header);
+}
+
+/* ================================
+   Airport Loading
+   ================================ */
 
 async function loadAirportLocations() {
   try {
@@ -62,15 +235,17 @@ async function loadAirportLocations() {
 
     renderCountryOptions("origin");
     renderCountryOptions("destination");
+
     resetCitySelect("origin");
     resetCitySelect("destination");
+
     resetAirportArea("origin", "먼저 도시를 선택해 주세요.");
     resetAirportArea("destination", "먼저 도시를 선택해 주세요.");
 
     hideStatus();
   } catch (error) {
     console.error(error);
-    showStatus("공항 목록을 불러오지 못했습니다. 서버 로그를 확인해 주세요.", "danger");
+    showStatus("공항 목록을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.", "danger");
   }
 }
 
@@ -117,11 +292,16 @@ function buildAirportLocationGroups(airports) {
   });
 
   return Array.from(countryMap.values())
-    .sort((a, b) => a.countryName.localeCompare(b.countryName, "ko"))
-    .map((country) => {
-      country.cities.sort((a, b) => a.cityName.localeCompare(b.cityName, "ko"));
-      return country;
-    });
+      .sort((a, b) => a.countryName.localeCompare(b.countryName, "ko"))
+      .map((country) => {
+        country.cities.sort((a, b) => a.cityName.localeCompare(b.cityName, "ko"));
+
+        country.cities.forEach((city) => {
+          city.airports.sort((a, b) => a.airportName.localeCompare(b.airportName, "ko"));
+        });
+
+        return country;
+      });
 }
 
 function renderCountryOptions(type) {
@@ -155,6 +335,12 @@ function handleCountryChange(type) {
   }
 
   renderCityOptions(type, country.cities || []);
+
+  if ((country.cities || []).length === 1) {
+    const citySelect = getCitySelect(type);
+    citySelect.value = country.cities[0].cityName;
+    handleCityChange(type);
+  }
 }
 
 function renderCityOptions(type, cities) {
@@ -228,11 +414,12 @@ function resetAirportArea(type, message) {
   airportArea.innerHTML = `<div class="timing-empty-text">${escapeHtml(message)}</div>`;
 }
 
+/* ================================
+   Query Params / Defaults
+   ================================ */
+
 function applyQueryParams() {
   const params = new URLSearchParams(window.location.search);
-
-  const originAirportCode = params.get("origin") || DEFAULT_ORIGIN_AIRPORT_CODE;
-  const destinationAirportCode = params.get("destination") || DEFAULT_DESTINATION_AIRPORT_CODE;
 
   setInputValue("startDate", params.get("startDate"));
   setInputValue("endDate", params.get("endDate"));
@@ -243,8 +430,16 @@ function applyQueryParams() {
   setInputValue("childCount", params.get("childCount"));
   setInputValue("infantCount", params.get("infantCount"));
 
+  normalizeStayDays();
+
+  const originAirportCode = params.get("origin") || DEFAULT_ORIGIN_AIRPORT_CODE;
+  const destinationAirportCode = params.get("destination");
+
   selectAirportByCode("origin", originAirportCode);
-  selectAirportByCode("destination", destinationAirportCode);
+
+  if (destinationAirportCode) {
+    selectAirportByCode("destination", destinationAirportCode);
+  }
 }
 
 function setInputValue(id, value) {
@@ -282,7 +477,12 @@ function selectAirportByCode(type, airportCode) {
   }
 }
 
-async function loadRecommendation() {
+
+/* ================================
+   Recommendation API
+   ================================ */
+
+async function loadRecommendation(options = {}) {
   try {
     const originAirportCode = getSelectedAirportCode("origin");
     const destinationAirportCode = getSelectedAirportCode("destination");
@@ -292,7 +492,7 @@ async function loadRecommendation() {
     }
 
     setSearchLoading(true);
-    showStatus("추천 분석 데이터를 불러오는 중입니다.", "secondary");
+    showStatus("월별 여행 시기 분석 데이터를 불러오는 중입니다.", "secondary");
 
     const url = buildRecommendationUrl(originAirportCode, destinationAirportCode);
     const response = await fetch(url);
@@ -304,20 +504,21 @@ async function loadRecommendation() {
     const data = await response.json();
 
     latestRecommendationData = data;
-    latestMonthlyAnalyses = data.monthlyAnalyses || [];
 
-    renderSummary(data);
     renderMonthCards(recommendedMonthsEl, data.recommendedMonths || [], "recommended");
     renderMonthCards(expensiveMonthsEl, data.expensiveMonths || [], "expensive");
-    renderMonthlyTable(latestMonthlyAnalyses);
-    renderDefaultMonthDetail(latestMonthlyAnalyses);
+    renderMonthlyTable(data.monthlyAnalyses || []);
+    renderDefaultMonthDetail(data.monthlyAnalyses || []);
     updateBrowserUrl(originAirportCode, destinationAirportCode);
 
     hideStatus();
-    scrollToResult();
+
+    if (!options.skipScroll) {
+      scrollToResult();
+    }
   } catch (error) {
     console.error(error);
-    showStatus("추천 분석 데이터를 불러오지 못했습니다. 콘솔과 서버 로그를 확인해 주세요.", "danger");
+    showStatus("월별 분석 데이터를 불러오지 못했습니다. 조건을 확인한 뒤 다시 시도해 주세요.", "danger");
   } finally {
     setSearchLoading(false);
   }
@@ -354,7 +555,8 @@ function validateSearchCondition(originAirportCode, destinationAirportCode) {
     return false;
   }
 
-  if (Number(getValue("stayDays")) < 1) {
+  const stayDays = Number(getStayDaysValue());
+  if (Number.isNaN(stayDays)|| stayDays < 1) {
     showStatus("체류일은 1일 이상이어야 합니다.", "warning");
     return false;
   }
@@ -369,7 +571,7 @@ function buildRecommendationUrl(originAirportCode, destinationAirportCode) {
   appendParam(params, "destination", destinationAirportCode);
   appendParam(params, "startDate", getValue("startDate"));
   appendParam(params, "endDate", getValue("endDate"));
-  appendParam(params, "stayDays", getValue("stayDays"));
+  appendParam(params, "stayDays", getStayDaysValue());
   appendParam(params, "connectionType", getValue("connectionType"));
   appendParam(params, "seatClass", getValue("seatClass"));
   appendParam(params, "adultCount", getValue("adultCount"));
@@ -386,7 +588,7 @@ function updateBrowserUrl(originAirportCode, destinationAirportCode) {
   appendParam(params, "destination", destinationAirportCode);
   appendParam(params, "startDate", getValue("startDate"));
   appendParam(params, "endDate", getValue("endDate"));
-  appendParam(params, "stayDays", getValue("stayDays"));
+  appendParam(params, "stayDays",getStayDaysValue());
   appendParam(params, "connectionType", getValue("connectionType"));
   appendParam(params, "seatClass", getValue("seatClass"));
   appendParam(params, "adultCount", getValue("adultCount"));
@@ -404,30 +606,13 @@ function appendParam(params, name, value) {
 }
 
 function getValue(id) {
-  return document.getElementById(id).value;
+  const element = document.getElementById(id);
+  return element ? element.value : "";
 }
 
-function renderSummary(data) {
-  summaryArea.classList.remove("d-none");
-
-  const originAirport = findAirportByCode(data.originAirportCode);
-  const destinationAirport = findAirportByCode(data.destinationAirportCode);
-
-  const originText = originAirport
-    ? `${originAirport.countryName} ${originAirport.cityName}(${originAirport.airportCode})`
-    : data.originAirportCode;
-
-  const destinationText = destinationAirport
-    ? `${destinationAirport.countryName} ${destinationAirport.cityName}(${destinationAirport.airportCode})`
-    : data.destinationAirportCode;
-
-  summaryTitle.textContent = `${data.cityName} 여행 시기 추천 분석`;
-  summaryInfo.textContent =
-    `${originText} → ${destinationText} / ` +
-    `${data.countryName}(${data.countryCode}) / ` +
-    `${data.startDate} ~ ${data.endDate} / ` +
-    `${data.stayDays ?? "-"}일 체류 기준`;
-}
+/* ================================
+   Render Month Cards
+   ================================ */
 
 function renderMonthCards(container, months, type) {
   container.innerHTML = "";
@@ -466,11 +651,11 @@ function renderMonthCards(container, months, type) {
         <div class="score-breakdown">
           <div class="score-mini-box">
             <span>항공권</span>
-            <strong>${escapeHtml(month.score.flightScore)} / 80점</strong>
+            <strong>${escapeHtml(month.score?.flightScore ?? "-")} / 80점</strong>
           </div>
           <div class="score-mini-box">
             <span>환율</span>
-            <strong>${escapeHtml(month.score.exchangeScore)} / 20점</strong>
+            <strong>${escapeHtml(month.score?.exchangeScore ?? "-")} / 20점</strong>
           </div>
         </div>
 
@@ -514,6 +699,10 @@ function renderMonthCards(container, months, type) {
   });
 }
 
+/* ================================
+   Render Table
+   ================================ */
+
 function renderMonthlyTable(months) {
   monthlyAnalysisBody.innerHTML = "";
 
@@ -538,18 +727,18 @@ function renderMonthlyTable(months) {
         <div class="score-detail-text">${escapeHtml(month.grade)}</div>
       </td>
       <td>
-        ${escapeHtml(month.score.flightScore)} / 80
+        ${escapeHtml(month.score?.flightScore ?? "-")} / 80
         <div class="score-detail-text">
-          TOP5 ${escapeHtml(month.score.flightCheapDateScore)} /
-          최저가 ${escapeHtml(month.score.flightMinPriceScore)} /
-          안정성 ${escapeHtml(month.score.flightStabilityScore)}
+          TOP5 ${escapeHtml(month.score?.flightCheapDateScore ?? "-")} /
+          최저가 ${escapeHtml(month.score?.flightMinPriceScore ?? "-")} /
+          안정성 ${escapeHtml(month.score?.flightStabilityScore ?? "-")}
         </div>
       </td>
       <td>
-        ${escapeHtml(month.score.exchangeScore)} / 20
+        ${escapeHtml(month.score?.exchangeScore ?? "-")} / 20
         <div class="score-detail-text">
-          평균 ${escapeHtml(month.score.exchangeAverageRateScore)} /
-          데이터 ${escapeHtml(month.score.exchangeDataCountScore)}
+          평균 ${escapeHtml(month.score?.exchangeAverageRateScore ?? "-")} /
+          데이터 ${escapeHtml(month.score?.exchangeDataCountScore ?? "-")}
         </div>
       </td>
       <td>${formatPrice(month.minRoundTripPrice)}</td>
@@ -568,6 +757,10 @@ function renderMonthlyTable(months) {
     monthlyAnalysisBody.appendChild(tr);
   });
 }
+
+/* ================================
+   Render Detail
+   ================================ */
 
 function renderDefaultMonthDetail(months) {
   if (!months || months.length === 0) {
@@ -671,6 +864,10 @@ function renderEventNames(events) {
   `;
 }
 
+/* ================================
+   Status / Loading
+   ================================ */
+
 function showStatus(message, type) {
   statusMessage.className = `alert alert-${type} recommendation-status`;
   statusMessage.textContent = message;
@@ -683,35 +880,21 @@ function hideStatus() {
 
 function setSearchLoading(isLoading) {
   searchBtn.disabled = isLoading;
-  searchBtn.textContent = isLoading ? "분석 중..." : "추천 분석 조회";
+  searchBtn.textContent = isLoading ? "분석 중..." : "월별 분석 조회";
 }
 
-function getGradeClass(grade) {
-  if (grade === "매우 추천") {
-    return "grade-excellent";
-  }
-
-  if (grade === "추천") {
-    return "grade-good";
-  }
-
-  if (grade === "보통") {
-    return "grade-normal";
-  }
-
-  if (grade === "비용 주의") {
-    return "grade-warning";
-  }
-
-  return "grade-bad";
-}
+/* ================================
+   Scroll
+   ================================ */
 
 function scrollToResult() {
-  if (!summaryArea) {
+  const resultSection = recommendedMonthsEl?.closest(".result-section");
+
+  if (!resultSection) {
     return;
   }
 
-  summaryArea.scrollIntoView({
+  resultSection.scrollIntoView({
     behavior: "smooth",
     block: "start",
   });
@@ -728,44 +911,17 @@ function scrollToDetail() {
   });
 }
 
-function formatPrice(value) {
-  if (value === null || value === undefined) {
-    return "-";
-  }
-
-  const number = Number(value);
-
-  if (Number.isNaN(number)) {
-    return "-";
-  }
-
-  return `${number.toLocaleString("ko-KR")}원`;
-}
-
-function formatRate(value) {
-  if (value === null || value === undefined) {
-    return "-";
-  }
-
-  const number = Number(value);
-
-  if (Number.isNaN(number)) {
-    return "-";
-  }
-
-  return `${number.toLocaleString("ko-KR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}원`;
-}
+/* ================================
+   Event Page Link
+   ================================ */
 
 function createFullEventPageUrl(month) {
   if (
-    !latestRecommendationData ||
-    !latestRecommendationData.countryCode ||
-    !latestRecommendationData.cityName ||
-    !month ||
-    !month.month
+      !latestRecommendationData ||
+      !latestRecommendationData.countryCode ||
+      !latestRecommendationData.cityName ||
+      !month ||
+      !month.month
   ) {
     return null;
   }
@@ -805,6 +961,10 @@ function extractMonthValue(month) {
   return Number(parts[1]);
 }
 
+/* ================================
+   Find / Getter
+   ================================ */
+
 function getSelectedAirportCode(type) {
   const selected = document.querySelector(`input[name="${type}AirportCode"]:checked`);
   return selected ? selected.value : "";
@@ -840,15 +1000,86 @@ function findAirportByCode(airportCode) {
   return airportList.find((airport) => airport.airportCode === airportCode);
 }
 
+/* ================================
+   Format / Escape
+   ================================ */
+
+function getGradeClass(grade) {
+  if (grade === "매우 추천") {
+    return "grade-excellent";
+  }
+
+  if (grade === "추천") {
+    return "grade-good";
+  }
+
+  if (grade === "보통") {
+    return "grade-normal";
+  }
+
+  if (grade === "비용 주의") {
+    return "grade-warning";
+  }
+
+  return "grade-bad";
+}
+
+function formatPrice(value) {
+  if (value === null || value === undefined) {
+    return "-";
+  }
+
+  const number = Number(value);
+
+  if (Number.isNaN(number)) {
+    return "-";
+  }
+
+  return `${number.toLocaleString("ko-KR")}원`;
+}
+
+function formatRate(value) {
+  if (value === null || value === undefined) {
+    return "-";
+  }
+
+  const number = Number(value);
+
+  if (Number.isNaN(number)) {
+    return "-";
+  }
+
+  return `${number.toLocaleString("ko-KR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}원`;
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
 }
 
 function escapeAttribute(value) {
   return escapeHtml(value).replaceAll("`", "&#096;");
+}
+
+function normalizeStayDays(){
+  if (!stayDaysInput) {
+    return;
+  }
+  const value = Number(stayDaysInput.value);
+  if (!stayDaysInput.value || Number.isNaN(value) || value < 1) {
+    stayDaysInput.value =1;
+    return;
+  }
+  stayDaysInput.value = Math.floor(value);
+}
+function getStayDaysValue(){
+  normalizeStayDays();
+  return stayDaysInput ? stayDaysInput.value : "1";
 }

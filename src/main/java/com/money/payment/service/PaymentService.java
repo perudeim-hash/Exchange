@@ -101,6 +101,13 @@ public class PaymentService {
         String normalizedOrderId = requireText(orderId, "주문 ID는 필수입니다.");
         Payment payment = paymentRepository.findByOrderId(normalizedOrderId)
                 .orElseThrow(() -> new IllegalArgumentException("결제 정보를 찾을 수 없습니다."));
+        if (payment.getStatus() == PaymentStatus.PAID){
+            return payment;
+        }
+        if (payment.getStatus() == PaymentStatus.CANCELED){
+            return payment;
+        }
+
         payment.fail("MOCK_PAYMENT_FAILED", reason == null || reason.isBlank() ? "결제 실패" : reason.trim(), "ABORTED");
         return payment;
     }
@@ -109,6 +116,13 @@ public class PaymentService {
         String normalizedOrderId = requireText(orderId, "주문 ID는 필수입니다.");
         Payment payment = paymentRepository.findByOrderId(normalizedOrderId)
                 .orElseThrow(() -> new IllegalArgumentException("결제 정보를 찾을 수 없습니다."));
+        if (payment.getStatus() == PaymentStatus.PAID){
+            return payment;
+        }
+        if (payment.getStatus() == PaymentStatus.CANCELED){
+            return payment;
+        }
+
         String failureCode = code == null || code.isBlank() ? "TOSS_PAYMENT_FAILED" : code.trim();
         String failureReason = message == null || message.isBlank() ? "토스 결제가 취소되었거나 실패했습니다." : message.trim();
         payment.fail(failureCode, failureReason ,"ABORTED");

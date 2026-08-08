@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -134,11 +135,50 @@ public interface FlightOptionRepository extends JpaRepository<FlightOption, Long
                                               @Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate,
                                               @Param("connectionType") ConnectionType connectionType, @Param("seatClass") SeatClass seatClass, Pageable pageable);
 
-    interface RouteDateProjection{
-            Long getRouteId();
-            LocalDate getDepartureDate();
-    }
+    @Query("""
+            select fo from FlightOption fo
+                where fo.flightRoute = :flightRoute
+                    and fo.enabled = true
+                       and fo.departureDate <= :endDate
+                           and( fo.departureDate > :today
+                               or( fo.departureDate = :today
+                                   and fo.departureTime >= :nowTime))
+            """)
+    List<FlightOption> findAvailableOptionsForRouteStats(@Param("flightRoute") FlightRoute flightRoute,
+                                                         @Param("today") LocalDate today, @Param("nowTime") LocalTime nowTime, @Param("endDate") LocalDate endDate);
 
+    @Query("""
+                    select distinct fo from FlightOption fo
+                    join fetch fo.flightRoute fr
+                    join fetch fr.originAirport oa
+                    join fetch fr.destinationAirport da
+                    where fo.enabled = true
+                    and fr.enabled = true
+                    and fo.departureDate between :startDate and :endDate
+                    and (:originCode is null or oa.code = :originCode)
+                    and (:destinationCode is null or da.code = :destinationCode)
+                    and (:connectionType is null or fo.connectionType = :connectionType)
+                    and (:seatClass is null or fo.seatClass = :seatClass)
+                    and (:startTime is null or fo.departureTime >= :startTime)
+                    and (:endTime is null or fo.departureTime <= :endTime)
+                    order by fr.displayOrder asc, fo.price asc, fo.departureDate asc, fo.departureTime asc
+            """)
+    List<FlightOption> findRouteSearchOptions(@Param("originCode") String originCode,
+                                              @Param("destinationCode") String destinationCode,
+                                              @Param("startDate") LocalDate startDate,
+                                              @Param("endDate") LocalDate endDate,
+                                              @Param("connectionType") ConnectionType connectionType,
+                                              @Param("seatClass") SeatClass seatClass,
+                                              @Param("startTime") LocalTime startTime,
+                                              @Param("endTime") LocalTime endTime
+    );
+
+
+    interface RouteDateProjection {
+        Long getRouteId();
+
+        LocalDate getDepartureDate();
+    }
 
 
 }

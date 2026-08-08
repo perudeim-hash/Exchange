@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class TravelTimingRecommendationPageController {
-    @GetMapping("/recommendations/travel-timing")
+    @GetMapping("/travel/travel-timing")
     public String travelTimingPage() {
-        return "recommendation/travel-timing";
+        return "travel/travel-timing";
     }
 }

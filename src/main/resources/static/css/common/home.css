@@ -1,196 +1,458 @@
-.home-hero {
+.home-hero-carousel {
     position: relative;
     overflow: hidden;
-    padding: 96px 0 88px;
-    background:
-            radial-gradient(circle at 82% 16%, rgba(56, 189, 248, 0.26), transparent 30%),
-            radial-gradient(circle at 10% 82%, rgba(37, 99, 235, 0.22), transparent 28%),
-            linear-gradient(135deg, #061d35 0%, #082746 48%, #0b3155 100%);
-    color: #ffffff;
+    background: #f8fafc;
 }
 
-.home-hero::before {
+.home-hero-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 640px;
+    overflow: hidden;
+    color: #111827;
+    background-color: #e0f2fe;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-hero-slide::before {
     content: "";
     position: absolute;
     inset: 0;
     background:
-            linear-gradient(90deg, rgba(6, 29, 53, 0.95), rgba(6, 29, 53, 0.55), rgba(6, 29, 53, 0.92)),
-            url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=80");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.18;
+        linear-gradient(
+            90deg,
+            rgba(248, 250, 252, 0.98) 0%,
+            rgba(248, 250, 252, 0.92) 40%,
+            rgba(248, 250, 252, 0.62) 68%,
+            rgba(248, 250, 252, 0.24) 100%
+        );
+    z-index: 0;
 }
 
-.home-hero .container {
+.home-hero-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 18% 20%, rgba(56, 189, 248, 0.16), transparent 28%),
+        radial-gradient(circle at 72% 18%, rgba(251, 191, 36, 0.14), transparent 24%);
+    z-index: 0;
+}
+
+/* 항공권 검색 */
+.home-hero-slide-flight {
+    background-image:
+        url("/images/home/hero-flight-wing.jpg"),
+        linear-gradient(135deg, #eff6ff, #e0f2fe);
+}
+
+/* 여행 시기 추천 */
+.home-hero-slide-recommend {
+    background-image:
+        url("/images/home/hero-travel-plan.jpg"),
+        linear-gradient(135deg, #f8fafc, #dbeafe);
+}
+
+/* 환율 분석 */
+.home-hero-slide-exchange {
+    background-image:
+        url("/images/home/hero-map-money.jpg"),
+        linear-gradient(135deg, #f8fafc, #dcfce7);
+}
+
+/* 이벤트/축제 */
+.home-hero-slide-event {
+    background-image:
+        url("/images/home/hero-japan-street.jpg"),
+        linear-gradient(135deg, #fff7ed, #e0f2fe);
+    background-position: center 44%;
+}
+
+/* 이벤트 슬라이드 전용 오버레이 */
+.home-hero-slide-event::before {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.96) 0%,
+            rgba(255, 255, 255, 0.86) 34%,
+            rgba(255, 247, 237, 0.48) 62%,
+            rgba(255, 237, 213, 0.18) 100%
+        );
+}
+
+.home-hero-slide-event::after {
+    background:
+        radial-gradient(circle at 18% 22%, rgba(56, 189, 248, 0.18), transparent 28%),
+        radial-gradient(circle at 72% 28%, rgba(251, 146, 60, 0.16), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 247, 237, 0.12));
+}
+
+.home-hero-content {
     position: relative;
     z-index: 1;
+    max-width: 720px;
+    padding: 104px 0 132px 54px;
 }
 
-.home-hero-title {
+.home-hero-content h1 {
+    margin: 16px 0 24px;
+    color: #0f172a;
+    font-size: clamp(44px, 5.6vw, 70px);
+    line-height: 1.08;
+    letter-spacing: -0.075em;
+    font-weight: 900;
+    word-break: keep-all;
+    overflow-wrap: normal;
+}
+
+.home-hero-content p:not(.tm-eyebrow) {
+    max-width: 640px;
     margin: 0;
-    font-size: clamp(38px, 5vw, 62px);
-    line-height: 1.16;
-    letter-spacing: -0.06em;
-    font-weight: 900;
-}
-
-.home-hero-description {
-    max-width: 680px;
-    color: #dbeafe;
-    font-size: 17px;
+    color: #475569;
+    font-size: 20px;
     line-height: 1.85;
+    font-weight: 600;
 }
 
-.home-hero-points {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    max-width: 660px;
+.home-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 36px;
 }
 
-.home-point-item {
-    padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(14px);
+.home-hero-control {
+    width: 54px;
+    height: 54px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 24px;
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.24);
+    backdrop-filter: blur(12px);
+    opacity: 1;
 }
 
-.home-point-item strong {
-    display: block;
-    margin-bottom: 5px;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 900;
+.home-hero-control:hover {
+    background: rgba(15, 23, 42, 0.36);
 }
 
-.home-point-item span {
-    color: #cbd5e1;
-    font-size: 13px;
-    line-height: 1.5;
+.home-hero-indicators {
+    bottom: 30px;
+    margin-bottom: 0;
 }
 
-.home-search-preview-card {
+.home-hero-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 999px;
+    background-color: #94a3b8;
+    opacity: 0.72;
+}
+
+.home-hero-indicators .active {
+    width: 32px;
+    background-color: #2563eb;
+    opacity: 1;
+}
+
+.home-quick-search-section {
     position: relative;
-    padding: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.96);
-    color: #111827;
-    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+    z-index: 5;
+    margin-top: -88px;
+    padding-bottom: 76px;
 }
 
-.home-search-card-header {
+.home-quick-search-card {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.13);
+}
+
+.home-quick-search-top {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 18px;
-    margin-bottom: 24px;
+    gap: 20px;
+    margin-bottom: 22px;
 }
 
-.home-search-card-header p {
-    color: #64748b;
-    font-size: 13px;
-    font-weight: 800;
-}
-
-.home-search-card-header h2 {
-    margin: 0;
-    font-size: 22px;
-    line-height: 1.35;
-    letter-spacing: -0.04em;
-    font-weight: 900;
-}
-
-.home-badge {
-    flex: 0 0 auto;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    padding: 0 12px;
-    border-radius: 999px;
-    background: #eff6ff;
-    color: #2563eb;
-    font-size: 12px;
-    font-weight: 900;
-}
-
-.home-route-box {
-    display: grid;
-    grid-template-columns: 1fr 48px 1fr;
-    gap: 16px;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #e5e7eb;
-    border-radius: 22px;
-    background: #f8fafc;
-}
-
-.home-airport span {
-    display: block;
-    margin-bottom: 5px;
-    color: #64748b;
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.home-airport strong {
-    display: block;
+.home-quick-search-top h2 {
+    margin: 8px 0 0;
     color: #111827;
-    font-size: 34px;
-    line-height: 1;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.055em;
     font-weight: 900;
 }
 
-.home-airport small {
-    display: block;
-    margin-top: 7px;
-    color: #64748b;
-    font-size: 13px;
+.home-trip-toggle {
+    display: inline-flex;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 999px;
+    background: #f1f5f9;
 }
 
-.home-route-arrow {
+.home-trip-toggle-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #ffffff;
-    color: #2563eb;
-    font-size: 24px;
+    min-width: 66px;
+    height: 38px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #475569;
+    font-size: 14px;
     font-weight: 900;
-    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 
-.home-flight-info-grid {
+.home-trip-toggle-btn.active {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+}
+
+.home-quick-route-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 18px;
+    grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr);
+    gap: 14px;
+    align-items: end;
+    margin-bottom: 16px;
 }
 
-.home-flight-info-grid div {
-    padding: 16px;
+.home-airport-autocomplete-field {
+    position: relative;
+}
+
+.home-airport-autocomplete-field label,
+.home-quick-detail-panel .form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.home-airport-input-shell {
+    position: relative;
+}
+
+.home-airport-search-input {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 74px 0 16px;
     border: 1px solid #e5e7eb;
-    border-radius: 18px;
+    border-radius: 16px;
     background: #ffffff;
-}
-
-.home-flight-info-grid span {
-    display: block;
-    margin-bottom: 6px;
-    color: #64748b;
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.home-flight-info-grid strong {
-    display: block;
     color: #111827;
     font-size: 15px;
     font-weight: 900;
+    outline: none;
+}
+
+.home-airport-search-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.home-airport-code-badge {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 46px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.home-route-swap-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 52px;
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.home-route-swap-btn:hover {
+    background: #dbeafe;
+}
+
+.home-quick-detail-panel {
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    background: #f8fafc;
+}
+
+.home-quick-search-card .form-control,
+.home-quick-search-card .form-select {
+    min-height: 52px;
+    border-radius: 16px;
+    border-color: #e5e7eb;
+    color: #111827;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.home-quick-search-card .form-control:focus,
+.home-quick-search-card .form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.home-quick-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.home-quick-summary {
+    display: grid;
+    gap: 5px;
+}
+
+.home-quick-summary strong {
+    color: #111827;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.home-quick-summary span {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.home-quick-submit-btn {
+    min-width: 220px;
+}
+
+.airport-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 8px);
+    z-index: 30;
+    display: none;
+    max-height: 340px;
+    overflow-y: auto;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.16);
+}
+
+.airport-dropdown.open {
+    display: block;
+}
+
+.airport-option {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 38px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    border: 0;
+    border-radius: 14px;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+.airport-option:hover {
+    background: #eff6ff;
+}
+
+.airport-option.is-active,
+.airport-option:focus {
+    background: #eff6ff;
+}
+
+.airport-option.is-active .airport-option-icon,
+.airport-option:focus .airport-option-icon {
+    background: #dbeafe;
+}
+
+.airport-option-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.airport-option-main {
+    display: grid;
+    gap: 3px;
+}
+
+.airport-option-title {
+    color: #111827;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.airport-option-sub {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.airport-option-code {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.airport-empty {
+    padding: 18px;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.is-hidden {
+    display: none !important;
 }
 
 .home-service-section {
@@ -201,67 +463,73 @@
 .home-section-heading h2 {
     margin: 10px 0 12px;
     color: #111827;
-    font-size: 36px;
-    line-height: 1.25;
-    letter-spacing: -0.05em;
+    font-size: 38px;
+    line-height: 1.24;
+    letter-spacing: -0.055em;
     font-weight: 900;
 }
 
 .home-section-heading p:last-child {
-    max-width: 680px;
+    max-width: 720px;
     margin: 0 auto;
     color: #64748b;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.8;
+    font-weight: 600;
 }
 
 .home-feature-card {
-    padding: 30px;
+    position: relative;
+    height: 100%;
+    padding: 32px;
+    overflow: hidden;
     border: 1px solid #e5e7eb;
-    border-radius: 26px;
+    border-radius: 28px;
     background: #ffffff;
-    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
     transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
+
 .home-feature-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     border-color: #bfdbfe;
-    box-shadow: 0 20px 46px rgba(15, 23, 42, 0.09);
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
 }
 
 .home-feature-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 46px;
-    height: 46px;
-    margin-bottom: 20px;
-    border-radius: 16px;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    border-radius: 18px;
     background: #eff6ff;
     color: #2563eb;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 900;
 }
 
 .home-feature-card h3 {
     margin: 0 0 12px;
     color: #111827;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 900;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
 }
 
 .home-feature-card p {
     margin: 0;
     color: #64748b;
     font-size: 15px;
-    line-height: 1.75;
+    line-height: 1.78;
+    font-weight: 600;
 }
 
 .home-feature-card a {
     display: inline-flex;
-    margin-top: 22px;
+    margin-top: 24px;
     color: #2563eb;
     font-size: 14px;
     font-weight: 900;
@@ -271,24 +539,234 @@
     color: #1d4ed8;
 }
 
+.home-preview-section {
+    padding: 94px 0;
+    background:
+        radial-gradient(circle at 12% 16%, rgba(56, 189, 248, 0.16), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.home-preview-section h2 {
+    margin: 12px 0 18px;
+    color: #111827;
+    font-size: 40px;
+    line-height: 1.24;
+    letter-spacing: -0.06em;
+    font-weight: 900;
+}
+
+.home-preview-section p {
+    margin: 0 0 28px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.85;
+    font-weight: 600;
+}
+
+.home-preview-card {
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 26px 70px rgba(15, 23, 42, 0.12);
+}
+
+.home-preview-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.home-preview-card-header span {
+    display: block;
+    margin-bottom: 6px;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.home-preview-card-header h3 {
+    margin: 0;
+    color: #111827;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+}
+
+.home-preview-card-header strong {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 68px;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.24);
+}
+
+.home-score-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.home-score-grid div {
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #f8fafc;
+}
+
+.home-score-grid span {
+    display: block;
+    margin-bottom: 7px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.home-score-grid strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.home-score-grid small {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.home-ticket-preview {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 18px;
+    align-items: center;
+    margin-top: 18px;
+    padding: 24px;
+    border: 1px solid #dbeafe;
+    border-radius: 24px;
+    background: #eff6ff;
+}
+
+.home-ticket-preview span {
+    display: block;
+    margin-bottom: 6px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.home-ticket-preview strong {
+    display: block;
+    color: #111827;
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.home-ticket-preview small {
+    display: block;
+    margin-top: 8px;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.home-ticket-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-ticket-line span {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    margin: 0 0 10px;
+    background: #93c5fd;
+}
+
+.home-ticket-line span::before,
+.home-ticket-line span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #2563eb;
+    transform: translateY(-50%);
+}
+
+.home-ticket-line span::before {
+    left: 0;
+}
+
+.home-ticket-line span::after {
+    right: 0;
+}
+
+.home-ticket-line small {
+    margin: 0;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.home-preview-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 18px;
+    padding: 18px 20px;
+    border-radius: 22px;
+    background: #111827;
+}
+
+.home-preview-price span {
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.home-preview-price strong {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
 .home-flow-section {
-    padding: 86px 0 96px;
+    padding: 92px 0 100px;
     background: #ffffff;
 }
 
 .home-flow-section h2 {
-    margin: 10px 0 16px;
+    margin: 12px 0 18px;
     color: #111827;
-    font-size: 36px;
-    line-height: 1.28;
-    letter-spacing: -0.05em;
+    font-size: 40px;
+    line-height: 1.26;
+    letter-spacing: -0.06em;
     font-weight: 900;
 }
 
 .home-flow-section p {
     color: #64748b;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.85;
+    font-weight: 600;
 }
 
 .home-flow-list {
@@ -298,32 +776,43 @@
 
 .home-flow-item {
     display: grid;
-    grid-template-columns: 64px 160px 1fr;
+    grid-template-columns: 58px 1fr;
     gap: 18px;
     align-items: center;
     padding: 22px;
     border: 1px solid #e5e7eb;
-    border-radius: 22px;
+    border-radius: 24px;
     background: #f8fafc;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
-.home-flow-item span {
+.home-flow-item:hover {
+    transform: translateY(-3px);
+    border-color: #bfdbfe;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+}
+
+.home-flow-item > span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background: #2563eb;
     color: #ffffff;
     font-size: 14px;
     font-weight: 900;
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
 }
 
 .home-flow-item strong {
+    display: block;
+    margin-bottom: 6px;
     color: #111827;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 900;
+    letter-spacing: -0.035em;
 }
 
 .home-flow-item p {
@@ -334,61 +823,395 @@
 }
 
 @media (max-width: 991px) {
-    .home-hero {
-        padding: 72px 0;
+    .home-hero-slide {
+        min-height: 570px;
     }
 
-    .home-hero-points {
+    .home-hero-slide::before {
+        background: rgba(248, 250, 252, 0.9);
+    }
+
+    .home-hero-slide-event::before {
+        background: rgba(255, 255, 255, 0.88);
+    }
+
+    .home-hero-content {
+        padding: 80px 0 116px 32px;
+    }
+
+    .home-quick-search-section {
+        margin-top: -54px;
+    }
+
+    .home-quick-search-top {
+        flex-direction: column;
+    }
+
+    .home-quick-route-row {
         grid-template-columns: 1fr;
     }
 
-    .home-search-preview-card {
-        margin-top: 12px;
+    .home-route-swap-btn {
+        width: 100%;
     }
 
-    .home-flow-item {
-        grid-template-columns: 56px 1fr;
+    .home-quick-bottom {
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    .home-flow-item p {
-        grid-column: 2 / -1;
+    .home-quick-submit-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .home-ticket-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .home-ticket-line span {
+        width: 2px;
+        height: 48px;
+    }
+
+    .home-ticket-line span::before,
+    .home-ticket-line span::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .home-ticket-line span::before {
+        top: 0;
+    }
+
+    .home-ticket-line span::after {
+        top: auto;
+        bottom: 0;
+    }
+
+    .home-ticket-preview .text-end {
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-score-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-preview-price {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
 @media (max-width: 576px) {
-    .home-hero {
-        padding: 56px 0;
+    .home-hero-slide {
+        min-height: 520px;
     }
 
-    .home-route-box {
-        grid-template-columns: 1fr;
-        text-align: left;
+    .home-hero-content {
+        padding: 68px 0 104px 0;
     }
 
-    .home-airport.text-end {
-        text-align: left !important;
+    .home-hero-content h1 {
+        font-size: 40px;
     }
 
-    .home-route-arrow {
-        transform: rotate(90deg);
+    .home-hero-content p:not(.tm-eyebrow) {
+        font-size: 16px;
     }
 
-    .home-flight-info-grid {
-        grid-template-columns: 1fr;
+    .home-hero-control {
+        display: none;
     }
 
-    .home-search-preview-card {
+    .home-quick-search-card {
         padding: 22px;
         border-radius: 24px;
     }
 
-    .home-service-section,
-    .home-flow-section {
-        padding: 64px 0;
-    }
-
+    .home-quick-search-top h2,
     .home-section-heading h2,
+    .home-preview-section h2,
     .home-flow-section h2 {
         font-size: 30px;
+    }
+
+    .home-service-section,
+    .home-preview-section,
+    .home-flow-section {
+        padding: 66px 0;
+    }
+}
+
+.home-date-input {
+    cursor: pointer;
+    background-color: #ffffff !important;
+}
+
+.home-date-input::placeholder{
+    color: #94a3b8;
+    font-weight: 800;
+}
+
+.home-date-input:placeholder-shown{
+    color: #94a3b8;
+}
+
+.home-date-input:not(:placeholder-shown){
+    color: #111827;
+}
+
+
+/* =========================
+   Home Bottom Clean Upgrade
+   아래 섹션 정리 버전
+========================= */
+
+/* 서비스 섹션: 과한 효과 제거하고 밝은 데이터 서비스 느낌 */
+.home-service-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 16% 18%, rgba(37, 99, 235, 0.06), transparent 28%),
+        radial-gradient(circle at 84% 16%, rgba(56, 189, 248, 0.08), transparent 30%),
+        linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.home-service-section::before {
+    display: none;
+}
+
+.home-service-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* 서비스 카드: 상단 줄 유지하되 얇고 깔끔하게 */
+.home-feature-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    background:
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: 0 18px 46px rgba(15, 23, 42, 0.07);
+}
+
+.col-md-4:nth-child(1) .home-feature-card::before {
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+}
+
+.col-md-4:nth-child(2) .home-feature-card::before {
+    background: linear-gradient(90deg, #0ea5e9, #22c55e);
+}
+
+.col-md-4:nth-child(3) .home-feature-card::before {
+    background: linear-gradient(90deg, #2563eb, #f97316);
+}
+
+
+.home-feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #bfdbfe;
+    box-shadow: 0 24px 56px rgba(15, 23, 42, 0.1);
+}
+
+.home-feature-icon {
+    position: relative;
+    z-index: 1;
+    background: #eff6ff;
+    box-shadow: none;
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.home-feature-card:hover .home-feature-icon {
+    transform: translateY(-2px);
+    background: #dbeafe;
+}
+
+.home-feature-card a {
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.home-feature-card a::after {
+    content: "→";
+    font-size: 13px;
+}
+
+.home-feature-card a:hover {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+/* Preview 섹션: PRICE/TIMING 큰 배경 글자 제거 */
+.home-preview-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 10% 18%, rgba(56, 189, 248, 0.14), transparent 30%),
+        radial-gradient(circle at 88% 20%, rgba(37, 99, 235, 0.07), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.home-preview-section::before,
+.home-preview-section::after {
+    display: none !important;
+}
+
+.home-preview-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Preview 카드: 오른쪽 위 난잡한 추천 장식 제거 */
+.home-preview-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #dbeafe;
+    background:
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: 0 26px 70px rgba(15, 23, 42, 0.11);
+}
+
+
+.home-preview-card::after {
+    display: none !important;
+}
+
+/* 추천 점수 뱃지는 깔끔하게 */
+.home-preview-card-header strong {
+    min-width: 64px;
+    height: 40px;
+    background: #2563eb;
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
+}
+
+/* 점수 박스 너무 네모난 느낌 완화 */
+.home-score-grid div {
+    border-radius: 18px;
+    background: #f8fafc;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.home-score-grid div:hover {
+    transform: translateY(-2px);
+    border-color: #bfdbfe;
+    background: #ffffff;
+}
+
+/* 항공권 미니 카드 */
+.home-ticket-preview {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, #eff6ff 0%, #f8fbff 100%);
+}
+
+.home-ticket-preview::before {
+    display: none;
+}
+
+/* 가격 영역 */
+.home-preview-price {
+    position: relative;
+    overflow: hidden;
+    background: #111827;
+}
+
+.home-preview-price::after {
+    display: none;
+}
+
+/* Flow 섹션: 선/점 제거하고 깔끔한 단계 카드 */
+.home-flow-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 14% 20%, rgba(37, 99, 235, 0.045), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.home-flow-section::before {
+    display: none !important;
+}
+
+.home-flow-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.home-flow-item {
+    position: relative;
+    border: 1px solid #e5e7eb;
+    background:
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.045);
+}
+
+.home-flow-item::after {
+    display: none !important;
+}
+
+.home-flow-item:hover {
+    transform: translateY(-3px);
+    border-color: #bfdbfe;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+}
+
+.home-flow-item > span {
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.18);
+}
+
+/* Flow 오른쪽 카드들이 너무 박스 같아 보이는 문제 완화 */
+.home-flow-list {
+    position: relative;
+    gap: 14px;
+}
+
+/* 등장 애니메이션은 너무 튀지 않게 약하게 */
+.home-feature-card,
+.home-preview-card,
+.home-flow-item {
+    animation: homeSoftRiseClean 0.34s ease both;
+}
+
+@keyframes homeSoftRiseClean {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 모바일에서 여백 과한 느낌 줄이기 */
+@media (max-width: 991px) {
+    .home-preview-section,
+    .home-flow-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .home-flow-item {
+        grid-template-columns: 52px 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-feature-card,
+    .home-preview-card,
+    .home-flow-item {
+        animation: none;
     }
 }

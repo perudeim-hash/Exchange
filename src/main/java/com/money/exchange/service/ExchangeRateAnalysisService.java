@@ -1,9 +1,6 @@
 package com.money.exchange.service;
 
-import com.money.exchange.dto.MonthlyAverageRateDto;
-import com.money.exchange.dto.RateHistoryAnalysisResponseDto;
-import com.money.exchange.dto.RateHistoryResponseDto;
-import com.money.exchange.dto.RateSummaryDto;
+import com.money.exchange.dto.*;
 import com.money.exchange.entity.Currency;
 import com.money.exchange.entity.RateHistory;
 import com.money.exchange.repository.RateHistoryRepository;
@@ -24,6 +21,8 @@ import java.util.TreeMap;
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class ExchangeRateAnalysisService {
+
+    private final RateJudgementCalculator rateJudgementCalculator;
     private final CurrencyService currencyService;
     private final RateHistoryRepository historyRepository;
 
@@ -46,14 +45,23 @@ public class ExchangeRateAnalysisService {
                 .min(Comparator.comparing(RateHistory::getRate))
                 .orElseThrow();
 
+        BigDecimal periodAverageRate = calculateAverageRate(histories);
+
+        RateJudgementDto currentJudgement = rateJudgementCalculator.createJudgement(latest.getRate(), periodAverageRate);
+
         List<MonthlyAverageRateDto> monthlyAverages = calculateMonthlyAverages(histories);
         MonthlyAverageRateDto lowestMonth = monthlyAverages.stream()
                 .min(Comparator.comparing(MonthlyAverageRateDto::getAverageRate))
-                .orElseThrow(null);
+                .orElse(null);
+
 
         MonthlyAverageRateDto highestMonth = monthlyAverages.stream()
                 .max(Comparator.comparing(MonthlyAverageRateDto::getAverageRate))
-                .orElseThrow(null);
+                .orElse(null);
+
+        List<MonthlyRateJudgementDto> monthlyJudgements = createMonthlyJudgements(monthlyAverages, periodAverageRate);
+
+        List<RateChartPointDto> chartPoints = createChartPoints(histories, periodAverageRate);
 
         List<RateHistoryResponseDto> historyDtos = histories.stream()
                 .map(RateHistoryResponseDto::from)
@@ -63,7 +71,7 @@ public class ExchangeRateAnalysisService {
                 currencyCode, histories.get(0).getRateDate(),
                 latest.getRateDate(), histories.size(),
                 RateSummaryDto.from(latest), RateSummaryDto.from(max), RateSummaryDto.from(min),
-                lowestMonth, highestMonth, monthlyAverages, historyDtos
+                periodAverageRate,currentJudgement,lowestMonth, highestMonth, monthlyAverages,monthlyJudgements,chartPoints, historyDtos
         );
     }
 
@@ -83,6 +91,42 @@ public class ExchangeRateAnalysisService {
         return histories.subList(histories.size() - limit, histories.size());
     }
 
+    private BigDecimal calculateAverageRate(List<RateHistory> histories) {
+        BigDecimal sum = BigDecimal.ZERO;
+        int count = 0;
+        for (RateHistory history : histories) {
+            if (history.getRate() == null) {
+                continue;
+            }
+            sum = sum.add(history.getRate());
+            count++;
+        }
+        if (count == 0) {
+            return BigDecimal.ZERO;
+        }
+        return sum.divide(BigDecimal.valueOf(count), 4, RoundingMode.HALF_UP);
+    }
+
+
+
+    private List<RateChartPointDto> createChartPoints(List<RateHistory> histories, BigDecimal periodAverageRate) {
+        return histories.stream().map(history -> {
+                    RateJudgementDto judgement = rateJudgementCalculator. createJudgement(history.getRate(), periodAverageRate);
+
+                    return RateChartPointDto.of(history.getRateDate(), history.getRate(), judgement.getAdvantagePercent(), judgement.getStatus(), judgement.getStatusLabel());
+                })
+                .toList();
+    }
+
+    private List<MonthlyRateJudgementDto> createMonthlyJudgements(List<MonthlyAverageRateDto> monthlyAverages, BigDecimal periodAverageRate) {
+        return monthlyAverages.stream().map(monthlyAverage -> {
+                    RateJudgementDto judgement = rateJudgementCalculator. createJudgement(monthlyAverage.getAverageRate(), periodAverageRate);
+
+                    return MonthlyRateJudgementDto.of(monthlyAverage.getMonth(), monthlyAverage.getAverageRate(), monthlyAverage.getCount(),
+                            judgement.getAdvantagePercent(), judgement.getStatus(), judgement.getStatusLabel(), judgement.getDifferenceText());
+                })
+                .toList();
+    }
     private List<MonthlyAverageRateDto> calculateMonthlyAverages(List<RateHistory> histories) {
         Map<YearMonth, MonthlyRateAccumulator> monthlyMap = new TreeMap<>();
 
@@ -121,4 +165,6 @@ public class ExchangeRateAnalysisService {
             return count;
         }
     }
+
+
 }

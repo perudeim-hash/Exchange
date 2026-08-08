@@ -16,10 +16,10 @@
 <main class="payment-result-page">
     <section class="payment-result-card success">
         <div class="result-icon">✓</div>
-        <p class="payment-label">Payment Complete</p>
-        <h1>결제가 완료되었습니다</h1>
+        <p class="payment-label">예약 확정</p>
+        <h1>여행 예약 결제가 완료되었습니다</h1>
         <p class="result-description">
-            항공권 예약과 결제 처리가 정상적으로 완료되었습니다.
+            항공권 예약이 확정되었습니다. <br> 아래 예약 정보를 확인하고 즐거운 여행 준비를 시작해 보세요.
         </p>
 
         <div class="result-info-list" th:if="${payment != null}">
@@ -35,7 +35,13 @@
 
             <div>
                 <span>결제 상태</span>
-                <strong th:text="${payment.status}">PAID</strong>
+                <strong th:switch="${payment.status}">
+                    <span th:case="'PAID'">결제 완료</span>
+                    <span th:case="'READY'">결제 대기</span>
+                    <span th:case="'FAILED'">결제 실패</span>
+                    <span th:case="'CANCELED'">결제 취소</span>
+                    <span th:case="*" th:text="${payment.status}">결제 상태 확인 중</span>
+                </strong>
             </div>
 
             <div>
@@ -45,12 +51,28 @@
 
             <div>
                 <span>결제 수단</span>
-                <strong th:text="${payment.paymentMethod != null ? payment.paymentMethod : '-'}">CARD</strong>
+                <strong th:switch="${payment.paymentMethod}">
+                    <span th:case="'CARD'">카드 결제</span>
+                    <span th:case="'TRANSFER'">계좌이체</span>
+                    <span th:case="'VIRTUAL_ACCOUNT'">가상계좌</span>
+                    <span th:case="'MOBILE_PHONE'">휴대폰 결제</span>
+                    <span th:case="'EASY_PAY'">간편결제</span>
+                    <span th:case="null">-</span>
+                    <span th:case="*" th:text="${payment.paymentMethod}">결제 수단 확인 중</span>
+                </strong>
             </div>
 
             <div>
-                <span>Toss 승인 상태</span>
-                <strong th:text="${payment.providerStatus != null ? payment.providerStatus : '-'}">DONE</strong>
+                <span>승인 상태</span>
+                <strong th:switch="${payment.providerStatus}">
+                    <span th:case="'DONE'">승인 완료</span>
+                    <span th:case="'WAITING_FOR_DEPOSIT'">입금 대기</span>
+                    <span th:case="'CANCELED'">승인 취소</span>
+                    <span th:case="'ABORTED'">승인 중단</span>
+                    <span th:case="'EXPIRED'">승인 만료</span>
+                    <span th:case="null">-</span>
+                    <span th:case="*" th:text="${payment.providerStatus}">승인 상태 확인 중</span>
+                </strong>
             </div>
         </div>
 
@@ -60,11 +82,11 @@
                target="_blank"
                rel="noopener noreferrer"
                class="payment-main-button link-button">
-                영수증 보기
+                결제 영수증 확인
             </a>
 
             <a th:href="@{/}" class="payment-secondary-link">
-                메인으로 돌아가기
+                Travel Money 홈으로 이동
             </a>
         </div>
     </section>

@@ -31,7 +31,7 @@ public class ReservationApiController {
         return ReservationResponseDto.from(reservation);
     }
 
-    @GetMapping("/{reservationId}/cancel")
+    @PostMapping("/{reservationId}/cancel")
     public ReservationResponseDto cancelReservation(@PathVariable Long reservationId) {
         Reservation reservation = reservationService.cancelReservation(reservationId);
         return ReservationResponseDto.from(reservation);

@@ -11,9 +11,12 @@ export function bindAirportAutocomplete(config) {
     getSelectedAirport,
     setSelectedAirport,
     onSelected,
+    limit = Infinity,
   } = config;
 
   let isComposing = false;
+  let activeIndex = -1;
+  let currentFilteredAirports = [];
 
   input.addEventListener("compositionstart", () => {
     isComposing = true;
@@ -21,14 +24,8 @@ export function bindAirportAutocomplete(config) {
 
   input.addEventListener("compositionend", () => {
     isComposing = false;
-    renderAirportDropdown({
-      type,
-      input,
-      dropdown,
-      getAirports,
-      setSelectedAirport,
-      onSelected,
-    });
+    activeIndex = 0;
+    renderAirportDropdown();
   });
 
   input.addEventListener("input", () => {
@@ -39,26 +36,210 @@ export function bindAirportAutocomplete(config) {
       return;
     }
 
-    renderAirportDropdown({
-      type,
-      input,
-      dropdown,
-      getAirports,
-      setSelectedAirport,
-      onSelected,
-    });
+    activeIndex = 0;
+    renderAirportDropdown();
   });
 
   input.addEventListener("focus", () => {
-    renderAirportDropdown({
-      type,
-      input,
-      dropdown,
-      getAirports,
-      setSelectedAirport,
-      onSelected,
-    });
+    activeIndex = 0;
+    renderAirportDropdown();
   });
+
+  input.addEventListener("keydown", (event) => {
+    handleKeydown(event);
+  });
+
+  function handleKeydown(event) {
+    const isDropdownOpen = dropdown.classList.contains("open");
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+
+      if (!isDropdownOpen) {
+        activeIndex = 0;
+        renderAirportDropdown();
+        return;
+      }
+
+      moveActiveIndex(1);
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+
+      if (!isDropdownOpen) {
+        activeIndex = 0;
+        renderAirportDropdown();
+        return;
+      }
+
+      moveActiveIndex(-1);
+      return;
+    }
+
+    if (event.key === "Enter") {
+      if (!isDropdownOpen) {
+        return;
+      }
+
+      event.preventDefault();
+
+      if (currentFilteredAirports.length === 0) {
+        return;
+      }
+
+      if (activeIndex < 0 || activeIndex >= currentFilteredAirports.length) {
+        activeIndex = 0;
+      }
+
+      selectAirport(currentFilteredAirports[activeIndex]);
+      return;
+    }
+
+    if (event.key === "Escape") {
+      if (!isDropdownOpen) {
+        return;
+      }
+
+      event.preventDefault();
+      closeDropdown();
+    }
+  }
+
+  function moveActiveIndex(direction) {
+    if (currentFilteredAirports.length === 0) {
+      return;
+    }
+
+    activeIndex += direction;
+
+    if (activeIndex < 0) {
+      activeIndex = currentFilteredAirports.length - 1;
+    }
+
+    if (activeIndex >= currentFilteredAirports.length) {
+      activeIndex = 0;
+    }
+
+    updateActiveOption();
+  }
+
+  function renderAirportDropdown() {
+    const airports = getAirports();
+    const keyword = normalizeText(input.value);
+
+    currentFilteredAirports = filterAirports(airports, keyword);
+
+    if (Number.isFinite(limit)) {
+      currentFilteredAirports = currentFilteredAirports.slice(0, limit);
+    }
+
+    if (currentFilteredAirports.length === 0) {
+      dropdown.innerHTML = `
+        <div class="airport-empty">
+          검색 결과가 없습니다.
+        </div>
+      `;
+      dropdown.classList.add("open");
+      activeIndex = -1;
+      return;
+    }
+
+    if (activeIndex < 0) {
+      activeIndex = 0;
+    }
+
+    if (activeIndex >= currentFilteredAirports.length) {
+      activeIndex = currentFilteredAirports.length - 1;
+    }
+
+    dropdown.innerHTML = currentFilteredAirports
+      .map((airport, index) => {
+        const isActive = index === activeIndex;
+
+        return `
+          <button type="button"
+                  class="airport-option ${isActive ? "is-active" : ""}"
+                  data-airport-code="${escapeHtml(airport.airportCode)}"
+                  data-airport-index="${index}"
+                  aria-selected="${isActive ? "true" : "false"}">
+            <span class="airport-option-icon">✈</span>
+
+            <span class="airport-option-main">
+              <span class="airport-option-title">
+                ${escapeHtml(airport.cityName)} ${escapeHtml(airport.airportName)}
+              </span>
+              <span class="airport-option-sub">
+                ${escapeHtml(airport.countryName)} · ${escapeHtml(airport.region)}
+              </span>
+            </span>
+
+            <span class="airport-option-code">${escapeHtml(airport.airportCode)}</span>
+          </button>
+        `;
+      })
+      .join("");
+
+    dropdown.querySelectorAll(".airport-option").forEach((button) => {
+      button.addEventListener("mouseenter", () => {
+        activeIndex = Number(button.dataset.airportIndex);
+        updateActiveOption();
+      });
+
+      button.addEventListener("click", () => {
+        const airportCode = button.dataset.airportCode;
+        const selectedAirport = currentFilteredAirports.find((airport) => {
+          return airport.airportCode === airportCode;
+        });
+
+        if (!selectedAirport) {
+          return;
+        }
+
+        selectAirport(selectedAirport);
+      });
+    });
+
+    dropdown.classList.add("open");
+    updateActiveOption();
+  }
+
+  function updateActiveOption() {
+    const optionButtons = dropdown.querySelectorAll(".airport-option");
+
+    optionButtons.forEach((button, index) => {
+      const isActive = index === activeIndex;
+
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-selected", isActive ? "true" : "false");
+
+      if (isActive) {
+        button.scrollIntoView({
+          block: "nearest",
+        });
+      }
+    });
+  }
+
+  function selectAirport(airport) {
+    if (!airport) {
+      return;
+    }
+
+    setSelectedAirport(airport);
+
+    if (onSelected) {
+      onSelected(airport);
+    }
+
+    closeDropdown();
+  }
+
+  function closeDropdown() {
+    dropdown.classList.remove("open");
+    activeIndex = -1;
+  }
 }
 
 export function renderSelectedAirport(input, badge, airport, fillInput = true) {
@@ -85,75 +266,6 @@ export function closeAirportDropdowns(...dropdowns) {
       dropdown.classList.remove("open");
     }
   });
-}
-
-function renderAirportDropdown(config) {
-  const {
-    input,
-    dropdown,
-    getAirports,
-    setSelectedAirport,
-    onSelected,
-  } = config;
-
-  const airports = getAirports();
-  const keyword = normalizeText(input.value);
-
-  const filteredAirports = filterAirports(airports, keyword).slice(0, 12);
-
-  if (filteredAirports.length === 0) {
-    dropdown.innerHTML = `
-      <div class="airport-empty">
-        검색 결과가 없습니다.
-      </div>
-    `;
-    dropdown.classList.add("open");
-    return;
-  }
-
-  dropdown.innerHTML = filteredAirports
-    .map((airport) => {
-      return `
-        <button type="button" class="airport-option" data-airport-code="${escapeHtml(airport.airportCode)}">
-          <span class="airport-option-icon">✈</span>
-
-          <span class="airport-option-main">
-            <span class="airport-option-title">
-              ${escapeHtml(airport.cityName)} ${escapeHtml(airport.airportName)}
-            </span>
-            <span class="airport-option-sub">
-              ${escapeHtml(airport.countryName)} · ${escapeHtml(airport.region)}
-            </span>
-          </span>
-
-          <span class="airport-option-code">${escapeHtml(airport.airportCode)}</span>
-        </button>
-      `;
-    })
-    .join("");
-
-  dropdown.querySelectorAll(".airport-option").forEach((button) => {
-    button.addEventListener("click", () => {
-      const airportCode = button.dataset.airportCode;
-      const selectedAirport = airports.find((airport) => {
-        return airport.airportCode === airportCode;
-      });
-
-      if (!selectedAirport) {
-        return;
-      }
-
-      setSelectedAirport(selectedAirport);
-
-      if (onSelected) {
-        onSelected(selectedAirport);
-      }
-
-      dropdown.classList.remove("open");
-    });
-  });
-
-  dropdown.classList.add("open");
 }
 
 function filterAirports(airports, keyword) {

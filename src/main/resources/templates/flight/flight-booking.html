@@ -33,13 +33,10 @@
             <strong>Detail</strong>
             <span>항공권 확인</span>
           </div>
+
           <div>
             <strong>Fare</strong>
             <span>요금 요약</span>
-          </div>
-          <div>
-            <strong>Next</strong>
-            <span>결제는 보류</span>
           </div>
         </div>
       </div>
@@ -88,9 +85,7 @@
               </div>
             </div>
 
-            <div id="outboundFlightDetail" class="booking-flight-body">
-              <!-- flight-booking.js에서 렌더링 -->
-            </div>
+            <div id="outboundFlightDetail" class="booking-flight-body"></div>
           </article>
 
           <article id="returnFlightCard" class="booking-flight-card booking-flight-card-refactor">
@@ -106,10 +101,9 @@
               </div>
             </div>
 
-            <div id="returnFlightDetail" class="booking-flight-body">
-              <!-- flight-booking.js에서 렌더링 -->
-            </div>
+            <div id="returnFlightDetail" class="booking-flight-body"></div>
           </article>
+
         </section>
 
         <aside class="booking-price-panel booking-price-panel-refactor">
@@ -130,7 +124,7 @@
             <div class="booking-price-divider"></div>
 
             <div class="booking-price-total">
-              <span>총 예상 금액</span>
+              <span>총 예상 <br> 금액</span>
               <strong id="totalPrice">-</strong>
             </div>
 
@@ -143,10 +137,6 @@
             </button>
 
             <div id="bookingPaymentMessage" class="booking-payment-message" style="display: none;"></div>
-
-            <p class="booking-next-help">
-              현재 단계에서는 실제 예매/결제 없이 항공권 상세 확인까지만 진행합니다.
-            </p>
           </div>
         </aside>
 

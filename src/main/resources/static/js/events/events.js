@@ -230,7 +230,7 @@ async function loadEvents() {
     hideEventStatus();
   } catch (error) {
     console.error(error);
-    showEventStatus("이벤트 데이터를 불러오지 못했습니다. 콘솔과 서버 로그를 확인해 주세요.", "danger");
+    showEventStatus("이벤트 데이터를 불러오지 못했습니다.", "danger");
   } finally {
     setSearchButtonLoading(false);
   }

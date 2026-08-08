@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>과거 환율 상세 | Travel Money</title>
+  <title>환율 상세 | Travel Money</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+
   <link rel="stylesheet" href="/css/common/common.css">
-  <link rel="stylesheet" href="/css/exchange/exchange.css">
+  <link rel="stylesheet" href="/css/exchange/exchange-detail.css">
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -18,65 +22,128 @@
 
 <main class="exchange-page">
 
-  <section class="exchange-detail-hero">
+  <section class="exchange-detail-hero exchange-detail-hero-bright">
     <div class="container">
-      <a href="/exchange" class="exchange-back-link">
+
+      <a href="/exchange" class="exchange-back-link exchange-back-link-light">
         ← 환율 목록으로
       </a>
 
-      <p class="tm-eyebrow">EXCHANGE HISTORY</p>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="tm-eyebrow">EXCHANGE TIMING</p>
 
-      <h1>
-        <span id="currencyTitle" th:text="${currencyCode}">USD</span>
-        과거 환율
-      </h1>
+          <h1 class="exchange-detail-title">
+            <span id="currencyTitle" th:text="${currencyCode}">USD</span>
+            환율 판단
+          </h1>
 
-      <p>
-        DB에 저장된 한국은행 환율 데이터를 기준으로 기간별 환율 변화,
-        최고/최저 환율, 월별 평균 환율을 확인합니다.
-      </p>
+          <p class="exchange-detail-description">
+            평균 환율과 현재 환율을 비교해 여행 예산에 유리한 시기인지 확인합니다.
+          </p>
+
+          <div class="exchange-detail-hero-actions">
+            <button type="button" class="exchange-hero-range-btn quick-range-btn" data-range="7d">
+              1주일
+            </button>
+            <button type="button" class="exchange-hero-range-btn quick-range-btn" data-range="1m">
+              1개월
+            </button>
+            <button type="button" class="exchange-hero-range-btn quick-range-btn" data-range="3m">
+              3개월
+            </button>
+            <button type="button" class="exchange-hero-range-btn quick-range-btn" data-range="6m">
+              6개월
+            </button>
+            <button type="button" class="exchange-hero-range-btn quick-range-btn active" data-range="12m">
+              12개월
+            </button>
+            <button type="button" class="exchange-hero-range-btn quick-range-btn" data-range="all">
+              전체
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <article class="exchange-decision-card" id="decisionCard">
+            <div class="exchange-decision-top">
+              <span id="decisionBadge" class="exchange-decision-badge status-normal">
+                분석 중
+              </span>
+              <small id="decisionDate">-</small>
+            </div>
+
+            <h2 id="decisionTitle">
+              환율 데이터를 불러오는 중
+            </h2>
+
+            <p id="decisionDescription">
+              선택한 기간의 평균 환율과 현재 환율을 비교합니다.
+            </p>
+
+            <div class="exchange-decision-rate-grid">
+              <div class="exchange-decision-rate-box current">
+                <span>현재 환율</span>
+                <strong id="currentRateValue">-</strong>
+              </div>
+
+              <div class="exchange-decision-rate-box average">
+                <span>기준 평균</span>
+                <strong id="decisionAverageRate">-</strong>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section class="exchange-content-section">
+  <section class="exchange-content-section exchange-detail-content-section">
     <div class="container">
 
-      <section class="exchange-panel">
-        <div class="exchange-card-header">
+      <section class="exchange-detail-filter-panel">
+        <div class="exchange-detail-filter-head">
           <div>
-            <p class="tm-eyebrow">FILTER</p>
-            <h2>조회 조건</h2>
-            <p>빠른 기간 버튼 또는 날짜 범위를 선택해서 환율 데이터를 조회합니다.</p>
+            <p class="tm-eyebrow">PERIOD</p>
+            <h2>기준 기간 선택</h2>
+            <p>
+              선택한 기간의 평균 환율을 기준으로 여행 유리도를 계산합니다.
+            </p>
           </div>
         </div>
 
-        <div class="mb-4">
-          <label class="form-label exchange-form-label">빠른 기간</label>
-
-          <div class="d-flex flex-wrap gap-2">
-            <button type="button" class="btn btn-outline-primary btn-sm quick-range-btn" data-range="7d">1주일</button>
-            <button type="button" class="btn btn-outline-primary btn-sm quick-range-btn" data-range="1m">1개월</button>
-            <button type="button" class="btn btn-outline-primary btn-sm quick-range-btn" data-range="3m">3개월</button>
-            <button type="button" class="btn btn-outline-primary btn-sm quick-range-btn" data-range="6m">6개월</button>
-            <button type="button" class="btn btn-outline-primary btn-sm quick-range-btn" data-range="12m">12개월</button>
-            <button type="button" class="btn btn-primary btn-sm quick-range-btn" data-range="all">전체</button>
-          </div>
+        <div class="exchange-period-buttons">
+          <button type="button" class="exchange-range-btn quick-range-btn" data-range="7d">1주일</button>
+          <button type="button" class="exchange-range-btn quick-range-btn" data-range="1m">1개월</button>
+          <button type="button" class="exchange-range-btn quick-range-btn" data-range="3m">3개월</button>
+          <button type="button" class="exchange-range-btn quick-range-btn" data-range="6m">6개월</button>
+          <button type="button" class="exchange-range-btn quick-range-btn active" data-range="12m">12개월</button>
+          <button type="button" class="exchange-range-btn quick-range-btn" data-range="all">전체</button>
         </div>
 
-        <div class="row g-3 align-items-end">
+        <div class="row g-3 align-items-end mt-2">
           <div class="col-12 col-md-3">
             <label for="fromDate" class="form-label exchange-form-label">시작일</label>
-            <input type="date" id="fromDate" class="form-control">
+            <input type="text"
+                   id="fromDate"
+                   class="form-control exchange-form-control exchange-date-input"
+                   placeholder="시작일 선택"
+                   readonly>
           </div>
 
           <div class="col-12 col-md-3">
             <label for="toDate" class="form-label exchange-form-label">종료일</label>
-            <input type="date" id="toDate" class="form-control">
+            <input type="text"
+                   id="toDate"
+                   class="form-control exchange-form-control exchange-date-input"
+                   placeholder="종료일 선택"
+                   readonly>
           </div>
 
           <div class="col-12 col-md-3">
             <label for="limitSelect" class="form-label exchange-form-label">표시 개수</label>
-            <select id="limitSelect" class="form-select">
+            <select id="limitSelect" class="form-select exchange-form-control">
               <option value="">전체</option>
               <option value="20">최근 20개</option>
               <option value="50">최근 50개</option>
@@ -85,121 +152,172 @@
           </div>
 
           <div class="col-12 col-md-3">
-            <button type="button" id="searchBtn" class="btn btn-primary w-100">
-              조회하기
+            <button type="button" id="searchBtn" class="btn tm-btn-primary exchange-search-btn">
+              기준 다시 계산
             </button>
           </div>
         </div>
       </section>
 
-      <section class="exchange-panel">
-        <div class="exchange-card-header">
-          <div>
-            <p class="tm-eyebrow">CHART</p>
-            <h2>환율 추이 차트</h2>
-            <p id="chartSummary">데이터를 불러오는 중입니다.</p>
-          </div>
-        </div>
-
-        <div class="exchange-chart-box">
-          <canvas id="rateChart" height="110"></canvas>
-        </div>
-      </section>
-
-      <section class="exchange-summary-grid">
-        <article class="exchange-summary-card">
-          <div>
-            <span>최신 환율</span>
-            <small id="latestRateDate">-</small>
-          </div>
+      <section class="exchange-detail-metric-grid">
+        <article class="exchange-metric-card primary">
+          <span>현재 환율</span>
           <strong id="latestRate">-</strong>
+          <small id="latestRateDate">-</small>
         </article>
 
-        <article class="exchange-summary-card">
-          <div>
-            <span>최고 환율</span>
-            <small id="maxRateDate">-</small>
-          </div>
-          <strong id="maxRate">-</strong>
+        <article class="exchange-metric-card average">
+          <span>기준 평균</span>
+          <strong id="periodAverageRate">-</strong>
+          <small id="periodAverageText">선택 기간 평균</small>
         </article>
 
-        <article class="exchange-summary-card">
-          <div>
-            <span>최저 환율</span>
-            <small id="minRateDate">-</small>
-          </div>
-          <strong id="minRate">-</strong>
+        <article class="exchange-metric-card" id="differenceMetricCard">
+          <span>평균 대비</span>
+          <strong id="differencePercent">-</strong>
+          <small id="differenceText">-</small>
+        </article>
+
+        <article class="exchange-metric-card min">
+          <span>최저 환율</span>
+          <strong id="minRateValue">-</strong>
+          <small id="minRateDate">-</small>
+        </article>
+
+        <article class="exchange-metric-card max">
+          <span>최고 환율</span>
+          <strong id="maxRateValue">-</strong>
+          <small id="maxRateDate">-</small>
         </article>
       </section>
 
-      <section class="exchange-panel">
-        <div class="exchange-card-header">
+      <section class="exchange-detail-chart-panel">
+        <div class="exchange-card-header exchange-detail-section-header">
           <div>
-            <p class="tm-eyebrow">MONTHLY AVERAGE</p>
-            <h2>월별 평균 환율 분석</h2>
-            <p>선택한 기간의 환율 데이터를 월별로 묶어 평균 환율을 계산합니다.</p>
+            <p class="tm-eyebrow">TRAVEL ADVANTAGE</p>
+            <h2>평균 대비 여행 유리도</h2>
+            <p id="chartSummary">
+              데이터를 불러오는 중입니다.
+            </p>
+          </div>
+
+          <div class="exchange-chart-legend">
+            <span class="good">유리</span>
+            <span class="zero">평균</span>
+            <span class="bad">부담</span>
           </div>
         </div>
 
-        <div class="row g-4 mb-4">
-          <div class="col-12 col-md-6">
-            <div class="monthly-highlight-card">
-              <p>평균 환율이 가장 낮았던 달</p>
-              <h3 id="lowestMonth">-</h3>
-              <span id="lowestMonthRate">-</span>
-            </div>
+        <div class="exchange-advantage-guide">
+          <div>
+            <strong>위쪽</strong>
+            <span>평균보다 저렴한 환율</span>
           </div>
-
-          <div class="col-12 col-md-6">
-            <div class="monthly-highlight-card">
-              <p>평균 환율이 가장 높았던 달</p>
-              <h3 id="highestMonth">-</h3>
-              <span id="highestMonthRate">-</span>
-            </div>
+          <div>
+            <strong>중간</strong>
+            <span>선택 기간 평균 환율</span>
+          </div>
+          <div>
+            <strong>아래쪽</strong>
+            <span>평균보다 부담되는 환율</span>
           </div>
         </div>
 
-        <div class="table-responsive">
-          <table class="table exchange-table align-middle mb-0">
-            <thead>
-            <tr>
-              <th>월</th>
-              <th class="text-end">평균 환율</th>
-              <th class="text-end">데이터 수</th>
-            </tr>
-            </thead>
-            <tbody id="monthlyAverageTableBody">
-            <tr>
-              <td colspan="3" class="text-center text-muted">
-                월별 평균 데이터를 불러오는 중입니다.
-              </td>
-            </tr>
-            </tbody>
-          </table>
+        <div class="exchange-chart-box exchange-advantage-chart-box">
+          <canvas id="rateChart"></canvas>
         </div>
       </section>
 
-      <section class="exchange-panel">
-        <div class="exchange-card-header">
+      <section class="exchange-detail-month-section">
+        <div class="exchange-card-header exchange-detail-section-header">
           <div>
-            <p class="tm-eyebrow">HISTORY</p>
+            <p class="tm-eyebrow">MONTHLY TIMING</p>
+            <h2>월별 환율 판단</h2>
+            <p>
+              선택한 기간 평균과 비교해 월별 환율이 여행에 유리했는지 보여줍니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="exchange-month-highlight-grid">
+          <article class="monthly-highlight-card good">
+            <p>가장 추천</p>
+            <h3 id="lowestMonth">-</h3>
+            <span id="lowestMonthRate">-</span>
+          </article>
+
+          <article class="monthly-highlight-card bad">
+            <p>가장 비추천</p>
+            <h3 id="highestMonth">-</h3>
+            <span id="highestMonthRate">-</span>
+          </article>
+        </div>
+
+        <div id="monthlyJudgementGrid" class="exchange-month-card-grid">
+          <div class="exchange-empty-card">
+            월별 데이터를 불러오는 중입니다.
+          </div>
+        </div>
+
+        <div class="exchange-month-table-wrap">
+          <button class="exchange-table-toggle-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#monthlyAverageTableCollapse"
+                  aria-expanded="false"
+                  aria-controls="monthlyAverageTableCollapse">
+            월별 평균 표 보기
+          </button>
+
+          <div class="collapse" id="monthlyAverageTableCollapse">
+            <div class="table-responsive mt-3">
+              <table class="table exchange-table align-middle mb-0">
+                <thead>
+                <tr>
+                  <th>월</th>
+                  <th class="text-end">평균 환율</th>
+                  <th class="text-end">평균 대비</th>
+                  <th class="text-end">데이터 수</th>
+                </tr>
+                </thead>
+                <tbody id="monthlyAverageTableBody">
+                <tr>
+                  <td colspan="4" class="text-center text-muted">
+                    월별 평균 데이터를 불러오는 중입니다.
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="exchange-detail-history-section">
+        <div class="exchange-card-header exchange-detail-section-header">
+          <div>
+            <p class="tm-eyebrow">DAILY HISTORY</p>
             <h2>날짜별 환율 데이터</h2>
-            <p>저장된 날짜별 환율 데이터를 표로 확인합니다.</p>
+            <p>
+              실제 저장된 날짜별 환율과 평균 대비 차이를 확인합니다.
+            </p>
           </div>
         </div>
 
         <div class="table-responsive">
-          <table class="table exchange-table align-middle mb-0">
+          <table class="table exchange-table exchange-history-table align-middle mb-0">
             <thead>
             <tr>
               <th>날짜</th>
               <th>통화</th>
               <th class="text-end">환율</th>
+              <th class="text-end">평균 대비</th>
+              <th class="text-end">판단</th>
             </tr>
             </thead>
             <tbody id="historyTableBody">
             <tr>
-              <td colspan="3" class="text-center text-muted">
+              <td colspan="5" class="text-center text-muted">
                 데이터를 불러오는 중입니다.
               </td>
             </tr>
@@ -210,7 +328,7 @@
 
       <p class="exchange-source-note">
         출처: 한국은행 경제통계시스템 ECOS Open API<br>
-        ※ 본 페이지의 환율 차트와 월별 평균 분석은 DB에 저장된 한국은행 ECOS 환율 데이터를 기준으로 계산됩니다.
+        ※ 본 페이지의 환율 판단은 DB에 저장된 환율 데이터의 선택 기간 평균을 기준으로 계산합니다.
       </p>
 
     </div>
@@ -225,6 +343,11 @@
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Flatpickr -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ko.js"></script>
+
 <script src="/js/exchange/exchange-detail.js"></script>
 
 </body>

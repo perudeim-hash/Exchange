@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error(error);
             enablePaymentButton();
-            showStatus("결제창을 여는 중 문제가 발생했습니다. 설정값과 콘솔을 확인해 주세요.");
+            showStatus("결제창을 여는 중 문제가 발생했습니다. 잠시 후 다시 시도해 주세요.");
         }
     });
 
