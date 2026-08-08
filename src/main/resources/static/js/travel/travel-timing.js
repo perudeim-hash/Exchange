@@ -81,7 +81,6 @@ function initDatePicker() {
     mode: "range",
     locale: "ko",
     dateFormat: "Y-m-d",
-    minDate: "today",
     showMonths: 2,
     static: false,
     closeOnSelect: false,

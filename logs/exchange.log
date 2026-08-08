@@ -1,19 +1,19 @@
-2026-08-01 20:25:42.187 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 31876 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
-2026-08-01 20:25:42.194 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
-2026-08-01 20:25:43.548 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-01 20:25:43.703 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 142 ms. Found 11 JPA repository interfaces.
-2026-08-01 20:25:44.524 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-08-01 20:25:44.542 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:25:44.545 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-08-01 20:25:44.546 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-08-01 20:25:44.633 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2380 ms
-2026-08-01 20:25:44.913 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-01 20:25:45.035 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-08-01 20:25:45.899 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-01 20:25:45.954 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-08-01 20:25:46.175 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@12d44a2a
-2026-08-01 20:25:46.177 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-08-01 20:25:46.278 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-08-08 19:16:12.113 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 18244 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
+2026-08-08 19:16:12.118 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-08 19:16:12.997 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-08 19:16:13.094 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 11 JPA repository interfaces.
+2026-08-08 19:16:13.528 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-08 19:16:13.542 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-08 19:16:13.544 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-08 19:16:13.545 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-08-08 19:16:13.607 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1429 ms
+2026-08-08 19:16:13.789 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-08 19:16:13.865 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-08-08 19:16:14.390 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-08 19:16:14.424 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-08 19:16:14.570 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6d2db15b
+2026-08-08 19:16:14.572 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-08 19:16:14.655 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [jdbc:mariadb://localhost/exchange?user=perudeim&password=***]
 	Database driver: MariaDB Connector/J
 	Database dialect: MariaDBDialect
@@ -25,66 +25,65 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-08-01 20:25:49.122 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-01 20:25:49.126 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
-2026-08-01 20:25:49.550 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:25:49.654 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-01 20:25:50.840 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
-2026-08-01 20:25:51.593 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
-2026-08-01 20:25:51.705 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
-2026-08-01 20:25:51.828 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
-2026-08-01 20:25:51.964 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
-2026-08-01 20:25:52.076 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
-2026-08-01 20:25:52.180 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
-2026-08-01 20:25:52.296 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
-2026-08-01 20:25:52.412 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
-2026-08-01 20:25:52.530 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
-2026-08-01 20:25:52.647 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
-2026-08-01 20:25:52.759 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
-2026-08-01 20:25:52.863 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
-2026-08-01 20:25:52.968 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
-2026-08-01 20:25:53.078 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
-2026-08-01 20:25:53.214 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
-2026-08-01 20:25:53.348 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
-2026-08-01 20:25:53.482 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
-2026-08-01 20:25:53.664 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
-2026-08-01 20:25:53.802 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
-2026-08-01 20:25:53.912 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
-2026-08-01 20:25:54.029 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
-2026-08-01 20:25:54.234 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
-2026-08-01 20:25:54.346 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
-2026-08-01 20:25:54.479 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
-2026-08-01 20:25:54.480 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
-2026-08-01 20:25:54.487 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
-2026-08-01 20:25:55.709 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-01 20:25:56.585 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:25:56.637 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-08-01 20:25:56.656 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 15.203 seconds (process running for 15.91)
-2026-08-01 20:26:00.778 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-01 20:26:00.779 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-08-01 20:26:00.782 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2026-08-01 20:26:33.976 [http-nio-8080-exec-9] WARN  org.hibernate.orm.query - HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
-2026-08-01 20:30:22.865 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-01 20:30:22.890 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-08-01 20:30:22.915 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:30:22.937 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-08-01 20:30:22.957 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-08-01 20:30:28.421 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 3540 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
-2026-08-01 20:30:28.424 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
-2026-08-01 20:30:29.233 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-01 20:30:29.364 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 120 ms. Found 11 JPA repository interfaces.
-2026-08-01 20:30:29.883 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-08-01 20:30:29.898 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:30:29.901 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-08-01 20:30:29.901 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-08-01 20:30:29.981 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1513 ms
-2026-08-01 20:30:30.176 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-01 20:30:30.251 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-08-01 20:30:30.856 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-01 20:30:30.897 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-08-01 20:30:31.021 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@30e2016a
-2026-08-01 20:30:31.024 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-08-01 20:30:31.104 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-08-08 19:16:15.791 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-08 19:16:15.795 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-08-08 19:16:16.250 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-08 19:16:16.331 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-08 19:16:17.452 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
+2026-08-08 19:16:18.310 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
+2026-08-08 19:16:18.593 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
+2026-08-08 19:16:18.893 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
+2026-08-08 19:16:19.091 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
+2026-08-08 19:16:19.298 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
+2026-08-08 19:16:19.513 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
+2026-08-08 19:16:19.674 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
+2026-08-08 19:16:19.910 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
+2026-08-08 19:16:20.119 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
+2026-08-08 19:16:20.322 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
+2026-08-08 19:16:20.630 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
+2026-08-08 19:16:20.840 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
+2026-08-08 19:16:21.034 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
+2026-08-08 19:16:21.241 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
+2026-08-08 19:16:21.445 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
+2026-08-08 19:16:21.614 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
+2026-08-08 19:16:21.851 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
+2026-08-08 19:16:22.060 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
+2026-08-08 19:16:22.269 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
+2026-08-08 19:16:22.467 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
+2026-08-08 19:16:22.671 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
+2026-08-08 19:16:22.873 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
+2026-08-08 19:16:23.030 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
+2026-08-08 19:16:23.184 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
+2026-08-08 19:16:23.184 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
+2026-08-08 19:16:23.189 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
+2026-08-08 19:16:23.678 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-08 19:16:23.943 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-08 19:16:23.961 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-08 19:16:23.968 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 12.454 seconds (process running for 13.114)
+2026-08-08 19:16:49.086 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-08 19:16:49.086 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-08 19:16:49.088 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-08-08 19:19:42.711 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-08 19:19:42.735 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-08 19:19:42.750 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-08 19:19:42.765 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-08 19:19:42.782 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-08 19:19:47.164 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 42232 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
+2026-08-08 19:19:47.166 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-08 19:19:47.968 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-08 19:19:48.060 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 11 JPA repository interfaces.
+2026-08-08 19:19:48.493 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-08 19:19:48.505 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-08 19:19:48.508 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-08 19:19:48.508 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-08-08 19:19:48.569 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1356 ms
+2026-08-08 19:19:48.740 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-08 19:19:48.814 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-08-08 19:19:49.266 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-08 19:19:49.300 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-08 19:19:49.409 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@61d09475
+2026-08-08 19:19:49.411 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-08 19:19:49.472 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [jdbc:mariadb://localhost/exchange?user=perudeim&password=***]
 	Database driver: MariaDB Connector/J
 	Database dialect: MariaDBDialect
@@ -96,66 +95,67 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-08-01 20:30:32.365 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-01 20:30:32.374 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
-2026-08-01 20:30:32.758 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:30:32.859 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-01 20:30:33.730 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
-2026-08-01 20:30:34.437 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
-2026-08-01 20:30:34.543 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
-2026-08-01 20:30:34.662 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
-2026-08-01 20:30:34.768 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
-2026-08-01 20:30:34.881 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
-2026-08-01 20:30:35.002 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
-2026-08-01 20:30:35.114 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
-2026-08-01 20:30:35.230 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
-2026-08-01 20:30:35.337 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
-2026-08-01 20:30:35.448 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
-2026-08-01 20:30:35.555 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
-2026-08-01 20:30:35.662 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
-2026-08-01 20:30:35.766 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
-2026-08-01 20:30:35.884 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
-2026-08-01 20:30:35.990 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
-2026-08-01 20:30:36.129 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
-2026-08-01 20:30:36.238 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
-2026-08-01 20:30:36.348 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
-2026-08-01 20:30:36.457 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
-2026-08-01 20:30:36.571 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
-2026-08-01 20:30:36.685 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
-2026-08-01 20:30:36.789 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
-2026-08-01 20:30:36.896 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
-2026-08-01 20:30:37.021 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
-2026-08-01 20:30:37.021 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
-2026-08-01 20:30:37.028 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
-2026-08-01 20:30:37.548 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-01 20:30:37.820 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:30:37.849 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-08-01 20:30:37.855 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 10.101 seconds (process running for 10.772)
-2026-08-01 20:30:45.910 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-01 20:30:45.912 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-08-01 20:30:45.914 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2026-08-01 20:30:48.777 [http-nio-8080-exec-6] WARN  org.hibernate.orm.query - HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
-2026-08-01 20:35:08.385 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-01 20:35:08.399 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-08-01 20:35:08.410 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:35:08.419 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-08-01 20:35:08.430 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-08-01 20:35:17.112 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 36112 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
-2026-08-01 20:35:17.115 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
-2026-08-01 20:35:17.923 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-01 20:35:18.061 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 125 ms. Found 11 JPA repository interfaces.
-2026-08-01 20:35:18.614 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-08-01 20:35:18.629 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:35:18.632 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-08-01 20:35:18.632 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-08-01 20:35:18.704 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1543 ms
-2026-08-01 20:35:18.909 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-01 20:35:19.056 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-08-01 20:35:19.767 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-01 20:35:19.823 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-08-01 20:35:19.930 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@61d09475
-2026-08-01 20:35:19.933 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-08-01 20:35:20.026 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-08-08 19:19:50.523 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-08 19:19:50.529 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-08-08 19:19:50.899 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-08 19:19:50.974 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-08 19:19:51.695 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
+2026-08-08 19:19:52.421 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
+2026-08-08 19:19:52.575 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
+2026-08-08 19:19:52.722 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
+2026-08-08 19:19:52.875 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
+2026-08-08 19:19:53.023 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
+2026-08-08 19:19:53.167 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
+2026-08-08 19:19:53.411 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
+2026-08-08 19:19:53.558 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
+2026-08-08 19:19:53.800 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
+2026-08-08 19:19:53.950 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
+2026-08-08 19:19:54.223 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
+2026-08-08 19:19:54.434 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
+2026-08-08 19:19:54.742 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
+2026-08-08 19:19:54.889 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
+2026-08-08 19:19:55.157 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
+2026-08-08 19:19:55.350 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
+2026-08-08 19:19:55.674 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
+2026-08-08 19:19:55.863 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
+2026-08-08 19:19:56.068 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
+2026-08-08 19:19:56.289 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
+2026-08-08 19:19:56.483 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
+2026-08-08 19:19:56.685 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
+2026-08-08 19:19:56.897 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
+2026-08-08 19:19:57.059 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
+2026-08-08 19:19:57.059 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
+2026-08-08 19:19:57.072 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
+2026-08-08 19:19:57.543 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-08 19:19:57.823 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-08 19:19:57.847 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-08 19:19:57.854 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 11.199 seconds (process running for 11.784)
+2026-08-08 19:20:17.996 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-08 19:20:17.996 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-08 19:20:17.998 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-08 19:20:44.340 [http-nio-8080-exec-4] WARN  org.hibernate.orm.query - HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+2026-08-08 19:20:47.769 [http-nio-8080-exec-1] WARN  org.hibernate.orm.query - HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
+2026-08-08 19:23:27.642 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-08 19:23:27.650 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-08 19:23:27.655 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-08 19:23:27.657 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-08 19:23:27.665 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-08 19:23:31.828 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 41936 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
+2026-08-08 19:23:31.830 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-08 19:23:32.539 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-08 19:23:32.625 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 11 JPA repository interfaces.
+2026-08-08 19:23:33.038 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-08 19:23:33.049 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-08 19:23:33.051 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-08 19:23:33.053 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-08-08 19:23:33.117 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1247 ms
+2026-08-08 19:23:33.283 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-08 19:23:33.370 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-08-08 19:23:33.848 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-08 19:23:33.887 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-08 19:23:33.963 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@30e2016a
+2026-08-08 19:23:33.966 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-08 19:23:34.033 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [jdbc:mariadb://localhost/exchange?user=perudeim&password=***]
 	Database driver: MariaDB Connector/J
 	Database dialect: MariaDBDialect
@@ -167,253 +167,319 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-08-01 20:35:21.736 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-01 20:35:21.742 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
-2026-08-01 20:35:22.065 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:35:22.187 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-01 20:35:23.007 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
-2026-08-01 20:35:23.772 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
-2026-08-01 20:35:23.893 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
-2026-08-01 20:35:24.026 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
-2026-08-01 20:35:24.139 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
-2026-08-01 20:35:24.245 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
-2026-08-01 20:35:24.351 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
-2026-08-01 20:35:24.467 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
-2026-08-01 20:35:24.581 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
-2026-08-01 20:35:24.693 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
-2026-08-01 20:35:24.807 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
-2026-08-01 20:35:24.915 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
-2026-08-01 20:35:25.059 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
-2026-08-01 20:35:25.169 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
-2026-08-01 20:35:25.287 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
-2026-08-01 20:35:25.402 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
-2026-08-01 20:35:25.516 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
-2026-08-01 20:35:25.627 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
-2026-08-01 20:35:25.785 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
-2026-08-01 20:35:25.903 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
-2026-08-01 20:35:26.013 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
-2026-08-01 20:35:26.131 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
-2026-08-01 20:35:26.243 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
-2026-08-01 20:35:26.354 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
-2026-08-01 20:35:26.460 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
-2026-08-01 20:35:26.460 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
-2026-08-01 20:35:26.465 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
-2026-08-01 20:35:27.195 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-01 20:35:27.639 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:35:27.667 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-08-01 20:35:27.676 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 11.264 seconds (process running for 11.77)
-2026-08-01 20:35:36.134 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-01 20:35:36.141 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-08-01 20:35:36.146 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:35:36.148 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-08-01 20:35:36.154 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-08-01 20:35:40.162 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 22532 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
-2026-08-01 20:35:40.164 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
-2026-08-01 20:35:40.985 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-01 20:35:41.088 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 11 JPA repository interfaces.
-2026-08-01 20:35:41.660 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-08-01 20:35:41.675 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:35:41.678 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-08-01 20:35:41.678 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-08-01 20:35:41.747 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1541 ms
-2026-08-01 20:35:42.540 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-01 20:35:42.727 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-08-01 20:35:43.606 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-01 20:35:43.649 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-08-01 20:35:43.769 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@78504ce9
-2026-08-01 20:35:43.772 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-08-01 20:35:43.877 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mariadb://localhost/exchange?user=perudeim&password=***]
-	Database driver: MariaDB Connector/J
-	Database dialect: MariaDBDialect
-	Database version: 11.7.2
-	Default catalog/schema: exchange/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-01 20:35:45.505 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-01 20:35:45.511 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
-2026-08-01 20:35:45.832 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:35:45.972 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-01 20:35:47.026 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
-2026-08-01 20:35:47.958 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
-2026-08-01 20:35:48.077 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
-2026-08-01 20:35:48.202 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
-2026-08-01 20:35:48.321 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
-2026-08-01 20:35:48.467 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
-2026-08-01 20:35:48.603 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
-2026-08-01 20:35:48.737 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
-2026-08-01 20:35:48.856 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
-2026-08-01 20:35:48.963 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
-2026-08-01 20:35:49.082 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
-2026-08-01 20:35:49.221 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
-2026-08-01 20:35:49.331 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
-2026-08-01 20:35:49.442 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
-2026-08-01 20:35:49.552 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
-2026-08-01 20:35:49.659 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
-2026-08-01 20:35:49.766 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
-2026-08-01 20:35:49.889 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
-2026-08-01 20:35:49.996 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
-2026-08-01 20:35:50.102 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
-2026-08-01 20:35:50.213 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
-2026-08-01 20:35:50.318 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
-2026-08-01 20:35:50.425 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
-2026-08-01 20:35:50.566 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
-2026-08-01 20:35:50.683 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
-2026-08-01 20:35:50.684 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
-2026-08-01 20:35:50.689 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
-2026-08-01 20:35:51.401 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-01 20:35:51.776 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:35:51.807 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-08-01 20:35:51.817 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 12.212 seconds (process running for 12.665)
-2026-08-01 20:35:53.462 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-01 20:35:53.491 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-08-01 20:35:53.497 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:35:53.500 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-08-01 20:35:53.513 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-08-01 20:35:56.586 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 26944 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
-2026-08-01 20:35:56.589 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
-2026-08-01 20:35:57.316 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-01 20:35:57.433 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 108 ms. Found 11 JPA repository interfaces.
-2026-08-01 20:35:57.831 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-08-01 20:35:57.844 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:35:57.846 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-08-01 20:35:57.846 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-08-01 20:35:57.907 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1269 ms
-2026-08-01 20:35:58.065 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-01 20:35:58.118 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-08-01 20:35:58.574 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-01 20:35:58.605 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-08-01 20:35:58.687 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@30e2016a
-2026-08-01 20:35:58.689 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-08-01 20:35:58.743 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mariadb://localhost/exchange?user=perudeim&password=***]
-	Database driver: MariaDB Connector/J
-	Database dialect: MariaDBDialect
-	Database version: 11.7.2
-	Default catalog/schema: exchange/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-01 20:35:59.796 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-01 20:35:59.801 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
-2026-08-01 20:36:00.099 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:36:00.171 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-01 20:36:00.873 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
-2026-08-01 20:36:01.420 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
-2026-08-01 20:36:01.531 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
-2026-08-01 20:36:01.642 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
-2026-08-01 20:36:01.757 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
-2026-08-01 20:36:01.874 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
-2026-08-01 20:36:01.986 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
-2026-08-01 20:36:02.095 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
-2026-08-01 20:36:02.210 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
-2026-08-01 20:36:02.317 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
-2026-08-01 20:36:02.423 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
-2026-08-01 20:36:02.532 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
-2026-08-01 20:36:02.651 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
-2026-08-01 20:36:02.784 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
-2026-08-01 20:36:02.929 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
-2026-08-01 20:36:03.041 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
-2026-08-01 20:36:03.154 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
-2026-08-01 20:36:03.269 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
-2026-08-01 20:36:03.382 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
-2026-08-01 20:36:03.520 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
-2026-08-01 20:36:03.626 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
-2026-08-01 20:36:03.738 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
-2026-08-01 20:36:03.878 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
-2026-08-01 20:36:04.001 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
-2026-08-01 20:36:04.117 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
-2026-08-01 20:36:04.117 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
-2026-08-01 20:36:04.121 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
-2026-08-01 20:36:04.619 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-01 20:36:04.878 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:36:04.903 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-08-01 20:36:04.911 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 8.858 seconds (process running for 9.297)
-2026-08-01 20:36:38.610 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-01 20:36:38.611 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-08-01 20:36:38.615 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2026-08-01 20:37:21.411 [http-nio-8080-exec-9] WARN  org.hibernate.orm.query - HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
-2026-08-01 20:46:42.892 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-01 20:46:42.909 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-08-01 20:46:42.923 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:46:42.936 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-08-01 20:46:42.947 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-08-01 20:50:19.538 [main] INFO  com.money.ExchangeApplication - Starting ExchangeApplication using Java 21.0.6 with PID 18444 (C:\Spring\exchange\build\classes\java\main started by perud in C:\Spring\exchange)
-2026-08-01 20:50:19.543 [main] INFO  com.money.ExchangeApplication - No active profile set, falling back to 1 default profile: "default"
-2026-08-01 20:50:20.456 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-01 20:50:20.564 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 11 JPA repository interfaces.
-2026-08-01 20:50:21.063 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-08-01 20:50:21.077 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:50:21.080 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-08-01 20:50:21.080 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-08-01 20:50:21.162 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1565 ms
-2026-08-01 20:50:21.350 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-08-01 20:50:21.426 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-08-01 20:50:22.020 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-01 20:50:22.066 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-08-01 20:50:22.200 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@23a78c77
-2026-08-01 20:50:22.202 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-08-01 20:50:22.287 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mariadb://localhost/exchange?user=perudeim&password=***]
-	Database driver: MariaDB Connector/J
-	Database dialect: MariaDBDialect
-	Database version: 11.7.2
-	Default catalog/schema: exchange/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-08-01 20:50:23.478 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-08-01 20:50:23.483 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
-2026-08-01 20:50:23.792 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 20:50:23.893 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-08-01 20:50:24.713 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
-2026-08-01 20:50:25.406 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
-2026-08-01 20:50:25.517 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
-2026-08-01 20:50:25.632 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
-2026-08-01 20:50:25.733 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
-2026-08-01 20:50:25.858 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
-2026-08-01 20:50:25.973 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
-2026-08-01 20:50:26.083 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
-2026-08-01 20:50:26.191 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
-2026-08-01 20:50:26.308 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
-2026-08-01 20:50:26.415 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
-2026-08-01 20:50:26.518 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
-2026-08-01 20:50:26.624 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
-2026-08-01 20:50:26.732 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
-2026-08-01 20:50:26.861 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
-2026-08-01 20:50:26.973 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
-2026-08-01 20:50:27.112 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
-2026-08-01 20:50:27.221 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
-2026-08-01 20:50:27.333 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
-2026-08-01 20:50:27.462 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
-2026-08-01 20:50:27.565 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
-2026-08-01 20:50:27.671 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
-2026-08-01 20:50:27.800 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
-2026-08-01 20:50:27.910 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
-2026-08-01 20:50:28.017 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
-2026-08-01 20:50:28.017 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
-2026-08-01 20:50:28.021 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
-2026-08-01 20:50:28.488 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-08-01 20:50:28.778 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2026-08-01 20:50:28.801 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2026-08-01 20:50:28.811 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 9.829 seconds (process running for 10.343)
-2026-08-01 20:50:38.461 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-08-01 20:50:38.462 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-08-01 20:50:38.464 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2026-08-01 20:50:51.333 [http-nio-8080-exec-3] WARN  org.hibernate.orm.query - HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
-2026-08-01 20:50:55.010 [http-nio-8080-exec-2] WARN  org.hibernate.orm.query - HHH90003004: firstResult/maxResults specified with collection fetch; applying in memory
-2026-08-01 22:53:54.576 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-08-01 22:53:54.664 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-08-01 22:53:54.746 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-08-01 22:53:54.857 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-08-01 22:53:54.886 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-08 19:23:35.135 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-08 19:23:35.139 [main] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 1000)
+2026-08-08 19:23:35.471 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-08 19:23:35.537 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-08 19:23:36.232 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 시작
+2026-08-08 19:23:36.998 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=USD, days=7
+2026-08-08 19:23:37.259 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=JPY, days=7
+2026-08-08 19:23:37.463 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=EUR, days=7
+2026-08-08 19:23:37.666 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CNY, days=7
+2026-08-08 19:23:37.870 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=GBP, days=7
+2026-08-08 19:23:38.073 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AUD, days=7
+2026-08-08 19:23:38.277 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CAD, days=7
+2026-08-08 19:23:38.483 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=CHF, days=7
+2026-08-08 19:23:38.686 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=HKD, days=7
+2026-08-08 19:23:38.905 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SGD, days=7
+2026-08-08 19:23:39.098 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=THB, days=7
+2026-08-08 19:23:39.300 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=MYR, days=7
+2026-08-08 19:23:39.506 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=IDR, days=7
+2026-08-08 19:23:39.723 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=PHP, days=7
+2026-08-08 19:23:40.017 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=VND, days=7
+2026-08-08 19:23:40.174 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=TWD, days=7
+2026-08-08 19:23:40.427 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NZD, days=7
+2026-08-08 19:23:40.735 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SEK, days=7
+2026-08-08 19:23:40.941 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=NOK, days=7
+2026-08-08 19:23:41.149 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=DKK, days=7
+2026-08-08 19:23:41.349 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=AED, days=7
+2026-08-08 19:23:41.555 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=SAR, days=7
+2026-08-08 19:23:41.761 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=KWD, days=7
+2026-08-08 19:23:41.964 [main] INFO  c.m.e.s.RateHistoryImportService - 환율 데이터 수집 완료. currencyCode=BHD, days=7
+2026-08-08 19:23:41.964 [main] INFO  c.m.e.s.RateHistoryImportService - 최근 환율 데이터 수집 종료. days=7
+2026-08-08 19:23:41.968 [main] INFO  c.m.e.scheduler.RateHistoryScheduler - 서버 시작 시 최근 환율 데이터 저장 완료
+2026-08-08 19:23:42.407 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-08 19:23:42.637 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-08 19:23:42.661 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-08 19:23:42.668 [main] INFO  com.money.ExchangeApplication - Started ExchangeApplication in 11.354 seconds (process running for 11.762)
+2026-08-08 19:23:57.192 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-08 19:23:57.192 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-08 19:23:57.195 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-08-08 19:40:00.598 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m26s383ms486µs300ns).
+2026-08-08 19:43:19.059 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 범위 생성 시작 : 2026-08-01 ~ 2026-10-01
+2026-08-08 19:43:19.301 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-01
+2026-08-08 19:43:19.302 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-02
+2026-08-08 19:43:19.303 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-03
+2026-08-08 19:43:19.303 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-04
+2026-08-08 19:43:19.304 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-05
+2026-08-08 19:43:19.304 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-06
+2026-08-08 19:43:19.304 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-07
+2026-08-08 19:43:19.304 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-08
+2026-08-08 19:43:19.305 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-09
+2026-08-08 19:43:19.305 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-10
+2026-08-08 19:43:19.305 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-11
+2026-08-08 19:43:19.305 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-12
+2026-08-08 19:43:19.305 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-13
+2026-08-08 19:43:19.305 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-14
+2026-08-08 19:43:19.306 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-15
+2026-08-08 19:43:19.306 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-16
+2026-08-08 19:43:19.306 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-17
+2026-08-08 19:43:19.307 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-18
+2026-08-08 19:43:19.307 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-19
+2026-08-08 19:43:19.307 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-20
+2026-08-08 19:43:19.307 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-21
+2026-08-08 19:43:19.308 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-22
+2026-08-08 19:43:19.308 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-23
+2026-08-08 19:43:19.308 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-24
+2026-08-08 19:43:19.308 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-25
+2026-08-08 19:43:19.309 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-26
+2026-08-08 19:43:19.309 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-27
+2026-08-08 19:43:19.309 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-28
+2026-08-08 19:43:19.309 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-29
+2026-08-08 19:43:19.309 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-30
+2026-08-08 19:43:19.310 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-31
+2026-08-08 19:43:19.310 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-01
+2026-08-08 19:43:21.487 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1012건 
+2026-08-08 19:43:23.104 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:43:25.186 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1026건 
+2026-08-08 19:43:27.301 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1014건 
+2026-08-08 19:43:27.306 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-02
+2026-08-08 19:43:29.091 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1001건 
+2026-08-08 19:43:31.702 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1013건 
+2026-08-08 19:43:34.029 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1004건 
+2026-08-08 19:43:36.505 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1022건 
+2026-08-08 19:43:38.896 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1032건 
+2026-08-08 19:43:38.897 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-03
+2026-08-08 19:43:41.236 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1010건 
+2026-08-08 19:43:43.831 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1001건 
+2026-08-08 19:43:45.983 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1019건 
+2026-08-08 19:43:48.290 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1000건 
+2026-08-08 19:43:48.296 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-04
+2026-08-08 19:43:50.579 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1012건 
+2026-08-08 19:43:52.982 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1004건 
+2026-08-08 19:43:55.429 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:43:57.826 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1012건 
+2026-08-08 19:44:00.342 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1014건 
+2026-08-08 19:44:00.345 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-05
+2026-08-08 19:44:02.622 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1035건 
+2026-08-08 19:44:05.331 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1005건 
+2026-08-08 19:44:07.468 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:44:10.093 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1016건 
+2026-08-08 19:44:10.099 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-06
+2026-08-08 19:44:12.433 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1012건 
+2026-08-08 19:44:14.945 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1025건 
+2026-08-08 19:44:17.428 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1021건 
+2026-08-08 19:44:19.781 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1019건 
+2026-08-08 19:44:22.377 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1006건 
+2026-08-08 19:44:22.380 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-07
+2026-08-08 19:44:24.623 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:44:27.369 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1011건 
+2026-08-08 19:44:29.515 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1000건 
+2026-08-08 19:44:32.098 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1000건 
+2026-08-08 19:44:32.105 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-08
+2026-08-08 19:44:34.637 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1016건 
+2026-08-08 19:44:37.086 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1039건 
+2026-08-08 19:44:38.638 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1005건 
+2026-08-08 19:44:40.830 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1021건 
+2026-08-08 19:44:43.476 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1002건 
+2026-08-08 19:44:43.480 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-09
+2026-08-08 19:44:45.212 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1033건 
+2026-08-08 19:44:47.587 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1006건 
+2026-08-08 19:44:49.398 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1004건 
+2026-08-08 19:44:51.482 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1004건 
+2026-08-08 19:44:53.785 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:44:53.786 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-10
+2026-08-08 19:44:56.116 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1018건 
+2026-08-08 19:44:58.337 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1017건 
+2026-08-08 19:45:00.482 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1021건 
+2026-08-08 19:45:03.177 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1010건 
+2026-08-08 19:45:03.181 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-11
+2026-08-08 19:45:05.152 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1015건 
+2026-08-08 19:45:07.585 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1013건 
+2026-08-08 19:45:09.929 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:45:12.393 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1016건 
+2026-08-08 19:45:14.736 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1024건 
+2026-08-08 19:45:14.737 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-12
+2026-08-08 19:45:16.923 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1028건 
+2026-08-08 19:45:19.519 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1002건 
+2026-08-08 19:45:21.643 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1027건 
+2026-08-08 19:45:24.378 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1000건 
+2026-08-08 19:45:24.383 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-13
+2026-08-08 19:45:26.454 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1005건 
+2026-08-08 19:45:28.346 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1006건 
+2026-08-08 19:45:30.558 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1017건 
+2026-08-08 19:45:32.832 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1008건 
+2026-08-08 19:45:35.301 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1009건 
+2026-08-08 19:45:35.303 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-14
+2026-08-08 19:45:37.535 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1013건 
+2026-08-08 19:45:40.098 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1009건 
+2026-08-08 19:45:42.132 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1014건 
+2026-08-08 19:45:44.355 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:45:44.360 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-15
+2026-08-08 19:45:46.631 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1011건 
+2026-08-08 19:45:48.893 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:45:51.265 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1014건 
+2026-08-08 19:45:53.500 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1005건 
+2026-08-08 19:45:55.473 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:45:55.476 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-16
+2026-08-08 19:45:57.470 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1010건 
+2026-08-08 19:45:59.961 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1006건 
+2026-08-08 19:46:02.213 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1000건 
+2026-08-08 19:46:04.588 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1014건 
+2026-08-08 19:46:06.827 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1026건 
+2026-08-08 19:46:06.828 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-17
+2026-08-08 19:46:09.065 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1019건 
+2026-08-08 19:46:11.362 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1002건 
+2026-08-08 19:46:13.300 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1029건 
+2026-08-08 19:46:15.756 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1015건 
+2026-08-08 19:46:15.760 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-18
+2026-08-08 19:46:17.694 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1010건 
+2026-08-08 19:46:20.318 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1020건 
+2026-08-08 19:46:22.735 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1018건 
+2026-08-08 19:46:25.104 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1013건 
+2026-08-08 19:46:27.566 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1010건 
+2026-08-08 19:46:27.567 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-19
+2026-08-08 19:46:29.887 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1031건 
+2026-08-08 19:46:32.373 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:46:34.592 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1024건 
+2026-08-08 19:46:36.250 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:46:36.252 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-20
+2026-08-08 19:46:37.663 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1000건 
+2026-08-08 19:46:40.002 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1009건 
+2026-08-08 19:46:42.404 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1010건 
+2026-08-08 19:46:44.677 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1011건 
+2026-08-08 19:46:47.311 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:46:47.316 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-21
+2026-08-08 19:46:49.704 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1021건 
+2026-08-08 19:46:52.356 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1010건 
+2026-08-08 19:46:54.517 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1016건 
+2026-08-08 19:46:56.283 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1000건 
+2026-08-08 19:46:56.288 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-22
+2026-08-08 19:46:58.694 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1013건 
+2026-08-08 19:47:01.100 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1029건 
+2026-08-08 19:47:03.611 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1017건 
+2026-08-08 19:47:05.927 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1022건 
+2026-08-08 19:47:08.623 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1012건 
+2026-08-08 19:47:08.625 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-23
+2026-08-08 19:47:10.876 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1010건 
+2026-08-08 19:47:13.612 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:47:15.769 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1013건 
+2026-08-08 19:47:17.564 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:47:17.570 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-24
+2026-08-08 19:47:18.368 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1018건 
+2026-08-08 19:47:19.138 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1011건 
+2026-08-08 19:47:20.659 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:47:22.911 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1026건 
+2026-08-08 19:47:25.527 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1014건 
+2026-08-08 19:47:25.530 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-25
+2026-08-08 19:47:27.574 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1007건 
+2026-08-08 19:47:30.030 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1017건 
+2026-08-08 19:47:32.223 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1005건 
+2026-08-08 19:47:34.415 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1005건 
+2026-08-08 19:47:36.847 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1029건 
+2026-08-08 19:47:36.847 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-26
+2026-08-08 19:47:39.042 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1026건 
+2026-08-08 19:47:41.478 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1001건 
+2026-08-08 19:47:43.638 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1018건 
+2026-08-08 19:47:46.001 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1014건 
+2026-08-08 19:47:46.004 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-27
+2026-08-08 19:47:48.088 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1028건 
+2026-08-08 19:47:50.629 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:47:52.757 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1012건 
+2026-08-08 19:47:55.117 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1011건 
+2026-08-08 19:47:57.499 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1024건 
+2026-08-08 19:47:57.500 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-28
+2026-08-08 19:47:59.714 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1018건 
+2026-08-08 19:48:01.891 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1017건 
+2026-08-08 19:48:03.932 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1031건 
+2026-08-08 19:48:06.468 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1005건 
+2026-08-08 19:48:06.471 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-29
+2026-08-08 19:48:08.475 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1004건 
+2026-08-08 19:48:11.088 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1025건 
+2026-08-08 19:48:13.277 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1011건 
+2026-08-08 19:48:15.718 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1018건 
+2026-08-08 19:48:18.141 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:48:18.143 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-30
+2026-08-08 19:48:20.126 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1000건 
+2026-08-08 19:48:22.584 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1008건 
+2026-08-08 19:48:24.649 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1022건 
+2026-08-08 19:48:27.169 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1003건 
+2026-08-08 19:48:27.171 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-10-01
+2026-08-08 19:48:29.074 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1002건 
+2026-08-08 19:48:31.410 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1030건 
+2026-08-08 19:48:33.751 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1013건 
+2026-08-08 19:48:36.017 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1006건 
+2026-08-08 19:48:38.469 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 1013건 
+2026-08-08 19:48:39.098 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 batch 저장 완료 : 311건 
+2026-08-08 19:48:39.099 [http-nio-8080-exec-7] INFO  c.m.f.s.FlightOptionSeedService - 항공권 범위 생성 완료 : 2026-08-01 ~ 2026-10-01, 생성 건수: 143104
+2026-08-08 19:50:28.986 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 범위 생성 시작 : 2026-08-01 ~ 2026-10-01
+2026-08-08 19:50:29.800 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-01
+2026-08-08 19:50:29.801 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-02
+2026-08-08 19:50:29.802 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-03
+2026-08-08 19:50:29.802 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-04
+2026-08-08 19:50:29.802 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-05
+2026-08-08 19:50:29.802 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-06
+2026-08-08 19:50:29.803 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-07
+2026-08-08 19:50:29.803 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-08
+2026-08-08 19:50:29.803 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-09
+2026-08-08 19:50:29.803 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-10
+2026-08-08 19:50:29.803 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-11
+2026-08-08 19:50:29.803 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-12
+2026-08-08 19:50:29.804 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-13
+2026-08-08 19:50:29.804 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-14
+2026-08-08 19:50:29.804 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-15
+2026-08-08 19:50:29.804 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-16
+2026-08-08 19:50:29.804 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-17
+2026-08-08 19:50:29.805 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-18
+2026-08-08 19:50:29.805 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-19
+2026-08-08 19:50:29.805 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-20
+2026-08-08 19:50:29.805 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-21
+2026-08-08 19:50:29.805 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-22
+2026-08-08 19:50:29.805 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-23
+2026-08-08 19:50:29.805 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-24
+2026-08-08 19:50:29.806 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-25
+2026-08-08 19:50:29.806 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-26
+2026-08-08 19:50:29.806 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-27
+2026-08-08 19:50:29.806 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-28
+2026-08-08 19:50:29.806 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-29
+2026-08-08 19:50:29.806 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-30
+2026-08-08 19:50:29.807 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-08-31
+2026-08-08 19:50:29.807 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-01
+2026-08-08 19:50:29.807 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-02
+2026-08-08 19:50:29.807 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-03
+2026-08-08 19:50:29.807 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-04
+2026-08-08 19:50:29.807 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-05
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-06
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-07
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-08
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-09
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-10
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-11
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-12
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-13
+2026-08-08 19:50:29.808 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-14
+2026-08-08 19:50:29.809 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-15
+2026-08-08 19:50:29.809 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-16
+2026-08-08 19:50:29.809 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-17
+2026-08-08 19:50:29.809 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-18
+2026-08-08 19:50:29.809 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-19
+2026-08-08 19:50:29.810 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-20
+2026-08-08 19:50:29.810 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-21
+2026-08-08 19:50:29.810 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-22
+2026-08-08 19:50:29.810 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-23
+2026-08-08 19:50:29.810 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-24
+2026-08-08 19:50:29.810 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-25
+2026-08-08 19:50:29.811 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-26
+2026-08-08 19:50:29.811 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-27
+2026-08-08 19:50:29.811 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-28
+2026-08-08 19:50:29.811 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-29
+2026-08-08 19:50:29.811 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-09-30
+2026-08-08 19:50:29.812 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 생성 중 날짜 : 2026-10-01
+2026-08-08 19:50:29.812 [http-nio-8080-exec-3] INFO  c.m.f.s.FlightOptionSeedService - 항공권 범위 생성 완료 : 2026-08-01 ~ 2026-10-01, 생성 건수: 0
+2026-08-08 19:53:42.070 [http-nio-8080-exec-9] INFO  c.m.f.s.FlightOptionSeedService - 항공권 후처리 시작 : 2026-08-01 ~ 2026-10-01 
+2026-08-08 19:55:17.759 [http-nio-8080-exec-9] INFO  c.m.f.s.FlightOptionSeedService - 항공권 후처리 완료 : 2026-08-01 ~ 2026-10-01 
+2026-08-08 19:56:17.565 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-08 19:56:17.591 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-08 19:56:17.614 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-08 19:56:17.635 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-08 19:56:17.654 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
