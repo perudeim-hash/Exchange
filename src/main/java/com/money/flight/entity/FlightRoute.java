@@ -6,7 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Getter
@@ -34,16 +36,27 @@ public class FlightRoute {
     //직항 최저가
     @Column(precision = 12, scale = 2)
     private BigDecimal directMinPrice;
+
+    private LocalDate directMinPriceDepartureDate;
+
+    private LocalTime directMinPriceDepartureTime;
+
     //직항 평균가
     @Column(precision = 12, scale = 2)
     private BigDecimal directAvgPrice;
     //직항 최단 소요시간
     private Integer directMinDurationMinutes;
+
     //직항 평균 소요 시간
     private Integer directAvgDurationMinutes;
     //경유 최저가
     @Column(precision = 12, scale = 2)
     private BigDecimal layoverMinPrice;
+
+    private LocalDate layoverMinPriceDepartureDate;
+
+    private LocalTime layoverMinPriceDepartureTime;
+
     //경유 평균가
     @Column(precision = 12, scale = 2)
     private BigDecimal layoverAvgPrice;
@@ -83,13 +96,18 @@ public class FlightRoute {
         this.hasLayover = false;
     }
 
-    public void updateStats(BigDecimal directMinPrice, BigDecimal directAvgPrice, Integer directMinDurationMinutes, Integer directAvgDurationMinutes,
-                            BigDecimal layoverMinPrice, BigDecimal layoverAvgPrice, Integer layoverMinDurationMinutes, Integer layoverAvgDurationMinutes, Boolean hasDirect, Boolean hasLayover) {
+    public void updateStats(BigDecimal directMinPrice,LocalDate directMinPriceDepartureDate, LocalTime directMinPriceDepartureTime,  BigDecimal directAvgPrice, Integer directMinDurationMinutes, Integer directAvgDurationMinutes,
+                            BigDecimal layoverMinPrice,LocalDate layoverMinPriceDepartureDate, LocalTime layoverMinPriceDepartureTime, BigDecimal layoverAvgPrice, Integer layoverMinDurationMinutes, Integer layoverAvgDurationMinutes, Boolean hasDirect, Boolean hasLayover) {
         this.directMinPrice = directMinPrice;
+        this.directMinPriceDepartureDate = directMinPriceDepartureDate;
+        this.directMinPriceDepartureTime = directMinPriceDepartureTime;
         this.directAvgPrice = directAvgPrice;
         this.directMinDurationMinutes = directMinDurationMinutes;
         this.directAvgDurationMinutes = directAvgDurationMinutes;
         this.layoverMinPrice = layoverMinPrice;
+        this.layoverMinPriceDepartureDate = layoverMinPriceDepartureDate;
+        this.layoverMinPriceDepartureTime = layoverMinPriceDepartureTime;
+
         this.layoverAvgPrice = layoverAvgPrice;
         this.layoverMinDurationMinutes = layoverMinDurationMinutes;
         this.layoverAvgDurationMinutes = layoverAvgDurationMinutes;

@@ -1,0 +1,452 @@
+/* ================================
+   Travel Money Common Calendar
+   Flatpickr Custom Theme
+
+   원칙:
+   - 달력은 항상 2개월 구조 유지
+   - 반응형이라고 1개월로 줄이지 않음
+   - 좁은 화면에서는 달력 자체 폭 960px 유지
+   - 1199px 이하에서는 화면 중앙에 고정 배치
+   - 스마트폰 최적화는 보류
+   ================================ */
+
+/* ================================
+   Calendar Base
+   ================================ */
+
+.flatpickr-calendar {
+    width: 960px !important;
+    min-width: 960px !important;
+    max-width: 960px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 28px !important;
+    background: #ffffff !important;
+    box-shadow: 0 28px 80px rgba(15, 23, 42, 0.24) !important;
+    font-family: inherit !important;
+    box-sizing: border-box !important;
+    z-index: 9999 !important;
+}
+
+.flatpickr-calendar.open {
+    z-index: 9999 !important;
+}
+
+.flatpickr-calendar.arrowTop::before,
+.flatpickr-calendar.arrowTop::after,
+.flatpickr-calendar.arrowBottom::before,
+.flatpickr-calendar.arrowBottom::after {
+    display: none !important;
+}
+
+/* ================================
+   Custom Header
+   JS에서 .tm-flatpickr-top 삽입
+   ================================ */
+
+.tm-flatpickr-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 30px 22px !important;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+    text-align: left !important;
+}
+
+.tm-flatpickr-top > div {
+    flex: 1;
+    min-width: 0;
+    text-align: left !important;
+}
+
+.tm-flatpickr-top strong {
+    display: block;
+    color: #0f172a;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: -0.02em !important;
+    word-spacing: 0 !important;
+    white-space: nowrap;
+    text-align: left !important;
+}
+
+.tm-flatpickr-top span {
+    display: block;
+    margin-top: 7px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 700;
+    text-align: left !important;
+}
+
+.tm-flatpickr-apply-btn {
+    flex: 0 0 auto;
+    min-width: 86px;
+    height: 48px;
+    border: 0;
+    border-radius: 14px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.25);
+}
+
+.tm-flatpickr-apply-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ================================
+   Month Header
+   ================================ */
+
+.flatpickr-calendar .flatpickr-months {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    width: 100% !important;
+    padding: 34px 86px 28px !important;
+    box-sizing: border-box !important;
+}
+
+.flatpickr-calendar .flatpickr-month {
+    width: 380px !important;
+    min-width: 380px !important;
+    max-width: 380px !important;
+    height: 42px !important;
+}
+
+.flatpickr-calendar .flatpickr-month + .flatpickr-month {
+    margin-left: 28px !important;
+}
+
+.flatpickr-calendar .flatpickr-current-month {
+    left: 0 !important;
+    width: 100% !important;
+    height: 42px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    color: #0f172a;
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 42px !important;
+}
+
+.flatpickr-calendar .flatpickr-monthDropdown-months {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: #0f172a;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.flatpickr-calendar .numInputWrapper,
+.flatpickr-calendar .flatpickr-monthDropdown-months {
+    pointer-events: none;
+}
+
+.flatpickr-calendar .numInput.cur-year {
+    color: #0f172a;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+/* ================================
+   Prev / Next Arrows
+   ================================ */
+
+.flatpickr-calendar .flatpickr-prev-month,
+.flatpickr-calendar .flatpickr-next-month {
+    top: 40px !important;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    border-radius: 50%;
+    background: #f8fafc;
+    color: #0f172a !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px !important;
+    font-weight: 800;
+    z-index: 10;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.flatpickr-calendar .flatpickr-prev-month {
+    left: 28px !important;
+}
+
+.flatpickr-calendar .flatpickr-next-month {
+    right: 28px !important;
+}
+
+.flatpickr-calendar .flatpickr-prev-month:hover,
+.flatpickr-calendar .flatpickr-next-month:hover {
+    background: #eff6ff;
+    color: #2563eb !important;
+}
+
+.flatpickr-calendar .flatpickr-prev-month svg,
+.flatpickr-calendar .flatpickr-next-month svg {
+    display: none;
+}
+
+/* ================================
+   Body Layout
+   한 달 기준:
+   7칸 * 44px + 6gap * 10px = 368px
+   좌우 여유 포함 380px
+   ================================ */
+
+.flatpickr-calendar .flatpickr-innerContainer {
+    display: block !important;
+    width: 100% !important;
+    padding: 3px 86px 56px !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+}
+
+.flatpickr-calendar .flatpickr-rContainer {
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+/* 요일 전체 줄 */
+.flatpickr-calendar .flatpickr-weekdays {
+    display: flex !important;
+    align-items: center !important;
+    gap: 28px !important;
+    width: auto !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 0 0 20px !important;
+    overflow: visible !important;
+}
+
+/* 한 달 요일 묶음 */
+.flatpickr-calendar .flatpickr-weekdaycontainer {
+    display: grid !important;
+    grid-template-columns: repeat(7, 44px);
+    column-gap: 10px;
+    width: 380px !important;
+    min-width: 380px !important;
+    max-width: 380px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 0 6px !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+}
+
+/* 요일 글자 */
+.flatpickr-calendar span.flatpickr-weekday {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    color: #334155 !important;
+    font-size: 14px !important;
+    font-weight: 900 !important;
+    line-height: 36px !important;
+    text-align: center !important;
+}
+
+/* 날짜 전체 줄 */
+.flatpickr-calendar .flatpickr-days {
+    display: flex !important;
+    gap: 28px !important;
+    width: auto !important;
+    overflow: visible !important;
+}
+
+/* 한 달 날짜 묶음 */
+.flatpickr-calendar .dayContainer {
+    display: grid !important;
+    grid-template-columns: repeat(7, 44px);
+    grid-auto-rows: 44px;
+    gap: 10px;
+    width: 380px !important;
+    min-width: 380px !important;
+    max-width: 380px !important;
+    padding: 0 6px !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+}
+
+/* ================================
+   Day Cell
+   ================================ */
+
+.flatpickr-calendar .flatpickr-day {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px !important;
+    max-width: 44px !important;
+    height: 44px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    color: #0f172a;
+    font-size: 15px !important;
+    font-weight: 900 !important;
+    line-height: 44px !important;
+    overflow: visible !important;
+    text-align: center !important;
+}
+
+.flatpickr-calendar .flatpickr-day:hover {
+    background: #eff6ff !important;
+    color: #2563eb !important;
+}
+
+.flatpickr-calendar .flatpickr-day.today {
+    box-shadow: inset 0 0 0 2px #2563eb;
+    color: #2563eb;
+}
+
+.flatpickr-calendar .flatpickr-day.prevMonthDay,
+.flatpickr-calendar .flatpickr-day.nextMonthDay {
+    color: #d8dee8 !important;
+}
+
+.flatpickr-calendar .flatpickr-day.flatpickr-disabled,
+.flatpickr-calendar .flatpickr-day.flatpickr-disabled:hover {
+    background: transparent !important;
+    color: #e2e8f0 !important;
+    cursor: not-allowed;
+}
+
+/* ================================
+   Range / Selected
+   ================================ */
+
+.flatpickr-calendar .flatpickr-day.inRange {
+    border-radius: 0 !important;
+    background: #dbeafe !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+}
+
+.flatpickr-calendar .flatpickr-day.selected,
+.flatpickr-calendar .flatpickr-day.startRange,
+.flatpickr-calendar .flatpickr-day.endRange {
+    border-radius: 50% !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.28) !important;
+}
+
+.flatpickr-calendar .flatpickr-day.today.selected,
+.flatpickr-calendar .flatpickr-day.today.startRange,
+.flatpickr-calendar .flatpickr-day.today.endRange {
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.28) !important;
+}
+
+/* Flatpickr 기본 range shadow 제거 */
+.flatpickr-calendar .flatpickr-day.startRange + .endRange:not(:nth-child(7n+1)),
+.flatpickr-calendar .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)) {
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.28) !important;
+}
+
+/* ================================
+   가격 표시 관련 클래스 무력화
+   ================================ */
+
+.result-price-day {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-lowest-price {
+    display: none !important;
+}
+
+.lowest-price-best,
+.lowest-price-normal {
+    background: transparent !important;
+}
+
+/* ================================
+   Overflow Safety
+   달력이 카드/패널에 잘리지 않도록 처리
+   ================================ */
+
+.tm-body,
+main,
+section,
+.search-panel,
+.search-card,
+.search-box,
+.flight-search-panel,
+.lowest-search-panel,
+.lowest-sidebar,
+.lowest-workspace-section,
+.lowest-price-refactor-page,
+.results-search-panel-refactor,
+.route-search-panel,
+.exchange-detail-page,
+.recommendation-page {
+    overflow: visible;
+}
+
+/* ================================
+   Responsive
+   달력은 항상 2개월 유지
+   작은 화면에서도 두 번째 달을 숨기지 않음
+   ================================ */
+
+@media (max-width: 1199px) {
+    .flatpickr-calendar {
+        width: 960px !important;
+        min-width: 960px !important;
+        max-width: 960px !important;
+    }
+
+    .flatpickr-calendar.open {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        max-width: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .flatpickr-calendar {
+        width: 960px !important;
+        min-width: 960px !important;
+        max-width: 960px !important;
+        border-radius: 24px !important;
+    }
+
+    .tm-flatpickr-top {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .tm-flatpickr-top strong {
+        white-space: normal;
+    }
+
+    .tm-flatpickr-apply-btn {
+        width: 100%;
+    }
+}

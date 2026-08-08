@@ -21,9 +21,9 @@ public class TossPaymentGateway {
     private static final String TOSS_CONFIRM_URL = "https://api.tosspayments.com/v1/payments/confirm";
 
     public TossPaymentConfirmResponseDto confirmPayment(String paymentKey, String orderId, Long amount) {
+        HttpHeaders headers = createHeaders();
         validateConfirmRequest(paymentKey, orderId, amount);
         RestTemplate restTemplate = new RestTemplate();
-        HttpHeaders headers = createHeaders();
         TossPaymentConfirmRequestDto requestBody = TossPaymentConfirmRequestDto.of(paymentKey, orderId, amount);
 
         HttpEntity<TossPaymentConfirmRequestDto> requestEntity = new HttpEntity<>(requestBody, headers);

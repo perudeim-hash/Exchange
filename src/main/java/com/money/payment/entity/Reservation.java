@@ -1,5 +1,6 @@
 package com.money.payment.entity;
 
+import com.money.flight.enums.TripType;
 import com.money.payment.enums.ReservationStatus;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -23,10 +24,13 @@ public class Reservation {
     @Column(nullable = false, unique = true, length = 100)
     private String reservationNumber;
 
-    @Column(nullable = false)
-    private Long outboundFlightOptionId;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 100)
+    private TripType tripType;
 
     @Column(nullable = false)
+    private Long outboundFlightOptionId;
+    @Column
     private Long returnFlightOptionId;
 
     @Column(nullable = false, length = 300)
@@ -50,7 +54,7 @@ public class Reservation {
     @Column(nullable = false)
     private LocalDate departureDate;
 
-    @Column(nullable = false)
+    @Column
     private LocalDate returnDate;
 
     @Column(nullable = false)
@@ -80,9 +84,10 @@ public class Reservation {
     private LocalDateTime canceledAt;
 
 
-    public static Reservation create(String reservationNumber, Long outboundFlightOptionId, Long returnFlightOptionId, String originAirportCode, String originAirportName, String originCityName, String destinationAirportCode, String destinationAirportName, String destinationCityName, LocalDate departureDate, LocalDate returnDate, int adultCount, int childCount, int infantCount, Long totalAmount,String customerName, String customerEmail, String customerPhone) {
+    public static Reservation create(String reservationNumber,TripType tripType, Long outboundFlightOptionId, Long returnFlightOptionId, String originAirportCode, String originAirportName, String originCityName, String destinationAirportCode, String destinationAirportName, String destinationCityName, LocalDate departureDate, LocalDate returnDate, int adultCount, int childCount, int infantCount, Long totalAmount,String customerName, String customerEmail, String customerPhone) {
         Reservation reservation = new Reservation();
         reservation.reservationNumber = reservationNumber;
+        reservation.tripType = tripType;
         reservation.outboundFlightOptionId = outboundFlightOptionId;
         reservation.returnFlightOptionId = returnFlightOptionId;
         reservation.originAirportCode = originAirportCode;
@@ -103,6 +108,14 @@ public class Reservation {
         reservation.status = ReservationStatus.READY;
         reservation.createdAt = LocalDateTime.now();
         return reservation;
+    }
+
+    public boolean isOneWay(){
+        return this.tripType == TripType.ONE_WAY;
+    }
+
+    public boolean isRoundTrip(){
+        return this.tripType == TripType.ROUND_TRIP;
     }
 
     public void completeReservation() {

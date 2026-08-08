@@ -1,144 +1,179 @@
 <!doctype html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8"/>
-  <title>환율</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율 | Travel Money</title>
 
-  <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/exchange.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/css/exchange/exchange.css">
 </head>
 
-<body class="bg-light">
+<body class="tm-body">
+
 <div th:replace="~{fragments/header :: siteHeader}"></div>
 
 <main class="exchange-page">
-  <div class="exchange-container">
 
-    <!-- 페이지 상단 소개 -->
-    <div class="exchange-hero">
-      <div>
-        <p class="page-label">Exchange Rate</p>
-        <h1>환율 계산기</h1>
-        <p class="exchange-hero-description">
-          한국은행 환율 데이터를 기준으로 통화 변환과 주요 환율을 확인합니다.
-        </p>
-      </div>
+    <section class="exchange-hero-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
 
-      <div class="exchange-source-box">
-        <span>기준 데이터</span>
-        <strong>한국은행 ECOS</strong>
-        <p>실제 은행 환전/송금 환율과 다를 수 있습니다.</p>
-      </div>
-    </div>
+                <div class="col-lg-7">
+                    <p class="tm-eyebrow">EXCHANGE RATE</p>
 
-    <!-- 환율 변환기 -->
-    <section class="converter-card card shadow-sm">
-      <div class="card-body">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-          <div>
-            <h4 class="fw-bold mb-1">환율 변환기</h4>
-            <p class="text-muted mb-0" id="rateInfoText">
-              기준일 환율을 불러오는 중입니다.
-            </p>
-          </div>
-        </div>
+                    <h1 class="exchange-page-title">
+                        여행 전 확인하는<br>
+                        실시간 환율 계산기
+                    </h1>
 
-        <div class="row g-3 align-items-center">
-          <div class="col-12 col-lg-5">
-            <label for="fromAmount" class="form-label fw-semibold">보유 금액</label>
+                    <p class="exchange-page-description">
+                        한국은행 환율 데이터를 기준으로 통화 변환과 국가별 환율 정보를 확인합니다.<br>
+                        여행 예산을 세우기 전에 항공권 가격과 함께 비교해 보세요.
+                    </p>
+                </div>
 
-            <div class="currency-box">
-              <input
-                      type="text"
-                      id="fromAmount"
-                      class="currency-input"
-                      placeholder="예: 100,000"
-                      inputmode="numeric"
-                      autocomplete="off"
-              />
+                <div class="col-lg-5">
+                    <section class="exchange-converter-card hero-converter-card">
+                        <div class="exchange-card-header">
+                            <div>
+                                <p class="tm-eyebrow">CALCULATOR</p>
+                                <h2>환율 계산기</h2>
+                                <p id="rateInfoText">
+                                    기준일 환율을 불러오는 중입니다.
+                                </p>
+                            </div>
+                        </div>
 
-              <select id="fromCurrencySelect" class="currency-select"></select>
+                        <div class="hero-converter-grid">
+                            <div>
+                                <label for="fromAmount" class="form-label exchange-form-label">보유 금액</label>
+
+                                <div class="currency-box">
+                                    <input
+                                            type="text"
+                                            id="fromAmount"
+                                            class="currency-input"
+                                            placeholder="예: 100,000"
+                                            inputmode="numeric"
+                                            autocomplete="off"
+                                    />
+
+                                    <select id="fromCurrencySelect" class="currency-select"></select>
+                                </div>
+                            </div>
+
+                            <div class="hero-swap-wrap">
+                                <button
+                                        type="button"
+                                        id="swapCurrencyBtn"
+                                        class="swap-btn"
+                                        aria-label="통화 전환">
+                                    ⇅
+                                </button>
+                            </div>
+
+                            <div>
+                                <label for="toAmount" class="form-label exchange-form-label">환산 금액</label>
+
+                                <div class="currency-box">
+                                    <input
+                                            type="text"
+                                            id="toAmount"
+                                            class="currency-input"
+                                            readonly
+                                            placeholder="0"
+                                    />
+
+                                    <select id="toCurrencySelect" class="currency-select"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="converter-result-message" id="converterResultMessage">
+                            금액을 입력하면 환산 결과를 알려드릴게요.
+                        </div>
+
+                        <div class="converter-insight-card" id="converterInsightCard">
+                            <div class="converter-insight-head">
+                                <div>
+                                    <span id="converterInsightCurrency">선택 통화</span>
+                                    <strong id="converterInsightRate">-</strong>
+                                </div>
+                                <span class="converter-insight-badge status-normal" id="converterInsightBadge">보통</span>
+                            </div>
+
+                            <p id="converterInsightText">
+                                통화를 선택하면 현재 환율이 평균 대비 어떤 수준인지 알려드릴게요.
+                            </p>
+                        </div>
+
+                    </section>
+                </div>
+
             </div>
-          </div>
-
-          <div class="col-12 col-lg-2 text-center">
-            <button
-                    type="button"
-                    id="swapCurrencyBtn"
-                    class="swap-btn"
-                    aria-label="통화 전환"
-            >
-              ⇅
-            </button>
-          </div>
-
-          <div class="col-12 col-lg-5">
-            <label for="toAmount" class="form-label fw-semibold">환산 금액</label>
-
-            <div class="currency-box">
-              <input
-                      type="text"
-                      id="toAmount"
-                      class="currency-input"
-                      readonly
-                      placeholder="0"
-              />
-
-              <select id="toCurrencySelect" class="currency-select"></select>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <!-- 주요 통화 환율 -->
-    <section class="rate-list-section">
+    <section class="exchange-content-section">
+        <div class="container">
 
-      <div class="rate-list-header">
-        <div>
-          <p class="page-label">Currency List</p>
-          <h5 class="fw-bold mb-1">주요 통화 환율</h5>
-          <p class="text-muted mb-0" id="rateSummary"></p>
+            <section class="rate-list-section">
+                <div class="rate-list-header">
+                    <div>
+                        <p class="tm-eyebrow">CURRENCY LIST</p>
+                        <h2>주요 통화 환율</h2>
+                        <p id="rateSummary">환율 정보를 불러오는 중입니다.</p>
+                        <div class="rate-period-buttons">
+                            <button type="button" class="rate-period-btn" data-range="7d">1주일</button>
+                            <button type="button" class="rate-period-btn" data-range="1m">1개월</button>
+                            <button type="button" class="rate-period-btn" data-range="3m">3개월</button>
+                            <button type="button" class="rate-period-btn" data-range="6m">6개월</button>
+                            <button type="button" class="rate-period-btn active" data-range="12m">12개월</button>
+                            <button type="button" class="rate-period-btn" data-range="all">전체</button>
+                        </div>
+
+                    </div>
+
+                    <div class="rate-filter-area">
+                        <div class="region-filter-buttons">
+                            <button type="button" class="region-filter-btn active" data-region="ALL">전체</button>
+                            <button type="button" class="region-filter-btn" data-region="ASIA">아시아</button>
+                            <button type="button" class="region-filter-btn" data-region="EUROPE">유럽</button>
+                            <button type="button" class="region-filter-btn" data-region="AMERICA">아메리카</button>
+                            <button type="button" class="region-filter-btn" data-region="OCEANIA">오세아니아</button>
+                            <button type="button" class="region-filter-btn" data-region="MIDDLE_EAST">중동</button>
+                        </div>
+
+                        <div class="rate-search-box">
+                            <input
+                                    type="text"
+                                    id="currencySearchInput"
+                                    class="rate-search-input"
+                                    placeholder="국가, 통화, 코드 검색 예: 영국, GBP"
+                                    autocomplete="off"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4" id="rateGrid"></div>
+            </section>
+
         </div>
-
-        <div class="rate-filter-area">
-          <div class="region-filter-buttons">
-            <button type="button" class="region-filter-btn active" data-region="ALL">전체</button>
-            <button type="button" class="region-filter-btn" data-region="ASIA">아시아</button>
-            <button type="button" class="region-filter-btn" data-region="EUROPE">유럽</button>
-            <button type="button" class="region-filter-btn" data-region="AMERICA">아메리카</button>
-            <button type="button" class="region-filter-btn" data-region="OCEANIA">오세아니아</button>
-            <button type="button" class="region-filter-btn" data-region="MIDDLE_EAST">중동</button>
-          </div>
-
-          <div class="rate-search-box">
-            <input
-                    type="text"
-                    id="currencySearchInput"
-                    class="rate-search-input"
-                    placeholder="국가, 통화, 코드 검색 예: 영국, GBP"
-                    autocomplete="off"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-4" id="rateGrid"></div>
     </section>
 
-  </div>
 </main>
 
+<div th:replace="~{fragments/footer :: siteFooter}"></div>
+
 <script th:inline="javascript">
-  window.__CURRENCY_RATES__ = /*[[${currencyRates}]]*/ [];
-  window.__COUNTRY_RATES__ = /*[[${countryRates}]]*/ [];
+    window.__CURRENCY_RATES__ = /*[[${currencyRates}]]*/ [];
+    window.__COUNTRY_RATES__ = /*[[${countryRates}]]*/ [];
 </script>
 
-<script type="module" src="/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/exchange/exchange.js"></script>
+
 </body>
 </html>

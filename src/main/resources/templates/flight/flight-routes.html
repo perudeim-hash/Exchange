@@ -2,85 +2,196 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>노선 보기</title>
-  <link rel="stylesheet" th:href="@{/css/flight-routes.css}">
-  <link rel="stylesheet" href="/css/common.css">
+  <title>노선 보기 | Travel Money</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="/css/common/calendar.css">
+
+  <link rel="stylesheet" href="/css/common/common.css">
+  <link rel="stylesheet" href="/css/flight/flight-routes.css">
 </head>
-<body>
+
+<body class="tm-body">
+
 <div th:replace="~{fragments/header :: siteHeader}"></div>
 
 <main class="route-page">
-  <section class="route-hero">
-    <p class="route-label">FLIGHT ROUTE</p>
-    <h1>노선 보기</h1>
-    <p>국가, 도시, 공항을 선택해서 이용 가능한 항공 노선을 확인할 수 있습니다.</p>
-  </section>
 
-  <section class="route-search-box">
-    <h2>검색 조건</h2>
-    <p class="route-search-description">
-      출발지와 도착지를 국가, 도시, 공항 순서로 선택하면 해당 노선을 확인할 수 있습니다.
-    </p>
-
-    <div class="route-select-section">
-      <h3>출발지</h3>
-
-      <div class="route-select-grid">
-        <div class="route-input-group">
-          <label for="originCountrySelect">출발 국가</label>
-          <select id="originCountrySelect"></select>
+  <section class="route-compact-hero">
+    <div class="route-wide-container">
+      <div class="route-compact-hero-inner">
+        <div>
+          <p class="tm-eyebrow">FLIGHT ROUTE</p>
+          <h1>여행 노선 탐색</h1>
+          <p>
+            출발지와 도착지를 선택해 등록된 항공 노선과 예약 가능한 최저가, 직항/경유 여부를 확인합니다.
+          </p>
         </div>
 
-        <div class="route-input-group">
-          <label for="originCitySelect">출발 도시</label>
-          <select id="originCitySelect"></select>
-        </div>
-
-        <div class="route-input-group">
-          <label>출발 공항</label>
-          <div id="originAirportList" class="airport-radio-list"></div>
-        </div>
+        <div class="route-hero-mini-info">
+          <div>
+            <strong>Route</strong>
+            <span>노선 확인</span>
+          </div>
+          <div>
+            <strong>Price</strong>
+            <span>예약 가능 <br>최저가</span>
+          </div>
+          </div>
       </div>
     </div>
+  </section>
 
-    <div class="route-select-section">
-      <h3>도착지</h3>
+  <section class="route-workspace-section">
+    <div class="route-wide-container">
 
-      <div class="route-select-grid">
-        <div class="route-input-group">
-          <label for="destinationCountrySelect">도착 국가</label>
-          <select id="destinationCountrySelect"></select>
-        </div>
+      <div class="route-workspace-layout">
 
-        <div class="route-input-group">
-          <label for="destinationCitySelect">도착 도시</label>
-          <select id="destinationCitySelect"></select>
-        </div>
+        <aside class="route-sidebar">
+          <section class="route-search-box">
+            <div class="route-search-header">
+              <p class="tm-eyebrow">SEARCH</p>
+              <h2>노선 검색 조건</h2>
+              <p>출발지와 도착지, 출발 기간과 시간대를 선택해서 <br>최저가 노선을 확인합니다.</p>
+            </div>
 
-        <div class="route-input-group">
-          <label>도착 공항</label>
-          <div id="destinationAirportList" class="airport-radio-list"></div>
-        </div>
+            <section class="route-select-section">
+              <div class="route-section-heading">
+                <span>01</span>
+                <h3>출발지</h3>
+              </div>
+
+              <div class="route-select-grid">
+                <div class="route-input-group">
+                  <label for="originCountrySelect">출발 국가</label>
+                  <select id="originCountrySelect"></select>
+                </div>
+
+                <div class="route-input-group">
+                  <label for="originCitySelect">출발 도시</label>
+                  <select id="originCitySelect"></select>
+                </div>
+
+                <div class="route-input-group route-airport-group">
+                  <label>출발 공항</label>
+                  <div id="originAirportList" class="airport-radio-list"></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="route-select-section">
+              <div class="route-section-heading">
+                <span>02</span>
+                <h3>도착지</h3>
+              </div>
+
+              <div class="route-select-grid">
+                <div class="route-input-group">
+                  <label for="destinationCountrySelect">도착 국가</label>
+                  <select id="destinationCountrySelect"></select>
+                </div>
+
+                <div class="route-input-group">
+                  <label for="destinationCitySelect">도착 도시</label>
+                  <select id="destinationCitySelect"></select>
+                </div>
+
+                <div class="route-input-group route-airport-group">
+                  <label>도착 공항</label>
+                  <div id="destinationAirportList" class="airport-radio-list"></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="route-select-section">
+              <div class="route-section-heading">
+                <span>03</span>
+                <h3>출발 기간</h3>
+              </div>
+
+              <div class="route-date-range-grid">
+                <div class="route-input-group">
+                  <label for="routeStartDateInput">출발 시작일</label>
+                  <input
+                          type="text"
+                          id="routeStartDateInput"
+                          class="route-calendar-input"
+                          placeholder="출발 시작일 선택"
+                          autocomplete="off"
+                          readonly>
+                </div>
+
+                <div class="route-input-group">
+                  <label for="routeEndDateInput">출발 종료일</label>
+                  <input
+                          type="text"
+                          id="routeEndDateInput"
+                          class="route-calendar-input"
+                          placeholder="출발 종료일 선택"
+                          autocomplete="off"
+                          readonly>
+                </div>
+              </div>
+            </section>
+
+
+            <div class="route-search-actions">
+              <button type="button" id="routeSearchButton" class="route-search-button">
+                노선 검색
+              </button>
+
+              <button type="button" id="routeResetButton" class="route-reset-button">
+                전체 노선 보기
+              </button>
+            </div>
+          </section>
+        </aside>
+
+        <section class="route-result-content">
+          <section class="route-result-section">
+            <div class="route-section-title">
+              <div>
+                <p class="tm-eyebrow">ROUTE LIST</p>
+                <h2>노선 목록</h2>
+                <p id="routeCountText">노선 정보를 불러오는 중입니다.</p>
+              </div>
+            </div>
+
+            <div class="route-filter-toolbar">
+              <div id="routeFilterArea" class="route-filter-area"></div>
+
+              <div class="route-time-filter-area">
+                <span class="route-time-filter-label">출발 시간대</span>
+
+                <div id="routeTimeSlotButtons" class="route-time-slot-buttons">
+                  <button type="button" class="route-time-slot-button active" data-time-slot="ALL">전체</button>
+                  <button type="button" class="route-time-slot-button" data-time-slot="DAWN">새벽</button>
+                  <button type="button" class="route-time-slot-button" data-time-slot="MORNING">오전</button>
+                  <button type="button" class="route-time-slot-button" data-time-slot="AFTERNOON">오후</button>
+                  <button type="button" class="route-time-slot-button" data-time-slot="EVENING">저녁</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="routeList" class="route-list"></div>
+          </section>
+        </section>
+
       </div>
-    </div>
 
-    <div class="route-search-actions">
-      <button type="button" id="routeSearchButton">노선 검색</button>
-      <button type="button" id="routeResetButton">전체 노선 보기</button>
     </div>
   </section>
 
-  <section class="route-result-section">
-    <div class="route-section-title">
-      <h2>노선 목록</h2>
-      <p id="routeCountText">노선 정보를 불러오는 중입니다.</p>
-    </div>
-
-    <div id="routeList" class="route-list"></div>
-  </section>
 </main>
 
-<script th:src="@{/js/flight-routes.js}"></script>
+<div th:replace="~{fragments/footer :: siteFooter}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ko.js"></script>
+<script type="module" src="/js/flight/flight-routes.js"></script>
+
 </body>
 </html>

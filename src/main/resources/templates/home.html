@@ -2,62 +2,567 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Money</title>
-    <link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/home.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/css/common/calendar.css">
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/css/common/home.css">
 </head>
-<body>
+
+<body class="tm-body">
 
 <div th:replace="~{fragments/header :: siteHeader}"></div>
 
-<main>
-    <section class="hero-section">
-        <div class="hero-content">
-            <p class="hero-subtitle">Flight · Exchange · Travel Cost</p>
-            <h1>항공권 가격과 환율을 함께 보는<br>여행 비용 분석 서비스</h1>
-            <p class="hero-description">
-                항공권 가격 시뮬레이션, 직항/경유 비교, 환율 차트와 여행 비용 정보를 한 곳에서 확인하세요.
-            </p>
+<main class="tm-main">
 
-            <div class="hero-actions">
-                <a href="/flights/search" class="primary-button">항공권 검색하기</a>
-                <a href="/exchange" class="secondary-button">환율 확인하기</a>
-            </div>
+    <section id="homeHeroCarousel"
+             class="carousel slide home-hero-carousel"
+             data-bs-ride="carousel"
+             data-bs-interval="5200">
+
+        <div class="carousel-indicators home-hero-indicators">
+            <button type="button"
+                    data-bs-target="#homeHeroCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="항공권 검색"></button>
+
+            <button type="button"
+                    data-bs-target="#homeHeroCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="여행 시기 추천"></button>
+
+            <button type="button"
+                    data-bs-target="#homeHeroCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="환율 분석"></button>
+
+            <button type="button"
+                    data-bs-target="#homeHeroCarousel"
+                    data-bs-slide-to="3"
+                    aria-label="이벤트"></button>
         </div>
 
-        <div class="hero-card">
-            <div class="ticket-card">
-                <div class="ticket-top">
-                    <span>ICN</span>
-                    <span class="arrow">→</span>
-                    <span>NRT</span>
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="home-hero-slide home-hero-slide-flight">
+                    <div class="container">
+                        <div class="home-hero-content">
+                            <p class="tm-eyebrow"></p>
+
+                            <h1>
+                                지금 떠나기 좋은 순간
+                            </h1>
+
+                            <p>
+                                항공권 가격과 여행 일정을 한 번에 비교하고 <br>
+                                더 좋은 출발 시점을 찾아보세요.
+                            </p>
+
+                            <div class="home-hero-actions">
+                                <a href="/flights/search" class="btn tm-btn-primary">
+                                    항공권 검색하기
+                                </a>
+                                <a href="/recommendations/travel-timing" class="btn tm-btn-soft">
+                                    추천 시기 보기
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="ticket-info">
-                    <p>직항 · 이코노미</p>
-                    <h2>₩104,000~</h2>
-                    <p>환율과 항공권 가격을 함께 비교</p>
+            </div>
+
+            <div class="carousel-item">
+                <div class="home-hero-slide home-hero-slide-recommend">
+                    <div class="container">
+                        <div class="home-hero-content">
+                            <p class="tm-eyebrow"></p>
+
+                            <h1>
+                                가격과 환율로 고르는 여행
+                            </h1>
+
+                            <p>
+                                항공권 최저가, 환율 흐름, 도시별 이벤트를 함께 보고 <br>
+                                여행가기 좋은 달을 확인해보세요.
+                            </p>
+
+                            <div class="home-hero-actions">
+                                <a href="/travel/travel-timing" class="btn tm-btn-primary">
+                                    여행 시기 추천받기
+                                </a>
+                                <a href="/events" class="btn tm-btn-soft">
+                                    이벤트 둘러보기
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="home-hero-slide home-hero-slide-exchange">
+                    <div class="container">
+                        <div class="home-hero-content">
+                            <p class="tm-eyebrow"></p>
+
+                            <h1>
+                                비용까지 보는 여행
+                            </h1>
+
+                            <p>
+                                오늘의 환율과 과거 환율 흐름을 확인하고 <br>
+                                여행 예산을 더 쉽게 계산해보세요.
+                            </p>
+
+                            <div class="home-hero-actions">
+                                <a href="/exchange" class="btn tm-btn-primary">
+                                    환율 확인하기
+                                </a>
+                                <a href="/exchange/USD" class="btn tm-btn-soft">
+                                    달러 차트 보기
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="home-hero-slide home-hero-slide-event">
+                    <div class="container">
+                        <div class="home-hero-content">
+                            <p class="tm-eyebrow"></p>
+
+                            <h1>
+                                걷기 좋은 도시
+                            </h1>
+
+                            <p>
+                                도시별 월간 축제와 이벤트를 확인하고 <br>
+                                여행 일정에 어울리는 시기를 골라보세요.
+                            </p>
+
+                            <div class="home-hero-actions">
+                                <a href="/events" class="btn tm-btn-primary">
+                                    이벤트 둘러보기
+                                </a>
+                                <a href="/trabel/travel-timing" class="btn tm-btn-soft">
+                                    추천 시기 보기
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev home-hero-control"
+                type="button"
+                data-bs-target="#homeHeroCarousel"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">이전</span>
+        </button>
+
+        <button class="carousel-control-next home-hero-control"
+                type="button"
+                data-bs-target="#homeHeroCarousel"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">다음</span>
+        </button>
+    </section>
+
+    <section class="home-quick-search-section">
+        <div class="container">
+            <form class="home-quick-search-card" id="homeQuickSearchForm">
+
+                <div class="home-quick-search-top">
+                    <div>
+                        <p class="tm-eyebrow"></p>
+                        <h2>수백만 개의 항공권. 검색 한 번으로 간단하게.</h2>
+                    </div>
+
+                    <div class="home-trip-toggle" role="group" aria-label="여행 유형 선택">
+                        <button type="button"
+                                class="home-trip-toggle-btn active"
+                                data-trip-type="ROUND_TRIP"
+                                id="homeRoundTripBtn">
+                            왕복
+                        </button>
+
+                        <button type="button"
+                                class="home-trip-toggle-btn"
+                                data-trip-type="ONE_WAY"
+                                id="homeOneWayBtn">
+                            편도
+                        </button>
+                    </div>
+                </div>
+
+                <div class="home-quick-route-row">
+
+                    <div class="home-airport-autocomplete-field">
+                        <label for="homeOriginAirportInput">출발지</label>
+
+                        <div class="home-airport-input-shell">
+                            <input type="text"
+                                   id="homeOriginAirportInput"
+                                   class="home-airport-search-input"
+                                   placeholder="예: 서울, 인천, ICN"
+                                   autocomplete="off">
+                            <span id="homeOriginAirportCodeBadge" class="home-airport-code-badge">-</span>
+                        </div>
+
+                        <div id="homeOriginAirportDropdown" class="airport-dropdown home-airport-dropdown"></div>
+                    </div>
+
+                    <button type="button"
+                            class="home-route-swap-btn"
+                            id="homeSwapAirportBtn"
+                            aria-label="출발지와 도착지 바꾸기">
+                        ⇄
+                    </button>
+
+                    <div class="home-airport-autocomplete-field">
+                        <label for="homeDestinationAirportInput">도착지</label>
+
+                        <div class="home-airport-input-shell">
+                            <input type="text"
+                                   id="homeDestinationAirportInput"
+                                   class="home-airport-search-input"
+                                   placeholder="예: 도쿄, 나리타, NRT"
+                                   autocomplete="off">
+                            <span id="homeDestinationAirportCodeBadge" class="home-airport-code-badge">-</span>
+                        </div>
+
+                        <div id="homeDestinationAirportDropdown" class="airport-dropdown home-airport-dropdown"></div>
+                    </div>
+
+                </div>
+
+                <div class="home-quick-detail-panel">
+                    <div class="row g-3 align-items-end">
+
+                        <div class="col-lg-3 col-md-6">
+                            <label class="form-label" for="homeDepartureDateInput">가는 날</label>
+                            <input type="text"
+                                   class="form-control home-date-input"
+                                   id="homeDepartureDateInput"
+                                   placeholder="날짜 입력"
+                                   readonly>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6" id="homeReturnDateField">
+                            <label class="form-label" for="homeReturnDateInput">오는 날</label>
+                            <input type="text"
+                                   class="form-control home-date-input"
+                                   id="homeReturnDateInput"
+                                   placeholder="날짜 입력"
+                                   readonly>
+                        </div>
+
+                        <div class="col-lg-2 col-md-4">
+                            <label class="form-label" for="homeAdultCountSelect">성인</label>
+                            <select class="form-select home-passenger-select"
+                                    id="homeAdultCountSelect">
+                                <option value="1">1명</option>
+                                <option value="2">2명</option>
+                                <option value="3">3명</option>
+                                <option value="4">4명</option>
+                                <option value="5">5명</option>
+                                <option value="6">6명</option>
+                                <option value="7">7명</option>
+                                <option value="8">8명</option>
+                                <option value="9">9명</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-2 col-md-4">
+                            <label class="form-label" for="homeChildCountSelect">소아</label>
+                            <select class="form-select home-passenger-select"
+                                    id="homeChildCountSelect">
+                                <option value="0">0명</option>
+                                <option value="1">1명</option>
+                                <option value="2">2명</option>
+                                <option value="3">3명</option>
+                                <option value="4">4명</option>
+                                <option value="5">5명</option>
+                                <option value="6">6명</option>
+                                <option value="7">7명</option>
+                                <option value="8">8명</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-2 col-md-4">
+                            <label class="form-label" for="homeInfantCountSelect">유아</label>
+                            <select class="form-select home-passenger-select"
+                                    id="homeInfantCountSelect">
+                                <option value="0">0명</option>
+                                <option value="1">1명</option>
+                                <option value="2">2명</option>
+                                <option value="3">3명</option>
+                                <option value="4">4명</option>
+                                <option value="5">5명</option>
+                                <option value="6">6명</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="home-quick-bottom">
+                    <div class="home-quick-summary">
+                        <strong id="homeQuickSummary">왕복 · 성인 1명</strong>
+                        <span>공항과 날짜를 선택한 뒤 항공권 검색 결과로 이동합니다.</span>
+                    </div>
+
+                    <button type="submit"
+                            class="btn tm-btn-primary home-quick-submit-btn"
+                            id="homeQuickSearchBtn"
+                            disabled>
+                        공항 목록 로딩 중
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <section class="home-service-section">
+        <div class="container">
+
+            <div class="home-section-heading text-center">
+                <p class="tm-eyebrow">SERVICE</p>
+                <h2>여행 준비에 필요한 핵심 기능</h2>
+                <p>
+                    항공권, 환율, 이벤트 데이터를 나눠 보지 않고 하나의 흐름으로 확인할 수 있습니다.
+                </p>
+            </div>
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-md-4">
+                    <article class="home-feature-card h-100">
+                        <div class="home-feature-icon">✈</div>
+
+                        <h3>항공권 검색</h3>
+
+                        <p>
+                            출발지, 도착지, 날짜, 승객 수를 기준으로 <br> 편도와 왕복 항공권을 검색하고 비교합니다.
+                        </p>
+
+                        <a href="/flights/search">
+                            항공권 검색하기
+                        </a>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="home-feature-card h-100">
+                        <div class="home-feature-icon">₩</div>
+
+                        <h3>환율 분석</h3>
+
+                        <p>
+                            국가별 통화의 현재 환율과 과거 환율 차트를 확인해 <br> 여행 비용을 비교합니다.
+                        </p>
+
+                        <a href="/exchange">
+                            환율 확인하기
+                        </a>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="home-feature-card h-100">
+                        <div class="home-feature-icon">📍</div>
+
+                        <h3>여행 시기 추천</h3>
+
+                        <p>
+                            항공권 가격, 환율, 이벤트 정보를 참고해 여행가기 <br>  좋은 시기를 추천합니다.
+                        </p>
+
+                        <a href="/recommendations/travel-timing">
+                            추천 보기
+                        </a>
+                    </article>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section class="feature-section">
-        <div class="feature-card">
-            <h3>항공권 검색</h3>
-            <p>출발 공항, 도착 공항, 날짜를 기준으로 직항/경유 항공권을 검색합니다.</p>
-        </div>
+    <section class="home-preview-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
 
-        <div class="feature-card">
-            <h3>환율 차트</h3>
-            <p>국가별 통화의 현재 환율과 과거 환율 변화를 확인합니다.</p>
-        </div>
+                <div class="col-lg-5">
+                    <p class="tm-eyebrow">TRAVEL MONEY</p>
 
-        <div class="feature-card">
-            <h3>여행 비용 분석</h3>
-            <p>항공권 가격과 환율 데이터를 함께 활용해 여행 시기를 비교합니다.</p>
+                    <h2>
+                        단순 최저가가 아니라<br>
+                        여행하기 좋은 시기
+                    </h2>
+
+                    <p>
+                        같은 도시라도 항공권 가격, 환율, 월별 이벤트에 따라 체감 여행 비용과 <br>만족도가 달라집니다.
+                        Travel Money는 여행 데이터를 <br> 한 화면에서 비교할 수 있게 구성합니다.
+                    </p>
+
+                    <a href="/recommendations/travel-timing" class="btn tm-btn-primary">
+                        여행 시기 추천받기
+                    </a>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="home-preview-card">
+
+                        <div class="home-preview-card-header">
+                            <div>
+                                <span>추천 예시</span>
+                                <h3>서울/인천 ICN → 도쿄/나리타 NRT</h3>
+                            </div>
+
+                            <strong>87점</strong>
+                        </div>
+
+                        <div class="home-score-grid">
+                            <div>
+                                <span>항공권</span>
+                                <strong>저렴함</strong>
+                                <small>최근 최저가 기준</small>
+                            </div>
+
+                            <div>
+                                <span>환율</span>
+                                <strong>보통</strong>
+                                <small>과거 평균 대비</small>
+                            </div>
+
+                            <div>
+                                <span>이벤트</span>
+                                <strong>참고</strong>
+                                <small>도시별 행사 확인</small>
+                            </div>
+                        </div>
+
+                        <div class="home-ticket-preview">
+                            <div>
+                                <span>출발</span>
+                                <strong>ICN</strong>
+                                <small>09:30</small>
+                            </div>
+
+                            <div class="home-ticket-line">
+                                <span></span>
+                                <small>직항 · 2시간 20분</small>
+                            </div>
+
+                            <div class="text-end">
+                                <span>도착</span>
+                                <strong>NRT</strong>
+                                <small>11:50</small>
+                            </div>
+                        </div>
+
+                        <div class="home-preview-price">
+                            <span>예상 최저가</span>
+                            <strong>₩181,000~</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    <section class="home-flow-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5">
+                    <p class="tm-eyebrow">TRAVEL FLOW</p>
+
+                    <h2>
+                        검색부터 상세 확인까지<br>
+                        자연스럽게 연결
+                    </h2>
+
+                    <p>
+                        여행 시기 추천에서 월별 흐름을 확인하고, 항공권 검색으로 이동해 <br>
+                        실제 항공편과 가격 정보를 비교할 수 있습니다.
+                    </p>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="home-flow-list">
+
+                        <div class="home-flow-item">
+                            <span>01</span>
+
+                            <div>
+                                <strong>여행 시기 추천</strong>
+                                <p>가격과 환율 흐름을 보고 여행하기 좋은 월을 확인합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="home-flow-item">
+                            <span>02</span>
+
+                            <div>
+                                <strong>항공권 검색</strong>
+                                <p>편도/왕복 기준으로 원하는 날짜의 항공권을 비교합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="home-flow-item">
+                            <span>03</span>
+
+                            <div>
+                                <strong>항공권 상세 확인</strong>
+                                <p>선택한 항공권의 시간, 경유, 요금 정보를 확인합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="home-flow-item">
+                            <span>04</span>
+
+                            <div>
+                                <strong>예약과 결제</strong>
+                                <p>예약 요약을 확인하고 결제 화면으로 이동합니다.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 </main>
+
+<div th:replace="~{fragments/footer :: siteFooter}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Flatpickr -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ko.js"></script>
+
+<script type="module" src="/js/main.js"></script>
 
 </body>
 </html>

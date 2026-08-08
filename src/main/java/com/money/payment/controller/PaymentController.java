@@ -56,7 +56,7 @@ public class PaymentController {
         return PaymentResponseDto.from(payment);
     }
 
-    @GetMapping("{paymentId}/cancel")
+    @PostMapping("{paymentId}/cancel")
     public PaymentResponseDto cancelPayment(@PathVariable Long paymentId) {
         Payment payment = paymentService.getPayment(paymentId);
         return PaymentResponseDto.from(payment);

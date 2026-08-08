@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    background:
+            radial-gradient(circle at 12% 8%, rgba(125, 211, 252, 0.26), transparent 30%),
+            radial-gradient(circle at 88% 12%, rgba(191, 219, 254, 0.7), transparent 34%),
+            linear-gradient(180deg, #ffffff 0%, #f3f9ff 48%, #f8fbff 100%);
+    color: #111827;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.page {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 40px 0 80px;
+}
+
+.page-header {
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #4169e1;
+    letter-spacing: 0.08em;
+}
+
+.page-header h1 {
+    margin: 0 0 10px;
+    font-size: 34px;
+}
+
+.page-description {
+    margin: 0;
+    color: #666;
+}
+
+.search-panel {
+    padding: 24px;
+    margin-bottom: 24px;
+    background: #fff;
+    border: 1px solid #e2e6ef;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #444;
+}
+
+.field-group input,
+.field-group select {
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d6dce8;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+#searchButton {
+    min-width: 160px;
+    height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.result-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    align-items: center;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    background: #fff;
+    border: 1px solid #e2e6ef;
+    border-radius: 16px;
+    color: #555;
+}
+
+.result-summary strong {
+    color: #2563eb;
+}
+
+.result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.round-trip-card {
+    position: relative;
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e2e6ef;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.card-rank {
+    display: inline-flex;
+    align-items: center;
+    height: 28px;
+    padding: 0 12px;
+    margin-bottom: 16px;
+    border-radius: 999px;
+    background: #eef3ff;
+    color: #1f4fd8;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.card-main {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 22px;
+}
+
+.price-box {
+    padding: 18px;
+    border-radius: 16px;
+    background: #f7f9ff;
+    border: 1px solid #e1e8ff;
+}
+
+.price-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+.price-box strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 28px;
+    color: #111;
+}
+
+.duration,
+.passenger {
+    display: block;
+    margin-top: 6px;
+    color: #666;
+    font-size: 14px;
+}
+
+.flight-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.flight-leg {
+    padding: 18px;
+    border: 1px solid #e4e8f0;
+    border-radius: 16px;
+}
+
+.leg-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.leg-label {
+    font-weight: 800;
+    color: #1f4fd8;
+}
+
+.airline {
+    color: #666;
+    font-size: 14px;
+}
+
+.route-line {
+    display: grid;
+    grid-template-columns: 1fr 28px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.airport strong {
+    display: block;
+    font-size: 24px;
+}
+
+.airport span {
+    display: block;
+    margin-top: 4px;
+    color: #666;
+    font-size: 13px;
+}
+
+.arrow {
+    text-align: center;
+    font-size: 20px;
+    color: #999;
+}
+
+.time-line,
+.meta-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    color: #555;
+    font-size: 14px;
+}
+
+.meta-line {
+    margin-top: 8px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.booking-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 42px;
+    padding: 0 18px;
+    border-radius: 12px;
+    background: #111827;
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.empty-box {
+    padding: 28px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e2e6ef;
+    border-radius: 18px;
+    color: #666;
+}
+
+@media (max-width: 980px) {
+    .search-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-main {
+        grid-template-columns: 1fr;
+    }
+
+    .flight-pair {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .page {
+        width: min(100% - 24px, 1180px);
+        padding-top: 24px;
+    }
+
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+}

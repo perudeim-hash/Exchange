@@ -1,6 +1,7 @@
 package com.money.payment.dto;
 
 import com.money.payment.entity.Reservation;
+import lombok.Builder;
 import lombok.Getter;
 
 import java.time.LocalDate;
@@ -8,33 +9,38 @@ import java.time.LocalDateTime;
 
 @Getter
 public class ReservationResponseDto {
-    private final Long reservationId;
-    private final String reservationNumber;
-    private final Long outboundFlightOptionId;
-    private final Long returnFlightOptionId;
-    private final String originAirportCode;
-    private final String originAirportName;
-    private final String originCityName;
-    private final String destinationAirportCode;
-    private final String destinationAirportName;
-    private final String destinationCityName;
-    private final LocalDate departureDate;
-    private final LocalDate returnDate;
-    private final int adultCount;
-    private final int childCount;
-    private final int infantCount;
-    private final Long totalAmount;
-    private final String status;
-    private final String customerName;
-    private final String customerEmail;
-    private final String customerPhone;
-    private final LocalDateTime createdAt;
-    private final LocalDateTime reservedAt;
-    private final LocalDateTime canceledAt;
+    private Long reservationId;
+    private String reservationNumber;
+    private String tripType;
+    private String tripTypeDescription;
 
-    private ReservationResponseDto(Long reservationId, String reservationNumber, Long outboundFlightOptionId, Long returnFlightOptionId, String originAirportCode, String originAirportName, String originCityName, String destinationAirportCode, String destinationAirportName, String destinationCityName, LocalDate departureDate, LocalDate returnDate, int adultCount, int childCount, int infantCount, Long totalAmount, String status, String customerName, String customerEmail, String customerPhone, LocalDateTime createdAt, LocalDateTime reservedAt, LocalDateTime canceledAt) {
+    private Long outboundFlightOptionId;
+    private Long returnFlightOptionId;
+    private String originAirportCode;
+    private String originAirportName;
+    private String originCityName;
+    private String destinationAirportCode;
+    private String destinationAirportName;
+    private String destinationCityName;
+    private LocalDate departureDate;
+    private LocalDate returnDate;
+    private int adultCount;
+    private int childCount;
+    private int infantCount;
+    private Long totalAmount;
+    private String status;
+    private String customerName;
+    private String customerEmail;
+    private String customerPhone;
+    private LocalDateTime createdAt;
+    private LocalDateTime reservedAt;
+    private LocalDateTime canceledAt;
+
+    private ReservationResponseDto(Long reservationId, String reservationNumber, String tripType, String tripTypeDescription, Long outboundFlightOptionId, Long returnFlightOptionId, String originAirportCode, String originAirportName, String originCityName, String destinationAirportCode, String destinationAirportName, String destinationCityName, LocalDate departureDate, LocalDate returnDate, int adultCount, int childCount, int infantCount, Long totalAmount, String status, String customerName, String customerEmail, String customerPhone, LocalDateTime createdAt, LocalDateTime reservedAt, LocalDateTime canceledAt) {
         this.reservationId = reservationId;
         this.reservationNumber = reservationNumber;
+        this.tripType = tripType;
+        this.tripTypeDescription = tripTypeDescription;
         this.outboundFlightOptionId = outboundFlightOptionId;
         this.returnFlightOptionId = returnFlightOptionId;
         this.originAirportCode = originAirportCode;
@@ -62,6 +68,8 @@ public class ReservationResponseDto {
         return new ReservationResponseDto(
                 reservation.getId(),
                 reservation.getReservationNumber(),
+                reservation.getTripType().name(),
+                reservation.getTripType().getDescription(),
                 reservation.getOutboundFlightOptionId(),
                 reservation.getReturnFlightOptionId(),
                 reservation.getOriginAirportCode(),

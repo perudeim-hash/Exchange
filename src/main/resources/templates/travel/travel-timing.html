@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>월별 여행 시기 분석 | Travel Money</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/css/travel/travel-timing.css">
+    <link rel="stylesheet" href="/css/common/calendar.css">
+</head>
+
+<body class="tm-body">
+
+<div th:replace="~{fragments/header :: siteHeader}"></div>
+
+<main class="timing-page">
+
+    <section class="timing-compact-hero">
+        <div class="timing-wide-container">
+            <div class="timing-compact-hero-inner">
+                <div>
+                    <p class="tm-eyebrow">MONTHLY TRAVEL PLANNER</p>
+                    <h1>월별 여행 시기 분석</h1>
+                    <p>
+                        이 화면은 실시간 예매 추천이 아니라, 저장된 항공권 가격·환율·이벤트 데이터를 기반으로<br>
+                        월별 여행 비용 흐름을 비교하는 계획용 분석 화면입니다.<br>
+                        실제 예매 전에는 최신 항공권 가격과 환율을 다시 확인해 주세요.
+                    </p>
+                </div>
+
+                <div class="timing-hero-score-box">
+                    <div>
+                        <strong>80</strong>
+                        <span>항공권 가격</span>
+                    </div>
+                    <div>
+                        <strong>20</strong>
+                        <span>환율 흐름</span>
+                    </div>
+                    <div>
+                        <strong>참고</strong>
+                        <span>이벤트 정보</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timing-workspace-section">
+        <div class="timing-wide-container">
+
+            <div class="timing-workspace-layout">
+
+                <aside class="timing-sidebar">
+                    <section class="timing-search-card">
+                        <div class="timing-search-header">
+                            <p class="tm-eyebrow">ANALYSIS CONDITION</p>
+                            <h2>분석 조건</h2>
+                            <p>
+                                출발지와 도착지, 분석 기간을 선택하면 <br> 월별 여행 비용 흐름을 비교합니다. <br>
+                                도착 공항은 직접 선택할 수 있습니다.
+                            </p>
+                        </div>
+
+                        <div class="timing-search-form">
+
+                            <details class="timing-condition-details" open>
+                                <summary>
+                                    <div>
+                                        <span>01</span>
+                                        <strong>출발지 선택</strong>
+                                    </div>
+                                    <em>변경</em>
+                                </summary>
+
+                                <div class="timing-condition-body">
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <label for="originCountrySelect" class="form-label">출발 국가</label>
+                                            <select id="originCountrySelect" class="form-select">
+                                                <option value="">국가 선택</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label for="originCitySelect" class="form-label">출발 도시</label>
+                                            <select id="originCitySelect" class="form-select" disabled>
+                                                <option value="">도시 선택</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label class="form-label">출발 공항</label>
+                                            <div id="originAirportArea" class="timing-airport-area">
+                                                <div class="timing-empty-text">먼저 도시를 선택해 주세요.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <details class="timing-condition-details" open>
+                                <summary>
+                                    <div>
+                                        <span>02</span>
+                                        <strong>도착지 선택</strong>
+                                    </div>
+                                    <em>변경</em>
+                                </summary>
+
+                                <div class="timing-condition-body">
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <label for="destinationCountrySelect" class="form-label">도착 국가</label>
+                                            <select id="destinationCountrySelect" class="form-select">
+                                                <option value="">국가 선택</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <label for="destinationCitySelect" class="form-label">도착 도시</label>
+                                            <select id="destinationCitySelect" class="form-select" disabled>
+                                                <option value="">도시 선택</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label class="form-label">도착 공항</label>
+                                            <div id="destinationAirportArea" class="timing-airport-area">
+                                                <div class="timing-empty-text">먼저 도시를 선택해 주세요.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <details class="timing-condition-details" open>
+                                <summary>
+                                    <div>
+                                        <span>03</span>
+                                        <strong>여행 조건</strong>
+                                    </div>
+                                    <em>설정</em>
+                                </summary>
+
+                                <div class="timing-condition-body">
+                                    <div class="row g-2">
+                                        <div class="col-12">
+                                            <div class="timing-date-range-grid">
+                                                <div>
+                                                    <label for="startDate" class="form-label">분석 시작일</label>
+                                                    <input type="text" id="startDate" class="form-control" placeholder="시작일 선택">
+                                                </div>
+
+                                                <div>
+                                                    <label for="endDate" class="form-label">분석 종료일</label>
+                                                    <input type="text" id="endDate" class="form-control" placeholder="종료일 선택">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="col-4">
+                                            <label for="stayDays" class="form-label">체류일</label>
+                                            <input type="number" id="stayDays" class="form-control" value="3" min="1">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <label for="seatClass" class="form-label">좌석</label>
+                                            <select id="seatClass" class="form-select">
+                                                <option value="">전체</option>
+                                                <option value="ECONOMY">이코노미</option>
+                                                <option value="EXTRA_LEGROOM">엑스트라 레그룸</option>
+                                                <option value="PREMIUM_ECONOMY">프리미엄 이코노미</option>
+                                                <option value="BUSINESS">비즈니스</option>
+                                                <option value="FIRST">퍼스트</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <label for="connectionType" class="form-label">경유</label>
+                                            <select id="connectionType" class="form-select">
+                                                <option value="">전체</option>
+                                                <option value="DIRECT">직항</option>
+                                                <option value="ONE_STOP">1회 경유</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <label for="adultCount" class="form-label">성인</label>
+                                            <input type="number" id="adultCount" class="form-control" value="1" min="1">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <label for="childCount" class="form-label">소아</label>
+                                            <input type="number" id="childCount" class="form-control" value="0" min="0">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <label for="infantCount" class="form-label">유아</label>
+                                            <input type="number" id="infantCount" class="form-control" value="0" min="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <button type="button" id="searchBtn" class="btn btn-primary w-100 timing-search-btn">
+                                월별 분석 조회
+                            </button>
+
+                        </div>
+                    </section>
+                </aside>
+
+                <section class="timing-result-content">
+
+                    <div id="statusMessage" class="alert d-none recommendation-status"></div>
+
+                    <section class="result-section">
+                        <div class="section-title-row">
+                            <div>
+                                <p class="tm-eyebrow">PLAN AHEAD</p>
+                                <h2>계획하기 좋은 달 TOP 3</h2>
+                                <p>항공권 가격과 환율 기준으로 여행 계획을 세우기 유리한 달입니다.</p>
+                            </div>
+                        </div>
+
+                        <div id="recommendedMonths" class="row g-3 result-card-grid">
+                            <div class="col-12">
+                                <div class="empty-box">
+                                    <strong>월별 분석을 조회해 주세요.</strong>
+                                    <span>기본 경로 또는 원하는 공항을 선택하면 계획하기 좋은 달이 표시됩니다.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="result-section">
+                        <div class="section-title-row">
+                            <div>
+                                <p class="tm-eyebrow">CHECK CAREFULLY</p>
+                                <h2>추천하지 않는 달 TOP 3</h2>
+                                <p>항공권 또는 환율 조건이 상대적으로 비싼 달입니다.</p>
+                            </div>
+                        </div>
+
+                        <div id="expensiveMonths" class="row g-3 result-card-grid">
+                            <div class="col-12">
+                                <div class="empty-box">
+                                    <strong>월별 분석을 조회해 주세요.</strong>
+                                    <span>분석 후 비용 부담이 큰 달이 표시됩니다.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="result-section">
+                        <details class="monthly-compare-details">
+                            <summary>
+                                <div>
+                                    <p class="tm-eyebrow">MONTHLY COMPARISON</p>
+                                    <h2>월별 전체 비교</h2>
+                                    <p>각 월의 점수, 항공권 가격, 환율, 이벤트 개수를 한 번에 비교합니다.</p>
+                                </div>
+
+                                <strong class="monthly-compare-toggle-text">열기</strong>
+                            </summary>
+
+                            <div class="monthly-compare-body">
+                                <div class="monthly-table-card">
+                                    <div class="table-responsive">
+                                        <table class="table monthly-analysis-table align-middle">
+                                            <thead>
+                                            <tr>
+                                                <th>월</th>
+                                                <th>총점</th>
+                                                <th>항공권 점수</th>
+                                                <th>환율 점수</th>
+                                                <th>최저 왕복</th>
+                                                <th>TOP5 평균</th>
+                                                <th>평균 환율</th>
+                                                <th>이벤트</th>
+                                                <th>저렴한 요일</th>
+                                                <th>비싼 요일</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="monthlyAnalysisBody">
+                                            <tr>
+                                                <td colspan="10" class="text-center text-muted py-4">
+                                                    월별 분석을 조회해 주세요.
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                    </section>
+
+                    <section id="monthDetailArea" class="result-section d-none">
+                        <div class="section-title-row">
+                            <div>
+                                <p class="tm-eyebrow">MONTH DETAIL</p>
+                                <h2 id="monthDetailTitle">월별 상세 정보</h2>
+                                <p>선택한 월의 저렴한 날짜, 비싼 날짜, 이벤트를 확인합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-lg-4">
+                                <div class="detail-card">
+                                    <h3>저렴한 날짜 TOP 5</h3>
+                                    <div id="cheapDateList" class="detail-list empty-text">
+                                        월을 선택해 주세요.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="detail-card">
+                                    <h3>비싼 날짜 TOP 5</h3>
+                                    <div id="expensiveDateList" class="detail-list empty-text">
+                                        월을 선택해 주세요.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="detail-card">
+                                    <h3>월별 이벤트</h3>
+                                    <div id="eventList" class="detail-list empty-text">
+                                        월을 선택해 주세요.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="score-policy-panel">
+                        <details class="score-policy-details">
+                            <summary>
+                                <div>
+                                    <span>분석 점수 기준</span>
+                                    <small>항공권 80점 + 환율 20점 / 이벤트는 참고 정보</small>
+                                </div>
+                                <strong>열기</strong>
+                            </summary>
+
+                            <div class="score-policy-content">
+                                <div class="score-policy-intro">
+                                    <p>
+                                        월별 점수는 <strong>항공권 가격 80점 + 환율 흐름 20점</strong>으로 계산합니다.
+                                        이벤트는 도시별 수집량 차이가 있어 점수에는 넣지 않고,
+                                        여행 목적과 분위기를 판단하는 참고 정보로만 제공합니다.
+                                    </p>
+                                </div>
+
+                                <div class="row g-3">
+                                    <div class="col-lg-6">
+                                        <div class="score-rule-card">
+                                            <div class="score-rule-header">
+                                                <span>Flight</span>
+                                                <strong>80점</strong>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <strong>저렴한 날짜 TOP 5 평균 가격: 55점</strong>
+                                                    <span>그 달에 저렴하게 떠날 수 있는 날짜가 여러 개 있는지를 가장 크게 반영합니다.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>월별 최저 왕복 가격: 10점</strong>
+                                                    <span>해당 월의 가장 저렴한 왕복 가격을 보조 지표로 반영합니다.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>가격 선택 폭 / 안정성: 15점</strong>
+                                                    <span>최저가와 최고가 차이가 작을수록 안정적인 달로 판단합니다.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="score-rule-card">
+                                            <div class="score-rule-header">
+                                                <span>Exchange</span>
+                                                <strong>20점</strong>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <strong>월별 평균 환율: 17점</strong>
+                                                    <span>같은 통화 기준으로 월별 평균 환율이 낮을수록 높은 점수를 받습니다.</span>
+                                                </li>
+                                                <li>
+                                                    <strong>환율 데이터 개수 / 신뢰도: 3점</strong>
+                                                    <span>해당 월의 환율 데이터가 충분할수록 분석 신뢰도를 높게 봅니다.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                    </section>
+
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div th:replace="~{fragments/footer :: siteFooter}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/ko.js"></script>
+
+<script src="/js/travel/travel-timing.js"></script>
+
+</body>
+</html>

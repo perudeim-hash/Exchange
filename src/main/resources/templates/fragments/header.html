@@ -1,34 +1,66 @@
 <header class="site-header" th:fragment="siteHeader">
-  <div class="header-inner">
-    <a href="/" class="logo">Travel Money</a>
+  <nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container">
 
-    <nav class="main-nav">
-      <div class="nav-item">
-        <a href="/flights/search" class="nav-link">항공권</a>
-        <div class="dropdown-menu">
-          <a href="/flights/search">항공권 검색</a>
-          <a href="/flights/routes">노선 보기</a>
-          <a href="/flights/lowest-prices">최저가 항공권</a>
-        </div>
+      <a class="navbar-brand site-logo" href="/">
+        <span class="site-logo-mark">TM</span>
+        <span>Travel Money</span>
+      </a>
+
+      <button class="navbar-toggler site-navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#siteNavbar"
+              aria-controls="siteNavbar"
+              aria-expanded="false"
+              aria-label="메뉴 열기">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="siteNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/flights/search">
+              항공권
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/flights/routes">
+              노선보기
+            </a>
+          </li>
+          <li class="nav-item">
+          <a href="/flights/lowest-prices">최저가 비교</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/exchange">
+              환율
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/travel/travel-timing">
+              여행 시기 추천
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/events">
+              이벤트
+            </a>
+          </li>
+
+          <li class="nav-item ms-lg-3">
+            <a class="btn site-header-button" href="/flights/search">
+              항공권 검색하기
+            </a>
+          </li>
+
+        </ul>
       </div>
 
-      <div class="nav-item">
-        <a href="/exchange" class="nav-link">환율</a>
-        <div class="dropdown-menu">
-          <a href="/exchange">현재 환율</a>
-          <a href="/exchange">환율 계산기</a>
-          <a href="/exchange/USD">달러 환율 차트</a>
-        </div>
-      </div>
-
-      <div class="nav-item">
-        <a href="/recommendations/travel-timing" class="nav-link">여행 추천</a>
-        <div class="dropdown-menu">
-          <a href="#">국가별 여행 비용</a>
-          <a href="/recommendations/travel-timing">여행 가기 좋은 시기</a>
-          <a href="/events">이벤트 목록</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>

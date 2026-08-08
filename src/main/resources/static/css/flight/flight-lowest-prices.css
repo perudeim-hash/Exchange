@@ -1,0 +1,833 @@
+.lowest-price-refactor-page {
+    min-height: calc(100vh - 72px);
+    overflow-x: hidden;
+    background: #ffffff;
+    color: #111827;
+}
+
+.lowest-wide-container {
+    width: min(100% - 48px, 1440px);
+    margin: 0 auto;
+}
+
+/* ================================
+   Hero
+   ================================ */
+
+.lowest-compact-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 42px 0 40px;
+    background:
+            radial-gradient(circle at 12% 8%, rgba(125, 211, 252, 0.26), transparent 30%),
+            radial-gradient(circle at 88% 12%, rgba(191, 219, 254, 0.7), transparent 34%),
+            linear-gradient(180deg, #ffffff 0%, #f3f9ff 48%, #f8fbff 100%);
+    color: #111827;
+}
+
+.lowest-compact-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.lowest-compact-hero .tm-eyebrow {
+    color: #2563eb;
+}
+
+.lowest-compact-hero h1 {
+    margin: 8px 0 10px;
+    color: #111827;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 1.16;
+    letter-spacing: -0.06em;
+    font-weight: 900;
+    word-break: keep-all;
+}
+
+.lowest-compact-hero p {
+    max-width: 780px;
+    margin: 0;
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+.lowest-hero-mini-info {
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 104px);
+    gap: 10px;
+}
+
+.lowest-hero-mini-info div {
+    padding: 15px 14px;
+    border: 1px solid #bfdbfe;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 18px 46px rgba(37, 99, 235, 0.12);
+}
+
+.lowest-hero-mini-info strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #2563eb;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.lowest-hero-mini-info span {
+    color: #475569;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* ================================
+   Workspace
+   ================================ */
+
+.lowest-workspace-section {
+    padding: 32px 0 88px;
+    background: #ffffff;
+}
+
+.lowest-workspace-layout {
+    display: grid;
+    grid-template-columns: 380px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.lowest-sidebar {
+    position: static;
+    top: auto;
+    max-height: none;
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
+}
+
+.lowest-result-content {
+    min-width: 0;
+}
+
+/* ================================
+   Search Panel
+   ================================ */
+
+.lowest-search-panel {
+    padding: 22px;
+    border: 1px solid rgba(191, 219, 254, 0.9);
+    border-radius: 24px;
+    background:
+            radial-gradient(circle at 100% 0%, rgba(40, 124, 255, 0.08), transparent 34%),
+            rgba(255, 255, 255, 0.97);
+    box-shadow: 0 22px 52px rgba(40, 124, 255, 0.14);
+}
+
+.lowest-search-header {
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #dbeafe;
+}
+
+.lowest-search-header .tm-eyebrow,
+.lowest-result-title .tm-eyebrow,
+.lowest-guide-card .tm-eyebrow {
+    color: #2563eb;
+}
+
+.lowest-search-header h2 {
+    margin: 6px 0 6px;
+    color: #111827;
+    font-size: 26px;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.lowest-search-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.65;
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+.lowest-trip-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin: 0 0 18px;
+    padding: 5px;
+    border-radius: 15px;
+    background: #eff6ff;
+}
+
+.lowest-trip-tabs .trip-type-button {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 11px;
+    background: transparent;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.lowest-trip-tabs .trip-type-button.active {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.22);
+}
+
+.lowest-search-group {
+    padding-top: 18px;
+    border-top: 1px solid #eff6ff;
+}
+
+.lowest-search-group + .lowest-search-group {
+    margin-top: 18px;
+}
+
+.lowest-group-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 12px;
+}
+
+.lowest-group-title span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.lowest-group-title strong {
+    color: #111827;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.lowest-form-grid,
+.lowest-date-area,
+.lowest-option-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.lowest-full-field {
+    grid-column: 1 / -1;
+}
+
+.lowest-search-panel .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lowest-search-panel .field-group label {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.lowest-search-panel .field-group input,
+.lowest-search-panel .field-group select {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #111827;
+    outline: none;
+    font-size: 14px;
+    font-weight: 800;
+    box-sizing: border-box;
+}
+
+.lowest-search-panel .field-group input:hover,
+.lowest-search-panel .field-group select:hover {
+    border-color: #bfdbfe;
+    background: #f8fbff;
+}
+
+.lowest-search-panel .field-group input:focus,
+.lowest-search-panel .field-group select:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.lowest-calendar-input {
+    max-width: 100%;
+    line-height: 44px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+}
+
+.lowest-calendar-input::placeholder {
+    color: #94a3b8;
+    font-weight: 800;
+}
+
+.lowest-search-button-row {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #dbeafe;
+}
+
+.lowest-search-button-row #searchButton {
+    width: 100%;
+    min-height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: rgb(40, 124, 255);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(40, 124, 255, 0.26);
+}
+
+.lowest-search-button-row #searchButton:hover {
+    background: rgb(21, 101, 235);
+}
+
+/* ================================
+   Guide / Summary
+   ================================ */
+
+.lowest-guide-card {
+    margin-bottom: 22px;
+    padding: 28px;
+    border: 1px solid rgba(191, 219, 254, 0.95);
+    border-radius: 24px;
+    background:
+            radial-gradient(circle at 100% 0%, rgba(40, 124, 255, 0.08), transparent 38%),
+            rgba(255, 255, 255, 0.98);
+    box-shadow: 0 18px 42px rgba(40, 124, 255, 0.12);
+}
+
+.lowest-guide-card h2 {
+    margin: 6px 0 8px;
+    color: #111827;
+    font-size: 30px;
+    line-height: 1.25;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+    word-break: keep-all;
+}
+
+.lowest-guide-card p:last-child {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.75;
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+.lowest-summary-hidden {
+    display: none !important;
+}
+
+.lowest-summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.lowest-summary-card {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.08);
+}
+
+.lowest-summary-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.lowest-summary-card strong {
+    display: block;
+    color: #2563eb;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.lowest-summary-card p {
+    margin: 8px 0 0;
+    color: #475569;
+    font-size: 12px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.lowest-result-summary-hidden {
+    display: none !important;
+}
+
+/* ================================
+   Result
+   ================================ */
+
+.lowest-result-section {
+    min-width: 0;
+}
+
+.lowest-result-title {
+    margin-bottom: 18px;
+}
+
+.lowest-result-title h2 {
+    margin: 6px 0 6px;
+    color: #111827;
+    font-size: 34px;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+}
+
+.lowest-result-title p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 700;
+}
+
+.lowest-price-refactor-page .result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lowest-empty-state,
+.lowest-price-refactor-page .empty-box {
+    padding: 42px 24px;
+    border: 1px dashed #bfdbfe;
+    border-radius: 22px;
+    background: #ffffff;
+    color: #64748b;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.05);
+}
+
+.lowest-empty-state strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.lowest-empty-state p {
+    margin: 0;
+}
+
+/* ================================
+   JS Cards
+   ================================ */
+
+.lowest-price-refactor-page .flight-card {
+    padding: 22px;
+    border: 1px solid rgba(191, 219, 254, 0.95);
+    border-radius: 24px;
+    background:
+            radial-gradient(circle at 100% 0%, rgba(40, 124, 255, 0.08), transparent 38%),
+            rgba(255, 255, 255, 0.98);
+    box-shadow: 0 18px 42px rgba(40, 124, 255, 0.12);
+    transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.lowest-price-refactor-page .flight-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(40, 124, 255, 0.55);
+    box-shadow: 0 24px 54px rgba(40, 124, 255, 0.18);
+}
+
+.lowest-price-refactor-page .card-rank {
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 12px;
+    margin-bottom: 16px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.lowest-price-refactor-page .card-content {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.lowest-price-refactor-page .price-box {
+    padding: 20px;
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    background: #f8fbff;
+}
+
+.lowest-price-refactor-page .price-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.lowest-price-refactor-page .price-box strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #2563eb;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+}
+
+.lowest-price-refactor-page .price-box span {
+    display: block;
+    margin-top: 6px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.lowest-price-refactor-page .round-trip-legs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 14px;
+    min-width: 0;
+}
+
+.lowest-price-refactor-page .flight-leg {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.lowest-price-refactor-page .leg-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.lowest-price-refactor-page .leg-label {
+    flex: 0 0 auto;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.lowest-price-refactor-page .airline {
+    min-width: 0;
+    max-width: 180px;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 800;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lowest-price-refactor-page .route-line {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) 32px minmax(100px, 1fr);
+    align-items: start;
+    gap: 12px;
+    height: auto;
+    margin: 0 0 14px;
+    background: transparent;
+}
+
+.lowest-price-refactor-page .route-line::after {
+    content: none;
+    display: none;
+}
+
+.lowest-price-refactor-page .airport {
+    min-width: 0;
+}
+
+.lowest-price-refactor-page .airport strong {
+    display: block;
+    color: #111827;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.lowest-price-refactor-page .airport span {
+    display: block;
+    margin-top: 7px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.45;
+    word-break: keep-all;
+}
+
+.lowest-price-refactor-page .route-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    color: #94a3b8;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.lowest-price-refactor-page .time-line {
+    display: grid;
+    gap: 5px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eff6ff;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.lowest-price-refactor-page .meta-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+}
+
+.lowest-price-refactor-page .meta-line span {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.lowest-price-refactor-page .segment-list {
+    margin: 13px 0 0;
+    padding-left: 18px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.lowest-price-refactor-page .card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.lowest-price-refactor-page .detail-button,
+.lowest-price-refactor-page .booking-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.lowest-price-refactor-page .detail-button {
+    background: rgb(40, 124, 255);
+}
+
+.lowest-price-refactor-page .booking-button {
+    background: #0f766e;
+}
+
+.lowest-price-refactor-page .detail-button:hover {
+    background: rgb(21, 101, 235);
+}
+
+.lowest-price-refactor-page .booking-button:hover {
+    background: #0d5f59;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 1399px) {
+    .lowest-price-refactor-page .round-trip-legs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1199px) {
+    .lowest-wide-container {
+        width: min(100% - 32px, 1200px);
+    }
+
+    .lowest-workspace-layout {
+        grid-template-columns: 350px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .lowest-summary-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lowest-price-refactor-page .card-content {
+        grid-template-columns: 200px minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .lowest-compact-hero-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .lowest-hero-mini-info {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lowest-workspace-layout {
+        display: block;
+    }
+
+    .lowest-sidebar {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        padding-right: 0;
+        margin-bottom: 24px;
+    }
+
+    .lowest-price-refactor-page .card-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .lowest-wide-container {
+        width: min(100% - 24px, 100%);
+    }
+
+    .lowest-compact-hero {
+        padding: 34px 0;
+    }
+
+    .lowest-compact-hero h1 {
+        font-size: 32px;
+    }
+
+    .lowest-compact-hero p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .lowest-hero-mini-info,
+    .lowest-summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .lowest-workspace-section {
+        padding: 24px 0 64px;
+    }
+
+    .lowest-search-panel {
+        padding: 18px;
+    }
+
+    .lowest-form-grid,
+    .lowest-date-area,
+    .lowest-option-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lowest-full-field {
+        grid-column: auto;
+    }
+
+    .lowest-result-title h2,
+    .lowest-guide-card h2 {
+        font-size: 28px;
+    }
+
+    .lowest-price-refactor-page .flight-card {
+        padding: 18px;
+    }
+
+    .lowest-price-refactor-page .leg-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .lowest-price-refactor-page .airline {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .lowest-price-refactor-page .route-line {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .lowest-price-refactor-page .route-arrow {
+        justify-content: flex-start;
+    }
+
+    .lowest-price-refactor-page .card-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .lowest-price-refactor-page .detail-button,
+    .lowest-price-refactor-page .booking-button {
+        width: 100%;
+    }
+}

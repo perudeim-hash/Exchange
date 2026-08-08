@@ -1,5 +1,10 @@
 package com.money.payment.dto.toss;
 
+import lombok.Getter;
+import lombok.ToString;
+
+@Getter
+@ToString
 public class TossPaymentConfirmRequestDto {
     private final String paymentKey;
     private final String orderId;
